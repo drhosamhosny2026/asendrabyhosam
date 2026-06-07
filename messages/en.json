@@ -1,0 +1,198 @@
+{
+  "brand": { "name": "ASCENDA", "sub": "by Hossam", "tagline": "Build Systems. Enable Growth. Drive Transformation." },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "work": "Work",
+    "insights": "Insights",
+    "contact": "Contact",
+    "cta": "Book Consultation"
+  },
+  "hero": {
+    "headline": "Build Systems.",
+    "headlineAccent": "Scale Faster. Grow Smarter.",
+    "subtext": "ASCENDA helps SMEs and startups build scalable business systems through consulting, automation, and digital transformation — so your business runs with precision, not guesswork.",
+    "cta": "Book a Free Consultation",
+    "ctaSecondary": "Explore Services",
+    "trustLine": "Consulting · Automation · Digital Transformation · Riyadh, KSA"
+  },
+  "philosophy": {
+    "label": "Our Philosophy",
+    "text": "We think like business owners, not consultants."
+  },
+  "services": {
+    "label": "Core Services",
+    "detailLabel": "What We Deliver",
+    "story": "Every company reaches a point where growth feels harder than it should. Operations get tangled, decisions are made on instinct, and effort rises while results don't. ASCENDA doesn't sell off-the-shelf solutions — we understand your business from the inside, identify where the real problem lies, and build the systems that let you scale with confidence.",
+    "items": [
+      {
+        "name": "Business Consulting",
+        "desc": "Strategic advisory that diagnoses your business from the inside out — identifying root causes, not symptoms — and maps a clear, executable path to measurable growth."
+      },
+      {
+        "name": "Digital Transformation",
+        "desc": "Move from manual chaos to intelligent digital systems that run your operations with precision, reduce error, and free your team to focus on what drives growth."
+      },
+      {
+        "name": "Process Optimization",
+        "desc": "Redesign how your business operates — eliminating friction, standardizing workflows, and building repeatable systems that scale without breaking."
+      },
+      {
+        "name": "Automation & AI Solutions",
+        "desc": "Automate repetitive workflows so your team focuses on high-value work. From simple automations to AI-powered systems, we deploy what actually moves the needle."
+      },
+      {
+        "name": "KPI & Performance Management",
+        "desc": "Build the dashboards, metrics, and accountability systems that make performance visible — so every decision is driven by data, not instinct."
+      },
+      {
+        "name": "Software Solutions",
+        "desc": "Custom tools and platforms engineered around your operations — not generic software that forces your business to adapt to its limitations."
+      }
+    ]
+  },
+  "outcomes": {
+    "label": "Business Outcomes",
+    "title": "What Changes After Working With ASCENDA",
+    "items": [
+      {
+        "metric": "↑",
+        "label": "Operational Efficiency",
+        "desc": "Streamlined workflows that cut wasted time and eliminate bottlenecks across every layer of your business."
+      },
+      {
+        "metric": "↓",
+        "label": "Operational Costs",
+        "desc": "Process redesign and targeted automation that reduce overhead without sacrificing output or quality."
+      },
+      {
+        "metric": "↑",
+        "label": "Team Productivity",
+        "desc": "Defined roles, clear systems, and the right tools — so your team executes with focus and real accountability."
+      },
+      {
+        "metric": "↑",
+        "label": "Scalable Growth",
+        "desc": "Systems built to grow with you — so every new hire, client, and product line adds strength, not complexity."
+      }
+    ]
+  },
+  "stages": {
+    "label": "Who We Serve",
+    "heading": "Built for Every Stage of Business",
+    "subtitle": "Wherever your business is today, we meet you there and move you forward.",
+    "cta": "Book a Diagnosis",
+    "items": [
+      {
+        "name": "Personal / Micro Project",
+        "employees": "1–5 employees",
+        "desc": "You're building something real. We help you set the right foundation from day one — before chaos sets in."
+      },
+      {
+        "name": "Small Business",
+        "employees": "6–20 employees",
+        "desc": "You've grown beyond doing everything yourself. We build the systems that let your business run without depending on you for everything."
+      },
+      {
+        "name": "Medium Business",
+        "employees": "21–100 employees",
+        "desc": "Growth has exposed the cracks. We diagnose what's really slowing you down and restructure for the next stage."
+      },
+      {
+        "name": "Large Business",
+        "employees": "100+ employees",
+        "desc": "Scale demands precision. We optimize systems, automate operations, and drive transformation across the organization."
+      }
+    ]
+  },
+  "start": {
+    "heading": "Ready to Transform Your Business?",
+    "card1Title": "I know what I need",
+    "card1Desc": "Browse our services and choose the engagement that fits your business goals.",
+    "card1Cta": "Explore Services",
+    "card2Title": "Help me figure it out",
+    "card2Desc": "Tell us where your business is today and we'll guide you to the right solution.",
+    "card2Cta": "Book a Diagnosis"
+  },
+  "audience": {
+    "label": "Who We Work With",
+    "title": "Built for owners who are ready to scale",
+    "intro": "We work with business owners who are done running on instinct alone — and ready to build something that grows with them.",
+    "items": [
+      { "name": "Restaurants & F&B", "desc": "Streamlined operations, smarter procurement, and systems that let you focus on the guest experience — not the daily fires." },
+      { "name": "Clinics & Healthcare", "desc": "Patient scheduling, admin workflows, and reporting systems that free your team to focus on care, not paperwork." },
+      { "name": "Real Estate Firms", "desc": "CRM, pipeline tracking, and client management systems that help your team close more deals with less friction." },
+      { "name": "Riyadh Startups", "desc": "Early-stage structure that helps you grow fast, stay lean, and build a foundation that won't break when you scale." }
+    ]
+  },
+  "why": {
+    "label": "Why ASCENDA",
+    "title": "We sell results. Not code.",
+    "items": [
+      { "name": "We think like owners", "desc": "Every recommendation we make is evaluated against one question: does this actually grow the business?" },
+      { "name": "Outcomes, not deliverables", "desc": "We measure success by the efficiency you gained, the revenue you grew, and the decisions you made faster." },
+      { "name": "Systems that last", "desc": "We build for the long term. Solid foundations that compound over time." },
+      { "name": "Rooted in Riyadh", "desc": "We understand this market, this culture, and the real challenges that Saudi business owners navigate every day." }
+    ]
+  },
+  "team": {
+    "label": "Who We Are",
+    "intro": "ASCENDA is led by a team that combines strategic analysis with hands-on execution — turning vision into systems, and systems into measurable growth.",
+    "members": [
+      {
+        "name": "Hosam H. Emam",
+        "role": "Founder — Strategy, Business Development & Data Analysis",
+        "bio": "Combines over seven years of experience in a competitive sector with a deep understanding of how businesses grow. Specializes in building systems, improving performance, and data-driven decision-making. MBA candidate."
+      },
+      {
+        "name": "Mohamed Karam",
+        "role": "Co-Founder — Operations & Digital Growth",
+        "bio": "Brings extensive experience in operations management, team leadership, e-commerce, and digital sales strategy. Specializes in operational efficiency, resource management, and negotiation. MBA candidate."
+      }
+    ]
+  },
+  "approach": {
+    "label": "How We Work",
+    "subtitle": "A structured transformation methodology that delivers measurable results at every phase.",
+    "items": [
+      {
+        "step": "01",
+        "name": "Assess",
+        "desc": "We map your operations end-to-end — uncovering bottlenecks, gaps, and your highest-leverage growth opportunities."
+      },
+      {
+        "step": "02",
+        "name": "Design",
+        "desc": "We engineer a clear transformation roadmap aligned to your goals — no abstract frameworks, just an executable path to growth."
+      },
+      {
+        "step": "03",
+        "name": "Implement",
+        "desc": "We build the systems, tools, and processes that remove friction and create genuine capacity for growth."
+      },
+      {
+        "step": "04",
+        "name": "Measure",
+        "desc": "We install the KPIs and dashboards that make performance visible — so every decision is driven by data, not instinct."
+      },
+      {
+        "step": "05",
+        "name": "Scale",
+        "desc": "We stay with you through the change — refining, optimizing, and ensuring the transformation compounds over time."
+      }
+    ]
+  },
+  "contact": {
+    "label": "Start the Conversation",
+    "title": "Ready to Build Systems That Scale?",
+    "subtitle": "Tell us where your business is today. We'll take it from there.",
+    "name": "Full Name",
+    "namePlaceholder": "Your full name",
+    "email": "Work Email",
+    "emailPlaceholder": "your@company.com",
+    "message": "How Can We Help?",
+    "messagePlaceholder": "Tell us about your business and the challenge you're facing",
+    "send": "Send Message"
+  },
+  "footer": { "rights": "All rights reserved." }
+}
