@@ -1,6 +1,6 @@
-# ASCEND by Hossam — Website
+# ASCENDRA by Hossam — Website
 
-موقع ASCEND الرسمي. مبني بـ **Next.js 15 + React 19 + TypeScript + Tailwind + next-intl** (عربي/إنجليزي).
+موقع ASCENDRA الرسمي. مبني بـ **Next.js 15 + React 19 + TypeScript + Tailwind + next-intl** (عربي/إنجليزي).
 
 ---
 

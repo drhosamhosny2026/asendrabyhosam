@@ -3,21 +3,22 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-  const hero  = useTranslations("hero");
-  const phil  = useTranslations("philosophy");
-  const svc   = useTranslations("services");
-  const start = useTranslations("start");
-  const stagesT = useTranslations("stages");
-  const teamT   = useTranslations("team");
-  const app   = useTranslations("approach");
-  const con   = useTranslations("contact");
-  const outT  = useTranslations("outcomes");
+  const hero   = useTranslations("hero");
+  const ins    = useTranslations("insight");
+  const phil   = useTranslations("philosophy");
+  const svc    = useTranslations("services");
+  const solT   = useTranslations("solutions");
+  const start  = useTranslations("start");
+  const teamT  = useTranslations("team");
+  const app    = useTranslations("approach");
+  const con    = useTranslations("contact");
+  const outT   = useTranslations("outcomes");
 
-  const services    = svc.raw("items")      as { name: string; desc: string }[];
-  const stageItems  = stagesT.raw("items")  as { name: string; employees: string; desc: string }[];
-  const teamMembers = teamT.raw("members")  as { name: string; role: string; bio: string }[];
-  const steps       = app.raw("items")      as { step: string; name: string; desc: string }[];
-  const outcomes    = outT.raw("items")     as { metric: string; label: string; desc: string }[];
+  const domains   = svc.raw("items")   as { name: string; desc: string; bullets: string[] }[];
+  const solutions = solT.raw("items")  as { stage: string; tagline: string; desc: string; bullets: string[] }[];
+  const teamMembers = teamT.raw("members") as { name: string; role: string; bio: string }[];
+  const steps     = app.raw("items")   as { step: string; name: string; desc: string }[];
+  const outcomes  = outT.raw("items")  as { metric: string; label: string; desc: string }[];
 
   return (
     <>
@@ -25,8 +26,7 @@ export default function Home() {
 
       {/* ── 1. HERO ──────────────────────────────────────────────── */}
       <section className="bg-navy text-white relative overflow-hidden">
-        {/* subtle diagonal-line texture */}
-        <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
+        <div className="absolute inset-0 opacity-[0.08] pointer-events-none">
           <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="apex-lines" x="0" y="0" width="60" height="60"
@@ -40,7 +40,7 @@ export default function Home() {
 
         <div className="max-w-content mx-auto px-6 py-20 md:py-28 relative">
           <img
-            src="/brand/ascend_symbol_gold.svg"
+            src="/brand/ASCENDRA-logo_gold-transparent.svg"
             alt=""
             className="h-14 w-14 mb-8 rise"
           />
@@ -51,6 +51,7 @@ export default function Home() {
 
           <h1 className="font-serif font-semibold text-5xl md:text-[4.5rem] leading-h1 tracking-heading max-w-4xl rise rise-d2">
             {hero("headline")}<br />
+            {hero("headlineMid")}<br />
             <span className="text-gold">{hero("headlineAccent")}</span>
           </h1>
 
@@ -66,7 +67,7 @@ export default function Home() {
               {hero("cta")}
             </a>
             <a
-              href="#services"
+              href="#approach"
               className="border border-white/20 text-white px-8 py-3.5 rounded font-medium text-sm hover:border-gold/50 hover:text-gold transition"
             >
               {hero("ctaSecondary")}
@@ -75,8 +76,41 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 2. SERVICES ──────────────────────────────────────────── */}
-      <section id="services" className="py-20 px-6 scroll-mt-20">
+      {/* ── 2. DIAGNOSIS INSIGHT ─────────────────────────────────── */}
+      <section id="insight" className="py-20 px-6">
+        <div className="max-w-content mx-auto">
+          <p className="font-medium text-gold text-xs tracking-label uppercase mb-6">
+            {ins("label")}
+          </p>
+          <h2 className="font-serif font-semibold text-3xl md:text-[2.5rem] text-navy leading-h2 tracking-heading mb-10 max-w-3xl">
+            {ins("headline")}
+          </h2>
+
+          <div className="max-w-2xl space-y-5 text-navy/60 text-lg leading-relaxed mb-12">
+            <p>{ins("body1")}</p>
+            <p>{ins("body2")}</p>
+          </div>
+
+          <div className="border-l-2 border-gold pl-8 mb-12 space-y-3 max-w-2xl">
+            <p className="font-serif font-semibold text-2xl md:text-[1.75rem] text-navy leading-h3 tracking-heading">
+              {ins("emphasis1")}
+            </p>
+            <p className="font-serif font-semibold text-2xl md:text-[1.75rem] text-gold leading-h3 tracking-heading">
+              {ins("emphasis2")}
+            </p>
+            <p className="font-serif text-xl md:text-2xl text-navy/65 italic leading-relaxed">
+              {ins("emphasis3")}
+            </p>
+          </div>
+
+          <p className="max-w-2xl text-navy/60 text-lg leading-relaxed">
+            {ins("body3")}
+          </p>
+        </div>
+      </section>
+
+      {/* ── 3. WHAT WE BUILD ─────────────────────────────────────── */}
+      <section id="domains" className="py-20 px-6 bg-light-gray scroll-mt-20">
         <div className="max-w-content mx-auto">
           <p className="font-medium text-gold text-xs tracking-label uppercase mb-4">
             {svc("detailLabel")}
@@ -88,28 +122,41 @@ export default function Home() {
             {svc("story")}
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
-            {services.map((s, i) => (
+          <div className="grid md:grid-cols-2 gap-x-10 gap-y-10">
+            {domains.map((d, i) => (
               <div
                 key={i}
-                className="border-t-2 border-gold/25 pt-7 transition-colors hover:border-gold/55"
+                className="bg-white rounded-xl p-8 border-t-2 border-gold/30 hover:border-gold/60 transition-colors flex flex-col gap-5"
               >
-                <h3 className="font-serif font-semibold text-xl text-navy leading-h3 tracking-heading mb-3">
-                  {s.name}
+                <h3 className="font-serif font-semibold text-xl text-navy leading-h3 tracking-heading">
+                  {d.name}
                 </h3>
-                <p className="text-gray-text text-sm leading-relaxed">{s.desc}</p>
+                <p className="text-gray-text text-sm leading-relaxed">{d.desc}</p>
+                {d.bullets && d.bullets.length > 0 && (
+                  <ul className="space-y-2 pt-1 border-t border-gold/15">
+                    {d.bullets.map((b, j) => (
+                      <li key={j} className="flex items-start gap-2.5 text-sm text-navy/60 pt-2 first:pt-3">
+                        <span className="text-gold shrink-0 mt-0.5">→</span>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── 3. HOW WE WORK ───────────────────────────────────────── */}
+      {/* ── 4. HOW WE WORK ───────────────────────────────────────── */}
       <section id="approach" className="bg-navy text-white py-20 px-6 scroll-mt-20">
         <div className="max-w-content mx-auto">
           <p className="font-medium text-gold text-xs tracking-label uppercase mb-4">
             {app("label")}
           </p>
+          <h2 className="font-serif font-semibold text-3xl md:text-[2.5rem] text-white leading-h2 tracking-heading mb-4 max-w-xl">
+            {app("heading")}
+          </h2>
           <p className="text-white/55 text-lg leading-relaxed max-w-2xl mb-14">
             {app("subtitle")}
           </p>
@@ -130,8 +177,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 4. OUTCOMES ──────────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-light-gray">
+      {/* ── 5. OUTCOMES ──────────────────────────────────────────── */}
+      <section className="py-20 px-6">
         <div className="max-w-content mx-auto">
           <p className="font-medium text-gold text-xs tracking-label uppercase mb-4">
             {outT("label")}
@@ -141,7 +188,7 @@ export default function Home() {
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {outcomes.map((o, i) => (
-              <div key={i} className="bg-white rounded-xl p-8 flex flex-col gap-3">
+              <div key={i} className="bg-light-gray rounded-xl p-8 flex flex-col gap-3">
                 <div className="text-gold font-serif font-semibold text-4xl leading-none">
                   {o.metric}
                 </div>
@@ -155,36 +202,47 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 5. WHO WE SERVE ──────────────────────────────────────── */}
-      <section id="stages" className="py-20 px-6 scroll-mt-20">
+      {/* ── 6. SOLUTIONS ─────────────────────────────────────────── */}
+      <section id="solutions" className="py-20 px-6 bg-light-gray scroll-mt-20">
         <div className="max-w-content mx-auto">
           <p className="font-medium text-gold text-xs tracking-label uppercase mb-4">
-            {stagesT("label")}
+            {solT("label")}
           </p>
-          <h2 className="font-serif font-semibold text-3xl md:text-[2.5rem] text-navy leading-h2 tracking-heading mb-4">
-            {stagesT("heading")}
+          <h2 className="font-serif font-semibold text-3xl md:text-[2.5rem] text-navy leading-h2 tracking-heading mb-4 max-w-xl">
+            {solT("heading")}
           </h2>
           <p className="text-navy/55 text-lg leading-relaxed max-w-2xl mb-14">
-            {stagesT("subtitle")}
+            {solT("subtitle")}
           </p>
-          <div className="grid md:grid-cols-2 gap-6">
-            {stageItems.map((s, i) => (
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {solutions.map((s, i) => (
               <div
                 key={i}
-                className="border border-gold/20 rounded-xl p-8 flex flex-col gap-4 hover:border-gold/45 transition-colors"
+                className="border border-gold/20 rounded-xl p-8 flex flex-col gap-4 bg-white hover:border-gold/50 transition-colors"
               >
-                <p className="font-medium text-gold text-xs tracking-label uppercase">
-                  {s.employees}
+                <p className="font-medium text-gold text-xs tracking-label uppercase leading-relaxed">
+                  {s.tagline}
                 </p>
                 <h3 className="font-serif font-semibold text-2xl md:text-[1.75rem] text-navy leading-h3 tracking-heading">
-                  {s.name}
+                  {s.stage}
                 </h3>
                 <p className="text-gray-text text-sm leading-relaxed flex-1">{s.desc}</p>
+                {s.bullets && s.bullets.length > 0 && (
+                  <ul className="space-y-2 pt-2 border-t border-gold/15">
+                    {s.bullets.map((b, j) => (
+                      <li key={j} className="flex items-start gap-2 text-sm text-navy/60 pt-1.5 first:pt-3">
+                        <span className="text-gold shrink-0 mt-0.5">→</span>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
                 <a
                   href="#contact"
-                  className="self-start border border-navy/25 text-navy px-6 py-2.5 rounded text-sm font-medium hover:bg-navy hover:text-white transition mt-1"
+                  className="self-start border border-navy/25 text-navy px-6 py-2.5 rounded text-sm font-medium hover:bg-navy hover:text-white transition mt-2"
                 >
-                  {stagesT("cta")}
+                  {solT("cta")}
                 </a>
               </div>
             ))}
@@ -192,19 +250,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 6. PHILOSOPHY ────────────────────────────────────────── */}
+      {/* ── 7. CONVICTION ────────────────────────────────────────── */}
       <section className="bg-navy py-20 px-6">
         <div className="max-w-content mx-auto text-center">
           <p className="font-medium text-gold text-xs tracking-label uppercase mb-6">
             {phil("label")}
           </p>
           <p className="font-serif font-medium text-3xl md:text-[2.5rem] text-white italic leading-h2 tracking-heading max-w-3xl mx-auto">
-            "{phil("text")}"
+            &ldquo;{phil("text")}&rdquo;
           </p>
         </div>
       </section>
 
-      {/* ── 7. WHO WE ARE ────────────────────────────────────────── */}
+      {/* ── 8. MEET THE BUILDERS ─────────────────────────────────── */}
       <section id="team" className="py-20 px-6 bg-light-gray scroll-mt-20">
         <div className="max-w-content mx-auto">
           <p className="font-medium text-gold text-xs tracking-label uppercase mb-4">
@@ -236,7 +294,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 8. HOW TO START ──────────────────────────────────────── */}
+      {/* ── 9. HOW TO START ──────────────────────────────────────── */}
       <section className="py-20 px-6">
         <div className="max-w-content mx-auto">
           <h2 className="font-serif font-semibold text-3xl md:text-[2.5rem] text-navy leading-h2 tracking-heading mb-10">
@@ -251,7 +309,7 @@ export default function Home() {
                 {start("card1Desc")}
               </p>
               <a
-                href="#services"
+                href="#contact"
                 className="self-start bg-gold text-navy px-8 py-3 rounded text-sm font-medium hover:bg-gold/90 transition"
               >
                 {start("card1Cta")}
@@ -275,7 +333,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 9. CONTACT ───────────────────────────────────────────── */}
+      {/* ── 10. CONTACT ──────────────────────────────────────────── */}
       <section id="contact" className="py-20 px-6 bg-light-gray scroll-mt-20">
         <div className="mx-auto max-w-xl">
           <p className="font-medium text-gold text-xs tracking-label uppercase mb-3 text-center">

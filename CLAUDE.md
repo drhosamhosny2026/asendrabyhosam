@@ -1,7 +1,7 @@
-# ASCEND by Hossam — Website Project
+# ASCENDRA by Hossam — Website Project
 
 ## What this is
-The official website for ASCEND by Hossam — a Business Systems & Strategic Transformation company.
+The official website for ASCENDRA by Hossam — a Business Systems & Growth Builder.
 Built with Next.js 15 (App Router) + React 19 + TypeScript + Tailwind CSS + next-intl (bilingual EN/AR).
 
 ## Brand rules (NON-NEGOTIABLE — the logo is approved and locked)

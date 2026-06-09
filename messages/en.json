@@ -1,198 +1,218 @@
 {
-  "brand": { "name": "ASCENDA", "sub": "by Hossam", "tagline": "Build Systems. Enable Growth. Drive Transformation." },
+  "brand": { "name": "ASCENDRA", "sub": "by Hossam", "tagline": "Build Systems. Enable Growth. Drive Transformation." },
   "nav": {
     "home": "Home",
-    "services": "Services",
-    "work": "Work",
-    "insights": "Insights",
+    "services": "What We Build",
+    "work": "How We Work",
+    "insights": "Solutions",
     "contact": "Contact",
-    "cta": "Book Consultation"
+    "cta": "Start Your Diagnosis"
   },
   "hero": {
     "headline": "Build Systems.",
-    "headlineAccent": "Scale Faster. Grow Smarter.",
-    "subtext": "ASCENDA helps SMEs and startups build scalable business systems through consulting, automation, and digital transformation — so your business runs with precision, not guesswork.",
-    "cta": "Book a Free Consultation",
-    "ctaSecondary": "Explore Services",
-    "trustLine": "Consulting · Automation · Digital Transformation · Riyadh, KSA"
+    "headlineMid": "Enable Growth.",
+    "headlineAccent": "Drive Transformation.",
+    "subtext": "ASCENDRA helps startups and growing businesses build scalable systems, digital infrastructure, and growth foundations that enable sustainable business growth.",
+    "cta": "Start Your Diagnosis",
+    "ctaSecondary": "Explore Our Approach",
+    "trustLine": "Business Systems & Growth Builder  ·  Riyadh, KSA"
   },
-  "philosophy": {
-    "label": "Our Philosophy",
-    "text": "We think like business owners, not consultants."
+  "insight": {
+    "label": "Why We Exist",
+    "headline": "Most businesses don't have a growth problem. They have a systems problem.",
+    "body1": "Every business that has plateaued shares the same pattern. Operations that worked at ten people begin to strain at thirty. Decisions that used to take minutes take weeks. The founder becomes the bottleneck of their own company.",
+    "body2": "The instinct is to hire more, push harder, or find a new strategy. But the constraint is rarely talent or ambition. It is the absence of operational infrastructure — the systems, digital tools, and growth foundations that allow a business to scale without breaking.",
+    "emphasis1": "The solution is rarely more effort.",
+    "emphasis2": "It is better systems.",
+    "emphasis3": "Systems that create clarity, improve execution, and make growth repeatable.",
+    "body3": "ASCENDRA diagnoses the root cause, designs the right system, and builds it. Not a report. Not a recommendation. A functioning business transformation."
   },
   "services": {
-    "label": "Core Services",
-    "detailLabel": "What We Deliver",
-    "story": "Every company reaches a point where growth feels harder than it should. Operations get tangled, decisions are made on instinct, and effort rises while results don't. ASCENDA doesn't sell off-the-shelf solutions — we understand your business from the inside, identify where the real problem lies, and build the systems that let you scale with confidence.",
+    "label": "What We Build",
+    "detailLabel": "Our Solutions",
+    "story": "We design and build the systems, infrastructure, and digital foundations your business needs to operate efficiently and scale with confidence.",
     "items": [
       {
-        "name": "Business Consulting",
-        "desc": "Strategic advisory that diagnoses your business from the inside out — identifying root causes, not symptoms — and maps a clear, executable path to measurable growth."
+        "name": "Business Websites",
+        "desc": "Professional websites and landing pages built to establish your business presence, communicate your value clearly, and convert visitors into clients.",
+        "bullets": [
+          "Professional business websites",
+          "Landing pages and conversion-focused design",
+          "Business presence foundations",
+          "Performance-optimized and mobile-ready"
+        ]
       },
       {
-        "name": "Digital Transformation",
-        "desc": "Move from manual chaos to intelligent digital systems that run your operations with precision, reduce error, and free your team to focus on what drives growth."
+        "name": "Digital Infrastructure",
+        "desc": "The foundational digital layer every business needs to operate professionally — from domain and hosting to business email and analytics.",
+        "bullets": [
+          "Domain registration and management",
+          "Hosting setup and configuration",
+          "Business email systems",
+          "Analytics and tracking setup"
+        ]
       },
       {
-        "name": "Process Optimization",
-        "desc": "Redesign how your business operates — eliminating friction, standardizing workflows, and building repeatable systems that scale without breaking."
+        "name": "Business Systems",
+        "desc": "The operational backbone of your business. We build CRM systems, define workflows, document processes, and create the internal infrastructure that lets your business run without chaos.",
+        "bullets": [
+          "CRM systems and pipeline management",
+          "Operational workflows and process documentation",
+          "Internal accountability structures",
+          "Performance management and KPI systems"
+        ]
       },
       {
-        "name": "Automation & AI Solutions",
-        "desc": "Automate repetitive workflows so your team focuses on high-value work. From simple automations to AI-powered systems, we deploy what actually moves the needle."
-      },
-      {
-        "name": "KPI & Performance Management",
-        "desc": "Build the dashboards, metrics, and accountability systems that make performance visible — so every decision is driven by data, not instinct."
-      },
-      {
-        "name": "Software Solutions",
-        "desc": "Custom tools and platforms engineered around your operations — not generic software that forces your business to adapt to its limitations."
+        "name": "Automation & Growth",
+        "desc": "We automate repetitive workflows and build the visibility tools — dashboards, reports, and KPI systems — that give you the data to make faster decisions and fuel consistent growth.",
+        "bullets": [
+          "Workflow and task automation",
+          "Performance dashboards and reporting",
+          "KPI tracking and business visibility",
+          "Growth systems and operational enablement"
+        ]
       }
     ]
   },
   "outcomes": {
     "label": "Business Outcomes",
-    "title": "What Changes After Working With ASCENDA",
+    "title": "What changes after ASCENDRA.",
     "items": [
       {
         "metric": "↑",
-        "label": "Operational Efficiency",
-        "desc": "Streamlined workflows that cut wasted time and eliminate bottlenecks across every layer of your business."
-      },
-      {
-        "metric": "↓",
-        "label": "Operational Costs",
-        "desc": "Process redesign and targeted automation that reduce overhead without sacrificing output or quality."
+        "label": "Operational Clarity",
+        "desc": "Redesigned workflows and defined accountability that eliminate ambiguity — your business runs on systems, not memory."
       },
       {
         "metric": "↑",
-        "label": "Team Productivity",
-        "desc": "Defined roles, clear systems, and the right tools — so your team executes with focus and real accountability."
+        "label": "Leadership Bandwidth",
+        "desc": "When systems run the routine, founders and leaders focus on growing the business — not managing its daily operations."
+      },
+      {
+        "metric": "↑",
+        "label": "Execution Velocity",
+        "desc": "Clear processes, the right tools, and aligned teams mean decisions happen faster and work gets done with less friction."
       },
       {
         "metric": "↑",
         "label": "Scalable Growth",
-        "desc": "Systems built to grow with you — so every new hire, client, and product line adds strength, not complexity."
+        "desc": "Systems built to carry the weight of the next stage — so every new hire, client, and market adds strength, not complexity."
       }
     ]
   },
-  "stages": {
-    "label": "Who We Serve",
-    "heading": "Built for Every Stage of Business",
-    "subtitle": "Wherever your business is today, we meet you there and move you forward.",
-    "cta": "Book a Diagnosis",
+  "solutions": {
+    "label": "Built for Every Stage",
+    "heading": "Solutions for Where You Are.",
+    "subtitle": "Whether you are launching, growing, or transforming — we build the systems and infrastructure to match your stage.",
+    "cta": "Start Your Diagnosis",
     "items": [
       {
-        "name": "Personal / Micro Project",
-        "employees": "1–5 employees",
-        "desc": "You're building something real. We help you set the right foundation from day one — before chaos sets in."
+        "stage": "Launch",
+        "tagline": "Founders  ·  Early Stage  ·  New Ventures",
+        "desc": "You have an idea or an early product. We build the digital foundation, set up your infrastructure, and structure your operations for growth from day one.",
+        "bullets": [
+          "Business website and digital presence",
+          "Domain, hosting, and email setup",
+          "Early-stage CRM and workflow foundation",
+          "Launch-ready operational structure"
+        ]
       },
       {
-        "name": "Small Business",
-        "employees": "6–20 employees",
-        "desc": "You've grown beyond doing everything yourself. We build the systems that let your business run without depending on you for everything."
+        "stage": "Grow",
+        "tagline": "SMEs  ·  Growing Teams  ·  Scaling Businesses",
+        "desc": "You have traction but operations are getting complex. We build the systems, automate the bottlenecks, and give you the visibility to scale with confidence.",
+        "bullets": [
+          "Business systems and process design",
+          "Workflow automation",
+          "KPI dashboards and performance visibility",
+          "Digital infrastructure for operational scale"
+        ]
       },
       {
-        "name": "Medium Business",
-        "employees": "21–100 employees",
-        "desc": "Growth has exposed the cracks. We diagnose what's really slowing you down and restructure for the next stage."
-      },
-      {
-        "name": "Large Business",
-        "employees": "100+ employees",
-        "desc": "Scale demands precision. We optimize systems, automate operations, and drive transformation across the organization."
+        "stage": "Transform",
+        "tagline": "Established Businesses  ·  Restructuring  ·  Optimization",
+        "desc": "Your business has grown but the inside hasn't kept up. We audit what's holding you back, redesign the architecture, and implement the transformation required for the next level.",
+        "bullets": [
+          "Full operational and systems audit",
+          "Process redesign and restructuring",
+          "Digital transformation implementation",
+          "Scalable infrastructure for the next stage"
+        ]
       }
     ]
   },
   "start": {
-    "heading": "Ready to Transform Your Business?",
-    "card1Title": "I know what I need",
-    "card1Desc": "Browse our services and choose the engagement that fits your business goals.",
-    "card1Cta": "Explore Services",
-    "card2Title": "Help me figure it out",
-    "card2Desc": "Tell us where your business is today and we'll guide you to the right solution.",
-    "card2Cta": "Book a Diagnosis"
+    "heading": "Ready to Build Your Business Systems?",
+    "card1Title": "I know what needs to be built.",
+    "card1Desc": "You have identified the gap. We design and build the systems, digital infrastructure, and operational foundations to fill it.",
+    "card1Cta": "Start Your Diagnosis",
+    "card2Title": "I'm not sure where to start.",
+    "card2Desc": "We run a business diagnosis to identify exactly what's holding your business back — then build the solution from there.",
+    "card2Cta": "Book a Discovery Call"
   },
-  "audience": {
-    "label": "Who We Work With",
-    "title": "Built for owners who are ready to scale",
-    "intro": "We work with business owners who are done running on instinct alone — and ready to build something that grows with them.",
-    "items": [
-      { "name": "Restaurants & F&B", "desc": "Streamlined operations, smarter procurement, and systems that let you focus on the guest experience — not the daily fires." },
-      { "name": "Clinics & Healthcare", "desc": "Patient scheduling, admin workflows, and reporting systems that free your team to focus on care, not paperwork." },
-      { "name": "Real Estate Firms", "desc": "CRM, pipeline tracking, and client management systems that help your team close more deals with less friction." },
-      { "name": "Riyadh Startups", "desc": "Early-stage structure that helps you grow fast, stay lean, and build a foundation that won't break when you scale." }
-    ]
-  },
-  "why": {
-    "label": "Why ASCENDA",
-    "title": "We sell results. Not code.",
-    "items": [
-      { "name": "We think like owners", "desc": "Every recommendation we make is evaluated against one question: does this actually grow the business?" },
-      { "name": "Outcomes, not deliverables", "desc": "We measure success by the efficiency you gained, the revenue you grew, and the decisions you made faster." },
-      { "name": "Systems that last", "desc": "We build for the long term. Solid foundations that compound over time." },
-      { "name": "Rooted in Riyadh", "desc": "We understand this market, this culture, and the real challenges that Saudi business owners navigate every day." }
-    ]
+  "philosophy": {
+    "label": "Our Conviction",
+    "text": "Most businesses don't fail because of bad ideas. They fail because the systems needed to execute those ideas were never built."
   },
   "team": {
-    "label": "Who We Are",
-    "intro": "ASCENDA is led by a team that combines strategic analysis with hands-on execution — turning vision into systems, and systems into measurable growth.",
+    "label": "Meet The Builders",
+    "intro": "ASCENDRA is built by a team that designs and implements systems — not advisors. We combine strategic thinking with hands-on execution to deliver real, measurable business transformation.",
     "members": [
       {
         "name": "Hosam H. Emam",
-        "role": "Founder — Strategy, Business Development & Data Analysis",
-        "bio": "Combines over seven years of experience in a competitive sector with a deep understanding of how businesses grow. Specializes in building systems, improving performance, and data-driven decision-making. MBA candidate."
+        "role": "Founder — Strategy, Business Development & Data Systems",
+        "bio": "Combines over seven years of experience in a competitive sector with a deep understanding of how businesses grow. Specializes in building operational systems, improving performance, and designing data-driven infrastructure. MBA candidate."
       },
       {
         "name": "Mohamed Karam",
         "role": "Co-Founder — Operations & Digital Growth",
-        "bio": "Brings extensive experience in operations management, team leadership, e-commerce, and digital sales strategy. Specializes in operational efficiency, resource management, and negotiation. MBA candidate."
+        "bio": "Brings extensive experience in operations management, team leadership, e-commerce, and digital growth strategy. Specializes in operational efficiency, resource management, and building scalable business infrastructure. MBA candidate."
       }
     ]
   },
   "approach": {
     "label": "How We Work",
-    "subtitle": "A structured transformation methodology that delivers measurable results at every phase.",
+    "heading": "The ASCENDRA System",
+    "subtitle": "A structured build methodology. Every project follows the same rigor. No two outcomes are identical.",
     "items": [
       {
         "step": "01",
         "name": "Assess",
-        "desc": "We map your operations end-to-end — uncovering bottlenecks, gaps, and your highest-leverage growth opportunities."
+        "desc": "We map your operations end-to-end — tracing bottlenecks to their root cause, not their surface symptoms."
       },
       {
         "step": "02",
         "name": "Design",
-        "desc": "We engineer a clear transformation roadmap aligned to your goals — no abstract frameworks, just an executable path to growth."
+        "desc": "We design the build plan specific to your business. No templates. An executable path built around your operations."
       },
       {
         "step": "03",
-        "name": "Implement",
-        "desc": "We build the systems, tools, and processes that remove friction and create genuine capacity for growth."
+        "name": "Build",
+        "desc": "We build the systems, infrastructure, and processes that remove the constraint. Every project ends with something operating."
       },
       {
         "step": "04",
         "name": "Measure",
-        "desc": "We install the KPIs and dashboards that make performance visible — so every decision is driven by data, not instinct."
+        "desc": "We install the KPIs and dashboards that make performance visible — so decisions are driven by data, not instinct."
       },
       {
         "step": "05",
         "name": "Scale",
-        "desc": "We stay with you through the change — refining, optimizing, and ensuring the transformation compounds over time."
+        "desc": "We stay with you through the growth curve — refining, optimizing, and ensuring the transformation compounds over time."
       }
     ]
   },
   "contact": {
-    "label": "Start the Conversation",
-    "title": "Ready to Build Systems That Scale?",
-    "subtitle": "Tell us where your business is today. We'll take it from there.",
+    "label": "Start Your Business Diagnosis",
+    "title": "Start Your Business Diagnosis.",
+    "subtitle": "Every transformation starts with understanding the real bottleneck. Tell us where your business is today and we will identify the systems, infrastructure, or growth constraints holding it back.",
     "name": "Full Name",
     "namePlaceholder": "Your full name",
     "email": "Work Email",
     "emailPlaceholder": "your@company.com",
-    "message": "How Can We Help?",
-    "messagePlaceholder": "Tell us about your business and the challenge you're facing",
-    "send": "Send Message"
+    "message": "What is the challenge?",
+    "messagePlaceholder": "Describe where your business is today and what's holding it back",
+    "send": "Start the Diagnosis"
   },
   "footer": { "rights": "All rights reserved." }
 }

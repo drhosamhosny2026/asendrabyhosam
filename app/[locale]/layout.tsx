@@ -13,9 +13,21 @@ const cormorant = Cormorant_Garamond({
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "ASCENDA by Hossam — Business Systems & Strategic Transformation",
-  description: "We turn chaos into systems, data into decisions, and effort into growth.",
+  title: "ASCENDRA — Business Systems & Growth Builder",
+  description: "ASCENDRA helps startups and growing businesses build scalable systems, digital infrastructure, and growth foundations that enable sustainable growth.",
   icons: { icon: "/brand/favicon.svg", apple: "/apple-touch-icon.png" },
+  openGraph: {
+    title: "ASCENDRA — Business Systems & Growth Builder",
+    description: "ASCENDRA helps startups and growing businesses build scalable systems, digital infrastructure, and growth foundations that enable sustainable growth.",
+    type: "website",
+    locale: "en_US",
+    siteName: "ASCENDRA",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ASCENDRA — Business Systems & Growth Builder",
+    description: "ASCENDRA helps startups and growing businesses build scalable systems, digital infrastructure, and growth foundations that enable sustainable growth.",
+  },
 };
 
 export default async function LocaleLayout({
