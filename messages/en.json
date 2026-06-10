@@ -212,7 +212,10 @@
     "emailPlaceholder": "your@company.com",
     "message": "What is the challenge?",
     "messagePlaceholder": "Describe where your business is today and what's holding it back",
-    "send": "Start the Diagnosis"
+    "send": "Start the Diagnosis",
+    "successTitle": "Message Received.",
+    "successBody": "We will review your submission and be in touch within 1–2 business days.",
+    "errorMsg": "Something went wrong. Please try again or email us directly."
   },
   "footer": { "rights": "All rights reserved." }
 }

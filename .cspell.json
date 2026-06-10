@@ -1,0 +1,10 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "ignorePaths": ["README.md", "messages/ar.json", "node_modules", ".next"],
+  "words": [
+    "ASCENDRA", "Hossam", "Hosam", "Karam", "ascendrabyhosam",
+    "nextjs", "next-intl", "tailwindcss", "nvm", "EACCES",
+    "typecheck", "autosize", "subword", "wordmark"
+  ]
+}
