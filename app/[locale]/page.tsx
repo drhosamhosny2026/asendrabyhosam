@@ -3,6 +3,7 @@ import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import { LINKS } from "@/config/links";
 
 export default function Home() {
   const hero   = useTranslations("hero");
@@ -12,15 +13,16 @@ export default function Home() {
   const solT   = useTranslations("solutions");
   const start  = useTranslations("start");
   const teamT  = useTranslations("team");
+  const casesT = useTranslations("caseStudies");
   const app    = useTranslations("approach");
   const con    = useTranslations("contact");
   const outT   = useTranslations("outcomes");
 
-  const domains     = svc.raw("items")     as { name: string; desc: string; bullets: string[] }[];
-  const solutions   = solT.raw("items")    as { stage: string; tagline: string; desc: string; bullets: string[] }[];
-  const teamMembers = teamT.raw("members") as { name: string; role: string; bio: string }[];
-  const steps       = app.raw("items")     as { step: string; name: string; desc: string }[];
-  const outcomes    = outT.raw("items")    as { metric: string; label: string; desc: string }[];
+  const domains        = svc.raw("items")            as { name: string; desc: string; bullets: string[] }[];
+  const solutions      = solT.raw("items")           as { stage: string; tagline: string; desc: string; bullets: string[] }[];
+  const steps          = app.raw("items")            as { step: string; name: string; desc: string }[];
+  const outcomes       = outT.raw("items")           as { metric: string; label: string; desc: string }[];
+  const caseCategories = casesT.raw("categories")    as string[];
 
   return (
     <>
@@ -30,7 +32,6 @@ export default function Home() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────── */}
         <section aria-labelledby="hero-heading" className="bg-navy text-white relative overflow-hidden">
-          {/* Decorative background pattern — hidden from assistive technology */}
           <div aria-hidden="true" className="absolute inset-0 opacity-[0.08] pointer-events-none">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" focusable="false">
               <defs>
@@ -265,7 +266,6 @@ export default function Home() {
         {/* ── 7. CONVICTION ────────────────────────────────────────── */}
         <section aria-labelledby="conviction-heading" className="bg-navy py-20 px-6">
           <div className="max-w-content mx-auto text-center">
-            {/* Section label promoted to H2 to maintain heading hierarchy */}
             <h2 id="conviction-heading" className="font-medium text-gold text-xs tracking-label uppercase mb-6">
               {phil("label")}
             </h2>
@@ -275,44 +275,96 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── 8. MEET THE BUILDERS ─────────────────────────────────── */}
-        <section id="team" aria-labelledby="team-heading" className="py-20 px-6 bg-light-gray scroll-mt-20">
+        {/* ── 8. THE FOUNDER ───────────────────────────────────────── */}
+        <section id="team" aria-labelledby="team-heading" className="py-20 px-6 scroll-mt-20">
           <div className="max-w-content mx-auto">
-            {/* Section label promoted to H2 to maintain heading hierarchy */}
-            <h2 id="team-heading" className="font-medium text-gold text-xs tracking-label uppercase mb-4">
+            <h2 id="team-heading" className="font-medium text-gold text-xs tracking-label uppercase mb-10">
               {teamT("label")}
             </h2>
-            <p className="font-serif font-semibold text-2xl md:text-3xl text-navy leading-h2 tracking-heading max-w-3xl mb-14">
-              {teamT("intro")}
-            </p>
-            <div className="grid md:grid-cols-2 gap-12">
-              {teamMembers.map((m, i) => (
-                <article key={i} className="flex flex-col gap-5">
-                  <Image
-                    src={`/brand/team/${i === 0 ? "hosam.png.png" : "mohamed.png.png"}`}
-                    alt={`Photo of ${m.name}`}
-                    width={192}
-                    height={192}
-                    className="w-48 h-48 object-cover rounded-xl shadow-sm"
-                  />
-                  <div>
-                    <h3 className="font-serif font-semibold text-xl text-navy leading-h3 tracking-heading mb-1">
-                      {m.name}
-                    </h3>
-                    <p className="font-medium text-gold text-xs tracking-label uppercase mb-3" aria-hidden="true">
-                      {m.role}
-                    </p>
-                    <p className="text-gray-text text-sm leading-relaxed" aria-label={`${m.name}: ${m.role}. ${m.bio}`}>
-                      {m.bio}
-                    </p>
-                  </div>
-                </article>
-              ))}
+
+            <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
+              {/* Left — text */}
+              <div>
+                <p className="font-serif font-semibold text-2xl md:text-3xl text-navy leading-h2 tracking-heading mb-6">
+                  {teamT("heading")}
+                </p>
+                <p className="text-gray-text text-base leading-relaxed mb-8">
+                  {teamT("bio")}
+                </p>
+                <a
+                  href={LINKS.founderSite}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-navy font-medium text-sm border-b border-navy/30 hover:border-gold hover:text-gold transition-colors pb-0.5"
+                >
+                  {teamT("websiteLabel")}
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+
+              {/* Right — founder card */}
+              <div className="bg-light-gray rounded-xl p-8 flex flex-col gap-4 border-t-2 border-gold/40">
+                <h3 className="font-serif font-semibold text-xl text-navy leading-h3 tracking-heading">
+                  {teamT("name")}
+                </h3>
+                <p className="font-medium text-gold text-xs tracking-label uppercase" aria-hidden="true">
+                  {teamT("role")}
+                </p>
+                <div className="border-t border-gold/20 pt-4 mt-1">
+                  <p className="text-gold/70 text-xs uppercase tracking-label font-medium">ASCENDRA</p>
+                  <p className="text-navy/40 text-xs mt-1">Riyadh, KSA</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* ── 9. HOW TO START ──────────────────────────────────────── */}
+        {/* ── 9. OUR WORK ──────────────────────────────────────────── */}
+        <section id="work" aria-labelledby="work-heading" className="py-20 px-6 bg-light-gray scroll-mt-20">
+          <div className="max-w-content mx-auto">
+            <p className="font-medium text-gold text-xs tracking-label uppercase mb-4" aria-hidden="true">
+              {casesT("label")}
+            </p>
+            <h2 id="work-heading" className="font-serif font-semibold text-3xl md:text-[2.5rem] text-navy leading-h2 tracking-heading mb-4 max-w-xl">
+              {casesT("heading")}
+            </h2>
+            <p className="text-navy/70 text-lg leading-relaxed max-w-2xl mb-14">
+              {casesT("subtitle")}
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {caseCategories.map((cat, i) => (
+                <div
+                  key={i}
+                  className="border border-dashed border-navy/15 rounded-xl p-8 flex flex-col gap-4 bg-white"
+                  aria-label={`${casesT("badge")}: ${cat}`}
+                >
+                  <p className="font-medium text-gold text-xs tracking-label uppercase" aria-hidden="true">
+                    {casesT("badge")}
+                  </p>
+                  <h3 className="font-serif font-semibold text-xl text-navy leading-h3 tracking-heading">
+                    {cat}
+                  </h3>
+                  <div className="flex-1 space-y-2.5 py-4" aria-hidden="true">
+                    <div className="h-1.5 bg-navy/8 rounded-full w-full" />
+                    <div className="h-1.5 bg-navy/8 rounded-full w-5/6" />
+                    <div className="h-1.5 bg-navy/8 rounded-full w-4/6" />
+                    <div className="h-1.5 bg-navy/8 rounded-full w-5/6" />
+                  </div>
+                  <p className="text-xs text-navy/35 border-t border-navy/10 pt-4">
+                    {casesT("comingSoon")}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-center text-navy/45 text-sm mt-10 italic">
+              {casesT("available")}
+            </p>
+          </div>
+        </section>
+
+        {/* ── 10. HOW TO START ─────────────────────────────────────── */}
         <section aria-labelledby="start-heading" className="py-20 px-6">
           <div className="max-w-content mx-auto">
             <h2 id="start-heading" className="font-serif font-semibold text-3xl md:text-[2.5rem] text-navy leading-h2 tracking-heading mb-10">
@@ -341,7 +393,9 @@ export default function Home() {
                   {start("card2Desc")}
                 </p>
                 <a
-                  href="#contact"
+                  href={LINKS.whatsappMsg}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="self-start border border-navy/25 text-navy px-8 py-3 rounded text-sm font-medium hover:bg-navy hover:text-white transition"
                 >
                   {start("card2Cta")}
@@ -351,7 +405,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── 10. CONTACT ──────────────────────────────────────────── */}
+        {/* ── 11. CONTACT ──────────────────────────────────────────── */}
         <section id="contact" aria-labelledby="contact-heading" className="py-20 px-6 bg-light-gray scroll-mt-20">
           <div className="mx-auto max-w-xl">
             <p className="font-medium text-gold text-xs tracking-label uppercase mb-3 text-center" aria-hidden="true">
@@ -365,6 +419,34 @@ export default function Home() {
             </p>
 
             <ContactForm />
+
+            {/* Quick social contact */}
+            <div className="mt-10 pt-8 border-t border-navy/10 flex flex-col items-center gap-4">
+              <p className="text-navy/45 text-xs">{con("orConnect")}</p>
+              <div className="flex flex-wrap justify-center gap-3">
+                <a
+                  href={LINKS.whatsappMsg}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 border border-navy/20 rounded-lg px-5 py-2.5 text-sm text-navy font-medium hover:bg-navy hover:text-white transition"
+                >
+                  <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="shrink-0">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                  </svg>
+                  {con("whatsappCta")}
+                </a>
+                {LINKS.messenger !== "#" && (
+                  <a
+                    href={LINKS.messenger}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 border border-navy/20 rounded-lg px-5 py-2.5 text-sm text-navy font-medium hover:bg-navy hover:text-white transition"
+                  >
+                    {con("messengerCta")}
+                  </a>
+                )}
+              </div>
+            </div>
           </div>
         </section>
 

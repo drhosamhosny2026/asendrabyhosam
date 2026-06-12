@@ -6,6 +6,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { locales, type Locale } from "@/i18n";
 import { OrganizationSchema } from "./schema";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import "../globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -62,6 +63,7 @@ export default async function LocaleLayout({
       <body className="font-sans">
         <OrganizationSchema />
         <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+        <WhatsAppButton />
       </body>
     </html>
   );

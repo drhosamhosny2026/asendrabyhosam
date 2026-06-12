@@ -154,21 +154,22 @@
     "label": "Our Conviction",
     "text": "Most businesses don't fail because of bad ideas. They fail because the systems needed to execute those ideas were never built."
   },
+  "caseStudies": {
+    "label": "Our Work",
+    "heading": "Results We've Delivered.",
+    "subtitle": "Real businesses. Measurable outcomes. Every engagement built to last.",
+    "badge": "Case Study",
+    "comingSoon": "Documenting outcomes",
+    "available": "Detailed case studies available upon request.",
+    "categories": ["Enterprise Operations", "Digital Infrastructure", "Growth Systems"]
+  },
   "team": {
-    "label": "Meet The Builders",
-    "intro": "ASCENDRA is built by a team that designs and implements systems — not advisors. We combine strategic thinking with hands-on execution to deliver real, measurable business transformation.",
-    "members": [
-      {
-        "name": "Hosam H. Emam",
-        "role": "Founder — Strategy, Business Development & Data Systems",
-        "bio": "Combines over seven years of experience in a competitive sector with a deep understanding of how businesses grow. Specializes in building operational systems, improving performance, and designing data-driven infrastructure. MBA candidate."
-      },
-      {
-        "name": "Mohamed Karam",
-        "role": "Co-Founder — Operations & Digital Growth",
-        "bio": "Brings extensive experience in operations management, team leadership, e-commerce, and digital growth strategy. Specializes in operational efficiency, resource management, and building scalable business infrastructure. MBA candidate."
-      }
-    ]
+    "label": "The Founder",
+    "heading": "Built by practitioners, not advisors.",
+    "name": "Hosam H. Emam",
+    "role": "Founder & Managing Director",
+    "bio": "Over seven years of hands-on experience building scalable business operations across competitive sectors. Specializes in operational systems design, business process engineering, and data-driven growth infrastructure. ASCENDRA is backed by a dedicated team of specialists across digital development, automation, and business strategy.",
+    "websiteLabel": "Explore the Founder's Profile"
   },
   "approach": {
     "label": "How We Work",
@@ -215,7 +216,14 @@
     "send": "Start the Diagnosis",
     "successTitle": "Message Received.",
     "successBody": "We will review your submission and be in touch within 1–2 business days.",
-    "errorMsg": "Something went wrong. Please try again or email us directly."
+    "errorMsg": "Something went wrong. Please try again or email us directly.",
+    "orConnect": "Or connect directly",
+    "whatsappCta": "WhatsApp",
+    "messengerCta": "Messenger"
   },
-  "footer": { "rights": "All rights reserved." }
+  "footer": {
+    "rights": "All rights reserved.",
+    "connect": "Connect with us",
+    "emailPlaceholder": "hello@ascendra.com"
+  }
 }
