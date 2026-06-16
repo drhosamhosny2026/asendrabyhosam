@@ -40,13 +40,13 @@ export const metadata: Metadata = {
     alternateLocale: ["ar_SA"],
     siteName: "ASCENDRA",
     url: SITE_URL,
-    images: [{ url: "/brand/logo_horizontal_navy.svg", width: 1200, height: 630, alt: "ASCENDRA — Business Systems & Growth Builder" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "ASCENDRA — Business Systems & Growth Builder" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ASCENDRA — Business Systems & Growth Builder",
     description: "ASCENDRA helps startups and growing businesses build scalable systems, digital infrastructure, and growth foundations that enable sustainable growth.",
-    images: ["/brand/logo_horizontal_navy.svg"],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "ASCENDRA — Business Systems & Growth Builder" }],
   },
 };
 
