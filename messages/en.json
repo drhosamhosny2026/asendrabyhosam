@@ -9,47 +9,48 @@
     "cta": "Let's Talk"
   },
   "hero": {
-    "headline": "We Build the Digital Systems",
-    "headlineMid": "Your Business Needs",
-    "headlineAccent": "to Operate and Grow.",
-    "subtext": "Websites, e-commerce, CRM, ERP, dashboards, automation, and AI — ASCENDRA designs, builds, and delivers the full digital stack. Backed by business consulting when you need it.",
+    "headline": "We Build Digital Solutions",
+    "headlineMid": "That Help Businesses",
+    "headlineAccent": "Grow.",
+    "keyMessage": "Your business needs digital solutions — and operational systems behind them.",
+    "subtext": "Websites, E-Commerce Stores, CRM Systems, ERP Systems, Mobile Apps, Dashboards, Automation, AI Solutions, and Custom Platforms built around your business goals.",
     "cta": "Let's Talk",
     "ctaSecondary": "See What We Build",
-    "trustLine": "Digital Systems & Business Consulting  ·  Riyadh, KSA"
+    "trustLine": "Business Transformation · Riyadh, KSA"
   },
   "digital": {
     "label": "ASCENDRA Digital",
     "heading": "What We Build.",
-    "subtitle": "Nine digital products. One team. Full delivery from strategy to deployment.",
+    "subtitle": "Digital solutions designed around your business goals — built, delivered, and measured.",
     "groups": [
       {
-        "name": "Websites & Platforms",
-        "desc": "Your digital presence and commercial infrastructure — designed to communicate your value clearly and convert visitors into clients.",
+        "name": "Websites & E-Commerce",
+        "desc": "Your digital storefront and commercial presence — built to represent your business professionally and convert visitors into clients around the clock.",
         "items": [
-          "Business Websites",
-          "Personal Brand Websites",
-          "E-commerce Stores",
-          "Educational Platforms"
+          "Corporate Websites",
+          "Personal Websites",
+          "Landing Pages",
+          "E-Commerce Stores"
         ]
       },
       {
-        "name": "Business Systems",
-        "desc": "The operational software your business runs on. CRM, ERP, and the internal tools your team uses to execute, sell, and serve.",
+        "name": "CRM & ERP Systems",
+        "desc": "The operational core your business runs on — managing clients, sales pipelines, resources, and internal processes in one integrated system.",
         "items": [
           "CRM Systems",
-          "ERP Systems",
-          "Customer Portals",
-          "Mobile Applications"
+          "ERP Implementation",
+          "Internal Portals",
+          "Operational Systems"
         ]
       },
       {
-        "name": "Automation & AI",
-        "desc": "Visibility, automation, and intelligence for businesses that want to move faster, eliminate manual work, and make better decisions.",
+        "name": "Automation, Dashboards & AI",
+        "desc": "Work smarter. Dashboards that surface the numbers, automation that removes manual work, and AI that gives your business a competitive edge.",
         "items": [
-          "Dashboards",
-          "Automation",
+          "Business Dashboards",
+          "Workflow Automation",
           "AI Solutions",
-          "Digital Infrastructure"
+          "Analytics & Reporting"
         ]
       }
     ]
@@ -93,25 +94,25 @@
     "heading": "What We Deliver.",
     "subtitle": "Digital products and business consulting services — built, implemented, and measured.",
     "items": [
-      "Business Websites",
-      "E-commerce Stores",
-      "Educational Platforms",
+      "Corporate Websites",
+      "E-Commerce Stores",
+      "Landing Pages",
       "CRM Systems",
-      "ERP Systems",
-      "Dashboards",
-      "Automation",
+      "ERP Implementation",
+      "Business Dashboards",
+      "Workflow Automation",
       "AI Solutions",
       "Mobile Applications",
+      "Analytics & Reporting",
       "Process Design",
-      "KPI Systems",
-      "Business Analysis"
+      "KPI Systems"
     ]
   },
   "insight": {
     "label": "Why ASCENDRA",
-    "headline": "Most businesses have a digital gap. And a systems problem hiding behind it.",
-    "body1": "Every business that has plateaued shares the same pattern. Operations that worked at ten people begin to strain at thirty. The website doesn't reflect the business anymore. There is no CRM, so nothing gets followed up. Reports are spreadsheets nobody trusts. The founder is the only person who knows where everything stands.",
-    "body2": "The instinct is to hire more, push harder, or find a new strategy. But the constraint is rarely talent or ambition. It is the absence of the digital infrastructure — the website, the systems, the automation, and the data visibility — that allow a business to operate efficiently and scale without breaking.",
+    "headline": "Most businesses have the ambition to grow. They are missing the digital foundation to do it.",
+    "body1": "Every business that has plateaued shares the same pattern. The website hasn't been updated in three years. There is no CRM, so client follow-up happens in someone's head. Reports are spreadsheets nobody trusts. The founder is the only person who knows where anything stands — and when they're out, everything slows down.",
+    "body2": "The instinct is to hire more people, push harder, or try a new strategy. But the constraint is rarely talent or ambition. It is the absence of the digital infrastructure — the website that works, the systems that track, the automation that removes the manual load, and the dashboards that give real visibility — that allows a business to operate at scale.",
     "emphasis1": "The solution is rarely more effort.",
     "emphasis2": "It is better systems.",
     "emphasis3": "Systems that create clarity, improve execution, and make growth repeatable.",

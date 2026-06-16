@@ -64,7 +64,11 @@ export default function Home() {
               <span className="text-gold">{hero("headlineAccent")}</span>
             </h1>
 
-            <p className="text-light-gray/70 text-xl leading-relaxed mt-8 max-w-xl rise rise-d3">
+            <p className="text-gold/75 font-serif italic text-xl leading-relaxed mt-7 max-w-2xl rise rise-d3">
+              {hero("keyMessage")}
+            </p>
+
+            <p className="text-light-gray/55 text-sm leading-relaxed mt-4 max-w-2xl rise rise-d3">
               {hero("subtext")}
             </p>
 
