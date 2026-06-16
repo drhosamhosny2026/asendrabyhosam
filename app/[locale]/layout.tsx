@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   description: "ASCENDRA helps startups and growing businesses build scalable systems, digital infrastructure, and growth foundations that enable sustainable growth.",
   icons: {
-    icon: [{ url: "/favicon.png", type: "image/png" }],
+    icon: [{ url: "/icon.svg", type: "image/svg+xml", sizes: "any" }],
     apple: "/apple-touch-icon.png",
   },
   alternates: {
