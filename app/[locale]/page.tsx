@@ -6,23 +6,22 @@ import ContactForm from "@/components/ContactForm";
 import { LINKS } from "@/config/links";
 
 export default function Home() {
-  const hero   = useTranslations("hero");
-  const ins    = useTranslations("insight");
-  const phil   = useTranslations("philosophy");
-  const svc    = useTranslations("services");
-  const solT   = useTranslations("solutions");
-  const start  = useTranslations("start");
-  const teamT  = useTranslations("team");
-  const casesT = useTranslations("caseStudies");
-  const app    = useTranslations("approach");
-  const con    = useTranslations("contact");
-  const outT   = useTranslations("outcomes");
+  const hero  = useTranslations("hero");
+  const dig   = useTranslations("digital");
+  const con   = useTranslations("consulting");
+  const app   = useTranslations("approach");
+  const cap   = useTranslations("capabilities");
+  const ins   = useTranslations("insight");
+  const phil  = useTranslations("philosophy");
+  const outT  = useTranslations("outcomes");
+  const cont  = useTranslations("contact");
+  const teamT = useTranslations("team");
 
-  const domains        = svc.raw("items")            as { name: string; desc: string; bullets: string[] }[];
-  const solutions      = solT.raw("items")           as { stage: string; tagline: string; desc: string; bullets: string[] }[];
-  const steps          = app.raw("items")            as { step: string; name: string; desc: string }[];
-  const outcomes       = outT.raw("items")           as { metric: string; label: string; desc: string }[];
-  const caseCategories = casesT.raw("categories")    as string[];
+  const groups   = dig.raw("groups")   as { name: string; desc: string; items: string[] }[];
+  const conItems = con.raw("items")    as { name: string; desc: string }[];
+  const steps    = app.raw("items")    as { step: string; name: string; desc: string }[];
+  const capItems = cap.raw("items")    as string[];
+  const outcomes = outT.raw("items")   as { metric: string; label: string; desc: string }[];
 
   return (
     <>
@@ -30,7 +29,7 @@ export default function Home() {
 
       <main id="main-content">
 
-        {/* ── 1. HERO ──────────────────────────────────────────────── */}
+        {/* ── 1. HERO ─────────────────────────────────────────────────── */}
         <section aria-labelledby="hero-heading" className="bg-navy text-white relative overflow-hidden">
           <div aria-hidden="true" className="absolute inset-0 opacity-[0.08] pointer-events-none">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" focusable="false">
@@ -77,7 +76,7 @@ export default function Home() {
                 {hero("cta")}
               </a>
               <a
-                href="#approach"
+                href="#digital"
                 className="border border-white/20 text-white px-8 py-3.5 rounded font-medium text-sm hover:border-gold/50 hover:text-gold transition"
               >
                 {hero("ctaSecondary")}
@@ -86,79 +85,89 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── 2. DIAGNOSIS INSIGHT ─────────────────────────────────── */}
-        <section id="insight" aria-labelledby="insight-heading" className="py-20 px-6">
-          <div className="max-w-content mx-auto">
-            <p className="font-medium text-gold text-xs tracking-label uppercase mb-6" aria-hidden="true">
-              {ins("label")}
-            </p>
-            <h2 id="insight-heading" className="font-serif font-semibold text-3xl md:text-[2.5rem] text-navy leading-h2 tracking-heading mb-10 max-w-3xl">
-              {ins("headline")}
-            </h2>
-
-            <div className="max-w-2xl space-y-5 text-navy/70 text-lg leading-relaxed mb-12">
-              <p>{ins("body1")}</p>
-              <p>{ins("body2")}</p>
-            </div>
-
-            <div className="border-l-2 border-gold pl-8 mb-12 space-y-3 max-w-2xl" role="note">
-              <p className="font-serif font-semibold text-2xl md:text-[1.75rem] text-navy leading-h3 tracking-heading">
-                {ins("emphasis1")}
-              </p>
-              <p className="font-serif font-semibold text-2xl md:text-[1.75rem] text-gold leading-h3 tracking-heading">
-                {ins("emphasis2")}
-              </p>
-              <p className="font-serif text-xl md:text-2xl text-navy/70 italic leading-relaxed">
-                {ins("emphasis3")}
-              </p>
-            </div>
-
-            <p className="max-w-2xl text-navy/70 text-lg leading-relaxed">
-              {ins("body3")}
-            </p>
-          </div>
-        </section>
-
-        {/* ── 3. WHAT WE BUILD ─────────────────────────────────────── */}
-        <section id="domains" aria-labelledby="domains-heading" className="py-20 px-6 bg-light-gray scroll-mt-20">
+        {/* ── 2. ASCENDRA DIGITAL ─────────────────────────────────────── */}
+        <section id="digital" aria-labelledby="digital-heading" className="py-20 px-6 bg-light-gray scroll-mt-20">
           <div className="max-w-content mx-auto">
             <p className="font-medium text-gold text-xs tracking-label uppercase mb-4" aria-hidden="true">
-              {svc("detailLabel")}
+              {dig("label")}
             </p>
-            <h2 id="domains-heading" className="font-serif font-semibold text-3xl md:text-[2.5rem] text-navy leading-h2 tracking-heading mb-4 max-w-xl">
-              {svc("label")}
+            <h2 id="digital-heading" className="font-serif font-semibold text-3xl md:text-[2.5rem] text-navy leading-h2 tracking-heading mb-4 max-w-xl">
+              {dig("heading")}
             </h2>
             <p className="text-navy/70 text-lg leading-relaxed max-w-2xl mb-14">
-              {svc("story")}
+              {dig("subtitle")}
             </p>
 
-            <div className="grid md:grid-cols-2 gap-x-10 gap-y-10">
-              {domains.map((d, i) => (
+            <div className="grid md:grid-cols-3 gap-8">
+              {groups.map((g, i) => (
                 <article
                   key={i}
                   className="bg-white rounded-xl p-8 border-t-2 border-gold/30 hover:border-gold/60 transition-colors flex flex-col gap-5"
                 >
                   <h3 className="font-serif font-semibold text-xl text-navy leading-h3 tracking-heading">
-                    {d.name}
+                    {g.name}
                   </h3>
-                  <p className="text-gray-text text-sm leading-relaxed">{d.desc}</p>
-                  {d.bullets && d.bullets.length > 0 && (
-                    <ul className="space-y-2 pt-1 border-t border-gold/15" aria-label={d.name}>
-                      {d.bullets.map((b, j) => (
-                        <li key={j} className="flex items-start gap-2.5 text-sm text-navy/70 pt-2 first:pt-3">
-                          <span aria-hidden="true" className="text-gold shrink-0 mt-0.5">→</span>
-                          <span>{b}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                  <p className="text-gray-text text-sm leading-relaxed">{g.desc}</p>
+                  <ul className="space-y-2 pt-1 border-t border-gold/15" aria-label={g.name}>
+                    {g.items.map((item, j) => (
+                      <li key={j} className="flex items-start gap-2.5 text-sm text-navy/70 pt-2 first:pt-3">
+                        <span aria-hidden="true" className="text-gold shrink-0 mt-0.5">→</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ── 4. HOW WE WORK ───────────────────────────────────────── */}
+        {/* ── 3. ASCENDRA CONSULTING ──────────────────────────────────── */}
+        <section id="consulting" aria-labelledby="consulting-heading" className="py-20 px-6 scroll-mt-20">
+          <div className="max-w-content mx-auto">
+            <p className="font-medium text-gold text-xs tracking-label uppercase mb-4" aria-hidden="true">
+              {con("label")}
+            </p>
+            <h2 id="consulting-heading" className="font-serif font-semibold text-3xl md:text-[2.5rem] text-navy leading-h2 tracking-heading mb-4 max-w-xl">
+              {con("heading")}
+            </h2>
+            <p className="text-navy/70 text-lg leading-relaxed max-w-2xl mb-14">
+              {con("subtitle")}
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-14">
+              {conItems.map((item, i) => (
+                <article
+                  key={i}
+                  className="border border-gold/20 rounded-xl p-8 flex flex-col gap-3 hover:border-gold/50 transition-colors"
+                >
+                  <h3 className="font-serif font-semibold text-xl text-navy leading-h3 tracking-heading">
+                    {item.name}
+                  </h3>
+                  <p className="text-gray-text text-sm leading-relaxed">{item.desc}</p>
+                </article>
+              ))}
+            </div>
+
+            {/* Stage CTA strip */}
+            <div className="bg-navy rounded-xl p-10 text-center">
+              <p className="font-serif font-semibold text-2xl md:text-3xl text-white leading-h2 tracking-heading mb-4 max-w-2xl mx-auto">
+                {con("stageLabel")}
+              </p>
+              <p className="text-light-gray/70 text-base leading-relaxed mb-8 max-w-xl mx-auto">
+                {con("stageSub")}
+              </p>
+              <a
+                href="#contact"
+                className="inline-block bg-gold text-navy px-8 py-3.5 rounded font-medium text-sm hover:bg-gold/90 transition"
+              >
+                {con("stageCta")}
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 4. TRANSFORMATION APPROACH ──────────────────────────────── */}
         <section id="approach" aria-labelledby="approach-heading" className="bg-navy text-white py-20 px-6 scroll-mt-20">
           <div className="max-w-content mx-auto">
             <p className="font-medium text-gold text-xs tracking-label uppercase mb-4" aria-hidden="true">
@@ -187,15 +196,71 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── 5. OUTCOMES ──────────────────────────────────────────── */}
-        <section aria-labelledby="outcomes-heading" className="py-20 px-6">
+        {/* ── 5. SELECTED CAPABILITIES ────────────────────────────────── */}
+        <section id="capabilities" aria-labelledby="capabilities-heading" className="py-20 px-6 bg-light-gray scroll-mt-20">
           <div className="max-w-content mx-auto">
+            <p className="font-medium text-gold text-xs tracking-label uppercase mb-4" aria-hidden="true">
+              {cap("label")}
+            </p>
+            <h2 id="capabilities-heading" className="font-serif font-semibold text-3xl md:text-[2.5rem] text-navy leading-h2 tracking-heading mb-4 max-w-xl">
+              {cap("heading")}
+            </h2>
+            <p className="text-navy/70 text-lg leading-relaxed max-w-2xl mb-14">
+              {cap("subtitle")}
+            </p>
+
+            <div className="flex flex-wrap gap-3" role="list" aria-label={cap("heading")}>
+              {capItems.map((item, i) => (
+                <div
+                  key={i}
+                  role="listitem"
+                  className="bg-white border border-navy/10 text-navy text-sm font-medium px-5 py-2.5 rounded-full hover:border-gold/50 hover:text-gold transition-colors"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 6. WHY ASCENDRA ─────────────────────────────────────────── */}
+        <section id="why" aria-labelledby="why-heading" className="py-20 px-6 scroll-mt-20">
+          <div className="max-w-content mx-auto">
+            <p className="font-medium text-gold text-xs tracking-label uppercase mb-6" aria-hidden="true">
+              {ins("label")}
+            </p>
+            <h2 id="why-heading" className="font-serif font-semibold text-3xl md:text-[2.5rem] text-navy leading-h2 tracking-heading mb-10 max-w-3xl">
+              {ins("headline")}
+            </h2>
+
+            <div className="max-w-2xl space-y-5 text-navy/70 text-lg leading-relaxed mb-12">
+              <p>{ins("body1")}</p>
+              <p>{ins("body2")}</p>
+            </div>
+
+            <div className="border-l-2 border-gold pl-8 mb-12 space-y-3 max-w-2xl" role="note">
+              <p className="font-serif font-semibold text-2xl md:text-[1.75rem] text-navy leading-h3 tracking-heading">
+                {ins("emphasis1")}
+              </p>
+              <p className="font-serif font-semibold text-2xl md:text-[1.75rem] text-gold leading-h3 tracking-heading">
+                {ins("emphasis2")}
+              </p>
+              <p className="font-serif text-xl md:text-2xl text-navy/70 italic leading-relaxed">
+                {ins("emphasis3")}
+              </p>
+            </div>
+
+            <p className="max-w-2xl text-navy/70 text-lg leading-relaxed mb-20">
+              {ins("body3")}
+            </p>
+
+            {/* Outcomes */}
             <p className="font-medium text-gold text-xs tracking-label uppercase mb-4" aria-hidden="true">
               {outT("label")}
             </p>
-            <h2 id="outcomes-heading" className="font-serif font-semibold text-3xl md:text-[2.5rem] text-navy leading-h2 tracking-heading mb-14 max-w-2xl">
+            <h3 className="font-serif font-semibold text-2xl md:text-3xl text-navy leading-h2 tracking-heading mb-10">
               {outT("title")}
-            </h2>
+            </h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {outcomes.map((o, i) => (
                 <div key={i} className="bg-light-gray rounded-xl p-8 flex flex-col gap-3">
@@ -205,9 +270,9 @@ export default function Home() {
                   >
                     {o.metric}
                   </div>
-                  <h3 className="font-serif font-semibold text-lg text-navy leading-h3 tracking-heading">
+                  <h4 className="font-serif font-semibold text-lg text-navy leading-h3 tracking-heading">
                     {o.label}
-                  </h3>
+                  </h4>
                   <p className="text-gray-text text-sm leading-relaxed">{o.desc}</p>
                 </div>
               ))}
@@ -215,55 +280,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── 6. SOLUTIONS ─────────────────────────────────────────── */}
-        <section id="solutions" aria-labelledby="solutions-heading" className="py-20 px-6 bg-light-gray scroll-mt-20">
-          <div className="max-w-content mx-auto">
-            <p className="font-medium text-gold text-xs tracking-label uppercase mb-4" aria-hidden="true">
-              {solT("label")}
-            </p>
-            <h2 id="solutions-heading" className="font-serif font-semibold text-3xl md:text-[2.5rem] text-navy leading-h2 tracking-heading mb-4 max-w-xl">
-              {solT("heading")}
-            </h2>
-            <p className="text-navy/70 text-lg leading-relaxed max-w-2xl mb-14">
-              {solT("subtitle")}
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              {solutions.map((s, i) => (
-                <article
-                  key={i}
-                  className="border border-gold/20 rounded-xl p-8 flex flex-col gap-4 bg-white hover:border-gold/50 transition-colors"
-                >
-                  <p className="font-medium text-gold text-xs tracking-label uppercase leading-relaxed" aria-hidden="true">
-                    {s.tagline}
-                  </p>
-                  <h3 className="font-serif font-semibold text-2xl md:text-[1.75rem] text-navy leading-h3 tracking-heading">
-                    {s.stage}
-                  </h3>
-                  <p className="text-gray-text text-sm leading-relaxed flex-1">{s.desc}</p>
-                  {s.bullets && s.bullets.length > 0 && (
-                    <ul className="space-y-2 pt-2 border-t border-gold/15" aria-label={s.stage}>
-                      {s.bullets.map((b, j) => (
-                        <li key={j} className="flex items-start gap-2 text-sm text-navy/70 pt-1.5 first:pt-3">
-                          <span aria-hidden="true" className="text-gold shrink-0 mt-0.5">→</span>
-                          <span>{b}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                  <a
-                    href="#contact"
-                    className="self-start border border-navy/25 text-navy px-6 py-2.5 rounded text-sm font-medium hover:bg-navy hover:text-white transition mt-2"
-                  >
-                    <span className="sr-only">{s.stage} — </span>{solT("cta")}
-                  </a>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── 7. CONVICTION ────────────────────────────────────────── */}
+        {/* ── Conviction ──────────────────────────────────────────────── */}
         <section aria-labelledby="conviction-heading" className="bg-navy py-20 px-6">
           <div className="max-w-content mx-auto text-center">
             <h2 id="conviction-heading" className="font-medium text-gold text-xs tracking-label uppercase mb-6">
@@ -275,15 +292,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── 8. THE FOUNDER ───────────────────────────────────────── */}
+        {/* ── Founder ─────────────────────────────────────────────────── */}
         <section id="team" aria-labelledby="team-heading" className="py-20 px-6 scroll-mt-20">
           <div className="max-w-content mx-auto">
             <h2 id="team-heading" className="font-medium text-gold text-xs tracking-label uppercase mb-10">
               {teamT("label")}
             </h2>
-
             <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
-              {/* Left — text */}
               <div>
                 <p className="font-serif font-semibold text-2xl md:text-3xl text-navy leading-h2 tracking-heading mb-6">
                   {teamT("heading")}
@@ -301,8 +316,6 @@ export default function Home() {
                   <span aria-hidden="true">→</span>
                 </a>
               </div>
-
-              {/* Right — founder card */}
               <div className="bg-light-gray rounded-xl p-8 flex flex-col gap-4 border-t-2 border-gold/40">
                 <h3 className="font-serif font-semibold text-xl text-navy leading-h3 tracking-heading">
                   {teamT("name")}
@@ -319,110 +332,23 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── 9. OUR WORK ──────────────────────────────────────────── */}
-        <section id="work" aria-labelledby="work-heading" className="py-20 px-6 bg-light-gray scroll-mt-20">
-          <div className="max-w-content mx-auto">
-            <p className="font-medium text-gold text-xs tracking-label uppercase mb-4" aria-hidden="true">
-              {casesT("label")}
-            </p>
-            <h2 id="work-heading" className="font-serif font-semibold text-3xl md:text-[2.5rem] text-navy leading-h2 tracking-heading mb-4 max-w-xl">
-              {casesT("heading")}
-            </h2>
-            <p className="text-navy/70 text-lg leading-relaxed max-w-2xl mb-14">
-              {casesT("subtitle")}
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              {caseCategories.map((cat, i) => (
-                <div
-                  key={i}
-                  className="border border-dashed border-navy/15 rounded-xl p-8 flex flex-col gap-4 bg-white"
-                  aria-label={`${casesT("badge")}: ${cat}`}
-                >
-                  <p className="font-medium text-gold text-xs tracking-label uppercase" aria-hidden="true">
-                    {casesT("badge")}
-                  </p>
-                  <h3 className="font-serif font-semibold text-xl text-navy leading-h3 tracking-heading">
-                    {cat}
-                  </h3>
-                  <div className="flex-1 space-y-2.5 py-4" aria-hidden="true">
-                    <div className="h-1.5 bg-navy/8 rounded-full w-full" />
-                    <div className="h-1.5 bg-navy/8 rounded-full w-5/6" />
-                    <div className="h-1.5 bg-navy/8 rounded-full w-4/6" />
-                    <div className="h-1.5 bg-navy/8 rounded-full w-5/6" />
-                  </div>
-                  <p className="text-xs text-navy/35 border-t border-navy/10 pt-4">
-                    {casesT("comingSoon")}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <p className="text-center text-navy/45 text-sm mt-10 italic">
-              {casesT("available")}
-            </p>
-          </div>
-        </section>
-
-        {/* ── 10. HOW TO START ─────────────────────────────────────── */}
-        <section aria-labelledby="start-heading" className="py-20 px-6">
-          <div className="max-w-content mx-auto">
-            <h2 id="start-heading" className="font-serif font-semibold text-3xl md:text-[2.5rem] text-navy leading-h2 tracking-heading mb-10">
-              {start("heading")}
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="border border-gold/30 rounded-xl p-10 flex flex-col gap-5">
-                <h3 className="font-serif font-semibold text-2xl md:text-[1.75rem] text-navy leading-h3 tracking-heading">
-                  {start("card1Title")}
-                </h3>
-                <p className="text-gray-text text-sm leading-relaxed flex-1">
-                  {start("card1Desc")}
-                </p>
-                <a
-                  href="#contact"
-                  className="self-start bg-gold text-navy px-8 py-3 rounded text-sm font-medium hover:bg-gold/90 transition"
-                >
-                  {start("card1Cta")}
-                </a>
-              </div>
-              <div className="bg-light-gray rounded-xl p-10 flex flex-col gap-5">
-                <h3 className="font-serif font-semibold text-2xl md:text-[1.75rem] text-navy leading-h3 tracking-heading">
-                  {start("card2Title")}
-                </h3>
-                <p className="text-gray-text text-sm leading-relaxed flex-1">
-                  {start("card2Desc")}
-                </p>
-                <a
-                  href={LINKS.whatsappMsg}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="self-start border border-navy/25 text-navy px-8 py-3 rounded text-sm font-medium hover:bg-navy hover:text-white transition"
-                >
-                  {start("card2Cta")}
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── 11. CONTACT ──────────────────────────────────────────── */}
+        {/* ── 7. CONTACT ──────────────────────────────────────────────── */}
         <section id="contact" aria-labelledby="contact-heading" className="py-20 px-6 bg-light-gray scroll-mt-20">
           <div className="mx-auto max-w-xl">
             <p className="font-medium text-gold text-xs tracking-label uppercase mb-3 text-center" aria-hidden="true">
-              {con("label")}
+              {cont("label")}
             </p>
             <h2 id="contact-heading" className="font-serif font-semibold text-3xl md:text-[2.5rem] text-navy leading-h2 tracking-heading mb-3 text-center">
-              {con("title")}
+              {cont("title")}
             </h2>
             <p className="text-navy/70 text-center text-sm leading-relaxed mb-10">
-              {con("subtitle")}
+              {cont("subtitle")}
             </p>
 
             <ContactForm />
 
-            {/* Quick social contact */}
             <div className="mt-10 pt-8 border-t border-navy/10 flex flex-col items-center gap-4">
-              <p className="text-navy/45 text-xs">{con("orConnect")}</p>
+              <p className="text-navy/45 text-xs">{cont("orConnect")}</p>
               <div className="flex flex-wrap justify-center gap-3">
                 <a
                   href={LINKS.whatsappMsg}
@@ -433,7 +359,7 @@ export default function Home() {
                   <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="shrink-0">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                   </svg>
-                  {con("whatsappCta")}
+                  {cont("whatsappCta")}
                 </a>
                 {LINKS.messenger !== "#" && (
                   <a
@@ -442,7 +368,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 border border-navy/20 rounded-lg px-5 py-2.5 text-sm text-navy font-medium hover:bg-navy hover:text-white transition"
                   >
-                    {con("messengerCta")}
+                    {cont("messengerCta")}
                   </a>
                 )}
               </div>

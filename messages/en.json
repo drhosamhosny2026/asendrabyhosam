@@ -1,78 +1,113 @@
 {
-  "brand": { "name": "ASCENDRA", "sub": "by Hossam", "tagline": "Build Systems. Enable Growth. Drive Transformation." },
+  "brand": { "name": "ASCENDRA", "sub": "by Hossam", "tagline": "Transform. Operate. Scale." },
   "nav": {
     "home": "Home",
-    "services": "What We Build",
-    "work": "How We Work",
-    "insights": "Solutions",
+    "services": "Digital",
+    "work": "Consulting",
+    "insights": "Approach",
     "contact": "Contact",
-    "cta": "Start Your Diagnosis"
+    "cta": "Let's Talk"
   },
   "hero": {
-    "headline": "Build Systems.",
-    "headlineMid": "Enable Growth.",
-    "headlineAccent": "Drive Transformation.",
-    "subtext": "ASCENDRA helps startups and growing businesses build scalable systems, digital infrastructure, and growth foundations that enable sustainable business growth.",
-    "cta": "Start Your Diagnosis",
-    "ctaSecondary": "Explore Our Approach",
-    "trustLine": "Business Systems & Growth Builder  ·  Riyadh, KSA"
+    "headline": "Business Transformation",
+    "headlineMid": "Through Digital Systems &",
+    "headlineAccent": "Operational Excellence.",
+    "subtext": "We help businesses build digital solutions, optimize operations, and create the foundations required for sustainable growth.",
+    "cta": "Let's Talk",
+    "ctaSecondary": "Explore Our Services",
+    "trustLine": "Business Transformation  ·  Riyadh, KSA"
+  },
+  "digital": {
+    "label": "Digital Solutions",
+    "heading": "ASCENDRA Digital",
+    "subtitle": "Digital solutions that help businesses operate, sell, and scale.",
+    "groups": [
+      {
+        "name": "Web & Commerce",
+        "desc": "Your business presence and commercial infrastructure online.",
+        "items": [
+          "Business Websites",
+          "Personal Brand Websites",
+          "E-commerce Platforms",
+          "Learning Platforms"
+        ]
+      },
+      {
+        "name": "Systems & Applications",
+        "desc": "The operational and customer-facing software your business runs on.",
+        "items": [
+          "CRM & ERP Systems",
+          "Customer Portals",
+          "Mobile Applications",
+          "Process Automation"
+        ]
+      },
+      {
+        "name": "Intelligence & Infrastructure",
+        "desc": "Data, automation, and the digital foundation for scale.",
+        "items": [
+          "Dashboards & Reporting",
+          "AI Solutions",
+          "Digital Infrastructure",
+          "Data Systems"
+        ]
+      }
+    ]
+  },
+  "consulting": {
+    "label": "Consulting",
+    "heading": "ASCENDRA Consulting",
+    "subtitle": "Business transformation and operational excellence services.",
+    "stageLabel": "Built for Every Stage",
+    "stageSub": "Whether you are launching, growing, or transforming — we build the systems and infrastructure to match your stage.",
+    "stageCta": "Let's Talk",
+    "items": [
+      {
+        "name": "Business Transformation",
+        "desc": "End-to-end programs that redesign how your business operates, competes, and grows."
+      },
+      {
+        "name": "Operations Improvement",
+        "desc": "Identify and eliminate the friction in your operations — improving speed, reducing waste, and building operational resilience."
+      },
+      {
+        "name": "Process & KPI Design",
+        "desc": "Structured, documented, and accountable processes — with the KPI frameworks and dashboards that make performance visible."
+      },
+      {
+        "name": "Organizational Structure & Growth",
+        "desc": "Role clarity, team design, performance systems, and the commercial foundations that make growth sustainable."
+      }
+    ]
+  },
+  "capabilities": {
+    "label": "Selected Capabilities",
+    "heading": "What We Deliver.",
+    "subtitle": "Specific capabilities across Digital and Consulting — built, implemented, and measured.",
+    "items": [
+      "Websites",
+      "Platforms",
+      "CRM Systems",
+      "ERP Systems",
+      "Automation",
+      "AI Solutions",
+      "Dashboards",
+      "Mobile Apps",
+      "E-Commerce",
+      "Business Analytics",
+      "Process Design",
+      "KPI Systems"
+    ]
   },
   "insight": {
-    "label": "Why We Exist",
+    "label": "Why ASCENDRA",
     "headline": "Most businesses don't have a growth problem. They have a systems problem.",
     "body1": "Every business that has plateaued shares the same pattern. Operations that worked at ten people begin to strain at thirty. Decisions that used to take minutes take weeks. The founder becomes the bottleneck of their own company.",
     "body2": "The instinct is to hire more, push harder, or find a new strategy. But the constraint is rarely talent or ambition. It is the absence of operational infrastructure — the systems, digital tools, and growth foundations that allow a business to scale without breaking.",
     "emphasis1": "The solution is rarely more effort.",
     "emphasis2": "It is better systems.",
     "emphasis3": "Systems that create clarity, improve execution, and make growth repeatable.",
-    "body3": "ASCENDRA diagnoses the root cause, designs the right system, and builds it. Not a report. Not a recommendation. A functioning business transformation."
-  },
-  "services": {
-    "label": "What We Build",
-    "detailLabel": "Our Solutions",
-    "story": "We design and build the systems, infrastructure, and digital foundations your business needs to operate efficiently and scale with confidence.",
-    "items": [
-      {
-        "name": "Business Websites",
-        "desc": "Professional websites and landing pages built to establish your business presence, communicate your value clearly, and convert visitors into clients.",
-        "bullets": [
-          "Professional business websites",
-          "Landing pages and conversion-focused design",
-          "Business presence foundations",
-          "Performance-optimized and mobile-ready"
-        ]
-      },
-      {
-        "name": "Digital Infrastructure",
-        "desc": "The foundational digital layer every business needs to operate professionally — from domain and hosting to business email and analytics.",
-        "bullets": [
-          "Domain registration and management",
-          "Hosting setup and configuration",
-          "Business email systems",
-          "Analytics and tracking setup"
-        ]
-      },
-      {
-        "name": "Business Systems",
-        "desc": "The operational backbone of your business. We build CRM systems, define workflows, document processes, and create the internal infrastructure that lets your business run without chaos.",
-        "bullets": [
-          "CRM systems and pipeline management",
-          "Operational workflows and process documentation",
-          "Internal accountability structures",
-          "Performance management and KPI systems"
-        ]
-      },
-      {
-        "name": "Automation & Growth",
-        "desc": "We automate repetitive workflows and build the visibility tools — dashboards, reports, and KPI systems — that give you the data to make faster decisions and fuel consistent growth.",
-        "bullets": [
-          "Workflow and task automation",
-          "Performance dashboards and reporting",
-          "KPI tracking and business visibility",
-          "Growth systems and operational enablement"
-        ]
-      }
-    ]
+    "body3": "ASCENDRA diagnoses the root cause, designs the right system, and builds it — across digital infrastructure and operational excellence."
   },
   "outcomes": {
     "label": "Business Outcomes",
@@ -104,7 +139,7 @@
     "label": "Built for Every Stage",
     "heading": "Solutions for Where You Are.",
     "subtitle": "Whether you are launching, growing, or transforming — we build the systems and infrastructure to match your stage.",
-    "cta": "Start Your Diagnosis",
+    "cta": "Let's Talk",
     "items": [
       {
         "stage": "Launch",
@@ -141,27 +176,74 @@
       }
     ]
   },
+  "services": {
+    "label": "What We Build",
+    "detailLabel": "Our Solutions",
+    "story": "We design and implement the systems, infrastructure, and digital foundations your business needs to operate efficiently and scale with confidence.",
+    "items": [
+      {
+        "name": "Business Websites",
+        "desc": "Professional websites and landing pages built to establish your business presence, communicate your value clearly, and convert visitors into clients.",
+        "bullets": [
+          "Professional business websites",
+          "Landing pages and conversion-focused design",
+          "Digital presence foundations for businesses",
+          "Optimized performance and mobile compatibility"
+        ]
+      },
+      {
+        "name": "Digital Infrastructure",
+        "desc": "The core digital layer every business needs to operate professionally — from domain and hosting to business email and analytics.",
+        "bullets": [
+          "Domain registration and management",
+          "Hosting setup and configuration",
+          "Business email systems",
+          "Analytics and tracking setup"
+        ]
+      },
+      {
+        "name": "Business Systems",
+        "desc": "The operational backbone of your business. We build CRM systems, define workflows, document processes, and create the internal infrastructure that makes your business run without chaos.",
+        "bullets": [
+          "CRM systems and sales pipeline management",
+          "Operational workflows and process documentation",
+          "Internal accountability structures",
+          "Performance management and KPI systems"
+        ]
+      },
+      {
+        "name": "Automation & Growth",
+        "desc": "We automate repetitive workflows and build visibility tools — dashboards, reports, and KPI systems — that give you the data to make faster decisions and sustain consistent growth.",
+        "bullets": [
+          "Workflow and task automation",
+          "Performance dashboards and reporting",
+          "KPI tracking and business visibility",
+          "Growth systems and operational enablement"
+        ]
+      }
+    ]
+  },
   "start": {
-    "heading": "Ready to Build Your Business Systems?",
-    "card1Title": "I know what needs to be built.",
-    "card1Desc": "You have identified the gap. We design and build the systems, digital infrastructure, and operational foundations to fill it.",
-    "card1Cta": "Start Your Diagnosis",
-    "card2Title": "I'm not sure where to start.",
-    "card2Desc": "We run a business diagnosis to identify exactly what's holding your business back — then build the solution from there.",
+    "heading": "Ready to build your business systems?",
+    "card1Title": "I know what I need to build.",
+    "card1Desc": "You've identified the gap. We design and implement the systems, digital infrastructure, and operational foundations to close it.",
+    "card1Cta": "Start Your Assessment",
+    "card2Title": "I don't know where to start.",
+    "card2Desc": "We run a business diagnostic to identify exactly what's holding you back — then build the solution from there.",
     "card2Cta": "Book a Discovery Call"
+  },
+  "caseStudies": {
+    "label": "Our Work",
+    "heading": "Measurable Results.",
+    "subtitle": "Real work. Tangible outcomes. Every project built to last.",
+    "badge": "Case Study",
+    "comingSoon": "Documenting results in progress",
+    "available": "Full case studies available upon request.",
+    "categories": ["Enterprise Operations", "Digital Infrastructure", "Growth Systems"]
   },
   "philosophy": {
     "label": "Our Conviction",
     "text": "Most businesses don't fail because of bad ideas. They fail because the systems needed to execute those ideas were never built."
-  },
-  "caseStudies": {
-    "label": "Our Work",
-    "heading": "Results We've Delivered.",
-    "subtitle": "Real businesses. Measurable outcomes. Every engagement built to last.",
-    "badge": "Case Study",
-    "comingSoon": "Documenting outcomes",
-    "available": "Detailed case studies available upon request.",
-    "categories": ["Enterprise Operations", "Digital Infrastructure", "Growth Systems"]
   },
   "team": {
     "label": "The Founder",
@@ -172,9 +254,9 @@
     "websiteLabel": "Explore the Founder's Profile"
   },
   "approach": {
-    "label": "How We Work",
+    "label": "Transformation Approach",
     "heading": "The ASCENDRA System",
-    "subtitle": "A structured build methodology. Every project follows the same rigor. No two outcomes are identical.",
+    "subtitle": "A structured methodology applied across every Digital and Consulting engagement. Every project follows the same rigor. No two outcomes are identical.",
     "items": [
       {
         "step": "01",
@@ -204,16 +286,16 @@
     ]
   },
   "contact": {
-    "label": "Start Your Business Diagnosis",
-    "title": "Start Your Business Diagnosis.",
-    "subtitle": "Every transformation starts with understanding the real bottleneck. Tell us where your business is today and we will identify the systems, infrastructure, or growth constraints holding it back.",
+    "label": "Start Your Transformation",
+    "title": "Start Your Transformation.",
+    "subtitle": "Tell us where your business is today — we will identify the digital or operational gaps holding it back and build the path forward.",
     "name": "Full Name",
     "namePlaceholder": "Your full name",
     "email": "Work Email",
     "emailPlaceholder": "your@company.com",
     "message": "What is the challenge?",
     "messagePlaceholder": "Describe where your business is today and what's holding it back",
-    "send": "Start the Diagnosis",
+    "send": "Let's Talk",
     "successTitle": "Message Received.",
     "successBody": "We will review your submission and be in touch within 1–2 business days.",
     "errorMsg": "Something went wrong. Please try again or email us directly.",

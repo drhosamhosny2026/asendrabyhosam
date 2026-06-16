@@ -18,9 +18,9 @@ export default function Header() {
   }, [open]);
 
   const navLinks = [
-    { href: "#domains", label: t("services") },
-    { href: "#approach", label: t("work") },
-    { href: "#solutions", label: t("insights") },
+    { href: "#digital",    label: t("services") },
+    { href: "#consulting", label: t("work") },
+    { href: "#approach",   label: t("insights") },
   ];
 
   return (
