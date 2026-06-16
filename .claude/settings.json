@@ -49,7 +49,17 @@
       "Bash(netstat -ano)",
       "Bash(findstr \":3003\")",
       "Bash(taskkill /PID 64200 /F)",
-      "PowerShell(Stop-Process -Id 64200 -Force -ErrorAction SilentlyContinue)"
+      "PowerShell(Stop-Process -Id 64200 -Force -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Process -Name \"node\" -ErrorAction SilentlyContinue)",
+      "PowerShell(Stop-Process -Force -Confirm:$false)",
+      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:3002\" -UseBasicParsing -TimeoutSec 15)",
+      "PowerShell(Start-Sleep -Seconds 5; $r3000 = try { \\(Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 5\\).StatusCode } catch { \"fail\" }; $r3002 = try { \\(Invoke-WebRequest -Uri \"http://localhost:3002\" -UseBasicParsing -TimeoutSec 5\\).StatusCode } catch { \"fail\" }; Write-Host \"3000: $r3000  |  3002: $r3002\")",
+      "Read(//tmp/**)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/ar)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code} -> %{redirect_url}\" http://localhost:3000/en)",
+      "Bash(curl -s http://localhost:3000/ar)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(pkill -f \"next dev\")"
     ]
   }
 }
