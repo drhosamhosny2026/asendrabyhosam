@@ -135,13 +135,13 @@ export default function Home() {
               {con("subtitle")}
             </p>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-14">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
               {conItems.map((item, i) => (
                 <article
                   key={i}
-                  className="border border-gold/20 rounded-xl p-8 flex flex-col gap-3 hover:border-gold/50 transition-colors"
+                  className="border border-gold/20 rounded-xl p-6 flex flex-col gap-3 hover:border-gold/50 transition-colors"
                 >
-                  <h3 className="font-serif font-semibold text-xl text-navy leading-h3 tracking-heading">
+                  <h3 className="font-serif font-semibold text-lg text-navy leading-h3 tracking-heading">
                     {item.name}
                   </h3>
                   <p className="text-gray-text text-sm leading-relaxed">{item.desc}</p>
@@ -149,19 +149,12 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Stage CTA strip */}
-            <div className="bg-navy rounded-xl p-10 text-center">
-              <p className="font-serif font-semibold text-2xl md:text-3xl text-white leading-h2 tracking-heading mb-4 max-w-2xl mx-auto">
-                {con("stageLabel")}
-              </p>
-              <p className="text-light-gray/70 text-base leading-relaxed mb-8 max-w-xl mx-auto">
-                {con("stageSub")}
-              </p>
+            <div className="text-center">
               <a
                 href="#contact"
-                className="inline-block bg-gold text-navy px-8 py-3.5 rounded font-medium text-sm hover:bg-gold/90 transition"
+                className="inline-flex items-center gap-2 text-navy font-medium text-sm border-b border-navy/30 hover:border-gold hover:text-gold transition-colors pb-0.5"
               >
-                {con("stageCta")}
+                {con("stageCta")} <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>

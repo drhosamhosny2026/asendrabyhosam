@@ -9,105 +9,113 @@
     "cta": "Let's Talk"
   },
   "hero": {
-    "headline": "Business Transformation",
-    "headlineMid": "Through Digital Systems &",
-    "headlineAccent": "Operational Excellence.",
-    "subtext": "We help businesses build digital solutions, optimize operations, and create the foundations required for sustainable growth.",
+    "headline": "We Build the Digital Systems",
+    "headlineMid": "Your Business Needs",
+    "headlineAccent": "to Operate and Grow.",
+    "subtext": "Websites, e-commerce, CRM, ERP, dashboards, automation, and AI — ASCENDRA designs, builds, and delivers the full digital stack. Backed by business consulting when you need it.",
     "cta": "Let's Talk",
-    "ctaSecondary": "Explore Our Services",
-    "trustLine": "Business Transformation  ·  Riyadh, KSA"
+    "ctaSecondary": "See What We Build",
+    "trustLine": "Digital Systems & Business Consulting  ·  Riyadh, KSA"
   },
   "digital": {
-    "label": "Digital Solutions",
-    "heading": "ASCENDRA Digital",
-    "subtitle": "Digital solutions that help businesses operate, sell, and scale.",
+    "label": "ASCENDRA Digital",
+    "heading": "What We Build.",
+    "subtitle": "Nine digital products. One team. Full delivery from strategy to deployment.",
     "groups": [
       {
-        "name": "Web & Commerce",
-        "desc": "Your business presence and commercial infrastructure online.",
+        "name": "Websites & Platforms",
+        "desc": "Your digital presence and commercial infrastructure — designed to communicate your value clearly and convert visitors into clients.",
         "items": [
           "Business Websites",
           "Personal Brand Websites",
-          "E-commerce Platforms",
-          "Learning Platforms"
+          "E-commerce Stores",
+          "Educational Platforms"
         ]
       },
       {
-        "name": "Systems & Applications",
-        "desc": "The operational and customer-facing software your business runs on.",
+        "name": "Business Systems",
+        "desc": "The operational software your business runs on. CRM, ERP, and the internal tools your team uses to execute, sell, and serve.",
         "items": [
-          "CRM & ERP Systems",
+          "CRM Systems",
+          "ERP Systems",
           "Customer Portals",
-          "Mobile Applications",
-          "Process Automation"
+          "Mobile Applications"
         ]
       },
       {
-        "name": "Intelligence & Infrastructure",
-        "desc": "Data, automation, and the digital foundation for scale.",
+        "name": "Automation & AI",
+        "desc": "Visibility, automation, and intelligence for businesses that want to move faster, eliminate manual work, and make better decisions.",
         "items": [
-          "Dashboards & Reporting",
+          "Dashboards",
+          "Automation",
           "AI Solutions",
-          "Digital Infrastructure",
-          "Data Systems"
+          "Digital Infrastructure"
         ]
       }
     ]
   },
   "consulting": {
-    "label": "Consulting",
-    "heading": "ASCENDRA Consulting",
-    "subtitle": "Business transformation and operational excellence services.",
-    "stageLabel": "Built for Every Stage",
-    "stageSub": "Whether you are launching, growing, or transforming — we build the systems and infrastructure to match your stage.",
-    "stageCta": "Let's Talk",
+    "label": "ASCENDRA Consulting",
+    "heading": "Business Consulting.",
+    "subtitle": "Operational and strategic consulting that supports your digital investment — and drives the business results behind it.",
+    "stageLabel": "Consulting that supports your digital investment.",
+    "stageSub": "",
+    "stageCta": "Start a Conversation",
     "items": [
       {
-        "name": "Business Transformation",
-        "desc": "End-to-end programs that redesign how your business operates, competes, and grows."
+        "name": "Business Analysis",
+        "desc": "A structured assessment of your business model, commercial gaps, and operational constraints — delivered as an actionable roadmap."
+      },
+      {
+        "name": "Data Analysis",
+        "desc": "Turn your data into decisions. We build reporting structures and analytical models that make business performance visible and measurable."
+      },
+      {
+        "name": "Process Design",
+        "desc": "Documented, structured, and accountable processes — the internal backbone that allows your team to execute consistently at scale."
+      },
+      {
+        "name": "KPI Systems",
+        "desc": "Define what performance looks like, build the measurement framework, and install the dashboards that keep every team aligned and accountable."
       },
       {
         "name": "Operations Improvement",
-        "desc": "Identify and eliminate the friction in your operations — improving speed, reducing waste, and building operational resilience."
+        "desc": "Identify the friction inside your operations and systematically remove it — improving execution speed, reducing errors, and increasing output."
       },
       {
-        "name": "Process & KPI Design",
-        "desc": "Structured, documented, and accountable processes — with the KPI frameworks and dashboards that make performance visible."
-      },
-      {
-        "name": "Organizational Structure & Growth",
-        "desc": "Role clarity, team design, performance systems, and the commercial foundations that make growth sustainable."
+        "name": "Growth Consulting",
+        "desc": "Commercial strategy, market expansion, and the operational foundations required to acquire and retain clients at scale."
       }
     ]
   },
   "capabilities": {
     "label": "Selected Capabilities",
     "heading": "What We Deliver.",
-    "subtitle": "Specific capabilities across Digital and Consulting — built, implemented, and measured.",
+    "subtitle": "Digital products and business consulting services — built, implemented, and measured.",
     "items": [
-      "Websites",
-      "Platforms",
+      "Business Websites",
+      "E-commerce Stores",
+      "Educational Platforms",
       "CRM Systems",
       "ERP Systems",
+      "Dashboards",
       "Automation",
       "AI Solutions",
-      "Dashboards",
-      "Mobile Apps",
-      "E-Commerce",
-      "Business Analytics",
+      "Mobile Applications",
       "Process Design",
-      "KPI Systems"
+      "KPI Systems",
+      "Business Analysis"
     ]
   },
   "insight": {
     "label": "Why ASCENDRA",
-    "headline": "Most businesses don't have a growth problem. They have a systems problem.",
-    "body1": "Every business that has plateaued shares the same pattern. Operations that worked at ten people begin to strain at thirty. Decisions that used to take minutes take weeks. The founder becomes the bottleneck of their own company.",
-    "body2": "The instinct is to hire more, push harder, or find a new strategy. But the constraint is rarely talent or ambition. It is the absence of operational infrastructure — the systems, digital tools, and growth foundations that allow a business to scale without breaking.",
+    "headline": "Most businesses have a digital gap. And a systems problem hiding behind it.",
+    "body1": "Every business that has plateaued shares the same pattern. Operations that worked at ten people begin to strain at thirty. The website doesn't reflect the business anymore. There is no CRM, so nothing gets followed up. Reports are spreadsheets nobody trusts. The founder is the only person who knows where everything stands.",
+    "body2": "The instinct is to hire more, push harder, or find a new strategy. But the constraint is rarely talent or ambition. It is the absence of the digital infrastructure — the website, the systems, the automation, and the data visibility — that allow a business to operate efficiently and scale without breaking.",
     "emphasis1": "The solution is rarely more effort.",
     "emphasis2": "It is better systems.",
     "emphasis3": "Systems that create clarity, improve execution, and make growth repeatable.",
-    "body3": "ASCENDRA diagnoses the root cause, designs the right system, and builds it — across digital infrastructure and operational excellence."
+    "body3": "ASCENDRA starts with the digital project — website, CRM, ERP, automation, or AI — and builds the operational foundation that makes it work inside your business."
   },
   "outcomes": {
     "label": "Business Outcomes",
