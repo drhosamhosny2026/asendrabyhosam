@@ -18,9 +18,10 @@ export default function Header() {
   }, [open]);
 
   const navLinks = [
-    { href: "#digital",    label: t("services") },
-    { href: "#consulting", label: t("work") },
-    { href: "#approach",   label: t("insights") },
+    { href: `/${locale}/services`, label: t("services") },
+    { href: `/${locale}/work`,     label: t("work") },
+    { href: `/${locale}/about`,    label: t("insights") },
+    { href: `/${locale}/contact`,  label: t("contact") },
   ];
 
   return (
@@ -43,9 +44,9 @@ export default function Header() {
           {/* Desktop nav */}
           <nav aria-label={locale === "ar" ? "التنقل الرئيسي" : "Primary navigation"} className="hidden md:flex items-center gap-8">
             {navLinks.map((l) => (
-              <a key={l.href} href={l.href} className="text-light-gray/75 text-sm hover:text-gold transition">
+              <Link key={l.href} href={l.href} className="text-light-gray/75 text-sm hover:text-gold transition" onClick={() => setOpen(false)}>
                 {l.label}
-              </a>
+              </Link>
             ))}
             <Link
               href={`/${other}`}
@@ -53,12 +54,12 @@ export default function Header() {
             >
               {other === "ar" ? "عربي" : "EN"}
             </Link>
-            <a
-              href="#contact"
+            <Link
+              href={`/${locale}/contact`}
               className="bg-gold text-navy text-sm font-medium px-5 py-2 rounded hover:bg-gold/90 transition"
             >
               {t("cta")}
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile hamburger button */}
@@ -92,7 +93,7 @@ export default function Header() {
             tabIndex={open ? undefined : -1}
           >
             {navLinks.map((l) => (
-              <a
+              <Link
                 key={l.href}
                 href={l.href}
                 tabIndex={open ? 0 : -1}
@@ -100,7 +101,7 @@ export default function Header() {
                 onClick={() => setOpen(false)}
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
             <div className="flex items-center justify-between pt-6 gap-4">
               <Link
@@ -111,14 +112,14 @@ export default function Header() {
               >
                 {other === "ar" ? "عربي" : "EN"}
               </Link>
-              <a
-                href="#contact"
+              <Link
+                href={`/${locale}/contact`}
                 tabIndex={open ? 0 : -1}
                 className="flex-1 text-center bg-gold text-navy text-sm font-medium px-5 py-2.5 rounded hover:bg-gold/90 transition"
                 onClick={() => setOpen(false)}
               >
                 {t("cta")}
-              </a>
+              </Link>
             </div>
           </nav>
         </div>

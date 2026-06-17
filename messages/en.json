@@ -6,9 +6,9 @@
   },
   "nav": {
     "home": "Home",
-    "services": "Digital",
-    "work": "Consulting",
-    "insights": "Approach",
+    "services": "Services",
+    "work": "Work",
+    "insights": "About",
     "contact": "Contact",
     "cta": "Let's Talk"
   },
@@ -114,7 +114,8 @@
       "Mobile Applications",
       "Analytics & Reporting",
       "Process Design",
-      "KPI Systems"
+      "KPI Systems",
+      "Business Systems Design"
     ]
   },
   "insight": {
@@ -171,7 +172,7 @@
   },
   "approach": {
     "label": "Transformation Approach",
-    "heading": "The ASCENDRA System",
+    "heading": "The ASCENDRA Method",
     "subtitle": "A structured methodology applied across every Digital and Consulting engagement. Every project follows the same rigor. No two outcomes are identical.",
     "items": [
       {
@@ -228,5 +229,284 @@
     "rights": "All rights reserved.",
     "connect": "Connect with us",
     "emailPlaceholder": "hello@ascendra.com"
+  },
+  "selectedWork": {
+    "label": "Selected Work",
+    "heading": "What We Have Built.",
+    "viewProject": "View Project",
+    "viewCaseStudy": "View Case Study",
+    "viewAll": "View All Work",
+    "items": [
+      {
+        "tier": "Flagship Product",
+        "name": "PharmacyOS",
+        "desc": "The complete operating system for modern pharmacies. Designed and built by ASCENDRA — not a client project.",
+        "href": "work"
+      },
+      {
+        "tier": "Case Study · Education",
+        "name": "Taghreed Academy",
+        "desc": "Digital systems and operational infrastructure for a growing education platform in Saudi Arabia.",
+        "href": "work"
+      },
+      {
+        "tier": "Digital Presence",
+        "name": "WIN Solutions",
+        "desc": "Corporate website and digital presence for a Saudi B2B services company.",
+        "href": "work"
+      }
+    ]
+  },
+  "contactCta": {
+    "label": "Start Your Transformation",
+    "heading": "Tell us where your business is today.",
+    "body": "We will identify the digital or operational gaps holding it back — and build the path forward.",
+    "primary": "Let's Talk",
+    "whatsapp": "Or message us on WhatsApp"
+  },
+  "servicesPage": {
+    "hero": {
+      "label": "Services",
+      "heading": "Digital Systems & Business Consulting.",
+      "sub": "Two pillars. One integrated system.",
+      "pillar1": "ASCENDRA Digital builds the digital products your business runs on.",
+      "pillar2": "ASCENDRA Consulting builds the operational systems that make them work."
+    },
+    "digitalSection": {
+      "footerNote": "Every digital engagement begins with an operational assessment. We build after we understand.",
+      "services": [
+        {
+          "name": "Business Websites",
+          "desc": "Your digital storefront — designed to represent your business with precision and convert visitors into clients. Corporate websites, personal brand sites, and e-commerce stores built to perform."
+        },
+        {
+          "name": "Business Systems Design",
+          "desc": "Designing custom operational systems, internal platforms, workflows, dashboards, and digital infrastructure — tailored to how your business actually operates. Before a single line of code is written."
+        },
+        {
+          "name": "Platforms & Portals",
+          "desc": "Custom web platforms, internal portals, and digital infrastructure built around specific business requirements — from client management portals to multi-sided marketplaces."
+        },
+        {
+          "name": "CRM Systems",
+          "desc": "Customer relationship management systems that track every lead, manage every relationship, and give your sales team a structured pipeline — built on or around the right platform for your business."
+        },
+        {
+          "name": "ERP Implementation",
+          "desc": "Enterprise resource planning systems that integrate your operations — finance, inventory, procurement, HR — into one coherent operating layer."
+        },
+        {
+          "name": "Business Dashboards",
+          "desc": "Real-time visibility into your most important business metrics. Custom dashboards that surface the numbers that matter — designed for the people who use them, not for the people who build them."
+        },
+        {
+          "name": "Workflow Automation",
+          "desc": "Remove the manual work that slows your business down. Automated workflows that connect your systems, trigger on the right events, and eliminate the human bottlenecks that create errors and delay."
+        },
+        {
+          "name": "AI Solutions",
+          "desc": "Applied artificial intelligence built around specific business problems — not general AI tools retrofitted to an existing workflow. Recommendation engines, predictive analytics, intelligent automation, and custom AI products."
+        },
+        {
+          "name": "Mobile Applications",
+          "desc": "iOS and Android applications built to extend your business operations to mobile — whether for your clients, your team, or your own internal operations."
+        },
+        {
+          "name": "Analytics & Reporting",
+          "desc": "Data infrastructure, reporting systems, and analytics frameworks that turn raw business data into operational intelligence — giving leadership the visibility to make faster, better decisions."
+        }
+      ]
+    },
+    "pillars": {
+      "heading": "Two pillars. One system.",
+      "body1": "Most digital projects fail not because the technology is wrong — but because the operational context it was built into was never properly understood. A CRM that doesn't match how your sales team actually works won't be used. A website that doesn't reflect how your business operates won't convert.",
+      "body2": "The ASCENDRA model fixes this by combining the two disciplines before the first deliverable is scoped. ASCENDRA Consulting runs an operational diagnosis. ASCENDRA Digital designs the system against the reality of that diagnosis — not against a generic brief.",
+      "body3": "The result is a digital system that works the moment it goes live — because it was built around the actual business, not around a set of requirements written in a meeting.",
+      "step1": "Consulting diagnoses the operational reality.",
+      "step2": "Digital is designed against that reality.",
+      "step3": "Implementation carries both layers simultaneously.",
+      "step4": "Measurement begins from day one.",
+      "closing": "This is not two services. It is one system — and the distinction matters."
+    },
+    "cta": {
+      "label": "Start Your Engagement",
+      "heading": "Not sure which service applies?",
+      "body": "Most engagements begin with a conversation, not a brief. Tell us where your business is today — we will identify the right starting point.",
+      "primary": "Let's Talk",
+      "secondary": "See Our Work"
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "label": "About ASCENDRA",
+      "heading": "Built by practitioners, not advisors.",
+      "sub": "Built by practitioners who understand how businesses actually operate."
+    },
+    "story": {
+      "label": "The Foundation",
+      "heading": "Why ASCENDRA exists.",
+      "body1": "ASCENDRA was built because a gap kept appearing. Not across industries — but inside them. Business owners with real ambition, capable teams, and a growing client base — but operating on systems that could not hold the weight of the next stage. A website that was not working. A sales pipeline tracked in someone's head. Reports that nobody trusted. Processes that only the founder could navigate.",
+      "body2": "The instinct in those moments is to hire more, push harder, or try a new strategy. But the constraint is not effort or talent. It is the absence of a coherent digital and operational foundation — the kind that allows a business to execute consistently, measure what matters, and grow without everything depending on one person.",
+      "body3": "ASCENDRA exists to build that foundation. Not as a consultant who delivers a slide deck. Not as a developer who hands over a website. As a systems partner — combining the digital and operational layers that allow a business to operate at the level it is actually capable of."
+    },
+    "vision": {
+      "label": "Vision & Mission",
+      "visionLabel": "Vision",
+      "vision": "To become the trusted digital and operational systems partner for ambitious businesses in Saudi Arabia and the GCC.",
+      "missionLabel": "Mission",
+      "mission": "To close the gap between business ambition and business execution — by building the digital systems and operational frameworks that allow organizations to operate clearly, grow predictably, and scale without losing control."
+    },
+    "values": {
+      "label": "What We Believe",
+      "heading": "Five principles that govern every engagement.",
+      "items": [
+        {
+          "title": "Precision over Speed",
+          "body": "The temptation to move fast is constant. ASCENDRA resists it. Every system we build begins with a thorough assessment — because a solution built on incomplete understanding solves the wrong problem. We move when we have clarity, not when we have urgency. Precision is not caution. It is how we ensure that what we build works."
+        },
+        {
+          "title": "Execution over Advice",
+          "body": "Consulting that ends with a report changes nothing. Advice without implementation is theoretical. ASCENDRA's standard is that every engagement ends with something operating — a system running, a process installed, a tool that people are using. We measure our value by what exists after we leave, not by what we said while we were there."
+        },
+        {
+          "title": "Systems over Workarounds",
+          "body": "The instinct when something breaks is to patch it. ASCENDRA's instinct is to ask why it broke — and build the structure that prevents it from breaking again. Workarounds accumulate. Systems compound. We choose the harder, more durable path every time."
+        },
+        {
+          "title": "Clarity over Complexity",
+          "body": "Complexity is easy. Clarity is hard. Every system ASCENDRA builds — every process, every dashboard, every workflow — must be understandable to the people who use it. Complexity that cannot be explained cannot be operated. We build for the people who will run the business, not for the people who designed the system."
+        },
+        {
+          "title": "Partnership over Transactions",
+          "body": "An engagement that ends at delivery is a transaction. ASCENDRA is built for partnerships — where success is measured by what the client's business looks like six months after we built something, not by whether we delivered on time. We care about outcomes, not outputs."
+        }
+      ]
+    },
+    "method": {
+      "label": "How We Work",
+      "heading": "The ASCENDRA Method.",
+      "sub": "A five-phase methodology applied to every Digital and Consulting engagement — with the same rigor regardless of project size or category.",
+      "items": [
+        {
+          "step": "01",
+          "name": "Assess",
+          "desc": "Map the operations, the commercial reality, the existing systems, and the gap between where the business is and where it needs to be. Most engagements begin here — because the solution is almost never what the client thinks it is when they first reach out. We surface the actual constraint before we design anything."
+        },
+        {
+          "step": "02",
+          "name": "Design",
+          "desc": "Design the build plan specific to the business, the sector, and the constraint identified in the assessment. No templates. No pre-made solutions applied to a different problem. An executable plan — agreed, scoped, and built around what will actually work in this business."
+        },
+        {
+          "step": "03",
+          "name": "Build",
+          "desc": "Build the systems, the digital products, the workflows, and the infrastructure identified in the design phase. Every Build phase ends with something operating — not a prototype, not a plan, but a functioning system that the business is using."
+        },
+        {
+          "step": "04",
+          "name": "Measure",
+          "desc": "Install the KPIs, the dashboards, and the reporting structures that make business performance visible in real time. Decisions made on gut instinct plateau. Decisions made on accurate, visible data compound. We wire the measurement layer before we hand over."
+        },
+        {
+          "step": "05",
+          "name": "Scale",
+          "desc": "Stay with the business through the growth curve — refining systems as volume increases, expanding capabilities as new challenges emerge, and ensuring that the initial transformation compounds over time. Scale is not a moment. It is an ongoing commitment."
+        }
+      ]
+    },
+    "founder": {
+      "label": "The Founder",
+      "name": "Hossam H. Emam",
+      "title": "Founder & Managing Director, ASCENDRA",
+      "roles": "Pharmacist · Operations Leader · Business Systems Builder",
+      "p1": "Hossam H. Emam began his career as a pharmacist. Not as a stepping stone — as a serious practitioner managing retail pharmacy operations, supplier chains, staff, and patient-facing systems in a high-pressure, heavily regulated environment. The skills that formed in that context — operational precision, systems thinking, compliance under constraints — became the foundation for everything that followed.",
+      "p2": "What became clear across sectors was a consistent gap. Businesses of all sizes were operating on fragile systems — processes held together by individual effort rather than structural design. CRM in a notebook. Inventory in a spreadsheet nobody trusted. Reports that arrived too late to act on. The businesses that scaled were not the ones that worked harder. They were the ones that built better.",
+      "p3": "The insight became a product. PharmacyOS was designed and built by Hossam to address a specific failure in pharmacy operations — the absence of an integrated management system designed for how a modern pharmacy actually works. It was not a client request. It was ASCENDRA's first proof of concept: that deep operational understanding, translated into a functioning digital system, could transform how a business operates.",
+      "p4": "ASCENDRA was founded as the extension of that conviction. Two pillars — digital and consulting — because neither works fully without the other. A digital system built without operational understanding breaks the moment it meets real business complexity. Consulting without implementation capability remains theoretical. ASCENDRA combines both — by design, not by coincidence.",
+      "quote": "ASCENDRA is not a consultancy that hands you a report. It is an execution partner that builds the systems with you.",
+      "linkLabel": "Explore the Founder's Profile"
+    },
+    "network": {
+      "label": "How We Engage",
+      "heading": "Our Network of Specialists.",
+      "body1": "Every ASCENDRA engagement is led by Hossam H. Emam — the founding director and the primary point of continuity for every client relationship. But the depth of delivery comes from a carefully curated network of specialists assembled for each project: developers, designers, data analysts, automation engineers, and industry consultants selected for their specific domain expertise.",
+      "body2": "This is not a freelance directory. Every specialist in the ASCENDRA network has been selected, vetted, and engaged based on track record — and every engagement is led with the same standard regardless of the project's size or category.",
+      "quote": "The right experts for the right challenge — assembled deliberately, not allocated by availability.",
+      "point1": "ASCENDRA leads every engagement from diagnosis to delivery. The client always has a single point of accountability.",
+      "point2": "The client interface is always ASCENDRA. Specialists deliver behind the scenes, at ASCENDRA's standard.",
+      "point3": "The network is curated, not crowdsourced. Every specialist has been selected for track record, not availability."
+    },
+    "cta": {
+      "heading": "Ready to build?",
+      "body": "Most engagements begin with a conversation — not a brief. Tell us where your business is today.",
+      "primary": "Let's Talk",
+      "secondary": "See What We Build"
+    }
+  },
+  "workPage": {
+    "hero": {
+      "label": "Work",
+      "heading": "What we have built.",
+      "sub": "From a flagship product designed and built by ASCENDRA, to digital systems and operational infrastructure built for clients in Saudi Arabia."
+    },
+    "pharmacyOS": {
+      "tierLabel": "Flagship Product",
+      "name": "PharmacyOS",
+      "tagline": "The complete operating system for modern pharmacies.",
+      "problemLabel": "The Problem",
+      "problem1": "Modern pharmacy operations are more complex than they appear from the outside. A functioning pharmacy must simultaneously manage inventory — dozens of supplier relationships, expiry tracking, reorder thresholds — alongside staff, patients, prescriptions, and real-time business performance. Doing all of this accurately, with a small team and no integrated system, is not possible.",
+      "problem2": "The result in most pharmacies is a patchwork: a POS system that handles transactions but not inventory intelligence, a WhatsApp group for shift coordination, a spreadsheet nobody trusts for stock levels, and a pharmacy owner who holds the entire operation in their head. When that owner is not there, the operation degrades.",
+      "productLabel": "The Product",
+      "product1": "PharmacyOS is a custom-designed pharmacy management system built to replace the patchwork with one integrated operating layer. It was designed not by a software team looking for a vertical — but by a pharmacist and operations specialist who lived inside the problem.",
+      "product2": "Every feature in PharmacyOS was derived from a real operational gap — not from a feature list. The system was built to be operated by pharmacy staff with no technical background, managed by pharmacy owners without the need for constant presence, and scaled to multi-branch operations without architectural modification.",
+      "coversLabel": "What It Covers",
+      "covers": [
+        "Inventory Management & Expiry Tracking",
+        "Supplier Management & Purchase Orders",
+        "Staff Operations & Shift Control",
+        "Prescription Tracking & Patient Records",
+        "Sales, Revenue & Financial Reporting",
+        "Business Intelligence Dashboard"
+      ],
+      "pillarsLabel": "ASCENDRA Pillars Applied",
+      "digitalScope": "Designed, built, and deployed by ASCENDRA Digital — custom-built from the ground up, not a configured SaaS platform.",
+      "consultingScope": "Operational structure, workflow design, and pharmacy management methodology developed by ASCENDRA Consulting — derived from direct sector experience.",
+      "statusLabel": "Status",
+      "status": "Proprietary Product · Designed and Built by ASCENDRA",
+      "statusNote": "PharmacyOS is not a client project. It is a product created from operational conviction — ASCENDRA's most direct proof that deep sector understanding, translated into a functioning digital system, changes how a business operates."
+    },
+    "caseStudies": {
+      "tierLabel": "Case Studies",
+      "taghreedName": "Taghreed Academy",
+      "taghreedTag": "Case Study · Education",
+      "taghreedDesc": "Digital systems and operational infrastructure for a growing education platform in Saudi Arabia.",
+      "ascendraName": "ASCENDRA Website",
+      "ascendraTag": "Case Study · Digital",
+      "ascendraChallenge": "Build the first version of ASCENDRA's public-facing website — a bilingual (EN/AR) digital presence that accurately represents the company's positioning, brand, and service architecture from day one.",
+      "ascendraApproach": "Designed and built from the brand up — starting with strategic positioning documents, moving through information architecture and content blueprinting, to implementation. Every layout rule was defined before a line of code was written.",
+      "ascendraBuilt": "Next.js 15 (App Router) · React 19 · TypeScript · Tailwind CSS · next-intl. Bilingual EN/AR with RTL layout. Schema.org structured data. Core Web Vitals optimized.",
+      "ascendraOutcome": "A production-ready bilingual digital presence that holds ASCENDRA's strategic positioning accurately — built to be extended as the company grows.",
+      "pillarsApplied": "ASCENDRA Pillars Applied",
+      "digital": "Digital",
+      "consulting": "Consulting"
+    },
+    "digitalPresence": {
+      "tierLabel": "Digital Presence",
+      "winName": "WIN Solutions",
+      "winTag": "Digital Presence · B2B Services",
+      "winDesc": "Corporate website and digital presence for a Saudi B2B services company.",
+      "hossamName": "Dr Hossam Personal Website",
+      "hossamTag": "Digital Presence · Personal Brand",
+      "hossamDesc": "Personal brand website for the founder — establishing a credible professional presence.",
+      "mohamedName": "Dr Mohamed Karam",
+      "mohamedTag": "Digital Presence · Medical",
+      "mohamedDesc": "Personal and professional digital presence for a medical professional."
+    },
+    "cta": {
+      "heading": "Have a project in mind?",
+      "body": "Tell us what you are trying to build. We will identify the right approach and scope it correctly.",
+      "primary": "Let's Talk",
+      "secondary": "See Our Services"
+    }
   }
 }
