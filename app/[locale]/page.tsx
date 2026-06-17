@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -7,7 +7,9 @@ import { LINKS } from "@/config/links";
 
 export default function Home() {
   const hero  = useTranslations("hero");
+  const brand = useTranslations("brand");
   const dig   = useTranslations("digital");
+  const bri   = useTranslations("bridge");
   const con   = useTranslations("consulting");
   const app   = useTranslations("approach");
   const cap   = useTranslations("capabilities");
@@ -16,6 +18,8 @@ export default function Home() {
   const outT  = useTranslations("outcomes");
   const cont  = useTranslations("contact");
   const teamT = useTranslations("team");
+
+  const locale = useLocale();
 
   const groups   = dig.raw("groups")   as { name: string; desc: string; items: string[] }[];
   const conItems = con.raw("items")    as { name: string; desc: string }[];
@@ -51,8 +55,11 @@ export default function Home() {
               width={56}
               height={56}
               unoptimized
-              className="h-14 w-14 mb-8 rise"
+              className="h-14 w-14 mb-2 rise"
             />
+            <p className="font-sans text-[11px] uppercase tracking-label text-gold/70 mb-7 rise rise-d1">
+              {brand("tagline")}
+            </p>
 
             <p className="font-medium text-gold/80 text-xs tracking-label uppercase mb-5 rise rise-d1">
               {hero("trustLine")}
@@ -125,6 +132,25 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* ── BRIDGE: Two Pillars, One System ─────────────────────────── */}
+        <div className="py-12 px-6 bg-white">
+          <div className="max-w-content mx-auto">
+            <div className="max-w-2xl border-s-2 border-gold/40 ps-8 space-y-3">
+              <p className="text-navy/70 text-base md:text-lg leading-relaxed">
+                {bri("body")}
+              </p>
+              <p className="text-navy text-base md:text-lg leading-relaxed font-medium">
+                <span className="text-gold font-semibold">ASCENDRA Digital</span>{" "}
+                {bri("digitalLine")}
+              </p>
+              <p className="text-navy text-base md:text-lg leading-relaxed font-medium">
+                <span className="text-gold font-semibold">ASCENDRA Consulting</span>{" "}
+                {bri("consultingLine")}
+              </p>
+            </div>
+          </div>
+        </div>
 
         {/* ── 3. ASCENDRA CONSULTING ──────────────────────────────────── */}
         <section id="consulting" aria-labelledby="consulting-heading" className="py-20 px-6 scroll-mt-20">
@@ -235,7 +261,7 @@ export default function Home() {
               <p>{ins("body2")}</p>
             </div>
 
-            <div className="border-l-2 border-gold pl-8 mb-12 space-y-3 max-w-2xl" role="note">
+            <blockquote className="border-s-2 border-gold ps-8 mb-12 space-y-3 max-w-2xl">
               <p className="font-serif font-semibold text-2xl md:text-[1.75rem] text-navy leading-h3 tracking-heading">
                 {ins("emphasis1")}
               </p>
@@ -245,7 +271,7 @@ export default function Home() {
               <p className="font-serif text-xl md:text-2xl text-navy/70 italic leading-relaxed">
                 {ins("emphasis3")}
               </p>
-            </div>
+            </blockquote>
 
             <p className="max-w-2xl text-navy/70 text-lg leading-relaxed mb-20">
               {ins("body3")}
@@ -262,7 +288,7 @@ export default function Home() {
               {outcomes.map((o, i) => (
                 <div key={i} className="bg-light-gray rounded-xl p-8 flex flex-col gap-3">
                   <div
-                    aria-label="Significant increase in"
+                    aria-label={locale === "ar" ? "زيادة ملحوظة في" : "Significant increase in"}
                     className="text-gold font-serif font-semibold text-4xl leading-none"
                   >
                     {o.metric}
@@ -322,7 +348,7 @@ export default function Home() {
                 </p>
                 <div className="border-t border-gold/20 pt-4 mt-1">
                   <p className="text-gold/70 text-xs uppercase tracking-label font-medium">ASCENDRA</p>
-                  <p className="text-navy/40 text-xs mt-1">Riyadh, KSA</p>
+                  <p className="text-gray-text text-xs mt-1">Riyadh, KSA</p>
                 </div>
               </div>
             </div>
@@ -345,7 +371,7 @@ export default function Home() {
             <ContactForm />
 
             <div className="mt-10 pt-8 border-t border-navy/10 flex flex-col items-center gap-4">
-              <p className="text-navy/45 text-xs">{cont("orConnect")}</p>
+              <p className="text-gray-text text-xs">{cont("orConnect")}</p>
               <div className="flex flex-wrap justify-center gap-3">
                 <a
                   href={LINKS.whatsappMsg}

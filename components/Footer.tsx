@@ -64,10 +64,11 @@ export default function Footer() {
           className="h-10 w-10 mb-3"
         />
         <div className="text-white text-xl font-serif font-semibold wordmark mb-1">{b("name")}</div>
-        <div className="text-gold text-sm subword font-serif mb-8">{b("sub")}</div>
+        <div className="text-gold text-sm subword font-serif mb-2">{b("sub")}</div>
+        <p className="font-sans text-[11px] uppercase tracking-label text-gold/55 mb-8">{b("tagline")}</p>
 
         {/* Social Icons */}
-        <div className="flex items-center gap-3 mb-4" aria-label={f("connect")}>
+        <nav aria-label={f("connect")} className="flex items-center gap-3 mb-4">
           {socials.map(({ href, Icon, label }) =>
             href !== "#" ? (
               <a
@@ -90,7 +91,7 @@ export default function Footer() {
               </span>
             )
           )}
-        </div>
+        </nav>
 
         {/* Email */}
         {LINKS.email !== "#" ? (

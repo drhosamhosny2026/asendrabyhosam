@@ -1,5 +1,9 @@
 {
-  "brand": { "name": "ASCENDRA", "sub": "by Hossam", "tagline": "Transform. Operate. Scale." },
+  "brand": {
+    "name": "ASCENDRA",
+    "sub": "by Hossam",
+    "tagline": "Built to Ascend."
+  },
   "nav": {
     "home": "Home",
     "services": "Digital",
@@ -9,10 +13,10 @@
     "cta": "Let's Talk"
   },
   "hero": {
-    "headline": "We Build Digital Solutions",
-    "headlineMid": "That Help Businesses",
-    "headlineAccent": "Grow.",
-    "keyMessage": "Your business needs digital solutions — and operational systems behind them.",
+    "headline": "We Build the Digital Systems",
+    "headlineMid": "Your Business Needs to",
+    "headlineAccent": "Operate and Grow.",
+    "keyMessage": "Digital products, built on real operational consulting. Two pillars. One system.",
     "subtext": "Websites, E-Commerce Stores, CRM Systems, ERP Systems, Mobile Apps, Dashboards, Automation, AI Solutions, and Custom Platforms built around your business goals.",
     "cta": "Let's Talk",
     "ctaSecondary": "See What We Build",
@@ -55,11 +59,16 @@
       }
     ]
   },
+  "bridge": {
+    "body": "Most businesses have a digital gap — and a systems problem hiding behind it.",
+    "digitalLine": "builds the visible layer.",
+    "consultingLine": "builds the foundation that makes it work."
+  },
   "consulting": {
     "label": "ASCENDRA Consulting",
     "heading": "Business Consulting.",
-    "subtitle": "Operational and strategic consulting that supports your digital investment — and drives the business results behind it.",
-    "stageLabel": "Consulting that supports your digital investment.",
+    "subtitle": "The operational foundation beneath every digital system we build.",
+    "stageLabel": "The operational foundation beneath every digital system we build.",
     "stageSub": "",
     "stageCta": "Start a Conversation",
     "items": [
@@ -144,112 +153,6 @@
       }
     ]
   },
-  "solutions": {
-    "label": "Built for Every Stage",
-    "heading": "Solutions for Where You Are.",
-    "subtitle": "Whether you are launching, growing, or transforming — we build the systems and infrastructure to match your stage.",
-    "cta": "Let's Talk",
-    "items": [
-      {
-        "stage": "Launch",
-        "tagline": "Founders  ·  Early Stage  ·  New Ventures",
-        "desc": "You have an idea or an early product. We build the digital foundation, set up your infrastructure, and structure your operations for growth from day one.",
-        "bullets": [
-          "Business website and digital presence",
-          "Domain, hosting, and email setup",
-          "Early-stage CRM and workflow foundation",
-          "Launch-ready operational structure"
-        ]
-      },
-      {
-        "stage": "Grow",
-        "tagline": "SMEs  ·  Growing Teams  ·  Scaling Businesses",
-        "desc": "You have traction but operations are getting complex. We build the systems, automate the bottlenecks, and give you the visibility to scale with confidence.",
-        "bullets": [
-          "Business systems and process design",
-          "Workflow automation",
-          "KPI dashboards and performance visibility",
-          "Digital infrastructure for operational scale"
-        ]
-      },
-      {
-        "stage": "Transform",
-        "tagline": "Established Businesses  ·  Restructuring  ·  Optimization",
-        "desc": "Your business has grown but the inside hasn't kept up. We audit what's holding you back, redesign the architecture, and implement the transformation required for the next level.",
-        "bullets": [
-          "Full operational and systems audit",
-          "Process redesign and restructuring",
-          "Digital transformation implementation",
-          "Scalable infrastructure for the next stage"
-        ]
-      }
-    ]
-  },
-  "services": {
-    "label": "What We Build",
-    "detailLabel": "Our Solutions",
-    "story": "We design and implement the systems, infrastructure, and digital foundations your business needs to operate efficiently and scale with confidence.",
-    "items": [
-      {
-        "name": "Business Websites",
-        "desc": "Professional websites and landing pages built to establish your business presence, communicate your value clearly, and convert visitors into clients.",
-        "bullets": [
-          "Professional business websites",
-          "Landing pages and conversion-focused design",
-          "Digital presence foundations for businesses",
-          "Optimized performance and mobile compatibility"
-        ]
-      },
-      {
-        "name": "Digital Infrastructure",
-        "desc": "The core digital layer every business needs to operate professionally — from domain and hosting to business email and analytics.",
-        "bullets": [
-          "Domain registration and management",
-          "Hosting setup and configuration",
-          "Business email systems",
-          "Analytics and tracking setup"
-        ]
-      },
-      {
-        "name": "Business Systems",
-        "desc": "The operational backbone of your business. We build CRM systems, define workflows, document processes, and create the internal infrastructure that makes your business run without chaos.",
-        "bullets": [
-          "CRM systems and sales pipeline management",
-          "Operational workflows and process documentation",
-          "Internal accountability structures",
-          "Performance management and KPI systems"
-        ]
-      },
-      {
-        "name": "Automation & Growth",
-        "desc": "We automate repetitive workflows and build visibility tools — dashboards, reports, and KPI systems — that give you the data to make faster decisions and sustain consistent growth.",
-        "bullets": [
-          "Workflow and task automation",
-          "Performance dashboards and reporting",
-          "KPI tracking and business visibility",
-          "Growth systems and operational enablement"
-        ]
-      }
-    ]
-  },
-  "start": {
-    "heading": "Ready to build your business systems?",
-    "card1Title": "I know what I need to build.",
-    "card1Desc": "You've identified the gap. We design and implement the systems, digital infrastructure, and operational foundations to close it.",
-    "card1Cta": "Start Your Assessment",
-    "card2Title": "I don't know where to start.",
-    "card2Desc": "We run a business diagnostic to identify exactly what's holding you back — then build the solution from there.",
-    "card2Cta": "Book a Discovery Call"
-  },
-  "caseStudies": {
-    "label": "Our Work",
-    "heading": "Measurable Results.",
-    "subtitle": "Real work. Tangible outcomes. Every project built to last.",
-    "badge": "Case Study",
-    "comingSoon": "Documenting results in progress",
-    "available": "Full case studies available upon request.",
-    "categories": ["Enterprise Operations", "Digital Infrastructure", "Growth Systems"]
-  },
   "philosophy": {
     "label": "Our Conviction",
     "text": "Most businesses don't fail because of bad ideas. They fail because the systems needed to execute those ideas were never built."
@@ -259,7 +162,7 @@
     "heading": "Built by practitioners, not advisors.",
     "name": "Hosam H. Emam",
     "role": "Founder & Managing Director",
-    "bio": "Over seven years of hands-on experience building scalable business operations across competitive sectors. Specializes in operational systems design, business process engineering, and data-driven growth infrastructure. ASCENDRA is backed by a dedicated team of specialists across digital development, automation, and business strategy.",
+    "bio": "Over seven years of hands-on experience building scalable business operations across competitive sectors. Specializes in operational systems design, business process engineering, and data-driven growth infrastructure. ASCENDRA is not a consultancy that hands over reports — it builds and implements. Backed by a dedicated team of specialists across digital development, automation, and business strategy.",
     "websiteLabel": "Explore the Founder's Profile"
   },
   "approach": {
