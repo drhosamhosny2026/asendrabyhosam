@@ -43,11 +43,11 @@ export default async function ServicesPage({
                 </p>
                 <p className="text-white/70 text-sm leading-relaxed">{sp("hero.pillar1")}</p>
               </div>
-              <div className="border-s-2 border-white/15 ps-6 pe-8 py-1 mt-6 md:mt-0">
-                <p className="font-sans text-[10px] uppercase tracking-label text-gold/60 font-medium mb-2">
+              <div className="border-s-2 border-gold ps-6 pe-8 py-1 mt-6 md:mt-0">
+                <p className="font-sans text-[10px] uppercase tracking-label text-gold font-medium mb-2">
                   ASCENDRA Consulting
                 </p>
-                <p className="text-white/60 text-sm leading-relaxed">{sp("hero.pillar2")}</p>
+                <p className="text-white/70 text-sm leading-relaxed">{sp("hero.pillar2")}</p>
               </div>
             </div>
           </div>

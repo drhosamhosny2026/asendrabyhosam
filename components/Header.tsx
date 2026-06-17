@@ -18,6 +18,7 @@ export default function Header() {
   }, [open]);
 
   const navLinks = [
+    { href: `/${locale}`,          label: t("home") },
     { href: `/${locale}/services`, label: t("services") },
     { href: `/${locale}/work`,     label: t("work") },
     { href: `/${locale}/about`,    label: t("insights") },
