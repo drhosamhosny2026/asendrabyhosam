@@ -60,9 +60,9 @@
     ]
   },
   "bridge": {
-    "body": "Most businesses have a digital gap — and a systems problem hiding behind it.",
-    "digitalLine": "builds the visible layer.",
-    "consultingLine": "builds the foundation that makes it work."
+    "body": "Most businesses have a digital gap — and a deeper systems problem behind it.",
+    "digitalLine": "builds the digital products your business runs on.",
+    "consultingLine": "builds the systems that help it grow steadily."
   },
   "consulting": {
     "label": "ASCENDRA Consulting",
@@ -126,10 +126,10 @@
     "emphasis2": "It is better systems.",
     "emphasis3": "Systems that create clarity, improve execution, and make growth repeatable.",
     "body3": "ASCENDRA starts with the digital project — website, CRM, ERP, automation, or AI — and builds the operational foundation that makes it work inside your business.",
-    "digitalCardLabel": "THE VISIBLE LAYER",
-    "digitalCardBody": "Websites, e-commerce, CRM, ERP, dashboards, automation, AI — the digital products your business runs on.",
-    "consultingCardLabel": "THE FOUNDATION",
-    "consultingCardBody": "Operational and strategic systems that make the digital layer actually work — and scale."
+    "digitalCardLabel": "ASCENDRA Digital",
+    "digitalCardBody": "Builds the digital products your business runs on — websites, e-commerce, CRM, ERP, dashboards, automation, and AI.",
+    "consultingCardLabel": "ASCENDRA Consulting",
+    "consultingCardBody": "Builds the operational and strategic systems that help your business grow steadily."
   },
   "outcomes": {
     "label": "Business Outcomes",
