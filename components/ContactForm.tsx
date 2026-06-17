@@ -7,7 +7,7 @@ type Status = "idle" | "sending" | "sent" | "error";
 export default function ContactForm() {
   const con = useTranslations("contact");
   const [status, setStatus] = useState<Status>("idle");
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const successRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -24,7 +24,8 @@ export default function ContactForm() {
     if (!form.name || !form.email || !form.message) return;
     setStatus("sending");
     const subject = encodeURIComponent(`Business Diagnosis Request from ${form.name}`);
-    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`);
+    const phoneLine = form.phone ? `\nPhone: ${form.phone}` : "";
+    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}${phoneLine}\n\n${form.message}`);
     const a = document.createElement("a");
     a.href = `mailto:dr.hosamhosny2014@gmail.com?subject=${subject}&body=${body}`;
     a.click();
@@ -41,22 +42,21 @@ export default function ContactForm() {
         className="text-center py-10 focus:outline-none"
       >
         <p className="font-serif font-semibold text-2xl text-navy mb-3">{con("successTitle")}</p>
-        <p className="text-navy/70 text-sm">{con("successBody")}</p>
+        <p className="text-gray-text text-sm">{con("successBody")}</p>
       </div>
     );
   }
 
   const inputClass =
-    "w-full border border-gray-text/25 rounded px-4 py-3 text-navy text-sm transition-colors " +
-    "focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/30";
+    "w-full border border-navy/15 rounded-lg px-4 py-[14px] text-navy text-sm transition-colors " +
+    "placeholder:text-gray-text/50 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20";
+
+  const labelClass = "block text-gray-text text-xs font-medium tracking-[0.12em] uppercase mb-1.5";
 
   return (
     <form className="grid gap-5" onSubmit={handleSubmit} noValidate>
       <div>
-        <label
-          htmlFor="contact-name"
-          className="block text-navy/70 text-xs font-medium tracking-wide uppercase mb-1.5"
-        >
+        <label htmlFor="contact-name" className={labelClass}>
           {con("name")}
         </label>
         <input
@@ -71,10 +71,7 @@ export default function ContactForm() {
         />
       </div>
       <div>
-        <label
-          htmlFor="contact-email"
-          className="block text-navy/70 text-xs font-medium tracking-wide uppercase mb-1.5"
-        >
+        <label htmlFor="contact-email" className={labelClass}>
           {con("email")}
         </label>
         <input
@@ -89,10 +86,22 @@ export default function ContactForm() {
         />
       </div>
       <div>
-        <label
-          htmlFor="contact-message"
-          className="block text-navy/70 text-xs font-medium tracking-wide uppercase mb-1.5"
-        >
+        <label htmlFor="contact-phone" className={labelClass}>
+          {con("phone")}
+        </label>
+        <input
+          id="contact-phone"
+          type="tel"
+          autoComplete="tel"
+          dir="ltr"
+          value={form.phone}
+          onChange={set("phone")}
+          placeholder={con("phonePlaceholder")}
+          className={inputClass}
+        />
+      </div>
+      <div>
+        <label htmlFor="contact-message" className={labelClass}>
           {con("message")}
         </label>
         <textarea
@@ -113,7 +122,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="bg-navy text-white py-3.5 rounded font-medium text-sm hover:bg-navy/85 transition disabled:opacity-60"
+        className="w-full bg-gold text-navy py-[14px] rounded-lg font-medium text-sm hover:bg-[#E8D48B] transition disabled:opacity-60"
       >
         {status === "sending" ? "..." : con("send")}
       </button>

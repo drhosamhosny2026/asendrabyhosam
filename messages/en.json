@@ -125,7 +125,11 @@
     "emphasis1": "The solution is rarely more effort.",
     "emphasis2": "It is better systems.",
     "emphasis3": "Systems that create clarity, improve execution, and make growth repeatable.",
-    "body3": "ASCENDRA starts with the digital project — website, CRM, ERP, automation, or AI — and builds the operational foundation that makes it work inside your business."
+    "body3": "ASCENDRA starts with the digital project — website, CRM, ERP, automation, or AI — and builds the operational foundation that makes it work inside your business.",
+    "digitalCardLabel": "THE VISIBLE LAYER",
+    "digitalCardBody": "Websites, e-commerce, CRM, ERP, dashboards, automation, AI — the digital products your business runs on.",
+    "consultingCardLabel": "THE FOUNDATION",
+    "consultingCardBody": "Operational and strategic systems that make the digital layer actually work — and scale."
   },
   "outcomes": {
     "label": "Business Outcomes",
@@ -160,7 +164,7 @@
   "team": {
     "label": "The Founder",
     "heading": "Built by practitioners, not advisors.",
-    "name": "Hosam H. Emam",
+    "name": "Hossam H. Emam",
     "role": "Founder & Managing Director",
     "bio": "Over seven years of hands-on experience building scalable business operations across competitive sectors. Specializes in operational systems design, business process engineering, and data-driven growth infrastructure. ASCENDRA is not a consultancy that hands over reports — it builds and implements. Backed by a dedicated team of specialists across digital development, automation, and business strategy.",
     "websiteLabel": "Explore the Founder's Profile"
@@ -205,6 +209,8 @@
     "namePlaceholder": "Your full name",
     "email": "Work Email",
     "emailPlaceholder": "your@company.com",
+    "phone": "Phone Number",
+    "phonePlaceholder": "+966 5X XXX XXXX",
     "message": "What is the challenge?",
     "messagePlaceholder": "Describe where your business is today and what's holding it back",
     "send": "Let's Talk",
@@ -213,7 +219,10 @@
     "errorMsg": "Something went wrong. Please try again or email us directly.",
     "orConnect": "Or connect directly",
     "whatsappCta": "WhatsApp",
-    "messengerCta": "Messenger"
+    "messengerCta": "Messenger",
+    "reassurance1": "A real human reviews every request",
+    "reassurance2": "We identify the gap before we propose anything",
+    "reassurance3": "No obligation, no sales pressure"
   },
   "footer": {
     "rights": "All rights reserved.",

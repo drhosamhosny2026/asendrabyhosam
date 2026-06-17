@@ -256,26 +256,60 @@ export default function Home() {
               {ins("headline")}
             </h2>
 
-            <div className="max-w-2xl space-y-5 text-navy/70 text-lg leading-relaxed mb-12">
-              <p>{ins("body1")}</p>
-              <p>{ins("body2")}</p>
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
+              {/* Left: text content */}
+              <div>
+                <div className="space-y-5 text-navy/70 text-lg leading-relaxed mb-10">
+                  <p>{ins("body1")}</p>
+                  <p>{ins("body2")}</p>
+                </div>
+
+                <blockquote className="border-s-2 border-gold ps-8 mb-10 space-y-3">
+                  <p className="font-serif font-semibold text-2xl md:text-[1.75rem] text-navy leading-h3 tracking-heading">
+                    {ins("emphasis1")}
+                  </p>
+                  <p className="font-serif font-semibold text-2xl md:text-[1.75rem] text-gold leading-h3 tracking-heading">
+                    {ins("emphasis2")}
+                  </p>
+                  <p className="font-serif text-xl md:text-2xl text-navy/70 italic leading-relaxed">
+                    {ins("emphasis3")}
+                  </p>
+                </blockquote>
+
+                <p className="text-navy/70 text-lg leading-relaxed">
+                  {ins("body3")}
+                </p>
+              </div>
+
+              {/* Right: two-pillar cards */}
+              <div className="flex flex-col">
+                <div className="bg-light-gray rounded-xl border-s-2 border-gold ps-6 py-7 pe-6">
+                  <p className="font-sans text-[10px] uppercase tracking-label text-gold font-medium mb-2">
+                    {ins("digitalCardLabel")}
+                  </p>
+                  <h3 className="font-serif font-semibold text-xl text-navy leading-h3 tracking-heading mb-3">
+                    ASCENDRA Digital
+                  </h3>
+                  <p className="text-gray-text text-sm leading-relaxed">
+                    {ins("digitalCardBody")}
+                  </p>
+                </div>
+
+                <div className="self-start h-8 w-[2px] bg-gold/30 shrink-0"></div>
+
+                <div className="bg-light-gray rounded-xl border-s-2 border-gold ps-6 py-7 pe-6">
+                  <p className="font-sans text-[10px] uppercase tracking-label text-gold font-medium mb-2">
+                    {ins("consultingCardLabel")}
+                  </p>
+                  <h3 className="font-serif font-semibold text-xl text-navy leading-h3 tracking-heading mb-3">
+                    ASCENDRA Consulting
+                  </h3>
+                  <p className="text-gray-text text-sm leading-relaxed">
+                    {ins("consultingCardBody")}
+                  </p>
+                </div>
+              </div>
             </div>
-
-            <blockquote className="border-s-2 border-gold ps-8 mb-12 space-y-3 max-w-2xl">
-              <p className="font-serif font-semibold text-2xl md:text-[1.75rem] text-navy leading-h3 tracking-heading">
-                {ins("emphasis1")}
-              </p>
-              <p className="font-serif font-semibold text-2xl md:text-[1.75rem] text-gold leading-h3 tracking-heading">
-                {ins("emphasis2")}
-              </p>
-              <p className="font-serif text-xl md:text-2xl text-navy/70 italic leading-relaxed">
-                {ins("emphasis3")}
-              </p>
-            </blockquote>
-
-            <p className="max-w-2xl text-navy/70 text-lg leading-relaxed mb-20">
-              {ins("body3")}
-            </p>
 
             {/* Outcomes */}
             <p className="font-medium text-gold text-xs tracking-label uppercase mb-4" aria-hidden="true">
@@ -356,45 +390,72 @@ export default function Home() {
         </section>
 
         {/* ── 7. CONTACT ──────────────────────────────────────────────── */}
-        <section id="contact" aria-labelledby="contact-heading" className="py-20 px-6 bg-light-gray scroll-mt-20">
-          <div className="mx-auto max-w-xl">
-            <p className="font-medium text-gold text-xs tracking-label uppercase mb-3 text-center" aria-hidden="true">
-              {cont("label")}
-            </p>
-            <h2 id="contact-heading" className="font-serif font-semibold text-3xl md:text-[2.5rem] text-navy leading-h2 tracking-heading mb-3 text-center">
-              {cont("title")}
-            </h2>
-            <p className="text-navy/70 text-center text-sm leading-relaxed mb-10">
-              {cont("subtitle")}
-            </p>
+        <section id="contact" aria-labelledby="contact-heading" className="py-24 px-6 bg-navy scroll-mt-20">
+          <div className="mx-auto max-w-content">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
-            <ContactForm />
-
-            <div className="mt-10 pt-8 border-t border-navy/10 flex flex-col items-center gap-4">
-              <p className="text-gray-text text-xs">{cont("orConnect")}</p>
-              <div className="flex flex-wrap justify-center gap-3">
-                <a
-                  href={LINKS.whatsappMsg}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 border border-navy/20 rounded-lg px-5 py-2.5 text-sm text-navy font-medium hover:bg-navy hover:text-white transition"
-                >
-                  <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="shrink-0">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                  </svg>
-                  {cont("whatsappCta")}
-                </a>
-                {LINKS.messenger !== "#" && (
-                  <a
-                    href={LINKS.messenger}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 border border-navy/20 rounded-lg px-5 py-2.5 text-sm text-navy font-medium hover:bg-navy hover:text-white transition"
-                  >
-                    {cont("messengerCta")}
-                  </a>
-                )}
+              {/* Left: heading + intro + reassurance list */}
+              <div className="lg:pt-2">
+                <p className="font-medium text-gold text-xs tracking-label uppercase mb-4" aria-hidden="true">
+                  {cont("label")}
+                </p>
+                <h2 id="contact-heading" className="font-serif font-semibold text-3xl md:text-[2.5rem] text-white leading-h2 tracking-heading mb-4">
+                  {cont("title")}
+                </h2>
+                <p className="text-light-gray/70 text-base leading-relaxed mb-10">
+                  {cont("subtitle")}
+                </p>
+                <ul className="space-y-5">
+                  <li className="flex items-start gap-3">
+                    <span className="text-gold mt-0.5 shrink-0 font-medium" aria-hidden="true">→</span>
+                    <span className="text-light-gray/80 text-sm leading-relaxed">{cont("reassurance1")}</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-gold mt-0.5 shrink-0 font-medium" aria-hidden="true">→</span>
+                    <span className="text-light-gray/80 text-sm leading-relaxed">{cont("reassurance2")}</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-gold mt-0.5 shrink-0 font-medium" aria-hidden="true">→</span>
+                    <span className="text-light-gray/80 text-sm leading-relaxed">{cont("reassurance3")}</span>
+                  </li>
+                </ul>
               </div>
+
+              {/* Right: elevated form card + connect */}
+              <div>
+                <div className="bg-white rounded-2xl p-10 shadow-lg">
+                  <ContactForm />
+                </div>
+
+                <div className="mt-8 flex flex-col items-center gap-4">
+                  <div className="w-10 h-px bg-gold/40"></div>
+                  <p className="text-light-gray/60 text-xs">{cont("orConnect")}</p>
+                  <div className="flex flex-wrap justify-center gap-3">
+                    <a
+                      href={LINKS.whatsappMsg}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 border border-gold/40 rounded-lg px-5 py-2.5 text-sm text-white font-medium hover:border-gold transition"
+                    >
+                      <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="shrink-0">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                      </svg>
+                      {cont("whatsappCta")}
+                    </a>
+                    {LINKS.messenger !== "#" && (
+                      <a
+                        href={LINKS.messenger}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 border border-gold/40 rounded-lg px-5 py-2.5 text-sm text-white font-medium hover:border-gold transition"
+                      >
+                        {cont("messengerCta")}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
