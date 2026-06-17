@@ -1,18 +1,18 @@
-import { useTranslations, useLocale } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { LINKS } from "@/config/links";
 
-export default function AboutPage({
-  params: { locale },
+export default async function AboutPage({
+  params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
   setRequestLocale(locale);
 
-  const ap = useTranslations("aboutPage");
+  const ap = await getTranslations("aboutPage");
 
   const values  = ap.raw("values.items")  as { title: string; body: string }[];
   const methods = ap.raw("method.items")  as { step: string; name: string; desc: string }[];

@@ -1,18 +1,18 @@
-import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import { LINKS } from "@/config/links";
 
-export default function ContactPage({
-  params: { locale },
+export default async function ContactPage({
+  params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
   setRequestLocale(locale);
 
-  const cont = useTranslations("contact");
+  const cont = await getTranslations("contact");
 
   return (
     <>

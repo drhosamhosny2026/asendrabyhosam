@@ -1,17 +1,17 @@
-import { useTranslations, useLocale } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-export default function WorkPage({
-  params: { locale },
+export default async function WorkPage({
+  params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
   setRequestLocale(locale);
 
-  const wp = useTranslations("workPage");
+  const wp = await getTranslations("workPage");
 
   const covers = wp.raw("pharmacyOS.covers") as string[];
 

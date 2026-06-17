@@ -1,18 +1,18 @@
-import { useTranslations, useLocale } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-export default function ServicesPage({
-  params: { locale },
+export default async function ServicesPage({
+  params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
   setRequestLocale(locale);
 
-  const sp  = useTranslations("servicesPage");
-  const con = useTranslations("consulting");
+  const sp  = await getTranslations("servicesPage");
+  const con = await getTranslations("consulting");
 
   const digitalServices = sp.raw("digitalSection.services") as { name: string; desc: string }[];
   const conItems        = con.raw("items") as { name: string; desc: string }[];
