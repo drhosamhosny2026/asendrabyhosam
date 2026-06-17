@@ -8,4 +8,4 @@ export const LINKS = {
   messenger:   "#",
   email:       "#",
   founderSite: "https://dr-hossamhosny.vercel.app/",
-} as const;
+};
