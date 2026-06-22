@@ -277,7 +277,7 @@
       "groups": [
         {
           "name": "Digital Presence",
-          "desc": "Your business's digital face — professionally designed to represent your brand, attract the right clients, and convert online visitors around the clock.",
+          "desc": "Your complete digital front — websites, landing pages, and e-commerce stores designed to represent your brand with authority and convert visitors into clients.",
           "items": [
             "Corporate Websites",
             "Business Websites",
@@ -287,7 +287,7 @@
         },
         {
           "name": "Business Systems",
-          "desc": "The operational core your business runs on — custom-built systems that manage clients, pipelines, resources, and processes in one integrated layer.",
+          "desc": "The operational core of your business — custom CRM, ERP, internal platforms, and client portals built to manage the complexity behind your growth.",
           "items": [
             "Business Systems Design",
             "CRM Solutions",
@@ -298,7 +298,7 @@
         },
         {
           "name": "Automation, Dashboards & AI",
-          "desc": "Work smarter. Dashboards that surface critical data, automation that removes manual bottlenecks, and AI that gives your business a measurable edge.",
+          "desc": "The intelligence layer — automated workflows, real-time dashboards, and applied AI that make your business faster, smarter, and more measurable.",
           "items": [
             "Workflow Automation",
             "Dashboards",
@@ -307,26 +307,14 @@
           ]
         },
         {
-          "name": "Brand & Creative",
-          "desc": "A coherent visual identity that commands authority — from the logo and identity system to presentations and marketing materials.",
+          "name": "Branding & Identity",
+          "desc": "The visual identity that signals authority — from the logo system and brand guidelines to presentations and all client-facing materials.",
           "items": [
             "Brand Identity",
             "Logo Design",
             "Visual Identity Systems",
             "Presentation Design",
             "Marketing Materials"
-          ]
-        },
-        {
-          "name": "Growth & Marketing",
-          "desc": "Systematic growth through structured digital marketing — from content strategy and campaigns to performance marketing and lead generation.",
-          "items": [
-            "Social Media Management",
-            "Content Strategy",
-            "Digital Campaigns",
-            "Performance Marketing",
-            "Lead Generation",
-            "Marketing Automation"
           ]
         }
       ]

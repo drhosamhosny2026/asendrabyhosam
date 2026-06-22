@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServicesPillarNav from "@/components/ServicesPillarNav";
+import DigitalAccordion from "@/components/DigitalAccordion";
 
 export default async function ServicesPage({
   params,
@@ -57,31 +58,14 @@ export default async function ServicesPage({
             </h2>
             <p className="text-navy/50 text-lg leading-relaxed max-w-2xl mb-16">
               {locale === "ar"
-                ? "خمس فئات من الخدمات الرقمية — كل منها مصمَّمة حول النتائج التجارية."
-                : "Five categories of digital services — each designed around business outcomes."}
+                ? "أربع فئات من الخدمات الرقمية — كل منها مصمَّمة حول النتائج التجارية."
+                : "Four categories of digital services — each designed around business outcomes."}
             </p>
 
-            <div className="divide-y divide-navy/10">
-              {digitalGroups.map((g, i) => (
-                <div key={i} className="py-10 grid md:grid-cols-[300px_1fr] gap-6 md:gap-20">
-                  <div>
-                    <h3 className="font-serif font-semibold text-xl text-navy leading-tight tracking-tight mb-4">
-                      {g.name}
-                    </h3>
-                    <p className="font-sans text-[10px] uppercase tracking-label text-gold/65 leading-relaxed">
-                      {g.items.join(" · ")}
-                    </p>
-                  </div>
-                  <p className="text-navy/60 text-base leading-relaxed self-start md:pt-1">
-                    {g.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <p className="mt-14 text-navy/35 text-sm italic border-t border-navy/10 pt-8">
-              {sp("digitalSection.footerNote")}
-            </p>
+            <DigitalAccordion
+              groups={digitalGroups}
+              footerNote={sp("digitalSection.footerNote")}
+            />
           </div>
         </section>
 
