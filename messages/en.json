@@ -281,8 +281,10 @@
           "items": [
             "Corporate Websites",
             "Business Websites",
+            "Personal Websites",
             "Landing Pages",
-            "E-Commerce"
+            "E-Commerce Stores",
+            "Educational Platforms"
           ]
         },
         {
@@ -301,7 +303,7 @@
           "desc": "The intelligence layer — automated workflows, real-time dashboards, and applied AI that make your business faster, smarter, and more measurable.",
           "items": [
             "Workflow Automation",
-            "Dashboards",
+            "Business Dashboards",
             "Analytics & Reporting",
             "AI Solutions"
           ]
