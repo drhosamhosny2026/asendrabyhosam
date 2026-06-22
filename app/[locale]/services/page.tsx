@@ -24,7 +24,7 @@ export default async function ServicesPage({
 
       <main id="main-content">
 
-        {/* ── HERO ──────────────────────────────────────────────────── */}
+        {/* ── HERO (unchanged) ──────────────────────────────────────── */}
         <section aria-labelledby="services-hero-heading" className="bg-navy text-white py-24 md:py-32 px-6">
           <div className="max-w-content mx-auto">
             <p className="font-sans text-xs uppercase tracking-label text-gold mb-5 rise rise-d1" aria-hidden="true">
@@ -36,7 +36,6 @@ export default async function ServicesPage({
             <p className="text-white/60 text-xl leading-relaxed max-w-2xl mb-14 rise rise-d3">
               {sp("hero.sub")}
             </p>
-
             <ServicesPillarNav
               pillar1={sp("hero.pillar1")}
               pillar2={sp("hero.pillar2")}
@@ -48,75 +47,71 @@ export default async function ServicesPage({
         </section>
 
         {/* ── ASCENDRA DIGITAL ──────────────────────────────────────── */}
-        <section id="digital" aria-labelledby="digital-services-heading" className="py-24 px-6 bg-light-gray scroll-mt-20">
+        <section id="digital" aria-labelledby="digital-heading" className="py-24 px-6 bg-light-gray scroll-mt-20">
           <div className="max-w-content mx-auto">
             <p className="font-sans text-xs uppercase tracking-label text-gold mb-4" aria-hidden="true">
               ASCENDRA Digital
             </p>
-            <h2 id="digital-services-heading" className="font-serif font-semibold text-4xl md:text-5xl text-navy leading-tight tracking-tight mb-4 max-w-xl">
+            <h2 id="digital-heading" className="font-serif font-semibold text-4xl md:text-5xl text-navy leading-tight tracking-tight mb-4 max-w-xl">
               {locale === "ar" ? "ماذا نبني." : "What We Build."}
             </h2>
-            <p className="text-navy/55 text-lg leading-relaxed max-w-2xl mb-14">
+            <p className="text-navy/50 text-lg leading-relaxed max-w-2xl mb-16">
               {locale === "ar"
-                ? "خمس فئات من الخدمات الرقمية، كل منها مصمَّمة حول النتائج التجارية — لا حول المخرجات التقنية."
-                : "Five categories of digital services, each designed around business outcomes — not technical deliverables."}
+                ? "خمس فئات من الخدمات الرقمية — كل منها مصمَّمة حول النتائج التجارية."
+                : "Five categories of digital services — each designed around business outcomes."}
             </p>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="divide-y divide-navy/10">
               {digitalGroups.map((g, i) => (
-                <article
-                  key={i}
-                  className="bg-white p-8 border-t-2 border-gold/30 hover:border-gold/70 transition-colors flex flex-col gap-5"
-                >
-                  <h3 className="font-serif font-semibold text-xl text-navy leading-tight tracking-tight">
-                    {g.name}
-                  </h3>
-                  <p className="text-gray-text text-sm leading-relaxed">{g.desc}</p>
-                  <ul className="space-y-2 pt-1 border-t border-gold/15" aria-label={g.name}>
-                    {g.items.map((item, j) => (
-                      <li key={j} className="flex items-start gap-2.5 text-sm text-navy/65 pt-2 first:pt-3">
-                        <span aria-hidden="true" className="text-gold shrink-0 mt-0.5">→</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </article>
+                <div key={i} className="py-10 grid md:grid-cols-[300px_1fr] gap-6 md:gap-20">
+                  <div>
+                    <h3 className="font-serif font-semibold text-xl text-navy leading-tight tracking-tight mb-4">
+                      {g.name}
+                    </h3>
+                    <p className="font-sans text-[10px] uppercase tracking-label text-gold/65 leading-relaxed">
+                      {g.items.join(" · ")}
+                    </p>
+                  </div>
+                  <p className="text-navy/60 text-base leading-relaxed self-start md:pt-1">
+                    {g.desc}
+                  </p>
+                </div>
               ))}
             </div>
 
-            <p className="mt-10 text-navy/40 text-sm italic border-t border-navy/10 pt-8">
+            <p className="mt-14 text-navy/35 text-sm italic border-t border-navy/10 pt-8">
               {sp("digitalSection.footerNote")}
             </p>
           </div>
         </section>
 
         {/* ── ASCENDRA CONSULTING ───────────────────────────────────── */}
-        <section id="consulting" aria-labelledby="consulting-services-heading" className="py-24 px-6 bg-navy scroll-mt-20">
+        <section id="consulting" aria-labelledby="consulting-heading" className="py-24 px-6 bg-navy scroll-mt-20">
           <div className="max-w-content mx-auto">
             <p className="font-sans text-xs uppercase tracking-label text-gold mb-4" aria-hidden="true">
               ASCENDRA Consulting
             </p>
-            <h2 id="consulting-services-heading" className="font-serif font-semibold text-4xl md:text-5xl text-white leading-tight tracking-tight mb-4 max-w-xl">
+            <h2 id="consulting-heading" className="font-serif font-semibold text-4xl md:text-5xl text-white leading-tight tracking-tight mb-4 max-w-xl">
               {locale === "ar" ? "الاستشارات التجارية." : "Business Consulting."}
             </h2>
-            <p className="text-white/55 text-lg leading-relaxed max-w-2xl mb-14">
+            <p className="text-white/50 text-lg leading-relaxed max-w-2xl mb-16">
               {locale === "ar"
                 ? "ست تخصصات استشارية — كل منها يُطبَّق ضمن منهجية ASCENDRA الخماسية."
                 : "Six consulting disciplines — each applied within the five-phase ASCENDRA Method."}
             </p>
 
-            <div className="divide-y divide-white/10">
+            <div className="grid md:grid-cols-2 gap-x-20 gap-y-12">
               {conItems.map((item, i) => (
-                <article key={i} className="py-7 grid md:grid-cols-[280px_1fr] gap-4 md:gap-10 group">
-                  <h3 className="font-serif font-semibold text-lg text-white leading-tight tracking-tight group-hover:text-gold transition-colors">
+                <div key={i}>
+                  <h3 className="font-serif font-semibold text-lg text-white leading-tight tracking-tight mb-3">
                     {item.name}
                   </h3>
-                  <p className="text-white/50 text-base leading-relaxed">{item.desc}</p>
-                </article>
+                  <p className="text-white/45 text-sm leading-relaxed">{item.desc}</p>
+                </div>
               ))}
             </div>
 
-            <p className="mt-10 text-white/30 text-sm italic border-t border-white/10 pt-8">
+            <p className="mt-16 text-white/25 text-sm italic border-t border-white/10 pt-8">
               {locale === "ar"
                 ? "يمكن لمشاريع الاستشارات أن تعمل بشكل مستقل أو بالتوازي مع مشروع رقمي."
                 : "Consulting engagements can stand alone or run alongside a digital project."}
@@ -131,7 +126,7 @@ export default async function ServicesPage({
               {sp("pillars.heading")}
             </h2>
 
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 mb-14">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
               <div className="space-y-5 text-navy/65 text-lg leading-relaxed">
                 <p>{sp("pillars.body1")}</p>
                 <p>{sp("pillars.body2")}</p>
@@ -139,7 +134,7 @@ export default async function ServicesPage({
               </div>
 
               <div>
-                <ol className="space-y-0" aria-label={sp("pillars.heading")}>
+                <ul className="space-y-0">
                   {[
                     sp("pillars.step1"),
                     sp("pillars.step2"),
@@ -147,13 +142,11 @@ export default async function ServicesPage({
                     sp("pillars.step4"),
                   ].map((step, i) => (
                     <li key={i} className="flex items-start gap-4 py-5 border-b border-navy/8 last:border-0">
-                      <span className="text-gold font-serif font-semibold text-lg shrink-0 mt-0.5 w-6">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
+                      <span className="text-gold mt-1 shrink-0 font-medium" aria-hidden="true">→</span>
                       <p className="text-navy/70 text-base leading-relaxed">{step}</p>
                     </li>
                   ))}
-                </ol>
+                </ul>
                 <p className="mt-8 font-serif font-semibold text-xl text-navy italic leading-tight">
                   {sp("pillars.closing")}
                 </p>
