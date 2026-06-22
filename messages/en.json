@@ -274,46 +274,60 @@
     },
     "digitalSection": {
       "footerNote": "Every digital engagement begins with an operational assessment. We build after we understand.",
-      "services": [
+      "groups": [
         {
-          "name": "Business Websites",
-          "desc": "Your digital storefront — designed to represent your business with precision and convert visitors into clients. Corporate websites, personal brand sites, and e-commerce stores built to perform."
+          "name": "Digital Presence",
+          "desc": "Your business's digital face — professionally designed to represent your brand, attract the right clients, and convert online visitors around the clock.",
+          "items": [
+            "Corporate Websites",
+            "Business Websites",
+            "Landing Pages",
+            "E-Commerce"
+          ]
         },
         {
-          "name": "Business Systems Design",
-          "desc": "Designing custom operational systems, internal platforms, workflows, dashboards, and digital infrastructure — tailored to how your business actually operates. Before a single line of code is written."
+          "name": "Business Systems",
+          "desc": "The operational core your business runs on — custom-built systems that manage clients, pipelines, resources, and processes in one integrated layer.",
+          "items": [
+            "Business Systems Design",
+            "CRM Solutions",
+            "ERP Implementation",
+            "Internal Platforms",
+            "Client Portals"
+          ]
         },
         {
-          "name": "Platforms & Portals",
-          "desc": "Custom web platforms, internal portals, and digital infrastructure built around specific business requirements — from client management portals to multi-sided marketplaces."
+          "name": "Automation, Dashboards & AI",
+          "desc": "Work smarter. Dashboards that surface critical data, automation that removes manual bottlenecks, and AI that gives your business a measurable edge.",
+          "items": [
+            "Workflow Automation",
+            "Dashboards",
+            "Analytics & Reporting",
+            "AI Solutions"
+          ]
         },
         {
-          "name": "CRM Systems",
-          "desc": "Customer relationship management systems that track every lead, manage every relationship, and give your sales team a structured pipeline — built on or around the right platform for your business."
+          "name": "Brand & Creative",
+          "desc": "A coherent visual identity that commands authority — from the logo and identity system to presentations and marketing materials.",
+          "items": [
+            "Brand Identity",
+            "Logo Design",
+            "Visual Identity Systems",
+            "Presentation Design",
+            "Marketing Materials"
+          ]
         },
         {
-          "name": "ERP Implementation",
-          "desc": "Enterprise resource planning systems that integrate your operations — finance, inventory, procurement, HR — into one coherent operating layer."
-        },
-        {
-          "name": "Business Dashboards",
-          "desc": "Real-time visibility into your most important business metrics. Custom dashboards that surface the numbers that matter — designed for the people who use them, not for the people who build them."
-        },
-        {
-          "name": "Workflow Automation",
-          "desc": "Remove the manual work that slows your business down. Automated workflows that connect your systems, trigger on the right events, and eliminate the human bottlenecks that create errors and delay."
-        },
-        {
-          "name": "AI Solutions",
-          "desc": "Applied artificial intelligence built around specific business problems — not general AI tools retrofitted to an existing workflow. Recommendation engines, predictive analytics, intelligent automation, and custom AI products."
-        },
-        {
-          "name": "Mobile Applications",
-          "desc": "iOS and Android applications built to extend your business operations to mobile — whether for your clients, your team, or your own internal operations."
-        },
-        {
-          "name": "Analytics & Reporting",
-          "desc": "Data infrastructure, reporting systems, and analytics frameworks that turn raw business data into operational intelligence — giving leadership the visibility to make faster, better decisions."
+          "name": "Growth & Marketing",
+          "desc": "Systematic growth through structured digital marketing — from content strategy and campaigns to performance marketing and lead generation.",
+          "items": [
+            "Social Media Management",
+            "Content Strategy",
+            "Digital Campaigns",
+            "Performance Marketing",
+            "Lead Generation",
+            "Marketing Automation"
+          ]
         }
       ]
     },

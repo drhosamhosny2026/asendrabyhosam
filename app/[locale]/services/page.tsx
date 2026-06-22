@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ServicesPillarNav from "@/components/ServicesPillarNav";
 
 export default async function ServicesPage({
   params,
@@ -14,8 +15,8 @@ export default async function ServicesPage({
   const sp  = await getTranslations("servicesPage");
   const con = await getTranslations("consulting");
 
-  const digitalServices = sp.raw("digitalSection.services") as { name: string; desc: string }[];
-  const conItems        = con.raw("items") as { name: string; desc: string }[];
+  const digitalGroups = sp.raw("digitalSection.groups") as { name: string; desc: string; items: string[] }[];
+  const conItems      = con.raw("items") as { name: string; desc: string }[];
 
   return (
     <>
@@ -36,25 +37,18 @@ export default async function ServicesPage({
               {sp("hero.sub")}
             </p>
 
-            <div className="grid md:grid-cols-2 gap-0 max-w-3xl rise rise-d4">
-              <div className="border-s-2 border-gold ps-6 pe-8 py-1">
-                <p className="font-sans text-[10px] uppercase tracking-label text-gold font-medium mb-2">
-                  ASCENDRA Digital
-                </p>
-                <p className="text-white/70 text-sm leading-relaxed">{sp("hero.pillar1")}</p>
-              </div>
-              <div className="border-s-2 border-gold ps-6 pe-8 py-1 mt-6 md:mt-0">
-                <p className="font-sans text-[10px] uppercase tracking-label text-gold font-medium mb-2">
-                  ASCENDRA Consulting
-                </p>
-                <p className="text-white/70 text-sm leading-relaxed">{sp("hero.pillar2")}</p>
-              </div>
-            </div>
+            <ServicesPillarNav
+              pillar1={sp("hero.pillar1")}
+              pillar2={sp("hero.pillar2")}
+              digitalCta={locale === "ar" ? "الخدمات الرقمية" : "Digital Services"}
+              consultingCta={locale === "ar" ? "خدمات الاستشارات" : "Consulting Services"}
+              rtl={locale === "ar"}
+            />
           </div>
         </section>
 
         {/* ── ASCENDRA DIGITAL ──────────────────────────────────────── */}
-        <section aria-labelledby="digital-services-heading" className="py-24 px-6 bg-light-gray scroll-mt-20">
+        <section id="digital" aria-labelledby="digital-services-heading" className="py-24 px-6 bg-light-gray scroll-mt-20">
           <div className="max-w-content mx-auto">
             <p className="font-sans text-xs uppercase tracking-label text-gold mb-4" aria-hidden="true">
               ASCENDRA Digital
@@ -64,17 +58,28 @@ export default async function ServicesPage({
             </h2>
             <p className="text-navy/55 text-lg leading-relaxed max-w-2xl mb-14">
               {locale === "ar"
-                ? "عشر فئات من المنتجات الرقمية، كل منها مصمّم حول النتائج التجارية — لا حول المخرجات التقنية."
-                : "Ten categories of digital products, each designed around business outcomes — not technical deliverables."}
+                ? "خمس فئات من الخدمات الرقمية، كل منها مصمَّمة حول النتائج التجارية — لا حول المخرجات التقنية."
+                : "Five categories of digital services, each designed around business outcomes — not technical deliverables."}
             </p>
 
-            <div className="divide-y divide-navy/8">
-              {digitalServices.map((svc, i) => (
-                <article key={i} className="py-7 grid md:grid-cols-[280px_1fr] gap-4 md:gap-10 group">
-                  <h3 className="font-serif font-semibold text-lg text-navy leading-tight tracking-tight group-hover:text-gold transition-colors">
-                    {svc.name}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {digitalGroups.map((g, i) => (
+                <article
+                  key={i}
+                  className="bg-white p-8 border-t-2 border-gold/30 hover:border-gold/70 transition-colors flex flex-col gap-5"
+                >
+                  <h3 className="font-serif font-semibold text-xl text-navy leading-tight tracking-tight">
+                    {g.name}
                   </h3>
-                  <p className="text-gray-text text-base leading-relaxed">{svc.desc}</p>
+                  <p className="text-gray-text text-sm leading-relaxed">{g.desc}</p>
+                  <ul className="space-y-2 pt-1 border-t border-gold/15" aria-label={g.name}>
+                    {g.items.map((item, j) => (
+                      <li key={j} className="flex items-start gap-2.5 text-sm text-navy/65 pt-2 first:pt-3">
+                        <span aria-hidden="true" className="text-gold shrink-0 mt-0.5">→</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </article>
               ))}
             </div>
@@ -86,7 +91,7 @@ export default async function ServicesPage({
         </section>
 
         {/* ── ASCENDRA CONSULTING ───────────────────────────────────── */}
-        <section aria-labelledby="consulting-services-heading" className="py-24 px-6 bg-navy scroll-mt-20">
+        <section id="consulting" aria-labelledby="consulting-services-heading" className="py-24 px-6 bg-navy scroll-mt-20">
           <div className="max-w-content mx-auto">
             <p className="font-sans text-xs uppercase tracking-label text-gold mb-4" aria-hidden="true">
               ASCENDRA Consulting
