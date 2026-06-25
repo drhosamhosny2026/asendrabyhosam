@@ -79,7 +79,7 @@ export default async function LocaleLayout({
   const dir = locale === "ar" ? "rtl" : "ltr";
   return (
     <html lang={locale} dir={dir} className={`${spaceGrotesk.variable} ${inter.variable} ${plexArabic.variable}`}>
-      <body className="font-sans">
+      <body className="font-sans" suppressHydrationWarning>
         <OrganizationSchema />
         <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
         <WhatsAppButton />
