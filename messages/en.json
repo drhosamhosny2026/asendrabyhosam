@@ -211,7 +211,7 @@
   "approach": {
     "label": "Transformation Approach",
     "heading": "The ASCENDRA Method",
-    "subtitle": "A structured methodology applied across every Digital and Consulting engagement. Every project follows the same rigor. No two outcomes are identical.",
+    "subtitle": "A structured methodology applied across every engagement. Every project follows the same rigor. No two outcomes are identical.",
     "items": [
       {
         "step": "01",
@@ -241,9 +241,9 @@
     ]
   },
   "contact": {
-    "label": "Start Your Transformation",
-    "title": "Start Your Transformation.",
-    "subtitle": "Tell us where your business is today — we will identify the digital or operational gaps holding it back and build the path forward.",
+    "label": "Let's start with your business",
+    "title": "Let's start with understanding your business.",
+    "subtitle": "Tell us where your business is today — we will identify the gaps holding it back and recommend the right next step.",
     "name": "Full Name",
     "namePlaceholder": "Your full name",
     "email": "Work Email",
@@ -266,7 +266,7 @@
   "footer": {
     "rights": "All rights reserved.",
     "connect": "Connect with us",
-    "emailPlaceholder": "hello@ascendra.com"
+    "emailPlaceholder": "contact@ascendrabyhosam.com"
   },
   "selectedWork": {
     "label": "Selected Work",
@@ -299,7 +299,7 @@
   "contactCta": {
     "label": "Start Your Transformation",
     "heading": "Let's find the system your business needs next.",
-    "body": "Most engagements begin with a conversation, not a brief. Tell us where your business is today — we'll identify the gaps holding it back and show you the path forward. No obligation, no pressure.",
+    "body": "We will identify the gaps holding it back — and recommend the right next step. No obligation, no pressure.",
     "primary": "Start with an Assessment",
     "whatsapp": "Or message us on WhatsApp"
   },
@@ -382,7 +382,7 @@
   "aboutPage": {
     "hero": {
       "label": "About ASCENDRA",
-      "heading": "Built by practitioners who have built and run businesses themselves.",
+      "heading": "Built by practitioners who've built and run real businesses.",
       "sub": "Built by practitioners who understand how businesses actually operate."
     },
     "story": {
@@ -395,9 +395,9 @@
     "vision": {
       "label": "Vision & Mission",
       "visionLabel": "Vision",
-      "vision": "To become the trusted digital and operational systems partner for ambitious businesses in Saudi Arabia and the GCC.",
+      "vision": "To become the trusted business systems partner for ambitious businesses in Saudi Arabia and the GCC.",
       "missionLabel": "Mission",
-      "mission": "To close the gap between business ambition and business execution — by building the digital systems and operational frameworks that allow organizations to operate clearly, grow predictably, and scale without losing control."
+      "mission": "To close the gap between business ambition and business execution — by building the systems that allow organizations to operate clearly, grow predictably, and scale without losing control."
     },
     "values": {
       "label": "What We Believe",
@@ -428,7 +428,7 @@
     "method": {
       "label": "How We Work",
       "heading": "The ASCENDRA Method.",
-      "sub": "A five-phase methodology applied to every Digital and Consulting engagement — with the same rigor regardless of project size or category.",
+      "sub": "A five-phase methodology applied to every engagement — with the same rigor regardless of system, project size, or category.",
       "items": [
         {
           "step": "01",
@@ -465,8 +465,8 @@
       "p1": "Hossam H. Emam began his career as a pharmacist. Not as a stepping stone — as a serious practitioner managing retail pharmacy operations, supplier chains, staff, and patient-facing systems in a high-pressure, heavily regulated environment. The skills that formed in that context — operational precision, systems thinking, compliance under constraints — became the foundation for everything that followed.",
       "p2": "What became clear across sectors was a consistent gap. Businesses of all sizes were operating on fragile systems — processes held together by individual effort rather than structural design. CRM in a notebook. Inventory in a spreadsheet nobody trusted. Reports that arrived too late to act on. The businesses that scaled were not the ones that worked harder. They were the ones that built better.",
       "p3": "The insight became a product. PharmacyOS was designed and built by Hossam to address a specific failure in pharmacy operations — the absence of an integrated management system designed for how a modern pharmacy actually works. It was not a client request. It was ASCENDRA's first proof of concept: that deep operational understanding, translated into a functioning digital system, could transform how a business operates.",
-      "p4": "ASCENDRA was founded as the extension of that conviction. Two pillars — digital and consulting — because neither works fully without the other. A digital system built without operational understanding breaks the moment it meets real business complexity. Consulting without implementation capability remains theoretical. ASCENDRA combines both — by design, not by coincidence.",
-      "quote": "ASCENDRA is not a consultancy that hands you a report. It is an execution partner that builds the systems with you.",
+      "p4": "ASCENDRA was founded as the extension of that conviction. A digital tool built without operational understanding breaks the moment it meets real business complexity. And strategy without the capability to build it remains theoretical. So ASCENDRA builds systems that bring technology and operations together by design — not by coincidence.",
+      "quote": "ASCENDRA is an execution partner. We build the systems with you — and help them evolve as your business grows.",
       "linkLabel": "Explore the Founder's Profile"
     },
     "network": {
@@ -550,11 +550,11 @@
   "workPage": {
     "hero": {
       "label": "Work",
-      "heading": "What we have built.",
-      "sub": "From a flagship product designed and built by ASCENDRA, to digital systems and operational infrastructure built for clients in Saudi Arabia."
+      "heading": "Business systems we've designed and built.",
+      "sub": "From our flagship business system to the business systems we've designed and built for ambitious organizations across Saudi Arabia."
     },
     "pharmacyOS": {
-      "tierLabel": "Flagship Product",
+      "tierLabel": "Flagship Business System",
       "name": "PharmacyOS",
       "tagline": "The complete operating system for modern pharmacies.",
       "problemLabel": "The Problem",
@@ -572,9 +572,9 @@
         "Sales, Revenue & Financial Reporting",
         "Business Intelligence Dashboard"
       ],
-      "pillarsLabel": "ASCENDRA Pillars Applied",
-      "digitalScope": "Designed, built, and deployed by ASCENDRA Digital — custom-built from the ground up, not a configured SaaS platform.",
-      "consultingScope": "Operational structure, workflow design, and pharmacy management methodology developed by ASCENDRA Consulting — derived from direct sector experience.",
+      "pillarsLabel": "How ASCENDRA Built It",
+      "digitalScope": "The technology — custom-built from the ground up by ASCENDRA, not a configured SaaS platform.",
+      "consultingScope": "The operations — workflow design and pharmacy management methodology, derived from direct sector experience.",
       "statusLabel": "Status",
       "status": "Proprietary Product · Designed and Built by ASCENDRA",
       "statusNote": "PharmacyOS is not a client project. It is a product created from operational conviction — ASCENDRA's most direct proof that deep sector understanding, translated into a functioning digital system, changes how a business operates."
@@ -585,14 +585,14 @@
       "taghreedTag": "Case Study · Education",
       "taghreedDesc": "Digital systems and operational infrastructure for a growing education platform in Saudi Arabia.",
       "ascendraName": "ASCENDRA Website",
-      "ascendraTag": "Case Study · Digital",
+      "ascendraTag": "Case Study · Foundation System",
       "ascendraChallenge": "Build the first version of ASCENDRA's public-facing website — a bilingual (EN/AR) digital presence that accurately represents the company's positioning, brand, and service architecture from day one.",
       "ascendraApproach": "Designed and built from the brand up — starting with strategic positioning documents, moving through information architecture and content blueprinting, to implementation. Every layout rule was defined before a line of code was written.",
       "ascendraBuilt": "Next.js 15 (App Router) · React 19 · TypeScript · Tailwind CSS · next-intl. Bilingual EN/AR with RTL layout. Schema.org structured data. Core Web Vitals optimized.",
       "ascendraOutcome": "A production-ready bilingual digital presence that holds ASCENDRA's strategic positioning accurately — built to be extended as the company grows.",
-      "pillarsApplied": "ASCENDRA Pillars Applied",
-      "digital": "Digital",
-      "consulting": "Consulting"
+      "pillarsApplied": "How ASCENDRA Built It",
+      "digital": "Technology",
+      "consulting": "Operations"
     },
     "digitalPresence": {
       "tierLabel": "Digital Presence",
@@ -610,7 +610,7 @@
       "heading": "Have a project in mind?",
       "body": "Tell us what you are trying to build. We will identify the right approach and scope it correctly.",
       "primary": "Let's Talk",
-      "secondary": "See Our Services"
+      "secondary": "Explore the Systems"
     }
   }
 }
