@@ -1,3 +1,6 @@
+Status: Archived
+Superseded by: BRAND_STRATEGY_v1.1.md
+
 # ASCENDRA MASTER BRIEF v2.0
 ### The Definitive Strategic Operating Manual
 

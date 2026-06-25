@@ -1,3 +1,6 @@
+Status: Archived
+Superseded by: BRAND_STRATEGY_v1.1.md
+
 # ASCENDRA INFORMATION ARCHITECTURE v1.0
 ### Website Structure — Based on ASCENDRA_MASTER_BRIEF_v2.0
 

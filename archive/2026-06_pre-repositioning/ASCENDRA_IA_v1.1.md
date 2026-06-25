@@ -1,3 +1,6 @@
+Status: Archived
+Superseded by: BRAND_STRATEGY_v1.1.md
+
 # ASCENDRA INFORMATION ARCHITECTURE v1.1
 ### Revision Document — Changes from v1.0
 

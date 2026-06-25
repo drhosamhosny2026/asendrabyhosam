@@ -6,6 +6,6 @@ export const LINKS = {
   linkedin:    "https://www.linkedin.com/company/ascendraofficial/",
   snapchat:    "#",
   messenger:   "#",
-  email:       "#",
+  email:       "contact@ascendrabyhosam.com",
   founderSite: "https://dr-hossamhosny.vercel.app/",
 };

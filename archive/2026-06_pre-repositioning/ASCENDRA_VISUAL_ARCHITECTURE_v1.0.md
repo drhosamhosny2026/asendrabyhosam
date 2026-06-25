@@ -1,3 +1,6 @@
+Status: Archived
+Superseded by: BRAND_STRATEGY_v1.1.md
+
 # ASCENDRA VISUAL ARCHITECTURE v1.0
 ### Design Blueprint — Pre-Production Visual System
 

@@ -10,17 +10,45 @@
     "work": "Work",
     "insights": "About",
     "contact": "Contact",
-    "cta": "Let's Talk"
+    "cta": "Let's Talk",
+    "solutions": "Solutions"
   },
   "hero": {
-    "headline": "We Build the Digital Systems",
-    "headlineMid": "Your Business Needs to",
-    "headlineAccent": "Operate and Grow.",
-    "keyMessage": "Digital products, built on real operational consulting. Two pillars. One system.",
-    "subtext": "Websites, E-Commerce Stores, CRM Systems, ERP Systems, Mobile Apps, Dashboards, Automation, AI Solutions, and Custom Platforms built around your business goals.",
+    "headline": "We Build the Systems",
+    "headlineMid": "Your Business",
+    "headlineAccent": "Runs On — And Grows With.",
+    "keyMessage": "ASCENDRA is a business systems company. We partner with growing businesses to build and evolve the systems they need to operate better, scale with confidence, and transform sustainably.",
+    "subtext": "We design and build digital and operational systems — from websites and CRM to custom platforms and ERP — built around the real operations of growing businesses.",
     "cta": "Let's Talk",
-    "ctaSecondary": "See What We Build",
+    "ctaSecondary": "Explore the Systems",
     "trustLine": "Business Transformation · Riyadh, KSA"
+  },
+  "coreSystems": {
+    "label": "What We Build",
+    "heading": "Every growing business runs on systems — whether they were designed on purpose or not. We build the four that matter most.",
+    "items": [
+      {
+        "name": "Foundation System",
+        "desc": "The digital foundation your business runs on.",
+        "outcome": "A professional, connected base ready to scale."
+      },
+      {
+        "name": "Operations System",
+        "desc": "The systems that run your day-to-day work.",
+        "outcome": "Operations that run on structure, not on individuals."
+      },
+      {
+        "name": "Performance & Intelligence System",
+        "desc": "The systems that measure and sharpen performance.",
+        "outcome": "Decisions backed by data, not guesswork."
+      },
+      {
+        "name": "Custom Business Systems",
+        "desc": "Industry-specific systems built around real operations.",
+        "outcome": "A system designed for how your sector actually works."
+      }
+    ],
+    "cta": "Explore the Systems"
   },
   "digital": {
     "label": "ASCENDRA Digital",
@@ -120,12 +148,12 @@
   },
   "insight": {
     "label": "Why ASCENDRA",
-    "headline": "Most businesses have the ambition to grow. They are missing the digital foundation to do it.",
-    "body1": "Every business that has plateaued shares the same pattern. The website hasn't been updated in three years. There is no CRM, so client follow-up happens in someone's head. Reports are spreadsheets nobody trusts. The founder is the only person who knows where anything stands — and when they're out, everything slows down.",
-    "body2": "The instinct is to hire more people, push harder, or try a new strategy. But the constraint is rarely talent or ambition. It is the absence of the digital infrastructure — the website that works, the systems that track, the automation that removes the manual load, and the dashboards that give real visibility — that allows a business to operate at scale.",
+    "headline": "Most growing businesses don't have a growth problem. They have a systems problem.",
+    "body1": "Every business that plateaus shares the same pattern. Work gets done, but it depends on a few key people. Information lives in scattered places. No one has a clear view of what's actually happening. And as the business grows, the complexity grows faster.",
+    "body2": "The instinct is to push harder — hire more people, work longer, try a new tactic. But effort doesn't fix a structural problem. It just stretches it.",
     "emphasis1": "The solution is rarely more effort.",
     "emphasis2": "It is better systems.",
-    "emphasis3": "Systems that create clarity, improve execution, and make growth repeatable.",
+    "emphasis3": "Better systems create better businesses — they create clarity, improve execution, and make growth repeatable instead of accidental.",
     "body3": "ASCENDRA starts with the digital project — website, CRM, ERP, automation, or AI — and builds the operational foundation that makes it work inside your business.",
     "digitalCardLabel": "ASCENDRA Digital",
     "digitalCardBody": "Builds the digital products your business runs on — websites, e-commerce, CRM, ERP, dashboards, automation, and AI.",
@@ -133,28 +161,38 @@
     "consultingCardBody": "Builds the operational and strategic systems that help your business grow steadily."
   },
   "outcomes": {
-    "label": "Business Outcomes",
-    "title": "What changes after ASCENDRA.",
+    "label": "What Changes",
+    "title": "What your business looks like once the systems are in place.",
     "items": [
       {
         "metric": "↑",
-        "label": "Operational Clarity",
-        "desc": "Redesigned workflows and defined accountability that eliminate ambiguity — your business runs on systems, not memory."
+        "label": "Clarity",
+        "desc": "You can see what's happening across the business, in real time."
       },
       {
         "metric": "↑",
-        "label": "Leadership Bandwidth",
-        "desc": "When systems run the routine, founders and leaders focus on growing the business — not managing its daily operations."
+        "label": "Efficiency",
+        "desc": "Work flows through systems instead of stalling on people."
       },
       {
         "metric": "↑",
-        "label": "Execution Velocity",
-        "desc": "Clear processes, the right tools, and aligned teams mean decisions happen faster and work gets done with less friction."
+        "label": "Visibility",
+        "desc": "Performance is measured, not guessed."
       },
       {
         "metric": "↑",
-        "label": "Scalable Growth",
-        "desc": "Systems built to carry the weight of the next stage — so every new hire, client, and market adds strength, not complexity."
+        "label": "Scalability",
+        "desc": "Growth doesn't break what you've built."
+      },
+      {
+        "metric": "↑",
+        "label": "Better Decisions",
+        "desc": "You act on data, not on instinct alone."
+      },
+      {
+        "metric": "↑",
+        "label": "Confidence",
+        "desc": "You scale knowing the foundation holds."
       }
     ]
   },
@@ -232,36 +270,37 @@
   },
   "selectedWork": {
     "label": "Selected Work",
-    "heading": "What We Have Built.",
+    "heading": "Business systems we've designed and built.",
+    "intro": "Business systems built around real operations and measured by real outcomes.",
     "viewProject": "View Project",
     "viewCaseStudy": "View Case Study",
     "viewAll": "View All Work",
     "items": [
       {
-        "tier": "Flagship Product",
+        "tier": "Flagship Business System",
         "name": "PharmacyOS",
-        "desc": "The complete operating system for modern pharmacies. Designed and built by ASCENDRA — not a client project.",
+        "desc": "A custom operational platform built around how pharmacies actually run — unifying operations, improving visibility, and building a foundation ready to scale across branches.",
         "href": "work"
       },
       {
         "tier": "Case Study · Education",
         "name": "Taghreed Academy",
-        "desc": "Digital systems and operational infrastructure for a growing education platform in Saudi Arabia.",
+        "desc": "Operational and digital systems designed around how the academy delivers and grows — structured for scale, not held together by manual effort.",
         "href": "work"
       },
       {
-        "tier": "Digital Presence",
+        "tier": "Foundation System",
         "name": "WIN Solutions",
-        "desc": "Corporate website and digital presence for a Saudi B2B services company.",
+        "desc": "A digital foundation built to represent the business professionally and convert the right clients.",
         "href": "work"
       }
     ]
   },
   "contactCta": {
     "label": "Start Your Transformation",
-    "heading": "Tell us where your business is today.",
-    "body": "We will identify the digital or operational gaps holding it back — and build the path forward.",
-    "primary": "Let's Talk",
+    "heading": "Let's find the system your business needs next.",
+    "body": "Most engagements begin with a conversation, not a brief. Tell us where your business is today — we'll identify the gaps holding it back and show you the path forward. No obligation, no pressure.",
+    "primary": "Start with an Assessment",
     "whatsapp": "Or message us on WhatsApp"
   },
   "servicesPage": {
@@ -343,7 +382,7 @@
   "aboutPage": {
     "hero": {
       "label": "About ASCENDRA",
-      "heading": "Built by practitioners, not advisors.",
+      "heading": "Built by practitioners who have built and run businesses themselves.",
       "sub": "Built by practitioners who understand how businesses actually operate."
     },
     "story": {
@@ -445,6 +484,67 @@
       "body": "Most engagements begin with a conversation — not a brief. Tell us where your business is today.",
       "primary": "Let's Talk",
       "secondary": "See What We Build"
+    }
+  },
+  "solutionsPage": {
+    "hero": {
+      "label": "Solutions",
+      "headline": "We build business systems designed around how your business actually operates.",
+      "body1": "Most businesses buy services one at a time — a website here, a tool there, a consultant when something breaks. The result is a collection of parts that were never designed to work together.",
+      "body2": "ASCENDRA works differently. We build systems — structured, connected, and designed around how your business actually operates. Each one solves a specific problem. Together, they become the foundation your business runs on, and grows with.",
+      "subLine": "Four systems. One way of working. Built in the order your business needs them."
+    },
+    "assessment": {
+      "label": "Where Every Engagement Begins",
+      "headline": "Before we build anything, we understand everything.",
+      "body1": "We don't start with a proposal. We start with a diagnosis. Business Analysis & Assessment is how every engagement begins — a structured look at how your business operates today, where the gaps are, and which system, or combination of systems, will move it forward.",
+      "body2": "You don't have to know what you need. That's what the assessment is for.",
+      "outcome": "A clear picture of where your business stands — and a recommended path, not a sales pitch."
+    },
+    "problemLabel": "The Problem",
+    "systemLabel": "The System",
+    "capabilitiesLabel": "Capabilities",
+    "outcomeLabel": "Outcome",
+    "systems": [
+      {
+        "id": "foundation",
+        "label": "Foundation System",
+        "problem": "Your digital presence is thin or fragmented. The basics — how the business looks, where it lives online, how it's set up technically — were never built on a solid base. Everything else depends on this foundation — and right now, it isn't built to support growth.",
+        "system": "The Foundation System builds the digital base your business runs on: a professional presence, a coherent identity, and the technical infrastructure underneath it. It's the layer everything else connects to.",
+        "capabilities": ["Business Websites", "Branding & Identity", "Digital Infrastructure"],
+        "outcome": "A professional, scalable, and connected business foundation — ready for everything you build on top of it."
+      },
+      {
+        "id": "operations",
+        "label": "Operations System",
+        "problem": "The work gets done, but it depends on people remembering, chasing, and holding it together. Information is scattered. Processes live in someone's head. As you grow, the cracks widen — and no one has a clear view of what's actually happening day to day.",
+        "system": "The Operations System replaces that fragility with structure. It connects your processes, automates the manual work, and gives the business a single, reliable way of running — so operations don't depend on any one person.",
+        "capabilities": ["CRM Systems", "ERP Systems", "Automation", "Process Design", "Process Optimization", "Operational Excellence"],
+        "outcome": "Operations that run through systems, not individuals — consistent, efficient, and ready to scale."
+      },
+      {
+        "id": "performance",
+        "label": "Performance & Intelligence System",
+        "problem": "You're growing, but you're flying partly blind. You can't easily see what's working and what isn't. Decisions get made on instinct because the data is either missing, scattered, or too slow to be useful.",
+        "system": "The Performance & Intelligence System gives the business sight. It defines what performance means, measures it continuously, and surfaces it clearly — turning scattered data into decisions you can act on.",
+        "capabilities": ["Dashboards", "KPI Design", "Reporting & Analytics", "Growth Planning", "AI-Enabled Insights"],
+        "outcome": "Better decisions and measurable growth — driven by what's real, not by guesswork."
+      },
+      {
+        "id": "custom",
+        "label": "Custom Business Systems",
+        "problem": "Your sector has needs that off-the-shelf tools can't meet. You've been forced to bend your operations around generic software — instead of having software built around how your business actually works.",
+        "system": "When the standard systems aren't enough, we build a custom one — designed around the specific operations of your business or industry. This is where ASCENDRA's deepest work lives, and where PharmacyOS, our flagship, was born.",
+        "capabilities": ["Custom Platforms", "Vertical Solutions", "PharmacyOS (Flagship Business System)"],
+        "outcome": "A purpose-built system designed for how your sector actually operates — proof that we build systems, not just assemble tools."
+      }
+    ],
+    "cta": {
+      "label": "Start Your Transformation",
+      "headline": "Not sure which system you need? That's where we start.",
+      "body": "Every engagement begins with a conversation, not a brief. Tell us where your business is today, and we'll identify the gaps and recommend the path forward — one system, or several, in the order that makes sense for you.",
+      "primary": "Start with an Assessment",
+      "secondary": "Or message us on WhatsApp"
     }
   },
   "workPage": {

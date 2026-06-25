@@ -1,3 +1,6 @@
+Status: Archived
+Superseded by: BRAND_STRATEGY_v1.1.md
+
 # ASCENDRA UX CONTENT BLUEPRINT v1.0
 ### Page-by-Page Production Content — All Five Pages
 
