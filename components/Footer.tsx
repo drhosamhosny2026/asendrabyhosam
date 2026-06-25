@@ -63,8 +63,7 @@ export default function Footer() {
           unoptimized
           className="h-10 w-10 mb-3"
         />
-        <div className="text-white text-xl font-serif font-semibold wordmark mb-1">{b("name")}</div>
-        <div className="text-gold text-sm subword font-serif mb-2">{b("sub")}</div>
+        <div className="text-white text-xl font-serif font-semibold wordmark mb-3">{b("name")}</div>
         <p className="font-sans text-[11px] uppercase tracking-label text-gold/55 mb-8">{b("tagline")}</p>
 
         {/* Social Icons */}
@@ -112,7 +111,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <p className="text-xs text-light-gray/40">
-          © {new Date().getFullYear()} {b("name")} {b("sub")}. {f("rights")}
+          © {new Date().getFullYear()} {b("name")}. {f("rights")}
         </p>
       </div>
     </footer>

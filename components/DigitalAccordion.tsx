@@ -1,10 +1,15 @@
 "use client";
 import { useState } from "react";
 
+interface ServiceItem {
+  name: string;
+  desc: string;
+}
+
 interface Group {
   name: string;
   desc: string;
-  items: string[];
+  items: ServiceItem[];
 }
 
 interface Props {
@@ -25,7 +30,6 @@ function CardIcon({ index }: { index: number }) {
       className="w-full h-full"
     >
       {index === 0 && (
-        /* Globe — Digital Presence */
         <>
           <circle cx="11" cy="11" r="9" />
           <line x1="2" y1="11" x2="20" y2="11" />
@@ -34,7 +38,6 @@ function CardIcon({ index }: { index: number }) {
         </>
       )}
       {index === 1 && (
-        /* Layers — Business Systems */
         <>
           <polygon points="11 2 21 7.5 11 13 1 7.5" />
           <polyline points="21 13.5 11 19 1 13.5" />
@@ -42,11 +45,9 @@ function CardIcon({ index }: { index: number }) {
         </>
       )}
       {index === 2 && (
-        /* Zap — Automation & AI */
         <polygon points="13 2 3 14 11 14 9 20 19 8 11 8" />
       )}
       {index === 3 && (
-        /* Gem — Branding & Identity */
         <>
           <path d="M5.5 3h11L20 8.5 11 19 2 8.5z" />
           <line x1="2" y1="8.5" x2="20" y2="8.5" />
@@ -59,10 +60,19 @@ function CardIcon({ index }: { index: number }) {
 
 export default function DigitalAccordion({ groups, footerNote }: Props) {
   const [open, setOpen] = useState<number | null>(null);
+  const [serviceOpen, setServiceOpen] = useState<Record<string, boolean>>({});
+
+  const svcKey = (catIdx: number, svcIdx: number) => `${catIdx}-${svcIdx}`;
+  const isServiceOpen = (catIdx: number, svcIdx: number) =>
+    !!serviceOpen[svcKey(catIdx, svcIdx)];
+  const toggleService = (catIdx: number, svcIdx: number) => {
+    const k = svcKey(catIdx, svcIdx);
+    setServiceOpen((prev) => ({ ...prev, [k]: !prev[k] }));
+  };
 
   return (
     <div>
-      <div className="space-y-2">
+      <div className="border-t border-navy/8">
         {groups.map((g, i) => {
           const isOpen = open === i;
 
@@ -70,64 +80,50 @@ export default function DigitalAccordion({ groups, footerNote }: Props) {
             <div
               key={i}
               className={[
-                "bg-white border-s-2 transition-colors duration-200",
-                isOpen
-                  ? "border-gold"
-                  : "border-transparent hover:border-gold/35",
+                "border-b border-navy/8 border-s-2 transition-colors duration-200",
+                isOpen ? "border-s-gold/50 bg-white" : "border-s-transparent",
               ].join(" ")}
             >
+              {/* ── Level 1 button ── */}
               <button
                 type="button"
-                className="w-full text-start flex items-start gap-7 px-10 py-9 group"
+                className="w-full text-start flex items-start gap-6 px-6 py-8 group"
                 onClick={() => setOpen(isOpen ? null : i)}
-                aria-expanded={isOpen}
+                aria-expanded={open === i}
                 aria-controls={`dp-panel-${i}`}
               >
-                {/* Icon */}
                 <span
                   className={[
-                    "w-5 h-5 shrink-0 mt-2 transition-colors duration-200",
-                    isOpen
-                      ? "text-gold"
-                      : "text-gold/50 group-hover:text-gold/80",
+                    "w-5 h-5 shrink-0 mt-1.5 transition-colors duration-200",
+                    isOpen ? "text-gold" : "text-gold/40 group-hover:text-gold/75",
                   ].join(" ")}
                 >
                   <CardIcon index={i} />
                 </span>
 
-                {/* Title + description */}
                 <span className="flex-1 min-w-0">
-                  <span className="block font-serif font-semibold text-2xl md:text-[1.75rem] leading-tight tracking-tight text-navy mb-2.5">
+                  <span className="block font-serif font-semibold text-2xl md:text-[1.75rem] leading-tight tracking-tight text-navy mb-2">
                     {g.name}
                   </span>
-                  <span className="block text-navy/50 text-base leading-relaxed">
+                  <span className="block text-navy/55 text-base leading-relaxed">
                     {g.desc}
                   </span>
                 </span>
 
-                {/* Chevron */}
                 <span
                   className={[
-                    "w-4 h-4 shrink-0 mt-3 transition-all duration-200",
-                    isOpen
-                      ? "text-gold rotate-180"
-                      : "text-gold/30 group-hover:text-gold/65",
+                    "w-4 h-4 shrink-0 mt-2 transition-all duration-200",
+                    isOpen ? "text-gold rotate-180" : "text-navy/25 group-hover:text-navy/50",
                   ].join(" ")}
                   aria-hidden="true"
                 >
-                  <svg
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                  >
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
                     <path d="M3 5.5l5 5 5-5" />
                   </svg>
                 </span>
               </button>
 
-              {/* Accordion panel — CSS grid-template-rows transition */}
+              {/* ── Level 1 panel ── */}
               <div
                 id={`dp-panel-${i}`}
                 className={[
@@ -136,11 +132,62 @@ export default function DigitalAccordion({ groups, footerNote }: Props) {
                 ].join(" ")}
               >
                 <div className="overflow-hidden min-h-0">
-                  <div className="px-10 pb-9">
-                    <div className="ms-12 border-t border-navy/8 pt-5">
-                      <p className="font-sans text-[10px] uppercase tracking-label text-gold/60 leading-loose">
-                        {g.items.join(" · ")}
-                      </p>
+                  <div className="px-6 pb-8">
+                    <div className="ms-11 border-t border-navy/8 pt-2">
+                      {g.items.map((svc, j) => {
+                        const sOpen = isServiceOpen(i, j);
+
+                        return (
+                          <div
+                            key={j}
+                            className="group/svc border-b border-navy/8 last:border-0"
+                          >
+                            {/* ── Level 2 button ── */}
+                            <button
+                              type="button"
+                              className="w-full text-start flex items-center justify-between gap-4 py-4"
+                              onClick={() => toggleService(i, j)}
+                              aria-expanded={isServiceOpen(i, j)}
+                              aria-controls={`dp-svc-${i}-${j}`}
+                            >
+                              <span className={[
+                                "font-sans text-sm leading-snug transition-colors duration-150",
+                                sOpen ? "text-navy" : "text-navy/55 group-hover/svc:text-navy",
+                              ].join(" ")}>
+                                {svc.name}
+                              </span>
+                              <span
+                                className={[
+                                  "w-3 h-3 shrink-0 transition-all duration-200",
+                                  sOpen ? "text-gold rotate-90" : "text-navy/25 group-hover/svc:text-navy/50",
+                                ].join(" ")}
+                                aria-hidden="true"
+                              >
+                                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+                                  <path d="M4 2l4 4-4 4" />
+                                </svg>
+                              </span>
+                            </button>
+
+                            {/* ── Level 2 panel ── */}
+                            <div
+                              id={`dp-svc-${i}-${j}`}
+                              className={[
+                                "grid transition-[grid-template-rows] duration-200 ease-in-out",
+                                sOpen
+                                  ? "grid-rows-[1fr]"
+                                  : "grid-rows-[0fr] md:group-hover/svc:grid-rows-[1fr]",
+                              ].join(" ")}
+                            >
+                              <div className="overflow-hidden min-h-0">
+                                <p className="text-navy/50 text-sm leading-relaxed pb-4 pe-4">
+                                  {svc.desc}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
@@ -150,7 +197,7 @@ export default function DigitalAccordion({ groups, footerNote }: Props) {
         })}
       </div>
 
-      <p className="mt-14 text-navy/35 text-sm italic border-t border-navy/10 pt-8">
+      <p className="mt-10 text-navy/40 text-sm leading-relaxed border-t border-navy/8 pt-6">
         {footerNote}
       </p>
     </div>

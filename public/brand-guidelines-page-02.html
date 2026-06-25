@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=794">
+  <title>ASCENDRA — Logo System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:#0B1D33; --gold:#D4AF37; --emerald:#0F5B46; --white:#FFFFFF;
+      --w80:rgba(255,255,255,.80); --w60:rgba(255,255,255,.60);
+      --w30:rgba(255,255,255,.30); --w12:rgba(255,255,255,.12);
+      --w06:rgba(255,255,255,.06); --w03:rgba(255,255,255,.03);
+    }
+    @page { size: A4 portrait; margin: 0; }
+    html { background:var(--navy); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body { background:var(--navy); color:var(--white); font-family:'Inter',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+    .page { width:210mm; height:297mm; overflow:hidden; background:var(--navy); display:flex; flex-direction:column; break-before:always; }
+    .page:first-child { break-before:auto; }
+
+    .topbar { display:flex; align-items:center; justify-content:space-between; padding:14px 44px; border-bottom:1px solid var(--w12); flex-shrink:0; }
+    .topbar-brand { display:flex; align-items:center; gap:10px; }
+    .topbar-name { font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:12px; letter-spacing:.22em; text-transform:uppercase; }
+    .topbar-right { display:flex; align-items:center; gap:16px; }
+    .topbar-label { font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--w30); }
+    .topbar-pill { font-size:9px; font-weight:500; letter-spacing:.10em; text-transform:uppercase; color:var(--gold); border:1px solid rgba(212,175,55,.30); padding:3px 8px; border-radius:2px; }
+    .gold-bar { height:3px; background:var(--gold); flex-shrink:0; }
+    .footer { padding:13px 44px 20px; border-top:1px solid var(--w12); display:flex; align-items:center; justify-content:space-between; margin-top:auto; flex-shrink:0; }
+    .footer-l { font-family:'Space Grotesk',sans-serif; font-size:10px; font-weight:500; letter-spacing:.15em; text-transform:uppercase; color:var(--w30); }
+    .footer-r { font-size:10px; color:var(--w30); letter-spacing:.08em; }
+    .section { padding:26px 44px 30px; border-top:1px solid var(--w12); }
+    .section-label { display:flex; align-items:center; gap:12px; margin-bottom:22px; }
+    .sl-num { font-size:10px; font-weight:500; letter-spacing:.16em; color:var(--gold); }
+    .sl-text { font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:500; letter-spacing:.20em; text-transform:uppercase; color:var(--w60); }
+    .sl-rule { flex:1; height:1px; background:var(--w12); }
+
+    /* Hero */
+    .hero { padding:28px 44px 24px; border-bottom:1px solid var(--w12); flex-shrink:0; }
+    .hero-logo-frame { border:1px solid var(--w12); display:flex; align-items:center; justify-content:center; padding:22px 60px; margin-bottom:20px; background:var(--w03); }
+    .hero-logo-frame img { width:150px; height:auto; }
+    .hero-foot { display:flex; align-items:flex-end; justify-content:space-between; }
+    .hero-heading { font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:30px; letter-spacing:-.015em; line-height:1.1; }
+    .hero-sub { font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--w30); margin-top:8px; }
+    .hero-ar { font-family:'IBM Plex Sans Arabic',sans-serif; font-weight:500; font-size:20px; color:var(--w60); direction:rtl; }
+
+    /* Logo Variants — 3-col grid */
+    .variants-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
+    .variant-bg { display:flex; align-items:center; justify-content:center; padding:22px; height:130px; }
+    .variant-bg img { width:90px; height:auto; }
+    .variant-info { padding:12px 14px 16px; background:var(--w06); border:1px solid var(--w12); border-top:none; }
+    .v-name { font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:600; margin-bottom:3px; }
+    .v-file { font-size:9px; letter-spacing:.05em; color:var(--gold); margin-bottom:6px; }
+    .v-use { font-size:9.5px; color:var(--w60); line-height:1.5; margin-bottom:8px; }
+    .v-tag { display:inline-block; font-size:8px; font-weight:500; letter-spacing:.10em; text-transform:uppercase; padding:2px 7px; border-radius:2px; }
+    .tag-dark { background:rgba(212,175,55,.10); color:var(--gold); border:1px solid rgba(212,175,55,.22); }
+    .tag-light { background:rgba(11,29,51,.25); color:var(--w60); border:1px solid var(--w12); }
+    .tag-em { background:rgba(15,91,70,.35); color:#5dbfa0; }
+
+    /* Background Rules */
+    .bg-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
+    .bg-swatch { display:flex; align-items:center; justify-content:center; gap:16px; padding:20px; height:110px; }
+    .bg-swatch img { width:60px; height:auto; }
+    .bg-body { padding:10px 14px 14px; background:var(--w03); border:1px solid var(--w12); border-top:none; }
+    .bg-label { font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:600; margin-bottom:5px; }
+    .bg-desc { font-size:10px; color:var(--w60); line-height:1.55; }
+    .bg-desc b { color:var(--w80); font-weight:500; }
+    .bg-prohibition { margin-top:12px; padding:12px 16px; border-left:3px solid rgba(224,122,118,.60); background:rgba(179,64,58,.06); }
+    .bg-prohibition p { font-size:10.5px; color:var(--w60); line-height:1.6; }
+    .bg-prohibition strong { color:rgba(224,122,118,.90); font-weight:500; }
+
+    /* Clear Space */
+    .cs-layout { display:flex; gap:28px; align-items:flex-start; }
+    .cs-rules { flex:1; display:flex; flex-direction:column; gap:16px; }
+    .cs-rule-title { font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; margin-bottom:6px; }
+    .cs-rule-desc { font-size:11px; color:var(--w60); line-height:1.6; }
+    .cs-formula { display:inline-block; margin-top:8px; font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:500; color:var(--gold); border:1px solid rgba(212,175,55,.25); padding:4px 10px; border-radius:2px; }
+
+    /* Minimum Size */
+    .minsize-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; }
+    .minsize-card { display:flex; gap:18px; align-items:flex-start; padding:20px 20px 24px; border:1px solid var(--w12); background:var(--w03); }
+    .ms-value { font-family:'Space Grotesk',sans-serif; font-size:22px; font-weight:600; color:var(--gold); letter-spacing:-.01em; margin-bottom:4px; }
+    .ms-context { font-size:9px; font-weight:500; letter-spacing:.10em; text-transform:uppercase; color:var(--w30); margin-bottom:10px; }
+    .ms-note { font-size:10.5px; color:var(--w60); line-height:1.6; }
+
+    /* Misuse */
+    .misuse-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; }
+    .misuse-card { border:1px solid var(--w12); }
+    .misuse-demo { position:relative; display:flex; align-items:center; justify-content:center; height:110px; }
+    .misuse-overlay { position:absolute; inset:0; background:rgba(11,29,51,.35); display:flex; align-items:center; justify-content:center; }
+    .x-badge { width:28px; height:28px; border-radius:50%; background:rgba(179,64,58,.85); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; color:#fff; }
+    .misuse-body { padding:12px 14px 16px; background:var(--w03); }
+    .misuse-title { font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:600; margin-bottom:5px; }
+    .misuse-desc { font-size:10px; color:var(--w60); line-height:1.55; }
+  </style>
+</head>
+<body>
+
+<!-- ═══ PAGE A — Hero + Logo Variants ═══ -->
+<div class="page">
+  <div class="topbar">
+    <div class="topbar-brand">
+      <svg width="20" height="20" viewBox="0 0 30 30" fill="none"><polygon points="15,2 28,24 2,24" fill="none" stroke="#D4AF37" stroke-width="1.4"/><polygon points="15,9 23,23 7,23" fill="rgba(212,175,55,.12)" stroke="rgba(212,175,55,.35)" stroke-width=".8"/><circle cx="15" cy="15" r="2" fill="#D4AF37"/></svg>
+      <span class="topbar-name">Ascendra</span>
+    </div>
+    <div class="topbar-right">
+      <span class="topbar-label">Brand Guidelines</span>
+      <span class="topbar-pill">02 · Logo System</span>
+    </div>
+  </div>
+  <div class="gold-bar"></div>
+
+  <div class="hero">
+    <div class="hero-logo-frame">
+      <img src="brand/ASCENDRA-logo_gold-transparent.svg" alt="ASCENDRA Primary Mark">
+    </div>
+    <div class="hero-foot">
+      <div>
+        <h1 class="hero-heading">Logo System</h1>
+        <p class="hero-sub">Variants &nbsp;·&nbsp; Usage Rules &nbsp;·&nbsp; Clear Space &nbsp;·&nbsp; Size &nbsp;·&nbsp; Misuse</p>
+      </div>
+      <p class="hero-ar">نظام الشعار</p>
+    </div>
+  </div>
+
+  <div class="section" style="flex:1;">
+    <div class="section-label">
+      <span class="sl-num">01</span>
+      <span class="sl-text">Logo Variants</span>
+      <div class="sl-rule"></div>
+    </div>
+    <div class="variants-grid">
+      <div>
+        <div class="variant-bg" style="background:#0B1D33; border:1px solid rgba(255,255,255,.10);"><img src="brand/ASCENDRA-logo_gold-transparent.svg" alt=""></div>
+        <div class="variant-info">
+          <div class="v-name">Gold on Transparent</div>
+          <div class="v-file">ASCENDRA-logo_gold-transparent.svg</div>
+          <div class="v-use">Primary variant. Use on all dark navy backgrounds, deep-tone surfaces, and brand-primary layouts.</div>
+          <span class="v-tag tag-dark">Dark · Primary</span>
+        </div>
+      </div>
+      <div>
+        <div class="variant-bg" style="background:#0B1D33; border:1px solid rgba(255,255,255,.10);"><img src="brand/ASCENDRA-logo_gold-on-navy.svg" alt=""></div>
+        <div class="variant-info">
+          <div class="v-name">Gold on Navy</div>
+          <div class="v-file">ASCENDRA-logo_gold-on-navy.svg</div>
+          <div class="v-use">Self-contained variant with navy background embedded. Safe for placement on any surface without a defined dark context.</div>
+          <span class="v-tag tag-dark">Dark · Self-Contained</span>
+        </div>
+      </div>
+      <div>
+        <div class="variant-bg" style="background:#162c4a; border:1px solid rgba(255,255,255,.10);"><img src="brand/ASCENDRA-logo_white-transparent.svg" alt=""></div>
+        <div class="variant-info">
+          <div class="v-name">White on Transparent</div>
+          <div class="v-file">ASCENDRA-logo_white-transparent.svg</div>
+          <div class="v-use">Use over dark photography, video stills, and gradient surfaces where gold lacks sufficient contrast.</div>
+          <span class="v-tag tag-dark">Photos · Dark Surfaces</span>
+        </div>
+      </div>
+      <div>
+        <div class="variant-bg" style="background:#F0F2F4;"><img src="brand/ASCENDRA-logo_navy-transparent.svg" alt=""></div>
+        <div class="variant-info">
+          <div class="v-name">Navy on Transparent</div>
+          <div class="v-file">ASCENDRA-logo_navy-transparent.svg</div>
+          <div class="v-use">Primary light-mode variant. Use on white, light gray, and all printed materials with light backgrounds.</div>
+          <span class="v-tag tag-light">Light · Primary</span>
+        </div>
+      </div>
+      <div>
+        <div class="variant-bg" style="background:#F0F2F4;"><img src="brand/ASCENDRA-logo_black-transparent.svg" alt=""></div>
+        <div class="variant-info">
+          <div class="v-name">Black on Transparent</div>
+          <div class="v-file">ASCENDRA-logo_black-transparent.svg</div>
+          <div class="v-use">Monochrome option for single-ink printing, embossing, engraving, and contexts where brand color is unavailable.</div>
+          <span class="v-tag tag-light">Mono · Print</span>
+        </div>
+      </div>
+      <div>
+        <div class="variant-bg" style="background:#0F5B46; border:1px solid rgba(255,255,255,.08);"><img src="brand/ASCENDRA-logo_gold-on-emerald.svg" alt=""></div>
+        <div class="variant-info">
+          <div class="v-name">Gold on Emerald</div>
+          <div class="v-file">ASCENDRA-logo_gold-on-emerald.svg</div>
+          <div class="v-use">Use exclusively in emerald-context applications — growth pillar, category headers, and sustainability-themed materials.</div>
+          <span class="v-tag tag-em">Emerald Only</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="footer-l">ASCENDRA — Brand Guidelines</span>
+    <span class="footer-r">02 · Logo System · Variants</span>
+  </div>
+</div>
+
+<!-- ═══ PAGE B — Background Rules + Clear Space ═══ -->
+<div class="page">
+  <div class="topbar">
+    <div class="topbar-brand">
+      <svg width="20" height="20" viewBox="0 0 30 30" fill="none"><polygon points="15,2 28,24 2,24" fill="none" stroke="#D4AF37" stroke-width="1.4"/><polygon points="15,9 23,23 7,23" fill="rgba(212,175,55,.12)" stroke="rgba(212,175,55,.35)" stroke-width=".8"/><circle cx="15" cy="15" r="2" fill="#D4AF37"/></svg>
+      <span class="topbar-name">Ascendra</span>
+    </div>
+    <div class="topbar-right">
+      <span class="topbar-label">Brand Guidelines</span>
+      <span class="topbar-pill">02 · Logo System</span>
+    </div>
+  </div>
+  <div class="gold-bar"></div>
+
+  <div class="section">
+    <div class="section-label">
+      <span class="sl-num">02</span>
+      <span class="sl-text">Background Rules</span>
+      <div class="sl-rule"></div>
+    </div>
+    <div class="bg-grid">
+      <div>
+        <div class="bg-swatch" style="background:#0B1D33;">
+          <img src="brand/ASCENDRA-logo_gold-transparent.svg" alt="">
+          <img src="brand/ASCENDRA-logo_white-transparent.svg" alt="">
+        </div>
+        <div class="bg-body">
+          <div class="bg-label">Dark / Navy</div>
+          <div class="bg-desc">Use <b>gold-transparent</b> as default. Switch to <b>white-transparent</b> over complex imagery where gold lacks contrast.</div>
+        </div>
+      </div>
+      <div>
+        <div class="bg-swatch" style="background:#F0F2F4;">
+          <img src="brand/ASCENDRA-logo_navy-transparent.svg" alt="">
+          <img src="brand/ASCENDRA-logo_black-transparent.svg" alt="">
+        </div>
+        <div class="bg-body">
+          <div class="bg-label">Light / White</div>
+          <div class="bg-desc">Use <b>navy-transparent</b> as default. Switch to <b>black-transparent</b> for mono contexts — single-ink print, emboss, foil.</div>
+        </div>
+      </div>
+      <div>
+        <div class="bg-swatch" style="background:#0F5B46;">
+          <img src="brand/ASCENDRA-logo_gold-on-emerald.svg" alt="">
+          <img src="brand/ASCENDRA-logo_white-transparent.svg" alt="">
+        </div>
+        <div class="bg-body">
+          <div class="bg-label">Emerald</div>
+          <div class="bg-desc">Use <b>gold-on-emerald</b> (self-contained). <b>white-transparent</b> is an acceptable alternative when the gold mark lacks clear separation.</div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-prohibition">
+      <p><strong>Prohibited —</strong> Never place the gold logo on white, light gray, or any light-toned background. Gold at #D4AF37 fails minimum contrast thresholds on light surfaces and violates the brand's core color rule.</p>
+    </div>
+  </div>
+
+  <div class="section" style="flex:1;">
+    <div class="section-label">
+      <span class="sl-num">03</span>
+      <span class="sl-text">Clear Space</span>
+      <div class="sl-rule"></div>
+    </div>
+    <div class="cs-layout">
+      <svg viewBox="0 0 380 380" xmlns="http://www.w3.org/2000/svg" width="340" height="340" style="flex-shrink:0;">
+        <rect width="380" height="380" fill="#0B1D33"/>
+        <rect width="380" height="380" fill="rgba(255,255,255,.025)"/>
+        <!-- Clear-space zone: logo 140×140 at (120,120); zone 50px padding → (70,70) 240×240 -->
+        <rect x="70" y="70" width="240" height="240" fill="none" stroke="rgba(212,175,55,.38)" stroke-width="1" stroke-dasharray="6,4"/>
+        <image href="brand/ASCENDRA-logo_gold-transparent.svg" x="120" y="120" width="140" height="140"/>
+        <!-- Top measurement -->
+        <line x1="130" y1="70" x2="130" y2="120" stroke="rgba(212,175,55,.55)" stroke-width="1"/>
+        <polygon points="130,71 126,81 134,81" fill="rgba(212,175,55,.55)"/>
+        <polygon points="130,119 126,109 134,109" fill="rgba(212,175,55,.55)"/>
+        <rect x="138" y="86" width="36" height="18" rx="2" fill="rgba(8,20,40,.95)"/>
+        <text x="156" y="99" text-anchor="middle" fill="rgba(212,175,55,.95)" font-family="Inter,sans-serif" font-size="11" font-weight="500">X / 2</text>
+        <!-- Bottom measurement -->
+        <line x1="130" y1="260" x2="130" y2="310" stroke="rgba(212,175,55,.55)" stroke-width="1"/>
+        <polygon points="130,261 126,271 134,271" fill="rgba(212,175,55,.55)"/>
+        <polygon points="130,309 126,299 134,299" fill="rgba(212,175,55,.55)"/>
+        <rect x="138" y="276" width="36" height="18" rx="2" fill="rgba(8,20,40,.95)"/>
+        <text x="156" y="289" text-anchor="middle" fill="rgba(212,175,55,.95)" font-family="Inter,sans-serif" font-size="11" font-weight="500">X / 2</text>
+        <!-- Left measurement -->
+        <line x1="70" y1="188" x2="120" y2="188" stroke="rgba(212,175,55,.55)" stroke-width="1"/>
+        <polygon points="71,188 81,184 81,192" fill="rgba(212,175,55,.55)"/>
+        <polygon points="119,188 109,184 109,192" fill="rgba(212,175,55,.55)"/>
+        <rect x="74" y="170" width="36" height="18" rx="2" fill="rgba(8,20,40,.95)"/>
+        <text x="92" y="183" text-anchor="middle" fill="rgba(212,175,55,.95)" font-family="Inter,sans-serif" font-size="11" font-weight="500">X / 2</text>
+        <!-- Right measurement -->
+        <line x1="260" y1="188" x2="310" y2="188" stroke="rgba(212,175,55,.55)" stroke-width="1"/>
+        <polygon points="261,188 271,184 271,192" fill="rgba(212,175,55,.55)"/>
+        <polygon points="309,188 299,184 299,192" fill="rgba(212,175,55,.55)"/>
+        <rect x="272" y="170" width="36" height="18" rx="2" fill="rgba(8,20,40,.95)"/>
+        <text x="290" y="183" text-anchor="middle" fill="rgba(212,175,55,.95)" font-family="Inter,sans-serif" font-size="11" font-weight="500">X / 2</text>
+        <!-- X height bracket -->
+        <line x1="268" y1="120" x2="268" y2="260" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+        <line x1="264" y1="120" x2="272" y2="120" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+        <line x1="264" y1="260" x2="272" y2="260" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+        <rect x="275" y="181" width="18" height="18" rx="2" fill="rgba(8,20,40,.95)"/>
+        <text x="284" y="194" text-anchor="middle" fill="rgba(255,255,255,.45)" font-family="Inter,sans-serif" font-size="11" font-weight="500">X</text>
+        <!-- Corner ticks -->
+        <line x1="70" y1="62" x2="70" y2="78" stroke="rgba(212,175,55,.35)" stroke-width="1"/>
+        <line x1="62" y1="70" x2="78" y2="70" stroke="rgba(212,175,55,.35)" stroke-width="1"/>
+        <line x1="310" y1="62" x2="310" y2="78" stroke="rgba(212,175,55,.35)" stroke-width="1"/>
+        <line x1="302" y1="70" x2="318" y2="70" stroke="rgba(212,175,55,.35)" stroke-width="1"/>
+        <line x1="70" y1="302" x2="70" y2="318" stroke="rgba(212,175,55,.35)" stroke-width="1"/>
+        <line x1="62" y1="310" x2="78" y2="310" stroke="rgba(212,175,55,.35)" stroke-width="1"/>
+        <line x1="310" y1="302" x2="310" y2="318" stroke="rgba(212,175,55,.35)" stroke-width="1"/>
+        <line x1="302" y1="310" x2="318" y2="310" stroke="rgba(212,175,55,.35)" stroke-width="1"/>
+        <!-- Legend -->
+        <line x1="70" y1="360" x2="108" y2="360" stroke="rgba(212,175,55,.38)" stroke-width="1" stroke-dasharray="6,4"/>
+        <text x="114" y="364" fill="rgba(255,255,255,.30)" font-family="Inter,sans-serif" font-size="10">Exclusion zone</text>
+        <line x1="228" y1="360" x2="248" y2="360" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+        <line x1="228" y1="356" x2="228" y2="364" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+        <line x1="248" y1="356" x2="248" y2="364" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+        <text x="254" y="364" fill="rgba(255,255,255,.30)" font-family="Inter,sans-serif" font-size="10">Mark height (X)</text>
+      </svg>
+      <div class="cs-rules">
+        <div>
+          <div class="cs-rule-title">Minimum Exclusion Zone</div>
+          <div class="cs-rule-desc">A protected clear space must surround the logo on all four sides at all times. No other graphic element, text, border, or image may enter this zone.</div>
+          <span class="cs-formula">Clear space = X &divide; 2 per side</span>
+        </div>
+        <div style="margin-top:18px;">
+          <div class="cs-rule-title">Defining X</div>
+          <div class="cs-rule-desc">X equals the full height of the ASCENDRA mark. As the logo scales up or down, the exclusion zone scales proportionally — the ratio is always fixed at half the mark height per side.</div>
+        </div>
+        <div style="margin-top:18px;">
+          <div class="cs-rule-title">Constrained Contexts</div>
+          <div class="cs-rule-desc">When context forces the logo into a tight space — app icons, favicons, embossed badges — the mark may be used as a standalone symbol without a wordmark. Clear space rules still apply to the symbol's bounding box.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="footer-l">ASCENDRA — Brand Guidelines</span>
+    <span class="footer-r">02 · Logo System · Backgrounds &amp; Clear Space</span>
+  </div>
+</div>
+
+<!-- ═══ PAGE C — Minimum Size + Misuse ═══ -->
+<div class="page">
+  <div class="topbar">
+    <div class="topbar-brand">
+      <svg width="20" height="20" viewBox="0 0 30 30" fill="none"><polygon points="15,2 28,24 2,24" fill="none" stroke="#D4AF37" stroke-width="1.4"/><polygon points="15,9 23,23 7,23" fill="rgba(212,175,55,.12)" stroke="rgba(212,175,55,.35)" stroke-width=".8"/><circle cx="15" cy="15" r="2" fill="#D4AF37"/></svg>
+      <span class="topbar-name">Ascendra</span>
+    </div>
+    <div class="topbar-right">
+      <span class="topbar-label">Brand Guidelines</span>
+      <span class="topbar-pill">02 · Logo System</span>
+    </div>
+  </div>
+  <div class="gold-bar"></div>
+
+  <div class="section">
+    <div class="section-label">
+      <span class="sl-num">04</span>
+      <span class="sl-text">Minimum Size</span>
+      <div class="sl-rule"></div>
+    </div>
+    <div class="minsize-grid">
+      <div class="minsize-card">
+        <img src="brand/ASCENDRA-logo_gold-transparent.svg" alt="" style="width:32px;height:32px;flex-shrink:0;display:block;">
+        <div>
+          <div class="ms-value">32 px</div>
+          <div class="ms-context">Digital minimum · screen, UI, web, mobile</div>
+          <div class="ms-note">At this size the mark remains legible at 1× and 2× pixel density. Below 32 px, geometric detail is lost — use the dedicated favicon asset instead.</div>
+        </div>
+      </div>
+      <div class="minsize-card">
+        <img src="brand/ASCENDRA-logo_gold-transparent.svg" alt="" style="width:57px;height:57px;flex-shrink:0;display:block;">
+        <div>
+          <div class="ms-value">15 mm</div>
+          <div class="ms-context">Print minimum · documents, collateral, packaging</div>
+          <div class="ms-note">At 15 mm (≈ 57 px at 96 dpi) the mark holds all geometric detail at 300 dpi print resolution. Below this threshold, fine lines close up in offset reproduction.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="flex:1;">
+    <div class="section-label">
+      <span class="sl-num">05</span>
+      <span class="sl-text">Misuse</span>
+      <div class="sl-rule"></div>
+    </div>
+    <div class="misuse-grid">
+      <div class="misuse-card">
+        <div class="misuse-demo" style="background:#0B1D33;">
+          <img src="brand/ASCENDRA-logo_gold-transparent.svg" alt="" style="width:80px;transform:scaleX(1.6) scaleY(0.7);transform-origin:center;">
+          <div class="misuse-overlay"><div class="x-badge">✕</div></div>
+        </div>
+        <div class="misuse-body">
+          <div class="misuse-title">Do not distort</div>
+          <div class="misuse-desc">Never stretch, compress, or alter the mark's aspect ratio. Scale uniformly only — width and height must change at the same rate.</div>
+        </div>
+      </div>
+      <div class="misuse-card">
+        <div class="misuse-demo" style="background:#0B1D33;">
+          <img src="brand/ASCENDRA-logo_gold-transparent.svg" alt="" style="width:80px;filter:hue-rotate(195deg) saturate(1.9) brightness(1.1);">
+          <div class="misuse-overlay"><div class="x-badge">✕</div></div>
+        </div>
+        <div class="misuse-body">
+          <div class="misuse-title">Do not recolor</div>
+          <div class="misuse-desc">Only the approved color variants may be used. Do not apply custom tints, gradients, or filters to the mark.</div>
+        </div>
+      </div>
+      <div class="misuse-card">
+        <div class="misuse-demo" style="background:repeating-linear-gradient(45deg,#183662 0px,#183662 10px,#254f8a 10px,#254f8a 20px);">
+          <img src="brand/ASCENDRA-logo_gold-transparent.svg" alt="" style="width:80px;opacity:.85;">
+          <div class="misuse-overlay"><div class="x-badge">✕</div></div>
+        </div>
+        <div class="misuse-body">
+          <div class="misuse-title">Do not use on busy backgrounds</div>
+          <div class="misuse-desc">The mark requires a clean, solid-color field. Patterns, textures, and complex imagery break its geometric legibility.</div>
+        </div>
+      </div>
+      <div class="misuse-card">
+        <div class="misuse-demo" style="background:#0B1D33;">
+          <img src="brand/ASCENDRA-logo_gold-transparent.svg" alt="" style="width:80px;transform:rotate(22deg);transform-origin:center;">
+          <div class="misuse-overlay"><div class="x-badge">✕</div></div>
+        </div>
+        <div class="misuse-body">
+          <div class="misuse-title">Do not rotate</div>
+          <div class="misuse-desc">The mark must always appear upright. No rotation, reflection, or flip is permitted in any orientation or context.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="footer-l">ASCENDRA — Brand Guidelines</span>
+    <span class="footer-r">02 · Logo System · Minimum Size &amp; Misuse</span>
+  </div>
+</div>
+
+</body>
+</html>

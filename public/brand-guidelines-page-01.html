@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=794">
+  <title>ASCENDRA — Brand Foundations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:#0B1D33; --gold:#D4AF37; --emerald:#0F5B46; --white:#FFFFFF;
+      --w80:rgba(255,255,255,.80); --w60:rgba(255,255,255,.60);
+      --w30:rgba(255,255,255,.30); --w12:rgba(255,255,255,.12);
+      --w06:rgba(255,255,255,.06); --w03:rgba(255,255,255,.03);
+    }
+    @page { size: A4 portrait; margin: 0; }
+    html { background:var(--navy); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body { background:var(--navy); color:var(--white); font-family:'Inter',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+
+    .page { width:210mm; height:297mm; overflow:hidden; background:var(--navy); display:flex; flex-direction:column; break-before:always; }
+    .page:first-child { break-before:auto; }
+
+    /* Topbar */
+    .topbar { display:flex; align-items:center; justify-content:space-between; padding:14px 44px; border-bottom:1px solid var(--w12); flex-shrink:0; }
+    .topbar-brand { display:flex; align-items:center; gap:10px; }
+    .topbar-name { font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:12px; letter-spacing:.22em; text-transform:uppercase; }
+    .topbar-right { display:flex; align-items:center; gap:16px; }
+    .topbar-label { font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--w30); }
+    .topbar-pill { font-size:9px; font-weight:500; letter-spacing:.10em; text-transform:uppercase; color:var(--gold); border:1px solid rgba(212,175,55,.30); padding:3px 8px; border-radius:2px; }
+
+    .gold-bar { height:3px; background:var(--gold); flex-shrink:0; }
+
+    /* Hero */
+    .hero { padding:32px 44px 28px; border-bottom:1px solid var(--w12); flex-shrink:0; }
+    .hero-logo-frame { border:1px solid var(--w12); display:flex; align-items:center; justify-content:center; padding:28px 60px; margin-bottom:22px; background:var(--w03); }
+    .hero-logo-frame img { width:160px; height:auto; }
+    .hero-foot { display:flex; align-items:flex-end; justify-content:space-between; }
+    .hero-heading { font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:30px; letter-spacing:-.015em; line-height:1.1; }
+    .hero-sub { font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--w30); margin-top:8px; }
+    .hero-ar { font-family:'IBM Plex Sans Arabic',sans-serif; font-weight:500; font-size:18px; color:var(--w60); direction:rtl; }
+
+    /* Section */
+    .section { padding:28px 44px 32px; border-top:1px solid var(--w12); }
+    .section-label { display:flex; align-items:center; gap:12px; margin-bottom:24px; }
+    .sl-num { font-size:10px; font-weight:500; letter-spacing:.16em; color:var(--gold); }
+    .sl-text { font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:500; letter-spacing:.20em; text-transform:uppercase; color:var(--w60); }
+    .sl-rule { flex:1; height:1px; background:var(--w12); }
+
+    /* Palette */
+    .palette-row { display:grid; grid-template-columns:repeat(5,1fr); gap:2px; }
+    .swatch-fill { height:120px; border-radius:1px 1px 0 0; }
+    .swatch-fill--outlined { border:1px solid var(--w12); border-bottom:none; }
+    .swatch-body { padding:12px 13px 16px; background:var(--w06); border:1px solid var(--w12); border-top:none; }
+    .sw-name { font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:600; margin-bottom:3px; }
+    .sw-hex { font-size:10px; letter-spacing:.07em; color:var(--gold); margin-bottom:6px; }
+    .sw-note { font-size:9.5px; color:var(--w60); line-height:1.5; margin-bottom:10px; }
+    .sw-tag { display:inline-block; font-size:8px; font-weight:500; letter-spacing:.10em; text-transform:uppercase; padding:2px 7px; border-radius:2px; }
+    .tag-dom { background:rgba(212,175,55,.14); color:var(--gold); }
+    .tag-acc { background:rgba(212,175,55,.07); color:var(--gold); border:1px solid rgba(212,175,55,.28); }
+    .tag-sec { background:rgba(15,91,70,.35); color:#5dbfa0; }
+    .tag-neu { background:var(--w06); color:var(--w60); border:1px solid var(--w12); }
+    .palette-note { margin-top:14px; padding:12px 16px; border-left:3px solid var(--gold); background:rgba(212,175,55,.035); }
+    .palette-note p { font-size:10.5px; color:var(--w60); line-height:1.6; }
+    .palette-note strong { color:var(--gold); font-weight:500; }
+
+    /* Typography */
+    .type-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; }
+    .type-col { border:1px solid var(--w12); padding:28px 26px 34px; background:var(--w03); }
+    .tc-label { font-size:9px; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--w30); padding-bottom:14px; margin-bottom:22px; border-bottom:1px solid var(--w12); }
+    .tc-ar { direction:rtl; text-align:right; }
+    .sp { margin-bottom:22px; }
+    .sp:last-child { margin-bottom:0; }
+    .sp-meta { font-size:8.5px; letter-spacing:.07em; text-transform:uppercase; color:var(--w30); margin-bottom:7px; }
+    .t-disp { font-family:'Space Grotesk',sans-serif; font-size:38px; font-weight:700; line-height:1.06; letter-spacing:-.025em; }
+    .t-h1 { font-family:'Space Grotesk',sans-serif; font-size:23px; font-weight:600; line-height:1.2; letter-spacing:-.012em; }
+    .t-h2 { font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:500; line-height:1.35; color:var(--w80); }
+    .t-body { font-size:13px; font-weight:400; line-height:1.65; color:var(--w60); }
+    .t-ui { font-size:10px; font-weight:500; letter-spacing:.10em; text-transform:uppercase; color:var(--w60); }
+    .t-disp-ar { font-family:'IBM Plex Sans Arabic',sans-serif; font-size:38px; font-weight:700; line-height:1.22; }
+    .t-h1-ar { font-family:'IBM Plex Sans Arabic',sans-serif; font-size:23px; font-weight:600; line-height:1.35; }
+    .t-h2-ar { font-family:'IBM Plex Sans Arabic',sans-serif; font-size:16px; font-weight:500; line-height:1.5; color:var(--w80); }
+    .t-body-ar { font-family:'IBM Plex Sans Arabic',sans-serif; font-size:13px; font-weight:400; line-height:1.75; color:var(--w60); }
+    .t-ui-ar { font-family:'IBM Plex Sans Arabic',sans-serif; font-size:10px; font-weight:500; color:var(--w60); }
+
+    /* Footer */
+    .footer { padding:13px 44px 20px; border-top:1px solid var(--w12); display:flex; align-items:center; justify-content:space-between; margin-top:auto; flex-shrink:0; }
+    .footer-l { font-family:'Space Grotesk',sans-serif; font-size:10px; font-weight:500; letter-spacing:.15em; text-transform:uppercase; color:var(--w30); }
+    .footer-r { font-size:10px; color:var(--w30); letter-spacing:.08em; }
+  </style>
+</head>
+<body>
+
+<!-- ═══ PAGE A — Hero + Color Palette ═══ -->
+<div class="page">
+  <div class="topbar">
+    <div class="topbar-brand">
+      <svg width="20" height="20" viewBox="0 0 30 30" fill="none"><polygon points="15,2 28,24 2,24" fill="none" stroke="#D4AF37" stroke-width="1.4"/><polygon points="15,9 23,23 7,23" fill="rgba(212,175,55,.12)" stroke="rgba(212,175,55,.35)" stroke-width=".8"/><circle cx="15" cy="15" r="2" fill="#D4AF37"/></svg>
+      <span class="topbar-name">Ascendra</span>
+    </div>
+    <div class="topbar-right">
+      <span class="topbar-label">Brand Guidelines</span>
+      <span class="topbar-pill">01 · Brand Foundations</span>
+    </div>
+  </div>
+  <div class="gold-bar"></div>
+
+  <div class="hero">
+    <div class="hero-logo-frame">
+      <img src="brand/ASCENDRA-logo_gold-transparent.svg" alt="ASCENDRA Primary Mark">
+    </div>
+    <div class="hero-foot">
+      <div>
+        <h1 class="hero-heading">Brand Foundations</h1>
+        <p class="hero-sub">Identity &nbsp;·&nbsp; Color &nbsp;·&nbsp; Typography</p>
+      </div>
+      <p class="hero-ar">المبادئ التأسيسية للعلامة التجارية</p>
+    </div>
+  </div>
+
+  <div class="section" style="flex:1;">
+    <div class="section-label">
+      <span class="sl-num">01</span>
+      <span class="sl-text">Color Palette</span>
+      <div class="sl-rule"></div>
+    </div>
+    <div class="palette-row">
+      <div>
+        <div class="swatch-fill swatch-fill--outlined" style="background:#0B1D33;"></div>
+        <div class="swatch-body">
+          <div class="sw-name">Deep Navy</div>
+          <div class="sw-hex">#0B1D33</div>
+          <div class="sw-note">Brand foundation. Primary surfaces, layouts, and all dark-mode contexts.</div>
+          <span class="sw-tag tag-dom">Dominant</span>
+        </div>
+      </div>
+      <div>
+        <div class="swatch-fill" style="background:#D4AF37;"></div>
+        <div class="swatch-body">
+          <div class="sw-name">Soft Gold</div>
+          <div class="sw-hex">#D4AF37</div>
+          <div class="sw-note">Structural rules, icon marks. Text on navy only. ≤ 10% of any composition.</div>
+          <span class="sw-tag tag-acc">Accent ≤ 10%</span>
+        </div>
+      </div>
+      <div>
+        <div class="swatch-fill" style="background:#0F5B46;"></div>
+        <div class="swatch-body">
+          <div class="sw-name">Emerald</div>
+          <div class="sw-hex">#0F5B46</div>
+          <div class="sw-note">Supporting accent for status states, indicators, and category labels.</div>
+          <span class="sw-tag tag-sec">Secondary</span>
+        </div>
+      </div>
+      <div>
+        <div class="swatch-fill swatch-fill--outlined" style="background:#FFFFFF;"></div>
+        <div class="swatch-body">
+          <div class="sw-name">White</div>
+          <div class="sw-hex">#FFFFFF</div>
+          <div class="sw-note">Primary text on navy. Headings, body copy, and all UI elements on dark surfaces.</div>
+          <span class="sw-tag tag-neu">Text &amp; UI</span>
+        </div>
+      </div>
+      <div>
+        <div class="swatch-fill swatch-fill--outlined" style="background:#F0F2F4;"></div>
+        <div class="swatch-body">
+          <div class="sw-name">Light Gray</div>
+          <div class="sw-hex">#F0F2F4</div>
+          <div class="sw-note">Light surface backgrounds, card fills, and dividers on light-theme contexts.</div>
+          <span class="sw-tag tag-neu">Surface</span>
+        </div>
+      </div>
+    </div>
+    <div class="palette-note">
+      <p><strong>Gold constraint —</strong> Gold may only appear as large shapes, thick structural rules, or text rendered on a navy field. Never use gold as text on white, light gray, or any light background.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="footer-l">ASCENDRA — Brand Guidelines</span>
+    <span class="footer-r">01 · Brand Foundations · Color Palette</span>
+  </div>
+</div>
+
+<!-- ═══ PAGE B — Typography Scale ═══ -->
+<div class="page">
+  <div class="topbar">
+    <div class="topbar-brand">
+      <svg width="20" height="20" viewBox="0 0 30 30" fill="none"><polygon points="15,2 28,24 2,24" fill="none" stroke="#D4AF37" stroke-width="1.4"/><polygon points="15,9 23,23 7,23" fill="rgba(212,175,55,.12)" stroke="rgba(212,175,55,.35)" stroke-width=".8"/><circle cx="15" cy="15" r="2" fill="#D4AF37"/></svg>
+      <span class="topbar-name">Ascendra</span>
+    </div>
+    <div class="topbar-right">
+      <span class="topbar-label">Brand Guidelines</span>
+      <span class="topbar-pill">01 · Brand Foundations</span>
+    </div>
+  </div>
+  <div class="gold-bar"></div>
+
+  <div class="section" style="flex:1;">
+    <div class="section-label">
+      <span class="sl-num">02</span>
+      <span class="sl-text">Typography Scale</span>
+      <div class="sl-rule"></div>
+    </div>
+    <div class="type-grid">
+      <!-- English -->
+      <div class="type-col">
+        <div class="tc-label">English — LTR &nbsp;·&nbsp; Space Grotesk + Inter</div>
+        <div class="sp">
+          <div class="sp-meta">Display · Space Grotesk 700 · 44px / –0.025em / lh 1.06 · Hero headlines</div>
+          <div class="t-disp">Build Systems.<br>Enable Growth.</div>
+        </div>
+        <div class="sp">
+          <div class="sp-meta">H1 · Space Grotesk 600 · 27px / –0.012em / lh 1.2 · Page titles</div>
+          <div class="t-h1">Digital Systems &amp; Business Growth</div>
+        </div>
+        <div class="sp">
+          <div class="sp-meta">H2 · Space Grotesk 500 · 18px / lh 1.35 · Sub-section titles</div>
+          <div class="t-h2">Business Transformation Consulting</div>
+        </div>
+        <div class="sp">
+          <div class="sp-meta">Body · Inter 400 · 14px / lh 1.65 · All body copy</div>
+          <div class="t-body">Strategic, executive-grade systems for organisations ready to scale with precision and clarity. Every engagement is structured for measurable outcomes and sustainable growth.</div>
+        </div>
+        <div class="sp">
+          <div class="sp-meta">UI Label · Inter 500 · 11px / uppercase / +0.10em · Eyebrows &amp; labels</div>
+          <div class="t-ui">Services &nbsp;·&nbsp; Approach &nbsp;·&nbsp; Contact</div>
+        </div>
+      </div>
+      <!-- Arabic -->
+      <div class="type-col tc-ar">
+        <div class="tc-label">Arabic — RTL &nbsp;·&nbsp; IBM Plex Sans Arabic</div>
+        <div class="sp">
+          <div class="sp-meta">عرض · IBM Plex Sans Arabic 700 · 44px / lh 1.22 · عناوين الأبطال</div>
+          <div class="t-disp-ar">نبني الأنظمة.<br>نمكّن النمو.</div>
+        </div>
+        <div class="sp">
+          <div class="sp-meta">عنوان 1 · IBM Plex Sans Arabic 600 · 27px / lh 1.3 · عناوين الصفحات</div>
+          <div class="t-h1-ar">الأنظمة الرقمية ونمو الأعمال</div>
+        </div>
+        <div class="sp">
+          <div class="sp-meta">عنوان 2 · IBM Plex Sans Arabic 500 · 18px / lh 1.5 · عناوين الأقسام</div>
+          <div class="t-h2-ar">استشارات التحول المؤسسي</div>
+        </div>
+        <div class="sp">
+          <div class="sp-meta">نص · IBM Plex Sans Arabic 400 · 14px / lh 1.75 · جميع نصوص الجسم</div>
+          <div class="t-body-ar">أنظمة استراتيجية بمستوى تنفيذي للمنظمات المستعدة للنمو بدقة ووضوح. كل مشاركة مبنية على نتائج قابلة للقياس ونمو مستدام.</div>
+        </div>
+        <div class="sp">
+          <div class="sp-meta">واجهة · IBM Plex Sans Arabic 500 · 12px · تسميات الواجهة</div>
+          <div class="t-ui-ar">الخدمات &nbsp;·&nbsp; المنهجية &nbsp;·&nbsp; التواصل</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="footer-l">ASCENDRA — Brand Guidelines</span>
+    <span class="footer-r">01 · Brand Foundations · Typography</span>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Space_Grotesk, Inter, IBM_Plex_Sans_Arabic } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -9,11 +9,15 @@ import { OrganizationSchema } from "./schema";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import "../globals.css";
 
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"], weight: ["500", "600"], style: ["normal", "italic"],
-  variable: "--font-cormorant", display: "swap",
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"], weight: ["400", "500", "600", "700"],
+  variable: "--font-space-grotesk", display: "swap",
 });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+const plexArabic = IBM_Plex_Sans_Arabic({
+  subsets: ["arabic"], weight: ["400", "500", "600"],
+  variable: "--font-plex-arabic", display: "swap",
+});
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ascendrabyhosam.com";
 
@@ -74,7 +78,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   const dir = locale === "ar" ? "rtl" : "ltr";
   return (
-    <html lang={locale} dir={dir} className={`${cormorant.variable} ${inter.variable}`}>
+    <html lang={locale} dir={dir} className={`${spaceGrotesk.variable} ${inter.variable} ${plexArabic.variable}`}>
       <body className="font-sans">
         <OrganizationSchema />
         <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>

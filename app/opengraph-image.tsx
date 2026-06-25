@@ -50,24 +50,10 @@ export default function Image() {
               color: "#FFFFFF",
               letterSpacing: "0.22em",
               lineHeight: 1,
-              marginBottom: 16,
+              marginBottom: 48,
             }}
           >
             ASCENDRA
-          </div>
-
-          {/* Sub-brand */}
-          <div
-            style={{
-              fontSize: 30,
-              color: "#D4AF37",
-              fontStyle: "italic",
-              letterSpacing: "0.08em",
-              marginBottom: 48,
-              opacity: 0.9,
-            }}
-          >
-            by Hossam
           </div>
 
           {/* Gold divider */}

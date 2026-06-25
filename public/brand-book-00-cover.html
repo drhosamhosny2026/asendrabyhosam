@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=794">
+  <title>ASCENDRA — Brand Book Cover</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @page { size: A4 portrait; margin: 0; }
+
+    :root {
+      --navy:    #0B1D33;
+      --gold:    #D4AF37;
+      --emerald: #0F5B46;
+      --white:   #FFFFFF;
+      --w80: rgba(255,255,255,.80);
+      --w60: rgba(255,255,255,.60);
+      --w30: rgba(255,255,255,.30);
+      --w12: rgba(255,255,255,.12);
+      --w06: rgba(255,255,255,.06);
+    }
+
+    html {
+      width: 210mm;
+      height: 297mm;
+      background: var(--navy);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      width: 210mm;
+      height: 297mm;
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Inter', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      background: var(--navy);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Full-bleed background composition */
+    .geo-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Gold top bar */
+    .gold-bar {
+      height: 3px;
+      background: var(--gold);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Topbar */
+    .cover-header {
+      padding: 16px 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--w12);
+      position: relative;
+      z-index: 2;
+      flex-shrink: 0;
+    }
+    .header-brand { display: flex; align-items: center; gap: 10px; }
+    .header-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600; font-size: 12px;
+      letter-spacing: .22em; text-transform: uppercase;
+    }
+    .header-right { display: flex; align-items: center; gap: 14px; }
+    .header-label {
+      font-family: 'Inter', sans-serif; font-size: 10px;
+      letter-spacing: .12em; text-transform: uppercase; color: var(--w30);
+    }
+    .header-pill {
+      font-family: 'Inter', sans-serif; font-size: 9px; font-weight: 500;
+      letter-spacing: .10em; text-transform: uppercase;
+      color: var(--gold); border: 1px solid rgba(212,175,55,.30);
+      padding: 3px 8px; border-radius: 2px;
+    }
+
+    /* Main hero zone */
+    .cover-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* wordmark sits at ~58% of the page — push content down */
+      justify-content: flex-end;
+      padding-bottom: 140px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cover-wordmark {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: 72px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-align: center;
+      line-height: 1;
+      /* very slight text-shadow for legibility over geometric lines */
+      text-shadow: 0 0 60px rgba(11,29,51,0.8);
+    }
+
+    .cover-rule {
+      width: 56px; height: 2px;
+      background: var(--gold);
+      margin: 22px auto 16px;
+    }
+
+    .cover-subtitle {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 300; font-size: 12px;
+      letter-spacing: .38em; text-transform: uppercase;
+      color: var(--w30); text-align: center;
+      margin-bottom: 44px;
+    }
+
+    .cover-divider {
+      width: 360px; height: 1px;
+      background: var(--w12);
+      margin-bottom: 36px;
+    }
+
+    .cover-tagline {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 400; font-size: 16px;
+      letter-spacing: .01em; color: var(--w60);
+      text-align: center; margin-bottom: 10px;
+    }
+
+    .cover-tagline-ar {
+      font-family: 'IBM Plex Sans Arabic', sans-serif;
+      font-weight: 400; font-size: 14px;
+      color: var(--w30); text-align: center;
+      direction: rtl;
+    }
+
+    /* Footer */
+    .cover-footer {
+      padding: 14px 44px 22px;
+      border-top: 1px solid var(--w12);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 2;
+      flex-shrink: 0;
+    }
+    .footer-version {
+      font-family: 'Inter', sans-serif; font-size: 9px;
+      letter-spacing: .14em; text-transform: uppercase; color: var(--w30);
+    }
+    .footer-conf {
+      font-family: 'Inter', sans-serif; font-size: 9px; font-weight: 500;
+      letter-spacing: .10em; text-transform: uppercase;
+      color: var(--gold); border: 1px solid rgba(212,175,55,.30);
+      padding: 3px 8px; border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!--
+    Geometric composition: 6 ascending triangles sharing a single apex at (397, 90).
+    Each successive triangle has a wider base at a lower Y — radiating outward like
+    an ascending signal expanding to fill the entire cover.
+    Inner triangles are bright and thick; outer ones fade to near-invisible.
+  -->
+  <svg class="geo-bg" viewBox="0 0 794 1123" preserveAspectRatio="xMidYMid meet"
+       fill="none" xmlns="http://www.w3.org/2000/svg">
+
+    <!-- Subtle emerald radial wash behind apex zone -->
+    <defs>
+      <radialGradient id="apexGlow" cx="50%" cy="8%" r="55%">
+        <stop offset="0%"   stop-color="rgba(15,91,70,0.22)"/>
+        <stop offset="100%" stop-color="rgba(11,29,51,0)"/>
+      </radialGradient>
+      <radialGradient id="baseGlow" cx="50%" cy="85%" r="60%">
+        <stop offset="0%"   stop-color="rgba(212,175,55,0.06)"/>
+        <stop offset="100%" stop-color="rgba(11,29,51,0)"/>
+      </radialGradient>
+    </defs>
+
+    <rect width="794" height="1123" fill="url(#apexGlow)"/>
+    <rect width="794" height="1123" fill="url(#baseGlow)"/>
+
+    <!-- ═══ TRIANGLE 6 — outermost, base 1560px at y=1100 ═══ -->
+    <!-- left=-383, right=1177 — extends far beyond page edges, clipped by overflow:hidden -->
+    <polygon
+      points="397,90 -383,1100 1177,1100"
+      fill="rgba(212,175,55,0.012)"
+      stroke="rgba(212,175,55,0.06)"
+      stroke-width="0.7"/>
+
+    <!-- ═══ TRIANGLE 5 — base 1150px at y=900 ═══ -->
+    <!-- left=-178, right=972 -->
+    <polygon
+      points="397,90 -178,900 972,900"
+      fill="rgba(212,175,55,0.018)"
+      stroke="rgba(212,175,55,0.12)"
+      stroke-width="0.9"/>
+
+    <!-- ═══ TRIANGLE 4 — base 810px at y=730 ═══ -->
+    <!-- left=-8, right=802 — nearly full page width -->
+    <polygon
+      points="397,90 -8,730 802,730"
+      fill="rgba(212,175,55,0.025)"
+      stroke="rgba(212,175,55,0.22)"
+      stroke-width="1.1"/>
+
+    <!-- ═══ TRIANGLE 3 — base 530px at y=570 ═══ -->
+    <!-- left=132, right=662 -->
+    <polygon
+      points="397,90 132,570 662,570"
+      fill="rgba(212,175,55,0.04)"
+      stroke="rgba(212,175,55,0.38)"
+      stroke-width="1.5"/>
+
+    <!-- ═══ TRIANGLE 2 — base 310px at y=420 ═══ -->
+    <!-- left=242, right=552 -->
+    <polygon
+      points="397,90 242,420 552,420"
+      fill="rgba(212,175,55,0.07)"
+      stroke="rgba(212,175,55,0.58)"
+      stroke-width="2.0"/>
+
+    <!-- ═══ TRIANGLE 1 — innermost mark, base 140px at y=280 ═══ -->
+    <!-- left=327, right=467 -->
+    <polygon
+      points="397,90 327,280 467,280"
+      fill="rgba(212,175,55,0.13)"
+      stroke="#D4AF37"
+      stroke-width="2.5"/>
+
+    <!-- Vertical axis — structural spine of the composition -->
+    <line x1="397" y1="90" x2="397" y2="1123"
+          stroke="rgba(212,175,55,0.06)" stroke-width="0.8"
+          stroke-dasharray="4,10"/>
+
+    <!-- Horizontal base echoes — very faint structural guides -->
+    <line x1="0" y1="280" x2="794" y2="280" stroke="rgba(212,175,55,0.04)" stroke-width="0.5"/>
+    <line x1="0" y1="420" x2="794" y2="420" stroke="rgba(255,255,255,0.025)" stroke-width="0.5"/>
+    <line x1="0" y1="570" x2="794" y2="570" stroke="rgba(255,255,255,0.02)" stroke-width="0.5"/>
+    <line x1="0" y1="730" x2="794" y2="730" stroke="rgba(255,255,255,0.015)" stroke-width="0.5"/>
+
+    <!-- Apex dot — precise gold point at the origin of all triangles -->
+    <circle cx="397" cy="90" r="3" fill="#D4AF37" opacity="0.9"/>
+    <!-- Apex halo -->
+    <circle cx="397" cy="90" r="7" fill="none" stroke="rgba(212,175,55,0.35)" stroke-width="1"/>
+    <circle cx="397" cy="90" r="13" fill="none" stroke="rgba(212,175,55,0.15)" stroke-width="0.7"/>
+
+    <!-- Subtle vignette at top corners -->
+    <polygon points="0,0 200,0 0,300" fill="rgba(11,29,51,0.30)"/>
+    <polygon points="794,0 594,0 794,300" fill="rgba(11,29,51,0.30)"/>
+
+    <!-- Bottom fade so footer text reads clearly -->
+    <rect x="0" y="900" width="794" height="223" fill="rgba(11,29,51,0.45)"/>
+  </svg>
+
+  <!-- Gold top bar -->
+  <div class="gold-bar"></div>
+
+  <!-- Header -->
+  <div class="cover-header">
+    <div class="header-brand">
+      <svg width="20" height="20" viewBox="0 0 30 30" fill="none">
+        <polygon points="15,2 28,24 2,24" fill="none" stroke="#D4AF37" stroke-width="1.4"/>
+        <polygon points="15,9 23,23 7,23" fill="rgba(212,175,55,.12)" stroke="rgba(212,175,55,.35)" stroke-width=".8"/>
+        <circle cx="15" cy="15" r="2" fill="#D4AF37"/>
+      </svg>
+      <span class="header-name">Ascendra</span>
+    </div>
+    <div class="header-right">
+      <span class="header-label">Brand Book</span>
+      <span class="header-pill">V 1.0</span>
+    </div>
+  </div>
+
+  <!-- Main — wordmark sits at 58% down the page, inside the geometric composition -->
+  <div class="cover-main">
+
+    <div class="cover-wordmark">Ascendra</div>
+
+    <div class="cover-rule"></div>
+
+    <div class="cover-subtitle">Brand Guidelines</div>
+
+    <div class="cover-divider"></div>
+
+    <div class="cover-tagline">"The system behind your growth."</div>
+
+    <div class="cover-tagline-ar">«النظام خلف نموّك»</div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="cover-footer">
+    <div class="footer-version">Version 1.0 — June 2026 · Ascendra by Hosam</div>
+    <div class="footer-conf">Confidential</div>
+  </div>
+
+</div>
+</body>
+</html>

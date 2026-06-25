@@ -29,7 +29,7 @@ export function OrganizationSchema() {
       "https://www.instagram.com/ascendra.sa",
       "https://www.linkedin.com/company/ascendraofficial/",
       "https://m.facebook.com/profile.php?id=61590883073074",
-      "https://wa.me/966563328225",
+      "https://wa.me/966561914666",
     ],
   };
 

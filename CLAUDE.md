@@ -7,9 +7,9 @@ Built with Next.js 15 (App Router) + React 19 + TypeScript + Tailwind CSS + next
 ## Brand rules (NON-NEGOTIABLE — the logo is approved and locked)
 - **Logo/Symbol**: use ONLY `/public/brand/ascend_symbol_gold.svg`. NEVER redraw, regenerate, or alter its geometry.
 - **Colors**: Deep Navy `#0B1D33` · Emerald `#0F5B46` · Soft Gold `#D4AF37` · White `#FFFFFF` · Light Gray `#F0F2F4`. Gold is an ACCENT only — never large fills.
-- **Typography**: Cormorant Garamond (Semibold) for the wordmark + headings; "by Hossam" is ITALIC. Inter for body/UI.
-  - Wordmark letter-spacing: 0.20em (class `.wordmark`). Sub-brand: italic, 0.02em (class `.subword`).
-- **Tagline**: EN "Build Systems. Enable Growth. Drive Transformation." / AR "نبني الأنظمة. نمكّن النمو. نقود التحول."
+- **Typography**: Space Grotesk (Medium/Semibold/Bold) for wordmark + headings; IBM Plex Sans Arabic for all Arabic text; Inter for body/UI.
+  - Wordmark letter-spacing: 0.12em (class `.wordmark`).
+- **Tagline**: EN "The system behind your growth." / AR "النظام خلف نموّك"
 - **Voice**: Strategic, executive, precise, premium. No hype, no startup clichés.
 
 ## Architecture

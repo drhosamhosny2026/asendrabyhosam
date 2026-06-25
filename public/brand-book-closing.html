@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=794">
+  <title>ASCENDRA — Brand Book Closing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @page { size: A4 portrait; margin: 0; }
+
+    :root {
+      --navy:    #0B1D33;
+      --gold:    #D4AF37;
+      --emerald: #0F5B46;
+      --white:   #FFFFFF;
+      --w80: rgba(255,255,255,.80);
+      --w60: rgba(255,255,255,.60);
+      --w30: rgba(255,255,255,.30);
+      --w12: rgba(255,255,255,.12);
+      --w06: rgba(255,255,255,.06);
+    }
+
+    html {
+      width: 210mm; height: 297mm;
+      background: var(--navy);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      width: 210mm; height: 297mm;
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Inter', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+
+    .page {
+      width: 210mm; height: 297mm;
+      background: var(--navy);
+      display: flex; flex-direction: column;
+      position: relative; overflow: hidden;
+    }
+
+    /* Radial gradient from centre */
+    .page::before {
+      content: '';
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(15,91,70,.22) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Geometric bg */
+    .geo-bg {
+      position: absolute; inset: 0;
+      pointer-events: none; z-index: 0;
+    }
+
+    .gold-bar {
+      height: 3px; background: var(--gold);
+      flex-shrink: 0; position: relative; z-index: 2;
+    }
+
+    /* ── TOPBAR ── */
+    .topbar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 44px;
+      border-bottom: 1px solid var(--w12);
+      flex-shrink: 0; position: relative; z-index: 2;
+    }
+    .topbar-brand { display: flex; align-items: center; gap: 10px; }
+    .topbar-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600; font-size: 12px;
+      letter-spacing: .22em; text-transform: uppercase;
+    }
+    .topbar-right { display: flex; align-items: center; gap: 14px; }
+    .topbar-label {
+      font-family: 'Inter', sans-serif; font-size: 10px;
+      letter-spacing: .12em; text-transform: uppercase; color: var(--w30);
+    }
+    .topbar-pill {
+      font-family: 'Inter', sans-serif; font-size: 9px; font-weight: 500;
+      letter-spacing: .10em; text-transform: uppercase;
+      color: var(--gold); border: 1px solid rgba(212,175,55,.30);
+      padding: 3px 8px; border-radius: 2px;
+    }
+
+    /* ── MAIN ── */
+    .closing-main {
+      flex: 1;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 0 60px;
+      position: relative; z-index: 2;
+      gap: 0;
+    }
+
+    /* Small mark */
+    .closing-mark { margin-bottom: 44px; }
+
+    /* Tagline EN */
+    .closing-tagline {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500; font-size: 32px;
+      letter-spacing: -.01em; line-height: 1.2;
+      color: var(--white); text-align: center;
+      margin-bottom: 16px;
+    }
+    .closing-tagline em {
+      font-style: italic; font-weight: 300;
+      color: var(--w60);
+    }
+
+    /* AR tagline */
+    .closing-tagline-ar {
+      font-family: 'IBM Plex Sans Arabic', sans-serif;
+      font-weight: 400; font-size: 20px;
+      color: var(--w30); text-align: center;
+      direction: rtl; margin-bottom: 52px;
+    }
+
+    /* Gold rule */
+    .closing-rule {
+      width: 56px; height: 2px;
+      background: var(--gold);
+      margin-bottom: 52px;
+    }
+
+    /* Contact block */
+    .contact-block {
+      display: flex; flex-direction: column;
+      align-items: center; gap: 14px;
+    }
+
+    .contact-label {
+      font-family: 'Inter', sans-serif; font-size: 9px; font-weight: 500;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--w30); margin-bottom: 4px;
+    }
+
+    .contact-row {
+      display: flex; align-items: center; gap: 28px;
+      flex-wrap: wrap; justify-content: center;
+    }
+
+    .contact-item {
+      display: flex; align-items: center; gap: 8px;
+    }
+    .contact-icon {
+      width: 16px; height: 16px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-text {
+      font-family: 'Inter', sans-serif; font-size: 11px;
+      letter-spacing: .03em; color: var(--w60);
+    }
+    .contact-text a {
+      color: inherit; text-decoration: none;
+    }
+    .contact-sep {
+      width: 1px; height: 14px;
+      background: var(--w12);
+    }
+
+    /* Gold contact highlight */
+    .contact-item--gold .contact-text {
+      color: var(--gold);
+      letter-spacing: .04em;
+    }
+
+    /* ── FOOTER (signature) ── */
+    .closing-footer {
+      padding: 16px 44px 24px;
+      border-top: 1px solid var(--w12);
+      display: flex; align-items: center; justify-content: space-between;
+      position: relative; z-index: 2; flex-shrink: 0;
+    }
+
+    /* Small logo signature */
+    .sig-brand { display: flex; align-items: center; gap: 8px; }
+    .sig-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500; font-size: 11px;
+      letter-spacing: .20em; text-transform: uppercase;
+      color: var(--w30);
+    }
+    .footer-year {
+      font-family: 'Inter', sans-serif; font-size: 9px;
+      letter-spacing: .12em; text-transform: uppercase; color: var(--w30);
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Geometric background -->
+  <svg class="geo-bg" viewBox="0 0 794 1123" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Large inverted triangle (closing energy) -->
+    <polygon points="16,180 778,180 397,780" stroke="rgba(212,175,55,.04)" stroke-width="1.5"/>
+    <polygon points="100,180 694,180 397,680" fill="rgba(212,175,55,.015)" stroke="rgba(212,175,55,.06)" stroke-width="1"/>
+    <!-- Ascending mark at bottom centre (echo) -->
+    <polygon points="397,900 480,1080 314,1080" stroke="rgba(212,175,55,.05)" stroke-width="1"/>
+    <polygon points="397,940 455,1060 339,1060" fill="rgba(212,175,55,.03)" stroke="rgba(212,175,55,.08)" stroke-width=".7"/>
+    <!-- Diagonal lines top-left, bottom-right -->
+    <line x1="0" y1="0" x2="300" y2="300" stroke="rgba(212,175,55,.03)" stroke-width="1"/>
+    <line x1="794" y1="1123" x2="494" y2="823" stroke="rgba(212,175,55,.03)" stroke-width="1"/>
+    <!-- Subtle horizontal grid -->
+    <line x1="0" y1="400" x2="794" y2="400" stroke="rgba(255,255,255,.025)" stroke-width=".5"/>
+    <line x1="0" y1="720" x2="794" y2="720" stroke="rgba(255,255,255,.025)" stroke-width=".5"/>
+    <!-- Vertical axis -->
+    <line x1="397" y1="0" x2="397" y2="1123" stroke="rgba(255,255,255,.02)" stroke-width=".5"/>
+  </svg>
+
+  <!-- Gold top bar -->
+  <div class="gold-bar"></div>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="topbar-brand">
+      <svg width="22" height="22" viewBox="0 0 30 30" fill="none">
+        <polygon points="15,2 28,24 2,24" fill="none" stroke="#D4AF37" stroke-width="1.4"/>
+        <polygon points="15,9 23,23 7,23" fill="rgba(212,175,55,.12)" stroke="rgba(212,175,55,.35)" stroke-width=".8"/>
+        <circle cx="15" cy="15" r="2" fill="#D4AF37"/>
+      </svg>
+      <span class="topbar-name">Ascendra</span>
+    </div>
+    <div class="topbar-right">
+      <span class="topbar-label">Brand Guidelines</span>
+      <span class="topbar-pill">Closing</span>
+    </div>
+  </div>
+
+  <!-- Main closing content -->
+  <div class="closing-main">
+
+    <!-- Mark (medium) -->
+    <div class="closing-mark">
+      <svg width="80" height="72" viewBox="0 0 80 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="40,2 76,70 4,70" fill="none" stroke="#D4AF37" stroke-width="1.6"/>
+        <polygon points="40,22 62,62 18,62" fill="rgba(212,175,55,.10)" stroke="rgba(212,175,55,.45)" stroke-width="1"/>
+        <circle cx="40" cy="44" r="2.5" fill="#D4AF37"/>
+      </svg>
+    </div>
+
+    <!-- Tagline EN -->
+    <div class="closing-tagline">
+      "The system<br>behind your growth."
+    </div>
+
+    <!-- Tagline AR -->
+    <div class="closing-tagline-ar">«النظام خلف نموّك»</div>
+
+    <!-- Rule -->
+    <div class="closing-rule"></div>
+
+    <!-- Contact block -->
+    <div class="contact-block">
+      <div class="contact-label">Get in touch</div>
+
+      <!-- Row 1: WhatsApp · Email -->
+      <div class="contact-row">
+        <div class="contact-item contact-item--gold">
+          <div class="contact-icon">
+            <!-- Phone/WhatsApp geometric icon -->
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter">
+              <rect x="5" y="2" width="14" height="20"/>
+              <line x1="5" y1="6" x2="19" y2="6"/>
+              <line x1="5" y1="18" x2="19" y2="18"/>
+              <circle cx="12" cy="21" r="1" fill="#D4AF37" stroke="none"/>
+            </svg>
+          </div>
+          <div class="contact-text">+966 56 191 4666</div>
+        </div>
+
+        <div class="contact-sep"></div>
+
+        <!-- Email -->
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.60)" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter">
+              <rect x="2" y="4" width="20" height="16"/>
+              <polyline points="2,4 12,13 22,4"/>
+            </svg>
+          </div>
+          <div class="contact-text">contact@ascendrabyhosam.com</div>
+        </div>
+      </div>
+
+      <!-- Row 2: Website · Instagram -->
+      <div class="contact-row" style="margin-top:6px;">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.60)" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter">
+              <rect x="2" y="2" width="20" height="20"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12,2 Q8,7 8,12 Q8,17 12,22" fill="none"/>
+              <path d="M12,2 Q16,7 16,12 Q16,17 12,22" fill="none"/>
+            </svg>
+          </div>
+          <div class="contact-text">ascendrabyhosam.com</div>
+        </div>
+
+        <div class="contact-sep"></div>
+
+        <!-- Instagram -->
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.60)" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter">
+              <rect x="2" y="2" width="20" height="20"/>
+              <circle cx="12" cy="12" r="4"/>
+              <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+            </svg>
+          </div>
+          <div class="contact-text">@ascendra.sa</div>
+        </div>
+      </div>
+
+      <!-- Row 3: LinkedIn · Facebook -->
+      <div class="contact-row" style="margin-top:6px;">
+        <!-- LinkedIn -->
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.60)" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter">
+              <rect x="2" y="2" width="20" height="20"/>
+              <line x1="7" y1="10" x2="7" y2="17"/>
+              <line x1="7" y1="7" x2="7" y2="7"/>
+              <line x1="11" y1="10" x2="11" y2="17"/>
+              <path d="M11,13 Q11,10 14,10 Q17,10 17,13 L17,17" fill="none"/>
+            </svg>
+          </div>
+          <div class="contact-text">linkedin.com/company/ascendraofficial</div>
+        </div>
+
+        <div class="contact-sep"></div>
+
+        <!-- Facebook -->
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.60)" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter">
+              <rect x="2" y="2" width="20" height="20"/>
+              <path d="M14,7 L12,7 Q10,7 10,9 L10,11 L8,11 L8,14 L10,14 L10,20" fill="none"/>
+              <line x1="10" y1="11" x2="14" y2="11"/>
+            </svg>
+          </div>
+          <div class="contact-text">facebook.com/profile.php?id=61590883073074</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Footer signature -->
+  <div class="closing-footer">
+    <div class="sig-brand">
+      <svg width="18" height="18" viewBox="0 0 30 30" fill="none">
+        <polygon points="15,2 28,24 2,24" fill="none" stroke="rgba(212,175,55,.50)" stroke-width="1.4"/>
+        <polygon points="15,9 23,23 7,23" fill="rgba(212,175,55,.06)" stroke="rgba(212,175,55,.20)" stroke-width=".8"/>
+        <circle cx="15" cy="15" r="2" fill="rgba(212,175,55,.50)"/>
+      </svg>
+      <span class="sig-name">Ascendra</span>
+    </div>
+    <div class="footer-year">Brand Guidelines v1.0 · © 2026 Ascendra by Hosam · Confidential</div>
+  </div>
+
+</div>
+</body>
+</html>

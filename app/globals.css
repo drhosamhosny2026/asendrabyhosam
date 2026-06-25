@@ -77,3 +77,10 @@ textarea:focus-visible {
 
 /* thin gold divider */
 .gold-rule { height: 1px; background: var(--gold); opacity: 0.5; }
+
+/* Arabic locale — IBM Plex Sans Arabic for all text */
+[dir="rtl"] body,
+[dir="rtl"] .font-sans,
+[dir="rtl"] .font-serif {
+  font-family: var(--font-plex-arabic), system-ui, sans-serif;
+}

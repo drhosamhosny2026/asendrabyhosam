@@ -12,12 +12,13 @@ const config: Config = {
         "gray-text": "#5A6678",
       },
       fontFamily: {
-        // Cormorant Garamond = display/headings ; Inter = body/UI
-        serif: ["var(--font-cormorant)", "Georgia", "serif"],
+        // Space Grotesk = display/headings/wordmark ; Inter = body/UI ; IBM Plex Sans Arabic = all Arabic
+        serif: ["var(--font-space-grotesk)", "system-ui", "sans-serif"],
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        arabic: ["var(--font-plex-arabic)", "system-ui", "sans-serif"],
       },
       letterSpacing: {
-        wordmark: "0.20em",
+        wordmark: "0.12em",
         sub: "0.02em",
         heading: "0.01em",
         label: "0.16em",
