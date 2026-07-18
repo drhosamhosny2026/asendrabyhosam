@@ -1,7 +1,22 @@
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { buildPageMetadata } from "@/lib/seo";
+
+export async function generateMetadata(
+  { params }: { params: Promise<{ locale: string }> }
+): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta.work" });
+  return buildPageMetadata({
+    locale,
+    path: "work",
+    title: t("title"),
+    description: t("description"),
+  });
+}
 
 export default async function WorkPage({
   params,
@@ -56,7 +71,7 @@ export default async function WorkPage({
               <div className="text-center py-16">
                 <p className="font-sans text-xs uppercase tracking-label text-gold/40 mb-2">PharmacyOS</p>
                 <p className="text-white/20 text-sm">
-                  {locale === "ar" ? "لقطات شاشة المنتج — قريباً" : "Product screenshots — coming soon"}
+                  {wp("pharmacyOS.screenshotsSoon")}
                 </p>
               </div>
             </div>
@@ -145,7 +160,7 @@ export default async function WorkPage({
               <article className="border border-navy/10 p-8 flex flex-col gap-4">
                 <div className="bg-light-gray aspect-video flex items-center justify-center mb-2">
                   <p className="text-navy/30 text-sm">
-                    {locale === "ar" ? "صورة المشروع — قريباً" : "Project image — coming soon"}
+                    {wp("caseStudies.imageSoon")}
                   </p>
                 </div>
                 <p className="font-sans text-[10px] uppercase tracking-label text-gold font-medium">
@@ -180,10 +195,10 @@ export default async function WorkPage({
                 </h3>
                 <div className="space-y-4 flex-1">
                   {[
-                    { label: locale === "ar" ? "التحدي" : "Challenge", text: wp("caseStudies.ascendraChallenge") },
-                    { label: locale === "ar" ? "المقاربة" : "Approach",  text: wp("caseStudies.ascendraApproach") },
-                    { label: locale === "ar" ? "ما بُني" : "Built",     text: wp("caseStudies.ascendraBuilt") },
-                    { label: locale === "ar" ? "النتيجة" : "Outcome",   text: wp("caseStudies.ascendraOutcome") },
+                    { label: wp("caseStudies.challengeLabel"), text: wp("caseStudies.ascendraChallenge") },
+                    { label: wp("caseStudies.approachLabel"),  text: wp("caseStudies.ascendraApproach") },
+                    { label: wp("caseStudies.builtLabel"),     text: wp("caseStudies.ascendraBuilt") },
+                    { label: wp("caseStudies.outcomeLabel"),   text: wp("caseStudies.ascendraOutcome") },
                   ].map((row, i) => (
                     <div key={i}>
                       <p className="font-sans text-[10px] uppercase tracking-label text-navy/40 font-medium mb-1">
@@ -256,13 +271,13 @@ export default async function WorkPage({
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href={`/${locale}/contact`}
+                href="/contact"
                 className="bg-gold text-navy px-10 py-3.5 font-semibold text-sm hover:bg-gold/90 transition"
               >
                 {wp("cta.primary")}
               </Link>
               <Link
-                href={`/${locale}/services`}
+                href="/solutions"
                 className="border border-white/20 text-white px-10 py-3.5 font-medium text-sm hover:border-gold/50 hover:text-gold transition"
               >
                 {wp("cta.secondary")}

@@ -4,14 +4,41 @@
     "sub": "",
     "tagline": "The system behind your growth."
   },
+  "meta": {
+    "home": {
+      "title": "ASCENDRA — Business Systems & Digital Consulting | Riyadh",
+      "description": "ASCENDRA builds the digital and operational systems growing businesses run on — websites, CRM, ERP, automation, and consulting. Based in Riyadh, Saudi Arabia."
+    },
+    "solutions": {
+      "title": "Solutions — Four Business Systems",
+      "description": "Foundation, Operations, Performance & Intelligence, and Custom Business Systems — each designed around how your business actually operates."
+    },
+    "work": {
+      "title": "Work — Systems We've Built",
+      "description": "PharmacyOS and selected business systems ASCENDRA has designed and built for ambitious organizations across Saudi Arabia."
+    },
+    "about": {
+      "title": "About ASCENDRA",
+      "description": "Built by practitioners who've run real operations. ASCENDRA combines digital build and business consulting into one systems partnership."
+    },
+    "contact": {
+      "title": "Contact ASCENDRA",
+      "description": "Tell us where your business stands today. We'll identify the gaps holding it back and recommend the right next step — no obligation."
+    }
+  },
   "nav": {
     "home": "Home",
-    "services": "Services",
     "work": "Work",
     "insights": "About",
     "contact": "Contact",
     "cta": "Let's Talk",
-    "solutions": "Solutions"
+    "solutions": "Solutions",
+    "skip": "Skip to main content",
+    "primaryNav": "Primary navigation",
+    "mobileNav": "Mobile navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLabel": "عربي"
   },
   "hero": {
     "headline": "We Build the Systems",
@@ -91,40 +118,6 @@
     "body": "Most businesses have a digital gap — and a deeper systems problem behind it.",
     "digitalLine": "builds the digital products your business runs on.",
     "consultingLine": "builds the systems that help it grow steadily."
-  },
-  "consulting": {
-    "label": "ASCENDRA Consulting",
-    "heading": "Business Consulting.",
-    "subtitle": "The operational foundation beneath every digital system we build.",
-    "stageLabel": "The operational foundation beneath every digital system we build.",
-    "stageSub": "",
-    "stageCta": "Start a Conversation",
-    "items": [
-      {
-        "name": "Business Analysis",
-        "desc": "A structured assessment of your business model, commercial gaps, and operational constraints — delivered as an actionable roadmap your leadership team can execute against immediately."
-      },
-      {
-        "name": "Strategic Planning",
-        "desc": "Translate vision into a concrete execution plan. We facilitate structured planning engagements that define where your business is going, what it will take to get there, and how every team contributes to the outcome."
-      },
-      {
-        "name": "Operational Optimization",
-        "desc": "Identify the friction inside your operations and systematically remove it — improving execution speed, reducing error rates, and increasing output without adding headcount."
-      },
-      {
-        "name": "Performance Management",
-        "desc": "Define what performance looks like across your organisation, build the measurement framework, and install the accountability structures that keep every function aligned and on track."
-      },
-      {
-        "name": "Operational Excellence",
-        "desc": "Establish the documented processes, standards, and operating rhythms that allow your team to execute consistently at scale — without the founder needing to be the system."
-      },
-      {
-        "name": "Growth Consulting",
-        "desc": "Commercial strategy, channel development, and the operational foundations required to acquire, convert, and retain clients at scale — without compromising the quality of delivery."
-      }
-    ]
   },
   "capabilities": {
     "label": "Selected Capabilities",
@@ -303,82 +296,6 @@
     "primary": "Start with an Assessment",
     "whatsapp": "Or message us on WhatsApp"
   },
-  "servicesPage": {
-    "hero": {
-      "label": "Services",
-      "heading": "Digital Systems & Business Consulting.",
-      "sub": "Two pillars. One integrated system.",
-      "pillar1": "ASCENDRA Digital builds the digital products your business runs on.",
-      "pillar2": "ASCENDRA Consulting builds the operational systems that make them work."
-    },
-    "digitalSection": {
-      "footerNote": "Every digital engagement begins with an operational assessment. We build after we understand.",
-      "groups": [
-        {
-          "name": "Digital Presence",
-          "desc": "Your complete digital front — websites, landing pages, and e-commerce stores designed to represent your brand with authority and convert visitors into clients.",
-          "items": [
-            { "name": "Corporate Websites", "desc": "A professional digital presence for established businesses — designed to command authority, reflect your positioning, and convert the right clients." },
-            { "name": "Business Websites", "desc": "Purpose-built websites for growing businesses — structured around your commercial goals and built to perform from the first visit." },
-            { "name": "Personal Websites", "desc": "A professional digital identity for founders, executives, and consultants — built to establish credibility and extend your professional reach." },
-            { "name": "Landing Pages", "desc": "Focused, conversion-optimised pages built for a single purpose — a campaign, a product launch, or an offer that needs to perform." },
-            { "name": "E-Commerce Stores", "desc": "Complete online retail environments — designed to present your products with authority and built to manage inventory, orders, and clients at scale." },
-            { "name": "Educational Platforms", "desc": "Digital learning environments for institutions, academies, and educators — built for content delivery, student management, and measurable outcomes." }
-          ]
-        },
-        {
-          "name": "Business Systems",
-          "desc": "The operational core of your business — custom CRM, ERP, internal platforms, and client portals built to manage the complexity behind your growth.",
-          "items": [
-            { "name": "Business Systems Design", "desc": "The architectural phase before any build — mapping your operations and designing the system that solves the actual constraint before a line of code is written." },
-            { "name": "CRM Solutions", "desc": "Customer relationship management systems that give your sales team a structured pipeline — every lead tracked, every client relationship managed, nothing lost." },
-            { "name": "ERP Implementation", "desc": "Enterprise resource planning that integrates finance, inventory, procurement, and HR into one coherent operating layer." },
-            { "name": "Internal Platforms", "desc": "Custom web platforms built for how your team actually works — approval workflows, project tracking, operational tools, and internal dashboards." },
-            { "name": "Client Portals", "desc": "Dedicated digital environments for your clients — secure, branded, and built to deliver a professional experience at every touchpoint." }
-          ]
-        },
-        {
-          "name": "Automation, Dashboards & AI",
-          "desc": "The intelligence layer — automated workflows, real-time dashboards, and applied AI that make your business faster, smarter, and more measurable.",
-          "items": [
-            { "name": "Workflow Automation", "desc": "Remove the manual work that creates delay and error — automated workflows that connect your systems, trigger on the right conditions, and run without human intervention." },
-            { "name": "Business Dashboards", "desc": "Real-time visibility into your most important metrics — custom dashboards designed for the people who use them, not the people who build them." },
-            { "name": "Analytics & Reporting", "desc": "Data infrastructure and reporting systems that turn raw business data into operational intelligence your leadership team can act on immediately." },
-            { "name": "AI Solutions", "desc": "Applied artificial intelligence built around specific business problems — recommendation engines, predictive analytics, intelligent automation, and custom AI products." }
-          ]
-        },
-        {
-          "name": "Branding & Identity",
-          "desc": "The visual identity that signals authority — from the logo system and brand guidelines to presentations and all client-facing materials.",
-          "items": [
-            { "name": "Brand Identity", "desc": "A complete strategic and visual identity system — positioning, tone of voice, visual language, and the guidelines that keep your brand consistent at every touchpoint." },
-            { "name": "Logo Design", "desc": "A mark built to last — professionally designed, strategically considered, and delivered with the full suite of files and usage guidelines." },
-            { "name": "Visual Identity Systems", "desc": "The full visual toolkit — typography, color systems, iconography, layout grids, and brand patterns that give your identity a coherent visual language." },
-            { "name": "Presentation Design", "desc": "Executive-grade presentation templates and branded decks — built to represent your business at the level your clients expect." },
-            { "name": "Marketing Materials", "desc": "Branded collateral that extends your identity across every channel — brochures, proposals, social templates, and campaign assets." }
-          ]
-        }
-      ]
-    },
-    "pillars": {
-      "heading": "Two pillars. One system.",
-      "body1": "Most digital projects fail not because the technology is wrong — but because the operational context it was built into was never properly understood. A CRM that doesn't match how your sales team actually works won't be used. A website that doesn't reflect how your business operates won't convert.",
-      "body2": "The ASCENDRA model fixes this by combining the two disciplines before the first deliverable is scoped. ASCENDRA Consulting runs an operational diagnosis. ASCENDRA Digital designs the system against the reality of that diagnosis — not against a generic brief.",
-      "body3": "The result is a digital system that works the moment it goes live — because it was built around the actual business, not around a set of requirements written in a meeting.",
-      "step1": "Consulting diagnoses the operational reality.",
-      "step2": "Digital is designed against that reality.",
-      "step3": "Implementation carries both layers simultaneously.",
-      "step4": "Measurement begins from day one.",
-      "closing": "This is not two services. It is one system — and the distinction matters."
-    },
-    "cta": {
-      "label": "Start Your Engagement",
-      "heading": "Not sure which service applies?",
-      "body": "Most engagements begin with a conversation, not a brief. Tell us where your business is today — we will identify the right starting point.",
-      "primary": "Let's Talk",
-      "secondary": "See Our Work"
-    }
-  },
   "aboutPage": {
     "hero": {
       "label": "About ASCENDRA",
@@ -459,6 +376,7 @@
     },
     "founder": {
       "label": "The Founder",
+      "photoPlaceholder": "Founder Photo",
       "name": "Hossam H. Emam",
       "title": "Founder & Managing Director, ASCENDRA",
       "roles": "Pharmacist · Operations Leader · Business Systems Builder",
@@ -557,6 +475,7 @@
       "tierLabel": "Flagship Business System",
       "name": "PharmacyOS",
       "tagline": "The complete operating system for modern pharmacies.",
+      "screenshotsSoon": "Product screenshots — coming soon",
       "problemLabel": "The Problem",
       "problem1": "Modern pharmacy operations are more complex than they appear from the outside. A functioning pharmacy must simultaneously manage inventory — dozens of supplier relationships, expiry tracking, reorder thresholds — alongside staff, patients, prescriptions, and real-time business performance. Doing all of this accurately, with a small team and no integrated system, is not possible.",
       "problem2": "The result in most pharmacies is a patchwork: a POS system that handles transactions but not inventory intelligence, a WhatsApp group for shift coordination, a spreadsheet nobody trusts for stock levels, and a pharmacy owner who holds the entire operation in their head. When that owner is not there, the operation degrades.",
@@ -581,6 +500,11 @@
     },
     "caseStudies": {
       "tierLabel": "Case Studies",
+      "imageSoon": "Project image — coming soon",
+      "challengeLabel": "Challenge",
+      "approachLabel": "Approach",
+      "builtLabel": "Built",
+      "outcomeLabel": "Outcome",
       "taghreedName": "Taghreed Academy",
       "taghreedTag": "Case Study · Education",
       "taghreedDesc": "Digital systems and operational infrastructure for a growing education platform in Saudi Arabia.",

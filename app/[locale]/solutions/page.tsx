@@ -1,8 +1,23 @@
-import { useTranslations, useLocale } from "next-intl";
-import Link from "next/link";
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Link } from "@/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { LINKS } from "@/config/links";
+import { buildPageMetadata } from "@/lib/seo";
+
+export async function generateMetadata(
+  { params }: { params: Promise<{ locale: string }> }
+): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta.solutions" });
+  return buildPageMetadata({
+    locale,
+    path: "solutions",
+    title: t("title"),
+    description: t("description"),
+  });
+}
 
 type SystemItem = {
   id: string;
@@ -13,9 +28,13 @@ type SystemItem = {
   outcome: string;
 };
 
-export default function SolutionsPage() {
-  const sp     = useTranslations("solutionsPage");
-  const locale = useLocale();
+export default async function SolutionsPage(
+  { params }: { params: Promise<{ locale: string }> }
+) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const sp = await getTranslations("solutionsPage");
 
   const systems = sp.raw("systems") as SystemItem[];
 
@@ -180,7 +199,7 @@ export default function SolutionsPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                href={`/${locale}/contact`}
+                href="/contact"
                 className="bg-gold text-navy px-10 py-3.5 font-semibold text-sm hover:bg-gold/90 transition"
               >
                 {sp("cta.primary")}

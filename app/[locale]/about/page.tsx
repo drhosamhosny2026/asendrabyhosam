@@ -1,8 +1,23 @@
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { LINKS } from "@/config/links";
+import { buildPageMetadata } from "@/lib/seo";
+
+export async function generateMetadata(
+  { params }: { params: Promise<{ locale: string }> }
+): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta.about" });
+  return buildPageMetadata({
+    locale,
+    path: "about",
+    title: t("title"),
+    description: t("description"),
+  });
+}
 
 export default async function AboutPage({
   params,
@@ -148,7 +163,7 @@ export default async function AboutPage({
               <div className="bg-light-gray aspect-[4/5] flex items-center justify-center border border-navy/8">
                 <div className="text-center">
                   <div className="text-navy/20 font-serif text-sm">
-                    {locale === "ar" ? "صورة المؤسس" : "Founder Photo"}
+                    {ap("founder.photoPlaceholder")}
                   </div>
                 </div>
               </div>
@@ -242,13 +257,13 @@ export default async function AboutPage({
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href={`/${locale}/contact`}
+                href="/contact"
                 className="bg-gold text-navy px-10 py-3.5 font-semibold text-sm hover:bg-gold/90 transition"
               >
                 {ap("cta.primary")}
               </Link>
               <Link
-                href={`/${locale}/services`}
+                href="/solutions"
                 className="border border-white/20 text-white px-10 py-3.5 font-medium text-sm hover:border-gold/50 hover:text-gold transition"
               >
                 {ap("cta.secondary")}

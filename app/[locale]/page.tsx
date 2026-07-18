@@ -1,20 +1,39 @@
-import { useTranslations, useLocale } from "next-intl";
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { LINKS } from "@/config/links";
+import { buildPageMetadata } from "@/lib/seo";
 
-export default function Home() {
-  const hero    = useTranslations("hero");
-  const brand   = useTranslations("brand");
-  const cs      = useTranslations("coreSystems");
-  const ins     = useTranslations("insight");
-  const outT    = useTranslations("outcomes");
-  const sw      = useTranslations("selectedWork");
-  const ctaCopy = useTranslations("contactCta");
+export async function generateMetadata(
+  { params }: { params: Promise<{ locale: string }> }
+): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta.home" });
+  return buildPageMetadata({
+    locale,
+    path: "",
+    title: t("title"),
+    description: t("description"),
+    absoluteTitle: true,
+  });
+}
 
-  const locale = useLocale();
+export default async function Home(
+  { params }: { params: Promise<{ locale: string }> }
+) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const hero    = await getTranslations("hero");
+  const brand   = await getTranslations("brand");
+  const cs      = await getTranslations("coreSystems");
+  const ins     = await getTranslations("insight");
+  const outT    = await getTranslations("outcomes");
+  const sw      = await getTranslations("selectedWork");
+  const ctaCopy = await getTranslations("contactCta");
 
   const csItems  = cs.raw("items")   as { name: string; desc: string; outcome: string }[];
   const outcomes = outT.raw("items") as { metric: string; label: string; desc: string }[];
@@ -66,13 +85,13 @@ export default function Home() {
 
             <div className="flex flex-wrap gap-4 mt-10 rise rise-d4">
               <Link
-                href={`/${locale}/contact`}
+                href="/contact"
                 className="bg-gold text-navy px-8 py-3.5 font-semibold text-sm hover:bg-gold/90 transition"
               >
                 {hero("cta")}
               </Link>
               <Link
-                href={`/${locale}/solutions`}
+                href="/solutions"
                 className="border border-white/20 text-white px-8 py-3.5 font-medium text-sm hover:border-gold/50 hover:text-gold transition"
               >
                 {hero("ctaSecondary")}
@@ -112,7 +131,7 @@ export default function Home() {
 
             <div className="mt-12">
               <Link
-                href={`/${locale}/solutions`}
+                href="/solutions"
                 className="inline-flex items-center gap-2 text-navy font-medium text-sm border-b border-navy/30 hover:border-gold hover:text-gold transition-colors pb-0.5"
               >
                 {cs("cta")}
@@ -208,7 +227,7 @@ export default function Home() {
                   </h3>
                   <p className="text-gray-text text-sm leading-relaxed flex-1">{item.desc}</p>
                   <Link
-                    href={`/${locale}/${item.href}`}
+                    href={`/${item.href}`}
                     className="inline-flex items-center gap-2 text-gold font-medium text-sm hover:gap-3 transition-all"
                   >
                     {i === 0 ? sw("viewProject") : sw("viewCaseStudy")}
@@ -220,7 +239,7 @@ export default function Home() {
 
             <div className="mt-12 text-center">
               <Link
-                href={`/${locale}/work`}
+                href="/work"
                 className="inline-flex items-center gap-2 border border-navy/20 text-navy text-sm font-medium px-8 py-3 hover:border-gold hover:text-gold transition-colors"
               >
                 {sw("viewAll")}
@@ -244,7 +263,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                href={`/${locale}/contact`}
+                href="/contact"
                 className="bg-gold text-navy px-10 py-3.5 font-semibold text-sm hover:bg-gold/90 transition"
               >
                 {ctaCopy("primary")}

@@ -2,13 +2,14 @@
 import { useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
+import { Link, usePathname } from "@/navigation";
 
 export default function Header() {
   const t = useTranslations("nav");
   const b = useTranslations("brand");
   const locale = useLocale();
   const other = locale === "ar" ? "en" : "ar";
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const expanded: "true" | "false" = open ? "true" : "false";
 
@@ -18,24 +19,24 @@ export default function Header() {
   }, [open]);
 
   const navLinks = [
-    { href: `/${locale}`,          label: t("home") },
-    { href: `/${locale}/solutions`, label: t("solutions") },
-    { href: `/${locale}/work`,     label: t("work") },
-    { href: `/${locale}/about`,    label: t("insights") },
-    { href: `/${locale}/contact`,  label: t("contact") },
+    { href: "/",          label: t("home") },
+    { href: "/solutions", label: t("solutions") },
+    { href: "/work",      label: t("work") },
+    { href: "/about",     label: t("insights") },
+    { href: "/contact",   label: t("contact") },
   ];
 
   return (
     <>
       {/* Skip navigation — visible on focus for keyboard users */}
       <a href="#main-content" className="skip-link">
-        {locale === "ar" ? "تخطّ إلى المحتوى الرئيسي" : "Skip to main content"}
+        {t("skip")}
       </a>
 
       <header className="sticky top-0 z-50 bg-navy/95 backdrop-blur border-b border-gold/20">
         <div className="max-w-content mx-auto px-6 h-20 flex items-center justify-between">
 
-          <Link href={`/${locale}`} className="flex items-center gap-3" onClick={() => setOpen(false)}>
+          <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
             <Image src="/brand/ASCENDRA-logo_gold-transparent.svg" alt="" width={36} height={36} unoptimized className="h-9 w-9" />
             <span className="text-white text-xl font-serif font-semibold wordmark">
               {b("name")}
@@ -43,20 +44,21 @@ export default function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav aria-label={locale === "ar" ? "التنقل الرئيسي" : "Primary navigation"} className="hidden md:flex items-center gap-8">
+          <nav aria-label={t("primaryNav")} className="hidden md:flex items-center gap-8">
             {navLinks.map((l) => (
               <Link key={l.href} href={l.href} className="text-light-gray/75 text-sm hover:text-gold transition" onClick={() => setOpen(false)}>
                 {l.label}
               </Link>
             ))}
             <Link
-              href={`/${other}`}
+              href={pathname}
+              locale={other}
               className="text-light-gray/75 text-sm border border-white/15 rounded px-3 py-1 hover:border-gold/40 hover:text-gold transition"
             >
-              {other === "ar" ? "عربي" : "EN"}
+              {t("switchLabel")}
             </Link>
             <Link
-              href={`/${locale}/contact`}
+              href="/contact"
               className="bg-gold text-navy text-sm font-medium px-5 py-2 rounded hover:bg-gold/90 transition"
             >
               {t("cta")}
@@ -67,9 +69,7 @@ export default function Header() {
           <button
             type="button"
             className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded"
-            aria-label={open
-              ? (locale === "ar" ? "أغلق القائمة" : "Close menu")
-              : (locale === "ar" ? "افتح القائمة" : "Open menu")}
+            aria-label={open ? t("closeMenu") : t("openMenu")}
             aria-expanded={expanded}
             aria-controls="mobile-menu"
             onClick={() => setOpen((v) => !v)}
@@ -89,7 +89,7 @@ export default function Header() {
           }`}
         >
           <nav
-            aria-label={locale === "ar" ? "قائمة الجوال" : "Mobile navigation"}
+            aria-label={t("mobileNav")}
             className="flex flex-col px-6 py-6 gap-0"
             tabIndex={open ? undefined : -1}
           >
@@ -106,15 +106,16 @@ export default function Header() {
             ))}
             <div className="flex items-center justify-between pt-6 gap-4">
               <Link
-                href={`/${other}`}
+                href={pathname}
+                locale={other}
                 tabIndex={open ? 0 : -1}
                 className="text-light-gray/75 text-sm border border-white/15 rounded px-4 py-2 hover:border-gold/40 hover:text-gold transition"
                 onClick={() => setOpen(false)}
               >
-                {other === "ar" ? "عربي" : "EN"}
+                {t("switchLabel")}
               </Link>
               <Link
-                href={`/${locale}/contact`}
+                href="/contact"
                 tabIndex={open ? 0 : -1}
                 className="flex-1 text-center bg-gold text-navy text-sm font-medium px-5 py-2.5 rounded hover:bg-gold/90 transition"
                 onClick={() => setOpen(false)}

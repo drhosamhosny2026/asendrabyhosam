@@ -1,10 +1,17 @@
 import type { MetadataRoute } from "next";
+import { pageUrls } from "@/lib/seo";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ascendrabyhosam.com";
+// Locale-less route segments ("" = home). Keep in sync with the app routes.
+const PATHS = ["", "solutions", "work", "about", "contact"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    { url: `${BASE_URL}/en`, lastModified: new Date(), changeFrequency: "monthly", priority: 1 },
-    { url: `${BASE_URL}/ar`, lastModified: new Date(), changeFrequency: "monthly", priority: 1 },
-  ];
+  return PATHS.flatMap((path) => {
+    const { en, ar } = pageUrls(path);
+    const priority = path === "" ? 1 : 0.8;
+    const languages = { en, ar };
+    return [
+      { url: en, changeFrequency: "monthly", priority, alternates: { languages } },
+      { url: ar, changeFrequency: "monthly", priority, alternates: { languages } },
+    ];
+  });
 }
