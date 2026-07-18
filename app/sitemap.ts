@@ -2,7 +2,17 @@ import type { MetadataRoute } from "next";
 import { pageUrls } from "@/lib/seo";
 
 // Locale-less route segments ("" = home). Keep in sync with the app routes.
-const PATHS = ["", "solutions", "work", "about", "contact"];
+const PATHS = [
+  "",
+  "solutions",
+  "products",
+  "products/feasibility-study",
+  "products/personal-brand-website",
+  "products/business-website",
+  "work",
+  "about",
+  "contact",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return PATHS.flatMap((path) => {

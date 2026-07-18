@@ -24,6 +24,22 @@
     "contact": {
       "title": "Contact ASCENDRA",
       "description": "Tell us where your business stands today. We'll identify the gaps holding it back and recommend the right next step — no obligation."
+    },
+    "products": {
+      "title": "Products",
+      "description": "Ready-to-start products with a clear scope and a fixed delivery time — bankable feasibility studies, personal brand websites, and corporate business websites. Built by ASCENDRA in Saudi Arabia."
+    },
+    "feasibilityStudy": {
+      "title": "Feasibility Study",
+      "description": "A bankable feasibility study for new projects in Saudi Arabia — market analysis, operating model, costs, revenue projections, and a clear go/no-go recommendation. Delivered in 7–10 business days."
+    },
+    "personalBrandWebsite": {
+      "title": "Personal Brand Website",
+      "description": "A professional personal website for doctors, consultants, and experts — bilingual-ready, mobile-first, with contact and booking built in. Delivered in one week."
+    },
+    "businessWebsite": {
+      "title": "Business Website",
+      "description": "A professional corporate website that positions your company correctly and converts — multi-page, AR/EN, mobile-first, with SEO foundations and analytics. Delivered in 2–3 weeks."
     }
   },
   "nav": {
@@ -38,7 +54,8 @@
     "mobileNav": "Mobile navigation",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "switchLabel": "عربي"
+    "switchLabel": "عربي",
+    "products": "Products"
   },
   "hero": {
     "headline": "We Build the Systems",
@@ -429,7 +446,11 @@
         "label": "Foundation System",
         "problem": "Your digital presence is thin or fragmented. The basics — how the business looks, where it lives online, how it's set up technically — were never built on a solid base. Everything else depends on this foundation — and right now, it isn't built to support growth.",
         "system": "The Foundation System builds the digital base your business runs on: a professional presence, a coherent identity, and the technical infrastructure underneath it. It's the layer everything else connects to.",
-        "capabilities": ["Business Websites", "Branding & Identity", "Digital Infrastructure"],
+        "capabilities": [
+          "Business Websites",
+          "Branding & Identity",
+          "Digital Infrastructure"
+        ],
         "outcome": "A professional, scalable, and connected business foundation — ready for everything you build on top of it."
       },
       {
@@ -437,7 +458,14 @@
         "label": "Operations System",
         "problem": "The work gets done, but it depends on people remembering, chasing, and holding it together. Information is scattered. Processes live in someone's head. As you grow, the cracks widen — and no one has a clear view of what's actually happening day to day.",
         "system": "The Operations System replaces that fragility with structure. It connects your processes, automates the manual work, and gives the business a single, reliable way of running — so operations don't depend on any one person.",
-        "capabilities": ["CRM Systems", "ERP Systems", "Automation", "Process Design", "Process Optimization", "Operational Excellence"],
+        "capabilities": [
+          "CRM Systems",
+          "ERP Systems",
+          "Automation",
+          "Process Design",
+          "Process Optimization",
+          "Operational Excellence"
+        ],
         "outcome": "Operations that run through systems, not individuals — consistent, efficient, and ready to scale."
       },
       {
@@ -445,7 +473,13 @@
         "label": "Performance & Intelligence System",
         "problem": "You're growing, but you're flying partly blind. You can't easily see what's working and what isn't. Decisions get made on instinct because the data is either missing, scattered, or too slow to be useful.",
         "system": "The Performance & Intelligence System gives the business sight. It defines what performance means, measures it continuously, and surfaces it clearly — turning scattered data into decisions you can act on.",
-        "capabilities": ["Dashboards", "KPI Design", "Reporting & Analytics", "Growth Planning", "AI-Enabled Insights"],
+        "capabilities": [
+          "Dashboards",
+          "KPI Design",
+          "Reporting & Analytics",
+          "Growth Planning",
+          "AI-Enabled Insights"
+        ],
         "outcome": "Better decisions and measurable growth — driven by what's real, not by guesswork."
       },
       {
@@ -453,7 +487,12 @@
         "label": "Custom Business Systems",
         "problem": "Your sector has needs that off-the-shelf tools can't meet. You've been forced to bend your operations around generic software — instead of having software built around how your business actually works.",
         "system": "When the standard systems aren't enough, we build a custom one — designed around the specific operations of your business or industry. This is where ASCENDRA's deepest work lives, and where PharmacyOS, our flagship, was born.",
-        "capabilities": ["Custom Platforms", "Vertical Solutions", "PharmacyOS (Flagship Business System)"],
+        "capabilities": [
+          "Custom Platforms",
+          "Vertical Solutions",
+          "Mobile Applications",
+          "PharmacyOS (Flagship Business System)"
+        ],
         "outcome": "A purpose-built system designed for how your sector actually operates — proof that we build systems, not just assemble tools."
       }
     ],
@@ -536,5 +575,249 @@
       "primary": "Let's Talk",
       "secondary": "Explore the Systems"
     }
+  },
+  "homeProducts": {
+    "label": "Productized Services",
+    "heading": "Ready-to-start products with a clear scope.",
+    "cta": "View all products",
+    "items": [
+      {
+        "name": "Feasibility Study",
+        "value": "A bankable feasibility study for new projects — funding-ready in 7–10 business days.",
+        "href": "products/feasibility-study"
+      },
+      {
+        "name": "Personal Brand Website",
+        "value": "A professional online presence for doctors, consultants, and experts — in one week.",
+        "href": "products/personal-brand-website"
+      },
+      {
+        "name": "Business Website",
+        "value": "A corporate website that positions your company and converts — in 2–3 weeks.",
+        "href": "products/business-website"
+      }
+    ]
+  },
+  "productsPage": {
+    "hero": {
+      "label": "Products",
+      "headline": "Ready-to-start products with a clear scope.",
+      "body1": "Alongside our end-to-end systems, ASCENDRA offers a set of focused, productized services — each with a defined scope, a clear delivery time, and a fixed outcome. No open-ended engagement; you know exactly what you get.",
+      "body2": "Choose a product below, or tell us what you need and we'll recommend the right starting point.",
+      "subLine": "Every product ends with something delivered — a document, a website, a result you can use."
+    },
+    "groups": [
+      {
+        "id": "business",
+        "label": "Business Products",
+        "items": [
+          {
+            "name": "Feasibility Study",
+            "value": "A bankable feasibility study for new projects in Saudi Arabia — built for funding applications, government requirements, and investment decisions.",
+            "href": "products/feasibility-study"
+          }
+        ]
+      },
+      {
+        "id": "technology",
+        "label": "Technology Products",
+        "items": [
+          {
+            "name": "Personal Brand Website",
+            "value": "A professional digital presence for doctors, consultants, and experts who need to be found and trusted.",
+            "href": "products/personal-brand-website"
+          },
+          {
+            "name": "Business Website",
+            "value": "A corporate website that positions your company correctly and turns visitors into clients.",
+            "href": "products/business-website"
+          }
+        ]
+      }
+    ],
+    "cardCta": "View details",
+    "alsoBuild": {
+      "label": "Beyond Products",
+      "headline": "We also build mobile apps and custom systems.",
+      "body": "Need something bigger than a product? We design and build mobile applications (Android & iOS) and custom business systems, engineered around how your business actually operates.",
+      "cta": "Talk to Us"
+    },
+    "detail": {
+      "whatYouGet": "What You Get",
+      "delivery": "Delivery Time",
+      "howItWorks": "How It Works",
+      "faq": "Frequently Asked Questions",
+      "addOnLabel": "Optional Add-on",
+      "back": "All Products",
+      "ctaPrimary": "Request a Quote",
+      "ctaWhatsapp": "Message us on WhatsApp"
+    }
+  },
+  "feasibilityStudy": {
+    "name": "Feasibility Study",
+    "heroValue": "A bankable feasibility study that tells you — with evidence — whether your project is worth building.",
+    "heroBody": "A professional feasibility study for new projects in Saudi Arabia, prepared to the standard expected by banks, investors, and government programs. Suitable for funding applications, licensing and government requirements, and internal go/no-go investment decisions.",
+    "scope": [
+      "Market and competitor analysis — demand, target segments, and where you fit",
+      "Operating model — how the project runs day to day",
+      "Capital costs (CapEx) and operating costs (OpEx), itemized",
+      "Revenue projections and core financial indicators",
+      "A clear go / no-go recommendation with the reasoning behind it",
+      "Delivered as a professional, presentation-ready document"
+    ],
+    "deliveryValue": "7–10 business days",
+    "steps": [
+      {
+        "title": "Discovery",
+        "desc": "We start with a structured conversation about your project idea, target market, and goals — and agree on the scope of the study."
+      },
+      {
+        "title": "Research & Analysis",
+        "desc": "We analyze the market, competitors, cost structure, and revenue potential using reliable data and realistic assumptions."
+      },
+      {
+        "title": "Modeling",
+        "desc": "We build the financial model — capital and operating costs, revenue projections, and the indicators that drive the decision."
+      },
+      {
+        "title": "Delivery",
+        "desc": "You receive a professional document with a clear go/no-go recommendation, ready to present to banks, investors, or partners."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Is the study suitable for bank funding and government requirements?",
+        "a": "Yes. It is prepared to the standard expected by banks, investment funds, and government programs, and is suitable for funding and licensing applications."
+      },
+      {
+        "q": "What do you need from me to start?",
+        "a": "A clear description of the project idea, the intended location, and any information you already have. We guide you through the rest during discovery."
+      },
+      {
+        "q": "How long does it take?",
+        "a": "Typically 7–10 business days from the discovery conversation, depending on the complexity of the project and the availability of market data."
+      },
+      {
+        "q": "What if the recommendation is 'no-go'?",
+        "a": "That is a valuable outcome. A clear, evidence-based no-go saves you from investing in the wrong project — and often points to a better version of the idea."
+      }
+    ],
+    "ctaHeading": "Thinking about a new project?",
+    "ctaBody": "Tell us about your idea. We'll scope the feasibility study and get you a clear answer you can act on.",
+    "whatsappText": "Hi, I'd like to request a quote for a Feasibility Study with ASCENDRA."
+  },
+  "personalBrandWebsite": {
+    "name": "Personal Brand Website",
+    "heroValue": "A professional website that turns your name and credentials into a trusted digital presence.",
+    "heroBody": "For credentialed professionals — doctors, consultants, and experts — who need to be found, understood, and trusted online. A focused personal website that presents your expertise with authority and makes it easy for the right people to reach you.",
+    "scope": [
+      "Single-page or multi-section personal website",
+      "Professional presentation of your profile, expertise, and credentials",
+      "Bilingual-ready structure (Arabic / English)",
+      "Mobile-first, fast-loading design",
+      "Contact and booking integration — so enquiries reach you directly",
+      "Ready to publish on your own domain"
+    ],
+    "deliveryValue": "1 week",
+    "steps": [
+      {
+        "title": "Brief",
+        "desc": "We collect your profile, credentials, photos, and the goal of the site — who you want to reach and what you want them to do."
+      },
+      {
+        "title": "Design",
+        "desc": "We design a clean, professional layout that reflects your standing and reads well on any device."
+      },
+      {
+        "title": "Build",
+        "desc": "We build the site, wire up contact and booking, and prepare it for your domain."
+      },
+      {
+        "title": "Launch",
+        "desc": "We publish, test on real devices, and hand it over ready to share."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Is the site bilingual?",
+        "a": "The structure is bilingual-ready (Arabic / English). We can launch in one language and add the second, or deliver both from the start."
+      },
+      {
+        "q": "Can visitors book an appointment?",
+        "a": "Yes. We integrate contact and booking so enquiries and appointment requests reach you directly."
+      },
+      {
+        "q": "Do I need to provide the content?",
+        "a": "You provide your profile details, credentials, and photos. We structure and present them professionally — and can refine your wording."
+      },
+      {
+        "q": "Can I add branding later?",
+        "a": "Yes. A personal brand identity (logo, colors, typography) is available as an optional add-on — see below."
+      }
+    ],
+    "addOn": {
+      "name": "+ Personal Brand Identity",
+      "desc": "Add a complete personal brand identity — logo, color palette, and typography — designed to match your website and give your name a consistent, professional look across every channel."
+    },
+    "ctaHeading": "Ready to own your name online?",
+    "ctaBody": "Tell us about your profession and your goals. We'll scope your personal website and get you a quote.",
+    "whatsappText": "Hi, I'd like to request a quote for a Personal Brand Website with ASCENDRA."
+  },
+  "businessWebsite": {
+    "name": "Business Website",
+    "heroValue": "A corporate website that positions your company correctly — and converts visitors into clients.",
+    "heroBody": "A professional, multi-page website for established and growing businesses. Built to present your company with authority, communicate what you do clearly, and turn the right visitors into enquiries.",
+    "scope": [
+      "Multi-page corporate website (home, about, services, contact, and more)",
+      "Bilingual Arabic / English with correct RTL layout",
+      "Mobile-first, fast, professional design",
+      "SEO foundations so the right people can find you",
+      "Analytics setup to measure visitors and enquiries",
+      "Contact flows that route enquiries to the right place"
+    ],
+    "deliveryValue": "2–3 weeks",
+    "steps": [
+      {
+        "title": "Discovery",
+        "desc": "We align on your positioning, audience, structure, and the pages the site needs to do its job."
+      },
+      {
+        "title": "Design",
+        "desc": "We design a professional, on-brand layout that presents your company with authority across every screen."
+      },
+      {
+        "title": "Build",
+        "desc": "We build the site bilingual and mobile-first, with SEO foundations, analytics, and contact flows wired in."
+      },
+      {
+        "title": "Launch",
+        "desc": "We test, publish to your domain, and hand over a site your team can rely on."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Is the website bilingual?",
+        "a": "Yes. It's built in Arabic and English with correct right-to-left layout for the Arabic side."
+      },
+      {
+        "q": "Will it help us show up on Google?",
+        "a": "We build in SEO foundations — clean structure, metadata, and performance — that give you a solid base to be found and to grow visibility over time."
+      },
+      {
+        "q": "Can you migrate our existing content?",
+        "a": "Yes. We can restructure and migrate your existing content, and refine it so it reads professionally in both languages."
+      },
+      {
+        "q": "Do we get a brand identity too?",
+        "a": "A full brand identity is available as an optional add-on — see below. If you already have one, we build to it."
+      }
+    ],
+    "addOn": {
+      "name": "+ Brand Identity",
+      "desc": "Add a complete brand identity — logo, color system, and typography — designed alongside the website so your company looks coherent and professional everywhere it appears."
+    },
+    "ctaHeading": "Ready for a website that works?",
+    "ctaBody": "Tell us about your company and what the site needs to do. We'll scope it and get you a quote.",
+    "whatsappText": "Hi, I'd like to request a quote for a Business Website with ASCENDRA."
   }
 }

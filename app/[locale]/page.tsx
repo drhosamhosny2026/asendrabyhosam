@@ -30,12 +30,14 @@ export default async function Home(
   const hero    = await getTranslations("hero");
   const brand   = await getTranslations("brand");
   const cs      = await getTranslations("coreSystems");
+  const hp      = await getTranslations("homeProducts");
   const ins     = await getTranslations("insight");
   const outT    = await getTranslations("outcomes");
   const sw      = await getTranslations("selectedWork");
   const ctaCopy = await getTranslations("contactCta");
 
   const csItems  = cs.raw("items")   as { name: string; desc: string; outcome: string }[];
+  const hpItems  = hp.raw("items")   as { name: string; value: string; href: string }[];
   const outcomes = outT.raw("items") as { metric: string; label: string; desc: string }[];
   const swItems  = sw.raw("items")   as { tier: string; name: string; desc: string; href: string }[];
 
@@ -135,6 +137,43 @@ export default async function Home(
                 className="inline-flex items-center gap-2 text-navy font-medium text-sm border-b border-navy/30 hover:border-gold hover:text-gold transition-colors pb-0.5"
               >
                 {cs("cta")}
+                <span aria-hidden="true">{locale === "ar" ? "←" : "→"}</span>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 2b. PRODUCTS TEASER ─────────────────────────────────────── */}
+        <section aria-labelledby="home-products-heading" className="py-24 px-6 bg-navy">
+          <div className="max-w-content mx-auto">
+            <p className="font-sans text-xs uppercase tracking-label text-gold mb-6" aria-hidden="true">
+              {hp("label")}
+            </p>
+            <h2 id="home-products-heading" className="font-serif font-semibold text-3xl md:text-4xl text-white leading-tight tracking-tight mb-12 max-w-2xl">
+              {hp("heading")}
+            </h2>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {hpItems.map((it) => (
+                <Link
+                  key={it.href}
+                  href={`/${it.href}`}
+                  className="bg-white/[0.03] border-t-2 border-gold/30 p-6 flex flex-col gap-3 hover:bg-white/[0.06] hover:border-gold/70 transition-colors"
+                >
+                  <h3 className="font-serif font-semibold text-lg text-white leading-tight tracking-tight">
+                    {it.name}
+                  </h3>
+                  <p className="text-white/55 text-sm leading-relaxed">{it.value}</p>
+                </Link>
+              ))}
+            </div>
+
+            <div className="mt-10">
+              <Link
+                href="/products"
+                className="inline-flex items-center gap-2 border border-white/20 text-white text-sm font-medium px-8 py-3 hover:border-gold hover:text-gold transition-colors"
+              >
+                {hp("cta")}
                 <span aria-hidden="true">{locale === "ar" ? "←" : "→"}</span>
               </Link>
             </div>
