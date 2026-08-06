@@ -29,17 +29,18 @@ export default async function Home(
 
   const hero    = await getTranslations("hero");
   const brand   = await getTranslations("brand");
-  const cs      = await getTranslations("coreSystems");
-  const hp      = await getTranslations("homeProducts");
+  const need    = await getTranslations("startFromNeed");
   const ins     = await getTranslations("insight");
   const outT    = await getTranslations("outcomes");
   const sw      = await getTranslations("selectedWork");
   const ctaCopy = await getTranslations("contactCta");
 
-  const csItems  = cs.raw("items")   as { name: string; desc: string; outcome: string }[];
-  const hpItems  = hp.raw("items")   as { name: string; value: string; href: string }[];
-  const outcomes = outT.raw("items") as { metric: string; label: string; desc: string }[];
-  const swItems  = sw.raw("items")   as { tier: string; name: string; desc: string; href: string }[];
+  const needItems = need.raw("items")  as { question: string; answer: string; cta: string; href: string }[];
+  const outcomes  = outT.raw("items")  as { metric: string; label: string; desc: string }[];
+  const swItems   = sw.raw("items")    as { tier: string; name: string; desc: string; href: string }[];
+
+  const arrow   = locale === "ar" ? "←" : "→";
+  const waHref  = `${LINKS.whatsapp}?text=${encodeURIComponent(ctaCopy("whatsappText"))}`;
 
   return (
     <>
@@ -87,13 +88,13 @@ export default async function Home(
 
             <div className="flex flex-wrap gap-4 mt-10 rise rise-d4">
               <Link
-                href="/contact"
+                href="/solutions"
                 className="bg-gold text-navy px-8 py-3.5 font-semibold text-sm hover:bg-gold/90 transition"
               >
-                {hero("cta")}
+                {hero("ctaPrimary")}
               </Link>
               <Link
-                href="/solutions"
+                href="/products"
                 className="border border-white/20 text-white px-8 py-3.5 font-medium text-sm hover:border-gold/50 hover:text-gold transition"
               >
                 {hero("ctaSecondary")}
@@ -106,136 +107,42 @@ export default async function Home(
           </div>
         </section>
 
-        {/* ── 2. CORE SYSTEMS TEASER ──────────────────────────────────── */}
-        <section aria-labelledby="systems-heading" className="py-24 px-6 bg-white">
+        {/* ── 2. START FROM YOUR NEED ─────────────────────────────────── */}
+        <section aria-labelledby="need-heading" className="py-24 px-6 bg-white">
           <div className="max-w-content mx-auto">
             <p className="font-sans text-xs uppercase tracking-label text-gold mb-6" aria-hidden="true">
-              {cs("label")}
+              {need("label")}
             </p>
-            <p id="systems-heading" className="text-navy/65 text-lg md:text-xl leading-relaxed max-w-3xl mb-16">
-              {cs("heading")}
-            </p>
+            <h2 id="need-heading" className="font-serif font-semibold text-4xl md:text-5xl text-navy leading-tight tracking-tight mb-14 max-w-2xl">
+              {need("heading")}
+            </h2>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0">
-              {csItems.map((item, i) => (
+            <div className="grid md:grid-cols-2 gap-6">
+              {needItems.map((item, i) => (
                 <div
                   key={i}
-                  className="border-t-2 border-gold/25 pt-6 pb-8 pe-8 hover:border-gold/60 transition-colors"
+                  className="bg-light-gray border-t-2 border-gold/25 p-8 flex flex-col gap-4 hover:border-gold/70 transition-colors"
                 >
-                  <h3 className="font-serif font-semibold text-lg text-navy leading-tight tracking-tight mb-3">
-                    {item.name}
+                  <h3 className="font-serif font-semibold text-xl text-navy leading-tight tracking-tight">
+                    {item.question}
                   </h3>
-                  <p className="text-navy/60 text-sm leading-relaxed mb-4">{item.desc}</p>
-                  <p className="text-navy/50 text-xs leading-relaxed">{item.outcome}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-12">
-              <Link
-                href="/solutions"
-                className="inline-flex items-center gap-2 text-navy font-medium text-sm border-b border-navy/30 hover:border-gold hover:text-gold transition-colors pb-0.5"
-              >
-                {cs("cta")}
-                <span aria-hidden="true">{locale === "ar" ? "←" : "→"}</span>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* ── 2b. PRODUCTS TEASER ─────────────────────────────────────── */}
-        <section aria-labelledby="home-products-heading" className="py-24 px-6 bg-navy">
-          <div className="max-w-content mx-auto">
-            <p className="font-sans text-xs uppercase tracking-label text-gold mb-6" aria-hidden="true">
-              {hp("label")}
-            </p>
-            <h2 id="home-products-heading" className="font-serif font-semibold text-3xl md:text-4xl text-white leading-tight tracking-tight mb-12 max-w-2xl">
-              {hp("heading")}
-            </h2>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              {hpItems.map((it) => (
-                <Link
-                  key={it.href}
-                  href={`/${it.href}`}
-                  className="bg-white/[0.03] border-t-2 border-gold/30 p-6 flex flex-col gap-3 hover:bg-white/[0.06] hover:border-gold/70 transition-colors"
-                >
-                  <h3 className="font-serif font-semibold text-lg text-white leading-tight tracking-tight">
-                    {it.name}
-                  </h3>
-                  <p className="text-white/55 text-sm leading-relaxed">{it.value}</p>
-                </Link>
-              ))}
-            </div>
-
-            <div className="mt-10">
-              <Link
-                href="/products"
-                className="inline-flex items-center gap-2 border border-white/20 text-white text-sm font-medium px-8 py-3 hover:border-gold hover:text-gold transition-colors"
-              >
-                {hp("cta")}
-                <span aria-hidden="true">{locale === "ar" ? "←" : "→"}</span>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* ── 3. WHY BETTER SYSTEMS MATTER ────────────────────────────── */}
-        <section id="why" aria-labelledby="why-heading" className="py-24 px-6 bg-light-gray scroll-mt-20">
-          <div className="max-w-content mx-auto">
-            <p className="font-sans text-xs uppercase tracking-label text-gold mb-6" aria-hidden="true">
-              {ins("label")}
-            </p>
-            <h2 id="why-heading" className="font-serif font-semibold text-4xl md:text-5xl text-navy leading-tight tracking-tight mb-12 max-w-3xl">
-              {ins("headline")}
-            </h2>
-
-            <div className="max-w-3xl space-y-5 text-navy/65 text-lg leading-relaxed mb-10">
-              <p>{ins("body1")}</p>
-              <p>{ins("body2")}</p>
-            </div>
-
-            <blockquote className="border-s-2 border-gold ps-8 max-w-3xl space-y-2">
-              <p className="font-serif font-semibold text-2xl md:text-3xl text-navy leading-tight tracking-tight">
-                {ins("emphasis1")}
-              </p>
-              <p className="font-serif font-semibold text-2xl md:text-3xl text-gold leading-tight tracking-tight">
-                {ins("emphasis2")}
-              </p>
-              <p className="font-serif text-xl text-navy/60 italic leading-relaxed pt-1">
-                {ins("emphasis3")}
-              </p>
-            </blockquote>
-          </div>
-        </section>
-
-        {/* ── 4. OUTCOMES ──────────────────────────────────────────────── */}
-        <section aria-labelledby="outcomes-heading" className="py-24 px-6 bg-white">
-          <div className="max-w-content mx-auto">
-            <p className="font-sans text-xs uppercase tracking-label text-gold mb-4" aria-hidden="true">
-              {outT("label")}
-            </p>
-            <h2 id="outcomes-heading" className="font-serif font-semibold text-4xl md:text-5xl text-navy leading-tight tracking-tight mb-14 max-w-2xl">
-              {outT("title")}
-            </h2>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {outcomes.map((o, i) => (
-                <div key={i} className="bg-light-gray p-8 flex flex-col gap-3">
-                  <div aria-hidden="true" className="text-gold font-serif font-semibold text-4xl leading-none">
-                    {o.metric}
-                  </div>
-                  <h3 className="font-serif font-semibold text-lg text-navy leading-tight tracking-tight">
-                    {o.label}
-                  </h3>
-                  <p className="text-gray-text text-sm leading-relaxed">{o.desc}</p>
+                  <p className="text-navy/60 text-base leading-relaxed flex-1">
+                    {item.answer}
+                  </p>
+                  <Link
+                    href={item.href}
+                    className="inline-flex items-center gap-2 text-gold font-medium text-sm hover:gap-3 transition-all self-start"
+                  >
+                    {item.cta}
+                    <span aria-hidden="true">{arrow}</span>
+                  </Link>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ── 5. SELECTED WORK ─────────────────────────────────────────── */}
+        {/* ── 3. SELECTED WORK ─────────────────────────────────────────── */}
         <section aria-labelledby="selected-work-heading" className="py-24 px-6 bg-light-gray">
           <div className="max-w-content mx-auto">
             <p className="font-sans text-xs uppercase tracking-label text-gold mb-4" aria-hidden="true">
@@ -270,7 +177,7 @@ export default async function Home(
                     className="inline-flex items-center gap-2 text-gold font-medium text-sm hover:gap-3 transition-all"
                   >
                     {i === 0 ? sw("viewProject") : sw("viewCaseStudy")}
-                    <span aria-hidden="true">{locale === "ar" ? "←" : "→"}</span>
+                    <span aria-hidden="true">{arrow}</span>
                   </Link>
                 </article>
               ))}
@@ -282,13 +189,43 @@ export default async function Home(
                 className="inline-flex items-center gap-2 border border-navy/20 text-navy text-sm font-medium px-8 py-3 hover:border-gold hover:text-gold transition-colors"
               >
                 {sw("viewAll")}
-                <span aria-hidden="true">{locale === "ar" ? "←" : "→"}</span>
+                <span aria-hidden="true">{arrow}</span>
               </Link>
             </div>
           </div>
         </section>
 
-        {/* ── 6. FINAL CTA ─────────────────────────────────────────────── */}
+        {/* ── 4. THE SYSTEMS PROBLEM + WHAT CHANGES ───────────────────── */}
+        <section id="why" aria-labelledby="why-heading" className="py-24 px-6 bg-white scroll-mt-20">
+          <div className="max-w-content mx-auto">
+            <p className="font-sans text-xs uppercase tracking-label text-gold mb-6" aria-hidden="true">
+              {ins("label")}
+            </p>
+            <h2 id="why-heading" className="font-serif font-semibold text-4xl md:text-5xl text-navy leading-tight tracking-tight mb-8 max-w-3xl">
+              {ins("headline")}
+            </h2>
+
+            <p className="max-w-3xl text-navy/65 text-lg leading-relaxed mb-14">
+              {ins("body")}
+            </p>
+
+            <div className="grid sm:grid-cols-3 gap-6">
+              {outcomes.map((o, i) => (
+                <div key={i} className="bg-light-gray p-8 flex flex-col gap-3">
+                  <div aria-hidden="true" className="text-gold font-serif font-semibold text-4xl leading-none">
+                    {o.metric}
+                  </div>
+                  <h3 className="font-serif font-semibold text-lg text-navy leading-tight tracking-tight">
+                    {o.label}
+                  </h3>
+                  <p className="text-gray-text text-sm leading-relaxed">{o.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 5. FINAL CTA ─────────────────────────────────────────────── */}
         <section aria-labelledby="cta-heading" className="py-24 px-6 bg-navy">
           <div className="max-w-content mx-auto text-center">
             <p className="font-sans text-xs uppercase tracking-label text-gold mb-5" aria-hidden="true">
@@ -308,7 +245,7 @@ export default async function Home(
                 {ctaCopy("primary")}
               </Link>
               <a
-                href={LINKS.whatsappMsg}
+                href={waHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-white/20 text-white px-10 py-3.5 font-medium text-sm hover:border-gold/50 hover:text-gold transition"

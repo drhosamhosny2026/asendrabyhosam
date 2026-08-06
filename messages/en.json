@@ -61,38 +61,40 @@
     "headline": "We Build the Systems",
     "headlineMid": "Your Business",
     "headlineAccent": "Runs On — And Grows With.",
-    "keyMessage": "ASCENDRA is a business systems company. We partner with growing businesses to build and evolve the systems they need to operate better, scale with confidence, and transform sustainably.",
-    "subtext": "We design and build digital and operational systems — from websites and CRM to custom platforms and ERP — built around the real operations of growing businesses.",
-    "cta": "Let's Talk",
-    "ctaSecondary": "Explore the Systems",
+    "keyMessage": "ASCENDRA builds business systems — so you operate with clarity and scale with confidence.",
+    "ctaPrimary": "Explore the Systems",
+    "ctaSecondary": "Browse Products",
     "trustLine": "Business Transformation · Riyadh, KSA"
   },
-  "coreSystems": {
-    "label": "What We Build",
-    "heading": "Every growing business runs on systems — whether they were designed on purpose or not. We build the four that matter most.",
+  "startFromNeed": {
+    "label": "Where To Start",
+    "heading": "Start from what you need.",
     "items": [
       {
-        "name": "Foundation System",
-        "desc": "The digital foundation your business runs on.",
-        "outcome": "A professional, connected base ready to scale."
+        "question": "Need a digital presence that represents you properly?",
+        "answer": "A business or personal website, ready in weeks.",
+        "cta": "View the products",
+        "href": "/products"
       },
       {
-        "name": "Operations System",
-        "desc": "The systems that run your day-to-day work.",
-        "outcome": "Operations that run on structure, not on individuals."
+        "question": "Starting a project and need certainty before you spend?",
+        "answer": "A certified feasibility study in 7–10 business days.",
+        "cta": "View the products",
+        "href": "/products"
       },
       {
-        "name": "Performance & Intelligence System",
-        "desc": "The systems that measure and sharpen performance.",
-        "outcome": "Decisions backed by data, not guesswork."
+        "question": "Growing, but operations still depend on you?",
+        "answer": "A custom operational system for your sector — like PharmacyOS.",
+        "cta": "Explore the systems",
+        "href": "/solutions"
       },
       {
-        "name": "Custom Business Systems",
-        "desc": "Industry-specific systems built around real operations.",
-        "outcome": "A system designed for how your sector actually works."
+        "question": "Making decisions without real numbers?",
+        "answer": "Dashboards and KPIs that show you everything.",
+        "cta": "Explore the systems",
+        "href": "/solutions"
       }
-    ],
-    "cta": "Explore the Systems"
+    ]
   },
   "digital": {
     "label": "ASCENDRA Digital",
@@ -158,26 +160,15 @@
   },
   "insight": {
     "label": "Why ASCENDRA",
-    "headline": "Most growing businesses don't have a growth problem. They have a systems problem.",
-    "body1": "Every business that plateaus shares the same pattern. Work gets done, but it depends on a few key people. Information lives in scattered places. No one has a clear view of what's actually happening. And as the business grows, the complexity grows faster.",
-    "body2": "The instinct is to push harder — hire more people, work longer, try a new tactic. But effort doesn't fix a structural problem. It just stretches it.",
-    "emphasis1": "The solution is rarely more effort.",
-    "emphasis2": "It is better systems.",
-    "emphasis3": "Better systems create better businesses — they create clarity, improve execution, and make growth repeatable instead of accidental.",
-    "body3": "ASCENDRA starts with the digital project — website, CRM, ERP, automation, or AI — and builds the operational foundation that makes it work inside your business.",
-    "digitalCardLabel": "ASCENDRA Digital",
-    "digitalCardBody": "Builds the digital products your business runs on — websites, e-commerce, CRM, ERP, dashboards, automation, and AI.",
-    "consultingCardLabel": "ASCENDRA Consulting",
-    "consultingCardBody": "Builds the operational and strategic systems that help your business grow steadily."
+    "headline": "Most growing companies don't have a growth problem — they have a systems problem.",
+    "body": "The work gets done, but it runs on people, not systems. Information lives in scattered places, and no one sees the full picture. The answer is rarely more effort — it's better systems."
   },
   "outcomes": {
-    "label": "What Changes",
-    "title": "What your business looks like once the systems are in place.",
     "items": [
       {
         "metric": "↑",
         "label": "Clarity",
-        "desc": "You can see what's happening across the business, in real time."
+        "desc": "See what's happening across your business, in real time."
       },
       {
         "metric": "↑",
@@ -186,23 +177,8 @@
       },
       {
         "metric": "↑",
-        "label": "Visibility",
-        "desc": "Performance is measured, not guessed."
-      },
-      {
-        "metric": "↑",
         "label": "Scalability",
         "desc": "Growth doesn't break what you've built."
-      },
-      {
-        "metric": "↑",
-        "label": "Better Decisions",
-        "desc": "You act on data, not on instinct alone."
-      },
-      {
-        "metric": "↑",
-        "label": "Confidence",
-        "desc": "You scale knowing the foundation holds."
       }
     ]
   },
@@ -308,10 +284,11 @@
   },
   "contactCta": {
     "label": "Start Your Transformation",
-    "heading": "Let's find the system your business needs next.",
-    "body": "We will identify the gaps holding it back — and recommend the right next step. No obligation, no pressure.",
+    "heading": "Let's identify the system your business needs now.",
+    "body": "Tell us where your business stands today — we'll map the next step. No commitment.",
     "primary": "Start with an Assessment",
-    "whatsapp": "Or message us on WhatsApp"
+    "whatsapp": "Or message us on WhatsApp",
+    "whatsappText": "Hi, I'd like to start a business diagnosis with ASCENDRA."
   },
   "aboutPage": {
     "hero": {
@@ -575,28 +552,6 @@
       "primary": "Let's Talk",
       "secondary": "Explore the Systems"
     }
-  },
-  "homeProducts": {
-    "label": "Productized Services",
-    "heading": "Ready-to-start products with a clear scope.",
-    "cta": "View all products",
-    "items": [
-      {
-        "name": "Feasibility Study",
-        "value": "A bankable feasibility study for new projects — funding-ready in 7–10 business days.",
-        "href": "products/feasibility-study"
-      },
-      {
-        "name": "Personal Brand Website",
-        "value": "A professional online presence for doctors, consultants, and experts — in one week.",
-        "href": "products/personal-brand-website"
-      },
-      {
-        "name": "Business Website",
-        "value": "A corporate website that positions your company and converts — in 2–3 weeks.",
-        "href": "products/business-website"
-      }
-    ]
   },
   "productsPage": {
     "hero": {
