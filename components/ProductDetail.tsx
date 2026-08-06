@@ -7,19 +7,24 @@ import { LINKS } from "@/config/links";
 type Step = { title: string; desc: string };
 type Faq = { q: string; a: string };
 
-// Shared layout for every product detail page. Each page passes its own
-// translation namespace (productKey) and whether it offers an optional add-on.
-// Copy lives entirely in messages/*.json; shared section labels come from
-// `productsPage.detail`.
+// Shared layout for every product AND consulting detail page. Each page passes
+// its own translation namespace (productKey) and whether it offers an optional
+// add-on. Copy lives entirely in messages/*.json; shared section labels come
+// from `labelsKey` — `productsPage.detail` for products, `consultingPage.detail`
+// for consulting — so both collections stay on one template.
 export default async function ProductDetail({
   productKey,
   hasAddOn = false,
+  labelsKey = "productsPage.detail",
+  backHref = "/products",
 }: {
   productKey: string;
   hasAddOn?: boolean;
+  labelsKey?: string;
+  backHref?: "/products" | "/consulting";
 }) {
   const t = await getTranslations(productKey);
-  const c = await getTranslations("productsPage.detail");
+  const c = await getTranslations(labelsKey);
 
   const scope = t.raw("scope") as string[];
   const steps = t.raw("steps") as Step[];
@@ -48,7 +53,7 @@ export default async function ProductDetail({
 
           <div className="max-w-content mx-auto relative">
             <Link
-              href="/products"
+              href={backHref}
               className="inline-block font-sans text-[11px] uppercase tracking-label text-gold/80 hover:text-gold mb-8 transition-colors"
             >
               {c("back")}

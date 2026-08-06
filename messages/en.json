@@ -27,7 +27,7 @@
     },
     "products": {
       "title": "Products",
-      "description": "Ready-to-start products with a clear scope and a fixed delivery time — bankable feasibility studies, personal brand websites, and corporate business websites. Built by ASCENDRA in Saudi Arabia."
+      "description": "Ready-to-start products with a clear scope and a fixed delivery time — personal brand websites, corporate business websites, and educational platforms. Built by ASCENDRA in Saudi Arabia."
     },
     "feasibilityStudy": {
       "title": "Feasibility Study",
@@ -40,6 +40,30 @@
     "businessWebsite": {
       "title": "Business Website",
       "description": "A professional corporate website that positions your company correctly and converts — multi-page, AR/EN, mobile-first, with SEO foundations and analytics. Delivered in 2–3 weeks."
+    },
+    "consulting": {
+      "title": "Consulting",
+      "description": "Business and digital consulting from ASCENDRA — business assessment, sales process optimization, operations design, growth strategy, and bankable feasibility studies. Riyadh, Saudi Arabia."
+    },
+    "businessDigitalAssessment": {
+      "title": "Business & Digital Assessment",
+      "description": "A structured diagnosis of where your business stands today — commercially and operationally — delivered as a clear, prioritized report. ASCENDRA, Saudi Arabia."
+    },
+    "salesProcessOptimization": {
+      "title": "Sales Process Optimization",
+      "description": "A structured redesign of your sales pipeline — from lead to close — built on hands-on sales leadership experience. ASCENDRA, Saudi Arabia."
+    },
+    "operationsDesign": {
+      "title": "Operations Design",
+      "description": "Documenting and structuring how your business actually runs — the operational backbone that lets it scale without breaking. ASCENDRA, Saudi Arabia."
+    },
+    "growthStrategySession": {
+      "title": "Growth Strategy Session",
+      "description": "A focused strategic session to identify and prioritize your next growth moves, grounded in your business's actual position. ASCENDRA, Saudi Arabia."
+    },
+    "educationalPlatform": {
+      "title": "Educational Platform",
+      "description": "A complete learning platform for academies, trainers, and education businesses — courses, enrolment, progress tracking, and payments. Built by ASCENDRA in Saudi Arabia."
     }
   },
   "nav": {
@@ -55,7 +79,8 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "switchLabel": "عربي",
-    "products": "Products"
+    "products": "Products",
+    "consulting": "Consulting"
   },
   "hero": {
     "headline": "We Build the Systems",
@@ -80,7 +105,7 @@
         "question": "Starting a project and need certainty before you spend?",
         "answer": "A certified feasibility study in 7–10 business days.",
         "cta": "View the products",
-        "href": "/products"
+        "href": "/consulting/feasibility-study"
       },
       {
         "question": "Growing, but operations still depend on you?",
@@ -559,23 +584,12 @@
       "headline": "Ready-to-start products with a clear scope.",
       "body1": "Alongside our end-to-end systems, ASCENDRA offers a set of focused, productized services — each with a defined scope, a clear delivery time, and a fixed outcome. No open-ended engagement; you know exactly what you get.",
       "body2": "Choose a product below, or tell us what you need and we'll recommend the right starting point.",
-      "subLine": "Every product ends with something delivered — a document, a website, a result you can use."
+      "subLine": "Every product ends with something delivered — a website, a platform, a result you can use."
     },
     "groups": [
       {
-        "id": "business",
-        "label": "Business Products",
-        "items": [
-          {
-            "name": "Feasibility Study",
-            "value": "A bankable feasibility study for new projects in Saudi Arabia — built for funding applications, government requirements, and investment decisions.",
-            "href": "products/feasibility-study"
-          }
-        ]
-      },
-      {
-        "id": "technology",
-        "label": "Technology Products",
+        "id": "websites",
+        "label": "Websites",
         "items": [
           {
             "name": "Personal Brand Website",
@@ -586,6 +600,17 @@
             "name": "Business Website",
             "value": "A corporate website that positions your company correctly and turns visitors into clients.",
             "href": "products/business-website"
+          }
+        ]
+      },
+      {
+        "id": "platforms",
+        "label": "Platforms",
+        "items": [
+          {
+            "name": "Educational Platform",
+            "value": "A complete learning platform for academies and trainers — courses, students, progress, and payments in one place.",
+            "href": "products/educational-platform"
           }
         ]
       }
@@ -774,5 +799,303 @@
     "ctaHeading": "Ready for a website that works?",
     "ctaBody": "Tell us about your company and what the site needs to do. We'll scope it and get you a quote.",
     "whatsappText": "Hi, I'd like to request a quote for a Business Website with ASCENDRA."
+  },
+  "consultingPage": {
+    "hero": {
+      "label": "Consulting",
+      "headline": "Consulting that ends with a decision you can act on.",
+      "body1": "Every consulting engagement at ASCENDRA starts the same way — by understanding how your business actually operates today, not how it looks on an org chart. We diagnose before we recommend.",
+      "body2": "Each engagement below has a defined focus and ends with something concrete: a report, a redesigned process, a documented operating model, or a prioritized plan.",
+      "subLine": "Scope is agreed before we start. Timelines are set after an initial scoping call."
+    },
+    "cardCta": "View details",
+    "items": [
+      {
+        "name": "Feasibility Study",
+        "value": "A bankable feasibility study for new projects in Saudi Arabia — built for funding applications, government requirements, and investment decisions.",
+        "href": "consulting/feasibility-study"
+      },
+      {
+        "name": "Business & Digital Assessment",
+        "value": "A structured diagnosis of where your business stands today — commercially and operationally — delivered as a clear, prioritized report.",
+        "href": "consulting/business-digital-assessment"
+      },
+      {
+        "name": "Sales Process Optimization",
+        "value": "A structured redesign of your sales pipeline — from lead to close — built on hands-on sales leadership experience.",
+        "href": "consulting/sales-process-optimization"
+      },
+      {
+        "name": "Operations Design",
+        "value": "Documenting and structuring how your business actually runs — the operational backbone that lets it scale without breaking.",
+        "href": "consulting/operations-design"
+      },
+      {
+        "name": "Growth Strategy Session",
+        "value": "A focused strategic session to identify and prioritize your next growth moves, grounded in your business's actual position — not generic theory.",
+        "href": "consulting/growth-strategy-session"
+      }
+    ],
+    "detail": {
+      "whatYouGet": "What You Get",
+      "delivery": "Delivery Time",
+      "howItWorks": "How It Works",
+      "faq": "Frequently Asked Questions",
+      "addOnLabel": "Optional Add-on",
+      "back": "All Consulting",
+      "ctaPrimary": "Request a Quote",
+      "ctaWhatsapp": "Message us on WhatsApp"
+    }
+  },
+  "businessDigitalAssessment": {
+    "name": "Business & Digital Assessment",
+    "heroValue": "A structured diagnosis of where your business stands today — commercially and operationally.",
+    "heroBody": "You can feel that something isn't working, but not exactly where. We sit with you, listen, and map how the business actually runs — then hand you a clear, prioritized report: these are the real problems, and this is the order to fix them.",
+    "scope": [
+      "Structured interviews with you and the people who run the day-to-day",
+      "A map of how work actually flows today — not how it is supposed to",
+      "Review of the digital tools in use, and the gaps between them",
+      "Commercial review — where revenue comes from and what constrains it",
+      "A written report naming the real constraints, not the symptoms",
+      "A prioritized list of what to fix first, and what can wait"
+    ],
+    "deliveryValue": "Determined after an initial scoping call",
+    "steps": [
+      {
+        "title": "Scoping Call",
+        "desc": "A short call to understand your business, its size, and what prompted you to look for an assessment."
+      },
+      {
+        "title": "Discovery",
+        "desc": "Structured sessions with you and your team, plus a review of the systems, documents, and numbers you already have."
+      },
+      {
+        "title": "Analysis",
+        "desc": "We separate symptoms from causes, and test each finding against what we observed rather than what we were told."
+      },
+      {
+        "title": "Report & Debrief",
+        "desc": "You receive the written report and we walk you through it — findings, priorities, and the recommended next step."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do I need to know what's wrong before we start?",
+        "a": "No. That is the point of the assessment. You only need to describe what you are experiencing — the diagnosis is our job."
+      },
+      {
+        "q": "Who needs to be involved from my side?",
+        "a": "You, and the people who actually run the day-to-day work. The assessment depends on seeing how the business operates in practice, not only how it is described from the top."
+      },
+      {
+        "q": "What do I get at the end?",
+        "a": "A written report that names the real constraints and puts them in priority order, plus a debrief session to walk through it and agree the next step."
+      }
+    ],
+    "ctaHeading": "Not sure where the problem actually is?",
+    "ctaBody": "Tell us what you're experiencing. We'll scope the assessment and give you a clear picture of what's really holding the business back.",
+    "whatsappText": "Hi, I'd like to request a quote for a Business & Digital Assessment with ASCENDRA."
+  },
+  "salesProcessOptimization": {
+    "name": "Sales Process Optimization",
+    "heroValue": "A structured redesign of your sales pipeline — from first lead to closed deal.",
+    "heroBody": "When sales runs on memory and good intentions, deals leak. We rebuild the process end to end — how leads arrive, how they are qualified, who follows up and when — grounded in hands-on sales leadership experience, not a template.",
+    "scope": [
+      "Review of how leads currently arrive, and what happens to them",
+      "A defined pipeline with clear stages and exit criteria",
+      "Lead qualification and segmentation rules your team can apply consistently",
+      "Follow-up cadence — who does what, and by when",
+      "The reporting view that shows where deals are actually stalling",
+      "A straight answer on whether you need a CRM — and which kind if you do"
+    ],
+    "deliveryValue": "Determined after an initial scoping call",
+    "steps": [
+      {
+        "title": "Scoping Call",
+        "desc": "We look at how you sell today, your team size, and where you believe deals are being lost."
+      },
+      {
+        "title": "Pipeline Review",
+        "desc": "We trace real deals through your current process — won and lost — to find where they actually leak."
+      },
+      {
+        "title": "Redesign",
+        "desc": "We define the stages, the qualification rules, and the follow-up cadence, built around how your team really works."
+      },
+      {
+        "title": "Handover",
+        "desc": "We document the process, walk the team through it, and advise on tooling — including whether a CRM is warranted."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do we have to buy a CRM?",
+        "a": "Not necessarily. Part of this engagement is telling you honestly whether your volume and team size justify one. A process that works on paper first is worth more than a tool nobody uses."
+      },
+      {
+        "q": "Will this work with a small sales team?",
+        "a": "Yes. The process is designed around your actual team size. A two-person sales function needs structure just as much as a ten-person one — it just needs less of it."
+      },
+      {
+        "q": "What if our team resists the new process?",
+        "a": "That is why the redesign is built with your team, not handed to them. We document it and walk them through it so it is something they can follow, not another layer of admin."
+      }
+    ],
+    "ctaHeading": "Losing deals you should be winning?",
+    "ctaBody": "Tell us how you sell today. We'll scope the redesign and show you where the pipeline is leaking.",
+    "whatsappText": "Hi, I'd like to request a quote for Sales Process Optimization with ASCENDRA."
+  },
+  "operationsDesign": {
+    "name": "Operations Design",
+    "heroValue": "Documenting and structuring how your business actually runs.",
+    "heroBody": "When everything lives in your head or in a scattered set of spreadsheets, growth multiplies the chaos instead of the output. We help you document and simplify how the work gets done — the operational backbone that lets the business scale without breaking.",
+    "scope": [
+      "A map of your core operational processes, end to end",
+      "Clear ownership — who is responsible for each step",
+      "Simplified workflows, with the redundant steps removed",
+      "Written procedures your team can actually follow",
+      "The handover points between people and departments, made explicit",
+      "A view of which processes are ready to automate, and which are not"
+    ],
+    "deliveryValue": "Determined after an initial scoping call",
+    "steps": [
+      {
+        "title": "Scoping Call",
+        "desc": "We identify which parts of the operation are causing the most friction, and where to start."
+      },
+      {
+        "title": "Observation",
+        "desc": "We follow the real work as it happens — what people actually do, not what the manual says."
+      },
+      {
+        "title": "Design",
+        "desc": "We simplify and restructure the workflows, define ownership, and remove the steps that exist only out of habit."
+      },
+      {
+        "title": "Documentation",
+        "desc": "You receive written procedures and process maps, and we walk the team through how to operate them."
+      }
+    ],
+    "faq": [
+      {
+        "q": "We have no documentation at all. Is that a problem?",
+        "a": "No — it is the normal starting point. Most businesses we work with run on knowledge held by a few people. Getting it out of their heads and onto paper is the point of the engagement."
+      },
+      {
+        "q": "Will this slow the team down?",
+        "a": "The observation stage is designed to sit alongside normal work rather than interrupt it. The goal is fewer steps at the end, not more process for its own sake."
+      },
+      {
+        "q": "Do we need software for this?",
+        "a": "Not to begin with. Documenting and simplifying comes first — deciding what to automate is a later, better-informed decision."
+      }
+    ],
+    "ctaHeading": "Is the business growing faster than the structure?",
+    "ctaBody": "Tell us how the work gets done today. We'll scope what needs documenting and where to simplify first.",
+    "whatsappText": "Hi, I'd like to request a quote for Operations Design with ASCENDRA."
+  },
+  "growthStrategySession": {
+    "name": "Growth Strategy Session",
+    "heroValue": "A focused strategic session to identify and prioritize your next growth moves.",
+    "heroBody": "You want to grow but the options compete — hire, open a branch, invest in marketing. This is a working session that sorts those options against your business's actual position: your numbers, your capacity, and your constraints. Not generic theory.",
+    "scope": [
+      "A pre-session review of your current numbers and capacity",
+      "A structured working session with you and your decision-makers",
+      "The growth options on the table, assessed against what the business can actually support",
+      "A prioritized sequence — what to do now, next, and later",
+      "The constraints that would break under each option, named upfront",
+      "A written summary of the decisions taken and the reasoning behind them"
+    ],
+    "deliveryValue": "Determined after an initial scoping call",
+    "steps": [
+      {
+        "title": "Scoping Call",
+        "desc": "We agree who should be in the room and which decisions the session needs to resolve."
+      },
+      {
+        "title": "Preparation",
+        "desc": "We review your current position — revenue, capacity, and operations — so the session starts from facts, not assumptions."
+      },
+      {
+        "title": "The Session",
+        "desc": "A focused working session where the options are laid out, tested against your position, and put in order."
+      },
+      {
+        "title": "Summary",
+        "desc": "You receive a written record of the priorities agreed and the reasoning, so the decisions survive the week."
+      }
+    ],
+    "faq": [
+      {
+        "q": "How is this different from an assessment?",
+        "a": "The assessment diagnoses what is wrong today. This session is forward-looking — it sorts your growth options and puts them in order. Some clients do the assessment first; it is not required."
+      },
+      {
+        "q": "Who should attend?",
+        "a": "You, and anyone who holds a real say in the decision. The session is only as useful as the authority in the room."
+      },
+      {
+        "q": "What if we leave without a decision?",
+        "a": "You leave with the options ranked and the trade-offs written down. If a decision needs data you do not have yet, the session names exactly what to go and find."
+      }
+    ],
+    "ctaHeading": "Ready to grow, unsure where to start?",
+    "ctaBody": "Tell us what you're weighing up. We'll scope the session around the decisions you actually need to make.",
+    "whatsappText": "Hi, I'd like to request a quote for a Growth Strategy Session with ASCENDRA."
+  },
+  "educationalPlatform": {
+    "name": "Educational Platform",
+    "heroValue": "A complete learning platform for academies, trainers, and education businesses.",
+    "heroBody": "A platform for delivering courses online — enrolment, content delivery, student progress, and payments in one place. Built for academies and training businesses that have outgrown running everything through WhatsApp groups and spreadsheets.",
+    "scope": [
+      "Course catalogue and structured lesson delivery",
+      "Student enrolment and account management",
+      "Progress tracking and completion records",
+      "Instructor accounts with their own dashboards",
+      "Payment and subscription handling",
+      "Bilingual Arabic / English with correct RTL layout",
+      "Mobile-first, so students can learn on their phones",
+      "Admin dashboard with enrolment and revenue reporting"
+    ],
+    "deliveryValue": "Determined after an initial scoping call",
+    "steps": [
+      {
+        "title": "Discovery",
+        "desc": "We map how your academy delivers today — courses, cohorts, instructors, and how students pay."
+      },
+      {
+        "title": "Design",
+        "desc": "We design the platform structure and the student journey, from first visit to course completion."
+      },
+      {
+        "title": "Build",
+        "desc": "We build the platform, wire up payments and accounts, and load your initial course content."
+      },
+      {
+        "title": "Launch",
+        "desc": "We test with real students, publish to your domain, and train your team to run it."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Is the platform bilingual?",
+        "a": "Yes. It is built in Arabic and English with correct right-to-left layout on the Arabic side."
+      },
+      {
+        "q": "Can we take payments through it?",
+        "a": "Yes. Payment and subscription handling is part of the scope; the specific provider is agreed during discovery."
+      },
+      {
+        "q": "Can we migrate our existing courses?",
+        "a": "Yes. Existing course content can be restructured and loaded into the platform as part of the build."
+      },
+      {
+        "q": "How long does it take?",
+        "a": "It depends on the number of courses and the features you need. The timeline is set after an initial scoping call — we do not quote a duration before we understand the scope."
+      }
+    ],
+    "ctaHeading": "Ready to move your academy online properly?",
+    "ctaBody": "Tell us how you teach today and what you need the platform to do. We'll scope it and get you a quote.",
+    "whatsappText": "Hi, I'd like to request a quote for an Educational Platform with ASCENDRA."
   }
 }

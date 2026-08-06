@@ -10,6 +10,18 @@ const nextConfig = {
     return [
       { source: "/services", destination: "/solutions", permanent: true },
       { source: "/ar/services", destination: "/ar/solutions", permanent: true },
+      // Feasibility Study was miscategorized as a product; it is a consulting
+      // engagement. Its old product URL was live and indexed, so redirect it.
+      {
+        source: "/products/feasibility-study",
+        destination: "/consulting/feasibility-study",
+        permanent: true,
+      },
+      {
+        source: "/ar/products/feasibility-study",
+        destination: "/ar/consulting/feasibility-study",
+        permanent: true,
+      },
     ];
   },
 };

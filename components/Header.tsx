@@ -19,12 +19,13 @@ export default function Header() {
   }, [open]);
 
   const navLinks = [
-    { href: "/",          label: t("home") },
-    { href: "/solutions", label: t("solutions") },
-    { href: "/products",  label: t("products") },
-    { href: "/work",      label: t("work") },
-    { href: "/about",     label: t("insights") },
-    { href: "/contact",   label: t("contact") },
+    { href: "/",           label: t("home") },
+    { href: "/solutions",  label: t("solutions") },
+    { href: "/products",   label: t("products") },
+    { href: "/consulting", label: t("consulting") },
+    { href: "/work",       label: t("work") },
+    { href: "/about",      label: t("insights") },
+    { href: "/contact",    label: t("contact") },
   ];
 
   return (
@@ -44,8 +45,9 @@ export default function Header() {
             </span>
           </Link>
 
-          {/* Desktop nav */}
-          <nav aria-label={t("primaryNav")} className="hidden md:flex items-center gap-8">
+          {/* Desktop nav — switches on at lg, not md: seven links plus the
+              language toggle and CTA overflow a 768px bar. */}
+          <nav aria-label={t("primaryNav")} className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navLinks.map((l) => (
               <Link key={l.href} href={l.href} className="text-light-gray/75 text-sm hover:text-gold transition" onClick={() => setOpen(false)}>
                 {l.label}
@@ -69,7 +71,7 @@ export default function Header() {
           {/* Mobile hamburger button */}
           <button
             type="button"
-            className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded"
+            className="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded"
             aria-label={open ? t("closeMenu") : t("openMenu")}
             aria-expanded={expanded}
             aria-controls="mobile-menu"
@@ -85,7 +87,7 @@ export default function Header() {
         <div
           id="mobile-menu"
           aria-hidden={!open}
-          className={`md:hidden bg-navy border-t border-gold/20 overflow-hidden transition-all duration-300 ease-in-out ${
+          className={`lg:hidden bg-navy border-t border-gold/20 overflow-hidden transition-all duration-300 ease-in-out ${
             open ? "max-h-screen opacity-100" : "max-h-0 opacity-0 pointer-events-none"
           }`}
         >
