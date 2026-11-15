@@ -1,778 +1,596 @@
 {
   "brand": {
     "name": "ASCENDRA",
-    "sub": "",
-    "tagline": "The system behind your growth."
+    "category": "Integrated Business Solutions",
+    "categoryEn": "Integrated Business Solutions",
+    "tagline": "Built to Ascend."
   },
   "meta": {
     "home": {
-      "title": "ASCENDRA — Business Systems & Digital Consulting | Riyadh",
-      "description": "ASCENDRA builds the digital and operational systems growing businesses run on — websites, CRM, ERP, automation, and consulting. Based in Riyadh, Saudi Arabia."
+      "title": "ASCENDRA — Integrated Business Solutions | Riyadh",
+      "description": "ASCENDRA is an Integrated Business Solutions company in Riyadh. Consulting, digital solutions and marketing for small and medium businesses, under one roof."
     },
-    "solutions": {
-      "title": "Solutions — Four Business Systems",
-      "description": "Foundation, Operations, Performance & Intelligence, and Custom Business Systems — each designed around how your business actually operates."
+    "consulting": {
+      "title": "Consulting",
+      "description": "Feasibility studies, business plans, business diagnosis, operations design, sales development and market research for businesses in Saudi Arabia."
+    },
+    "digital": {
+      "title": "Digital Solutions",
+      "description": "Websites, online stores, learning platforms, internal systems and dashboards, built in Arabic and English."
+    },
+    "marketing": {
+      "title": "Marketing",
+      "description": "Social media management, paid ads, visual identity, content, print, and our personal branding package."
     },
     "work": {
-      "title": "Work — Systems We've Built",
-      "description": "PharmacyOS and selected business systems ASCENDRA has designed and built for ambitious organizations across Saudi Arabia."
+      "title": "Our Work",
+      "description": "Selected projects ASCENDRA has delivered in consulting, digital solutions and marketing."
     },
     "about": {
-      "title": "About ASCENDRA",
-      "description": "Built by practitioners who've run real operations. ASCENDRA combines digital build and business consulting into one systems partnership."
+      "title": "About",
+      "description": "ASCENDRA is an Integrated Business Solutions company in Riyadh, working with small and medium businesses across Saudi Arabia and the Gulf."
     },
     "contact": {
-      "title": "Contact ASCENDRA",
-      "description": "Tell us where your business stands today. We'll identify the gaps holding it back and recommend the right next step — no obligation."
+      "title": "Contact",
+      "description": "Tell us about your business and what you need. We reply within one working day."
     },
-    "products": {
-      "title": "Products",
-      "description": "Ready-to-start products with a clear scope and a fixed delivery time — bankable feasibility studies, personal brand websites, and corporate business websites. Built by ASCENDRA in Saudi Arabia."
-    },
-    "feasibilityStudy": {
-      "title": "Feasibility Study",
-      "description": "A bankable feasibility study for new projects in Saudi Arabia — market analysis, operating model, costs, revenue projections, and a clear go/no-go recommendation. Delivered in 7–10 business days."
-    },
-    "personalBrandWebsite": {
-      "title": "Personal Brand Website",
-      "description": "A professional personal website for doctors, consultants, and experts — bilingual-ready, mobile-first, with contact and booking built in. Delivered in one week."
-    },
-    "businessWebsite": {
-      "title": "Business Website",
-      "description": "A professional corporate website that positions your company correctly and converts — multi-page, AR/EN, mobile-first, with SEO foundations and analytics. Delivered in 2–3 weeks."
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "How ASCENDRA handles the information you send through this website."
     }
   },
   "nav": {
     "home": "Home",
-    "work": "Work",
-    "insights": "About",
+    "services": "Services",
+    "work": "Our Work",
+    "about": "About",
     "contact": "Contact",
-    "cta": "Let's Talk",
-    "solutions": "Solutions",
-    "skip": "Skip to main content",
-    "primaryNav": "Primary navigation",
+    "cta": "Tell us about your project",
+    "skip": "Skip to content",
+    "primaryNav": "Main navigation",
     "mobileNav": "Mobile navigation",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "switchLabel": "عربي",
-    "products": "Products"
+    "switchName": "العربية",
+    "notFound": "Can't find what you need? Tell us about your project and we'll see how we can help.",
+    "notFoundCta": "Contact us"
   },
-  "hero": {
-    "headline": "We Build the Systems",
-    "headlineMid": "Your Business",
-    "headlineAccent": "Runs On — And Grows With.",
-    "keyMessage": "ASCENDRA builds business systems — so you operate with clarity and scale with confidence.",
-    "ctaPrimary": "Explore the Systems",
-    "ctaSecondary": "Browse Products",
-    "trustLine": "Business Transformation · Riyadh, KSA"
+  "common": {
+    "who": "Who it's for",
+    "deliverables": "What you get",
+    "requestService": "Request this service",
+    "packageBadge": "Package",
+    "packageFull": "Complete package",
+    "packageIncludes": "What the package includes",
+    "requestPackage": "Request the package",
+    "browseServices": "Browse services",
+    "howWeWork": "How we work",
+    "faqLabel": "FAQ",
+    "faqTitle": "Before you get in touch",
+    "reply": "Tell us what you need, and we'll reply within one working day.",
+    "whatsapp": "WhatsApp",
+    "whatsappContact": "Message us on WhatsApp",
+    "whatsappAria": "Contact us on WhatsApp",
+    "whatsappGeneral": "Hello, I'd like to talk to you about my project.",
+    "whatsappService": "Hello, I'd like to ask about: {service}",
+    "breadcrumb": "Breadcrumb",
+    "explorePillar": "Explore the department"
   },
-  "startFromNeed": {
-    "label": "Where To Start",
-    "heading": "Start from what you need.",
-    "items": [
-      {
-        "question": "Need a digital presence that represents you properly?",
-        "answer": "A business or personal website, ready in weeks.",
-        "cta": "View the products",
-        "href": "/products"
-      },
-      {
-        "question": "Starting a project and need certainty before you spend?",
-        "answer": "A certified feasibility study in 7–10 business days.",
-        "cta": "View the products",
-        "href": "/products"
-      },
-      {
-        "question": "Growing, but operations still depend on you?",
-        "answer": "A custom operational system for your sector — like PharmacyOS.",
-        "cta": "Explore the systems",
-        "href": "/solutions"
-      },
-      {
-        "question": "Making decisions without real numbers?",
-        "answer": "Dashboards and KPIs that show you everything.",
-        "cta": "Explore the systems",
-        "href": "/solutions"
-      }
-    ]
-  },
-  "digital": {
-    "label": "ASCENDRA Digital",
-    "heading": "What We Build.",
-    "subtitle": "Digital solutions designed around your business goals — built, delivered, and measured.",
-    "groups": [
-      {
-        "name": "Websites & E-Commerce",
-        "desc": "Your digital storefront and commercial presence — built to represent your business professionally and convert visitors into clients around the clock.",
-        "items": [
-          "Corporate Websites",
-          "Personal Websites",
-          "Landing Pages",
-          "E-Commerce Stores"
-        ]
-      },
-      {
-        "name": "CRM & ERP Systems",
-        "desc": "The operational core your business runs on — managing clients, sales pipelines, resources, and internal processes in one integrated system.",
-        "items": [
-          "CRM Systems",
-          "ERP Implementation",
-          "Internal Portals",
-          "Operational Systems"
-        ]
-      },
-      {
-        "name": "Automation, Dashboards & AI",
-        "desc": "Work smarter. Dashboards that surface the numbers, automation that removes manual work, and AI that gives your business a competitive edge.",
-        "items": [
-          "Business Dashboards",
-          "Workflow Automation",
-          "AI Solutions",
-          "Analytics & Reporting"
-        ]
-      }
-    ]
-  },
-  "bridge": {
-    "body": "Most businesses have a digital gap — and a deeper systems problem behind it.",
-    "digitalLine": "builds the digital products your business runs on.",
-    "consultingLine": "builds the systems that help it grow steadily."
-  },
-  "capabilities": {
-    "label": "Selected Capabilities",
-    "heading": "What We Deliver.",
-    "subtitle": "Digital products and business consulting services — built, implemented, and measured.",
-    "items": [
-      "Corporate Websites",
-      "E-Commerce Stores",
-      "Landing Pages",
-      "CRM Systems",
-      "ERP Implementation",
-      "Business Dashboards",
-      "Workflow Automation",
-      "AI Solutions",
-      "Mobile Applications",
-      "Analytics & Reporting",
-      "Process Design",
-      "KPI Systems",
-      "Business Systems Design"
-    ]
-  },
-  "insight": {
-    "label": "Why ASCENDRA",
-    "headline": "Most growing companies don't have a growth problem — they have a systems problem.",
-    "body": "The work gets done, but it runs on people, not systems. Information lives in scattered places, and no one sees the full picture. The answer is rarely more effort — it's better systems."
-  },
-  "outcomes": {
-    "items": [
-      {
-        "metric": "↑",
-        "label": "Clarity",
-        "desc": "See what's happening across your business, in real time."
-      },
-      {
-        "metric": "↑",
-        "label": "Efficiency",
-        "desc": "Work flows through systems instead of stalling on people."
-      },
-      {
-        "metric": "↑",
-        "label": "Scalability",
-        "desc": "Growth doesn't break what you've built."
-      }
-    ]
-  },
-  "philosophy": {
-    "label": "Our Conviction",
-    "text": "Most businesses don't fail because of bad ideas. They fail because the systems needed to execute those ideas were never built."
-  },
-  "team": {
-    "label": "The Founder",
-    "heading": "Built by practitioners, not advisors.",
-    "name": "Hossam H. Emam",
-    "role": "Founder & Managing Director",
-    "bio": "Over seven years of hands-on experience building scalable business operations across competitive sectors. Specializes in operational systems design, business process engineering, and data-driven growth infrastructure. ASCENDRA is not a consultancy that hands over reports — it builds and implements. Backed by a dedicated team of specialists across digital development, automation, and business strategy.",
-    "websiteLabel": "Explore the Founder's Profile"
-  },
-  "approach": {
-    "label": "Transformation Approach",
-    "heading": "The ASCENDRA Method",
-    "subtitle": "A structured methodology applied across every engagement. Every project follows the same rigor. No two outcomes are identical.",
-    "items": [
-      {
-        "step": "01",
-        "name": "Assess",
-        "desc": "We map your operations end-to-end — tracing bottlenecks to their root cause, not their surface symptoms."
-      },
-      {
-        "step": "02",
-        "name": "Design",
-        "desc": "We design the build plan specific to your business. No templates. An executable path built around your operations."
-      },
-      {
-        "step": "03",
-        "name": "Build",
-        "desc": "We build the systems, infrastructure, and processes that remove the constraint. Every project ends with something operating."
-      },
-      {
-        "step": "04",
-        "name": "Measure",
-        "desc": "We install the KPIs and dashboards that make performance visible — so decisions are driven by data, not instinct."
-      },
-      {
-        "step": "05",
-        "name": "Scale",
-        "desc": "We stay with you through the growth curve — refining, optimizing, and ensuring the transformation compounds over time."
-      }
-    ]
-  },
-  "contact": {
-    "label": "Let's start with your business",
-    "title": "Let's start with understanding your business.",
-    "subtitle": "Tell us where your business is today — we will identify the gaps holding it back and recommend the right next step.",
-    "name": "Full Name",
-    "namePlaceholder": "Your full name",
-    "email": "Work Email",
-    "emailPlaceholder": "your@company.com",
-    "phone": "Phone Number",
-    "phonePlaceholder": "+966 5X XXX XXXX",
-    "message": "What is the challenge?",
-    "messagePlaceholder": "Describe where your business is today and what's holding it back",
-    "send": "Let's Talk",
-    "successTitle": "Message Received.",
-    "successBody": "We will review your submission and be in touch within 1–2 business days.",
-    "errorMsg": "Something went wrong. Please try again or email us directly.",
-    "orConnect": "Or connect directly",
-    "whatsappCta": "WhatsApp",
-    "messengerCta": "Messenger",
-    "reassurance1": "A real human reviews every request",
-    "reassurance2": "We identify the gap before we propose anything",
-    "reassurance3": "No obligation, no sales pressure"
-  },
-  "footer": {
-    "rights": "All rights reserved.",
-    "connect": "Connect with us",
-    "emailPlaceholder": "contact@ascendrabyhosam.com"
-  },
-  "selectedWork": {
-    "label": "Selected Work",
-    "heading": "Business systems we've designed and built.",
-    "intro": "Business systems built around real operations and measured by real outcomes.",
-    "viewProject": "View Project",
-    "viewCaseStudy": "View Case Study",
-    "viewAll": "View All Work",
-    "items": [
-      {
-        "tier": "Flagship Business System",
-        "name": "PharmacyOS",
-        "desc": "A custom operational platform built around how pharmacies actually run — unifying operations, improving visibility, and building a foundation ready to scale across branches.",
-        "href": "work"
-      },
-      {
-        "tier": "Case Study · Education",
-        "name": "Taghreed Academy",
-        "desc": "Operational and digital systems designed around how the academy delivers and grows — structured for scale, not held together by manual effort.",
-        "href": "work"
-      },
-      {
-        "tier": "Foundation System",
-        "name": "WIN Solutions",
-        "desc": "A digital foundation built to represent the business professionally and convert the right clients.",
-        "href": "work"
-      }
-    ]
-  },
-  "contactCta": {
-    "label": "Start Your Transformation",
-    "heading": "Let's identify the system your business needs now.",
-    "body": "Tell us where your business stands today — we'll map the next step. No commitment.",
-    "primary": "Start with an Assessment",
-    "whatsapp": "Or message us on WhatsApp",
-    "whatsappText": "Hi, I'd like to start a business diagnosis with ASCENDRA."
-  },
-  "aboutPage": {
+  "home": {
     "hero": {
-      "label": "About ASCENDRA",
-      "heading": "Built by practitioners who've built and run real businesses.",
-      "sub": "Built by practitioners who understand how businesses actually operate."
+      "eyebrow": "Integrated Business Solutions · Riyadh",
+      "title": "Integrated business solutions for small and medium businesses.",
+      "lead": "A study before you decide, a website and system to run your business, and marketing that brings in customers. All from one team, instead of juggling a consultant, a developer and an ad agency.",
+      "primary": "Tell us about your project",
+      "secondary": "Message us on WhatsApp"
     },
-    "story": {
-      "label": "The Foundation",
-      "heading": "Why ASCENDRA exists.",
-      "body1": "ASCENDRA was built because a gap kept appearing. Not across industries — but inside them. Business owners with real ambition, capable teams, and a growing client base — but operating on systems that could not hold the weight of the next stage. A website that was not working. A sales pipeline tracked in someone's head. Reports that nobody trusted. Processes that only the founder could navigate.",
-      "body2": "The instinct in those moments is to hire more, push harder, or try a new strategy. But the constraint is not effort or talent. It is the absence of a coherent digital and operational foundation — the kind that allows a business to execute consistently, measure what matters, and grow without everything depending on one person.",
-      "body3": "ASCENDRA exists to build that foundation. Not as a consultant who delivers a slide deck. Not as a developer who hands over a website. As a systems partner — combining the digital and operational layers that allow a business to operate at the level it is actually capable of."
+    "clients": {
+      "label": "Clients who trusted us"
     },
-    "vision": {
-      "label": "Vision & Mission",
-      "visionLabel": "Vision",
-      "vision": "To become the trusted business systems partner for ambitious businesses in Saudi Arabia and the GCC.",
-      "missionLabel": "Mission",
-      "mission": "To close the gap between business ambition and business execution — by building the systems that allow organizations to operate clearly, grow predictably, and scale without losing control."
-    },
-    "values": {
-      "label": "What We Believe",
-      "heading": "Five principles that govern every engagement.",
-      "items": [
+    "integrated": {
+      "label": "Integrated Business Solutions",
+      "title": "What do we mean by integrated?",
+      "p1": "A business owner isn't looking for a single, separate service. They want the business to work. A problem may start in pricing and show up in sales; a website may be good, yet nobody finds it.",
+      "p2": "So we look at the whole business first, then deliver what it needs across consulting, digital solutions and marketing, with one team that knows the details from day one.",
+      "points": [
         {
-          "title": "Precision over Speed",
-          "body": "The temptation to move fast is constant. ASCENDRA resists it. Every system we build begins with a thorough assessment — because a solution built on incomplete understanding solves the wrong problem. We move when we have clarity, not when we have urgency. Precision is not caution. It is how we ensure that what we build works."
+          "title": "One point of contact",
+          "body": "You work with one team from the first meeting to delivery, and never explain your situation twice."
         },
         {
-          "title": "Execution over Advice",
-          "body": "Consulting that ends with a report changes nothing. Advice without implementation is theoretical. ASCENDRA's standard is that every engagement ends with something operating — a system running, a process installed, a tool that people are using. We measure our value by what exists after we leave, not by what we said while we were there."
+          "title": "One connected plan",
+          "body": "What we recommend in the study is what we build on the website and run in marketing."
         },
         {
-          "title": "Systems over Workarounds",
-          "body": "The instinct when something breaks is to patch it. ASCENDRA's instinct is to ask why it broke — and build the structure that prevents it from breaking again. Workarounds accumulate. Systems compound. We choose the harder, more durable path every time."
-        },
-        {
-          "title": "Clarity over Complexity",
-          "body": "Complexity is easy. Clarity is hard. Every system ASCENDRA builds — every process, every dashboard, every workflow — must be understandable to the people who use it. Complexity that cannot be explained cannot be operated. We build for the people who will run the business, not for the people who designed the system."
-        },
-        {
-          "title": "Partnership over Transactions",
-          "body": "An engagement that ends at delivery is a transaction. ASCENDRA is built for partnerships — where success is measured by what the client's business looks like six months after we built something, not by whether we delivered on time. We care about outcomes, not outputs."
+          "title": "One clear proposal",
+          "body": "You get a written proposal covering everything you need, with its scope and cost."
         }
       ]
     },
-    "method": {
-      "label": "How We Work",
-      "heading": "The ASCENDRA Method.",
-      "sub": "A five-phase methodology applied to every engagement — with the same rigor regardless of system, project size, or category.",
+    "services": {
+      "label": "Services",
+      "title": "Three departments, working together",
+      "lead": "Start with any department. If your business needs more, the other two are ready."
+    },
+    "steps": {
+      "label": "How we work",
+      "title": "From first message to delivery",
       "items": [
         {
-          "step": "01",
-          "name": "Assess",
-          "desc": "Map the operations, the commercial reality, the existing systems, and the gap between where the business is and where it needs to be. Most engagements begin here — because the solution is almost never what the client thinks it is when they first reach out. We surface the actual constraint before we design anything."
+          "title": "You tell us what you need",
+          "body": "Through the form or WhatsApp. You don't need to know the service name; just describe the situation."
         },
         {
-          "step": "02",
-          "name": "Design",
-          "desc": "Design the build plan specific to the business, the sector, and the constraint identified in the assessment. No templates. No pre-made solutions applied to a different problem. An executable plan — agreed, scoped, and built around what will actually work in this business."
+          "title": "We review and send a proposal",
+          "body": "We review your request, may ask for a short call, then send a written proposal with scope and cost."
         },
         {
-          "step": "03",
-          "name": "Build",
-          "desc": "Build the systems, the digital products, the workflows, and the infrastructure identified in the design phase. Every Build phase ends with something operating — not a prototype, not a plan, but a functioning system that the business is using."
-        },
-        {
-          "step": "04",
-          "name": "Measure",
-          "desc": "Install the KPIs, the dashboards, and the reporting structures that make business performance visible in real time. Decisions made on gut instinct plateau. Decisions made on accurate, visible data compound. We wire the measurement layer before we hand over."
-        },
-        {
-          "step": "05",
-          "name": "Scale",
-          "desc": "Stay with the business through the growth curve — refining systems as volume increases, expanding capabilities as new challenges emerge, and ensuring that the initial transformation compounds over time. Scale is not a moment. It is an ongoing commitment."
+          "title": "We deliver",
+          "body": "Work starts once you approve, and we keep you updated until delivery."
         }
       ]
     },
-    "founder": {
-      "label": "The Founder",
-      "photoPlaceholder": "Founder Photo",
-      "name": "Hossam H. Emam",
-      "title": "Founder & Managing Director, ASCENDRA",
-      "roles": "Pharmacist · Operations Leader · Business Systems Builder",
-      "p1": "Hossam H. Emam began his career as a pharmacist. Not as a stepping stone — as a serious practitioner managing retail pharmacy operations, supplier chains, staff, and patient-facing systems in a high-pressure, heavily regulated environment. The skills that formed in that context — operational precision, systems thinking, compliance under constraints — became the foundation for everything that followed.",
-      "p2": "What became clear across sectors was a consistent gap. Businesses of all sizes were operating on fragile systems — processes held together by individual effort rather than structural design. CRM in a notebook. Inventory in a spreadsheet nobody trusted. Reports that arrived too late to act on. The businesses that scaled were not the ones that worked harder. They were the ones that built better.",
-      "p3": "The insight became a product. PharmacyOS was designed and built by Hossam to address a specific failure in pharmacy operations — the absence of an integrated management system designed for how a modern pharmacy actually works. It was not a client request. It was ASCENDRA's first proof of concept: that deep operational understanding, translated into a functioning digital system, could transform how a business operates.",
-      "p4": "ASCENDRA was founded as the extension of that conviction. A digital tool built without operational understanding breaks the moment it meets real business complexity. And strategy without the capability to build it remains theoretical. So ASCENDRA builds systems that bring technology and operations together by design — not by coincidence.",
-      "quote": "ASCENDRA is an execution partner. We build the systems with you — and help them evolve as your business grows.",
-      "linkLabel": "Explore the Founder's Profile"
-    },
-    "network": {
-      "label": "How We Engage",
-      "heading": "Our Network of Specialists.",
-      "body1": "Every ASCENDRA engagement is led by Hossam H. Emam — the founding director and the primary point of continuity for every client relationship. But the depth of delivery comes from a carefully curated network of specialists assembled for each project: developers, designers, data analysts, automation engineers, and industry consultants selected for their specific domain expertise.",
-      "body2": "This is not a freelance directory. Every specialist in the ASCENDRA network has been selected, vetted, and engaged based on track record — and every engagement is led with the same standard regardless of the project's size or category.",
-      "quote": "The right experts for the right challenge — assembled deliberately, not allocated by availability.",
-      "point1": "ASCENDRA leads every engagement from diagnosis to delivery. The client always has a single point of accountability.",
-      "point2": "The client interface is always ASCENDRA. Specialists deliver behind the scenes, at ASCENDRA's standard.",
-      "point3": "The network is curated, not crowdsourced. Every specialist has been selected for track record, not availability."
-    },
-    "cta": {
-      "heading": "Ready to build?",
-      "body": "Most engagements begin with a conversation — not a brief. Tell us where your business is today.",
-      "primary": "Let's Talk",
-      "secondary": "See What We Build"
+    "contact": {
+      "label": "Contact",
+      "title": "Tell us about your business",
+      "lead": "Write a short note on what you need, and we'll reply within one working day.",
+      "orWhatsapp": "Or message us directly on WhatsApp"
     }
   },
-  "solutionsPage": {
-    "hero": {
-      "label": "Solutions",
-      "headline": "We build business systems designed around how your business actually operates.",
-      "body1": "Most businesses buy services one at a time — a website here, a tool there, a consultant when something breaks. The result is a collection of parts that were never designed to work together.",
-      "body2": "ASCENDRA works differently. We build systems — structured, connected, and designed around how your business actually operates. Each one solves a specific problem. Together, they become the foundation your business runs on, and grows with.",
-      "subLine": "Four systems. One way of working. Built in the order your business needs them."
-    },
-    "assessment": {
-      "label": "Where Every Engagement Begins",
-      "headline": "Before we build anything, we understand everything.",
-      "body1": "We don't start with a proposal. We start with a diagnosis. Business Analysis & Assessment is how every engagement begins — a structured look at how your business operates today, where the gaps are, and which system, or combination of systems, will move it forward.",
-      "body2": "You don't have to know what you need. That's what the assessment is for.",
-      "outcome": "A clear picture of where your business stands — and a recommended path, not a sales pitch."
-    },
-    "problemLabel": "The Problem",
-    "systemLabel": "The System",
-    "capabilitiesLabel": "Capabilities",
-    "outcomeLabel": "Outcome",
-    "systems": [
-      {
-        "id": "foundation",
-        "label": "Foundation System",
-        "problem": "Your digital presence is thin or fragmented. The basics — how the business looks, where it lives online, how it's set up technically — were never built on a solid base. Everything else depends on this foundation — and right now, it isn't built to support growth.",
-        "system": "The Foundation System builds the digital base your business runs on: a professional presence, a coherent identity, and the technical infrastructure underneath it. It's the layer everything else connects to.",
-        "capabilities": [
-          "Business Websites",
-          "Branding & Identity",
-          "Digital Infrastructure"
-        ],
-        "outcome": "A professional, scalable, and connected business foundation — ready for everything you build on top of it."
+  "services": {
+    "consulting": {
+      "name": "Consulting",
+      "eyebrow": "We understand your business",
+      "homeDesc": "When you need to know before you decide: is the project viable? Why did sales drop? How do you organise the work so it doesn't depend on one person?",
+      "explore": "Explore Consulting",
+      "aboutDesc": "Feasibility studies, business plans, business diagnosis and operations design.",
+      "hero": {
+        "eyebrow": "Consulting — We understand your business",
+        "title": "Before you invest, know where your business stands.",
+        "lead": "We review your business by the numbers, tell you plainly what works and what needs to change, then build a plan with you that you can actually carry out.",
+        "cta": "Request a consultation"
       },
-      {
-        "id": "operations",
-        "label": "Operations System",
-        "problem": "The work gets done, but it depends on people remembering, chasing, and holding it together. Information is scattered. Processes live in someone's head. As you grow, the cracks widen — and no one has a clear view of what's actually happening day to day.",
-        "system": "The Operations System replaces that fragility with structure. It connects your processes, automates the manual work, and gives the business a single, reliable way of running — so operations don't depend on any one person.",
-        "capabilities": [
-          "CRM Systems",
-          "ERP Systems",
-          "Automation",
-          "Process Design",
-          "Process Optimization",
-          "Operational Excellence"
-        ],
-        "outcome": "Operations that run through systems, not individuals — consistent, efficient, and ready to scale."
-      },
-      {
-        "id": "performance",
-        "label": "Performance & Intelligence System",
-        "problem": "You're growing, but you're flying partly blind. You can't easily see what's working and what isn't. Decisions get made on instinct because the data is either missing, scattered, or too slow to be useful.",
-        "system": "The Performance & Intelligence System gives the business sight. It defines what performance means, measures it continuously, and surfaces it clearly — turning scattered data into decisions you can act on.",
-        "capabilities": [
-          "Dashboards",
-          "KPI Design",
-          "Reporting & Analytics",
-          "Growth Planning",
-          "AI-Enabled Insights"
-        ],
-        "outcome": "Better decisions and measurable growth — driven by what's real, not by guesswork."
-      },
-      {
-        "id": "custom",
-        "label": "Custom Business Systems",
-        "problem": "Your sector has needs that off-the-shelf tools can't meet. You've been forced to bend your operations around generic software — instead of having software built around how your business actually works.",
-        "system": "When the standard systems aren't enough, we build a custom one — designed around the specific operations of your business or industry. This is where ASCENDRA's deepest work lives, and where PharmacyOS, our flagship, was born.",
-        "capabilities": [
-          "Custom Platforms",
-          "Vertical Solutions",
-          "Mobile Applications",
-          "PharmacyOS (Flagship Business System)"
-        ],
-        "outcome": "A purpose-built system designed for how your sector actually operates — proof that we build systems, not just assemble tools."
+      "servicesLabel": "Consulting services",
+      "servicesTitle": "Choose what fits the stage your business is in",
+      "stepsTitle": "From the first session to the final recommendation",
+      "steps": [
+        {
+          "title": "Introductory session",
+          "body": "We listen to your situation and goals, and agree on the right service and scope."
+        },
+        {
+          "title": "Research and analysis",
+          "body": "We gather and analyse the data, and check in with you along the way."
+        },
+        {
+          "title": "Delivery and recommendations",
+          "body": "We walk you through the findings, with clear practical next steps."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Do I need to know which service I need before contacting you?",
+          "a": "No. Tell us about your situation and where you want to get to, and we'll find the right service together."
+        },
+        {
+          "q": "How is the cost set?",
+          "a": "Once we understand what you need, we send a written proposal with scope and cost before we start."
+        },
+        {
+          "q": "Can you help implement after the study?",
+          "a": "Yes. Our digital and marketing teams can carry out the recommendations with you, from one place."
+        },
+        {
+          "q": "Is my business information confidential?",
+          "a": "Yes. We treat all client data and information as strictly confidential."
+        }
+      ],
+      "endTitle": "Not sure which service fits? Start with an introductory session.",
+      "items": {
+        "feasibility": {
+          "name": "Feasibility Studies",
+          "who": "For anyone about to launch a new project or expand, who wants to be sure before investing.",
+          "deliverables": [
+            "Market, technical and financial study of the project",
+            "Revenue and cost projections, and break-even point",
+            "A clear recommendation: whether to go ahead, when, and how"
+          ]
+        },
+        "businessPlan": {
+          "name": "Business Plans",
+          "who": "For anyone who needs a written plan to present to an investor, partner or funding body.",
+          "deliverables": [
+            "A complete, professionally written business plan",
+            "A financial model for the first years",
+            "An executive summary ready to present"
+          ]
+        },
+        "diagnosis": {
+          "name": "Business Diagnosis & Problem Solving",
+          "who": "For owners who feel their business has stopped growing, or that profits don't reflect the effort.",
+          "deliverables": [
+            "A full analysis of the current situation (SWOT and other tools)",
+            "The real causes of the problem",
+            "A recovery plan, ordered by priority"
+          ]
+        },
+        "operations": {
+          "name": "Operations & Procedures",
+          "who": "For businesses that depend on specific people instead of a clear system.",
+          "deliverables": [
+            "Clear process maps",
+            "Documented standard operating procedures (SOPs)",
+            "Defined responsibilities and permissions"
+          ]
+        },
+        "sales": {
+          "name": "Sales Development",
+          "who": "For businesses that get leads, but those leads don't turn into sales.",
+          "deliverables": [
+            "Analysis of the current sales process and where leads drop off",
+            "A redesigned sales process",
+            "Ready-to-use scripts and tools for the sales team"
+          ]
+        },
+        "market": {
+          "name": "Market Research",
+          "who": "For anyone who wants to understand the market and competitors before a new decision.",
+          "deliverables": [
+            "Market size and competitor analysis",
+            "The most suitable customer segments",
+            "Available opportunities and entry recommendations"
+          ]
+        }
       }
-    ],
-    "cta": {
-      "label": "Start Your Transformation",
-      "headline": "Not sure which system you need? That's where we start.",
-      "body": "Every engagement begins with a conversation, not a brief. Tell us where your business is today, and we'll identify the gaps and recommend the path forward — one system, or several, in the order that makes sense for you.",
-      "primary": "Start with an Assessment",
-      "secondary": "Or message us on WhatsApp"
+    },
+    "digital": {
+      "name": "Digital Solutions",
+      "eyebrow": "We build your presence",
+      "homeDesc": "Websites, online stores and platforms, plus internal systems that cut manual work and show you your numbers as they happen.",
+      "explore": "Explore Digital Solutions",
+      "aboutDesc": "Websites, online stores, platforms, systems and dashboards.",
+      "hero": {
+        "eyebrow": "Digital Solutions — We build your presence",
+        "title": "A website that introduces your business, and a system that runs it.",
+        "lead": "We design and build websites, online stores and internal systems around the way you actually work, and stay with you after launch for support and updates.",
+        "cta": "Request a digital solution"
+      },
+      "servicesLabel": "Digital services",
+      "servicesTitle": "What do you need to build?",
+      "stepsTitle": "How we work on your digital project",
+      "steps": [
+        {
+          "title": "Understanding the need",
+          "body": "We sit with you to understand who will use the website or system, and what it must achieve for your business."
+        },
+        {
+          "title": "Design and development",
+          "body": "We show you the design before we write any code, and refine it until it fits."
+        },
+        {
+          "title": "Launch and support",
+          "body": "We launch, train your team to use it, and follow up after delivery."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Do I own the website and its data after delivery?",
+          "a": "Yes. The website, its domain and its data belong to your business."
+        },
+        {
+          "q": "Do you handle hosting and renewals?",
+          "a": "Yes. We can manage hosting, the domain and technical subscriptions for you, so you never have to track renewal dates."
+        },
+        {
+          "q": "Will the website be in Arabic and English?",
+          "a": "Yes, we build in both languages whenever your business needs it."
+        },
+        {
+          "q": "Can the website be connected to marketing?",
+          "a": "Yes. Our marketing team works on the same website, from ads to tracking results."
+        }
+      ],
+      "endTitle": "Have an idea for a website or system? Tell us about it.",
+      "items": {
+        "web": {
+          "name": "Websites",
+          "who": "For businesses that need an official online presence that introduces them and receives customer requests.",
+          "deliverables": [
+            "A website designed around your identity, in Arabic and English",
+            "Fast on mobile and ready for search engines",
+            "Connected to WhatsApp and contact forms"
+          ]
+        },
+        "store": {
+          "name": "Online Stores",
+          "who": "For anyone selling products who wants a direct sales channel, without relying entirely on marketplaces.",
+          "deliverables": [
+            "A store with clear product pages and an easy checkout",
+            "Payment gateway and shipping integration",
+            "A dashboard to manage orders and stock"
+          ]
+        },
+        "edu": {
+          "name": "Learning Platforms",
+          "who": "For trainers, teachers or institutions that offer courses and want to manage them in one place.",
+          "deliverables": [
+            "A platform to publish courses and enrol students",
+            "Video content, quizzes and progress tracking",
+            "Subscription and payment management"
+          ]
+        },
+        "systems": {
+          "name": "Systems & Automation",
+          "who": "For businesses run on spreadsheets and manual messages, losing time on tasks that repeat every day.",
+          "deliverables": [
+            "An internal system designed around how you work (CRM or operations system)",
+            "Automation for repetitive tasks such as reminders and reports",
+            "Clear permissions for each employee"
+          ]
+        },
+        "dashboards": {
+          "name": "Dashboards & Reports",
+          "who": "For anyone making decisions without clear numbers in front of them.",
+          "deliverables": [
+            "A dashboard showing your key performance indicators (KPIs)",
+            "Automatic updates from your business data",
+            "Regular reports ready to share"
+          ]
+        }
+      }
+    },
+    "marketing": {
+      "name": "Marketing",
+      "eyebrow": "We grow your business",
+      "homeDesc": "From identity, design and print to account management and paid ads, sized to your business and your budget.",
+      "explore": "Explore Marketing",
+      "aboutDesc": "Identity, design, content, paid ads and print.",
+      "hero": {
+        "eyebrow": "Marketing — We grow your business",
+        "title": "Marketing where you know where the budget goes.",
+        "lead": "From your logo and print materials to account management and paid ads. We work at the scale of your business, and show you the results in numbers.",
+        "cta": "Request a marketing service"
+      },
+      "servicesLabel": "Marketing services",
+      "servicesTitle": "Where would you like to start?",
+      "stepsTitle": "How we work on your marketing",
+      "steps": [
+        {
+          "title": "Understanding the market",
+          "body": "We get to know your business, customers and competitors before any design or ad."
+        },
+        {
+          "title": "Plan and execution",
+          "body": "We set a clear plan, and start once you approve it."
+        },
+        {
+          "title": "Measure and improve",
+          "body": "We track results, send regular reports, and adjust what needs adjusting."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Do you work with small ad budgets?",
+          "a": "Yes. We set a budget that fits your business, and start with what gives clear results."
+        },
+        {
+          "q": "Do you handle printing yourselves?",
+          "a": "We handle the design, and manage printing with print shops we work with until the job reaches you ready."
+        },
+        {
+          "q": "How will I know the marketing is working?",
+          "a": "We send regular reports with clear numbers: reach, engagement, messages and orders."
+        },
+        {
+          "q": "Can I start with just one service?",
+          "a": "Yes. Start with one service and add others when you need them."
+        }
+      ],
+      "endTitle": "Ready to start? Tell us about your business.",
+      "items": {
+        "social": {
+          "name": "Social Media Management",
+          "who": "For owners who know their accounts matter, but don't have the time or team to run them.",
+          "deliverables": [
+            "A monthly content plan",
+            "Post design, copywriting and publishing",
+            "A monthly performance report"
+          ]
+        },
+        "ads": {
+          "name": "Paid Ads",
+          "who": "For anyone who wants customers now, and an ad budget spent in the right place.",
+          "deliverables": [
+            "Campaign setup and the right audience targeting",
+            "Ongoing monitoring and optimisation",
+            "Reports showing where the budget went and what it achieved"
+          ]
+        },
+        "identity": {
+          "name": "Design & Visual Identity",
+          "who": "For new businesses, or those whose activity has changed and whose identity no longer fits.",
+          "deliverables": [
+            "Approved logo, colours and fonts",
+            "A brand usage guide",
+            "Ready-made designs for social media and print"
+          ]
+        },
+        "content": {
+          "name": "Content & Video",
+          "who": "For anyone who needs content that explains their services and moves customers to act.",
+          "deliverables": [
+            "Marketing copywriting",
+            "Short video shooting and editing",
+            "Content tailored to each platform"
+          ]
+        },
+        "print": {
+          "name": "Print",
+          "who": "For anyone who needs print materials for a shop, an event or a team.",
+          "deliverables": [
+            "Design of business cards, brochures and signage",
+            "Print management with print shops until delivery",
+            "Consistent quality that matches your identity"
+          ]
+        },
+        "personal": {
+          "name": "Personal Branding",
+          "who": "For professionals, experts and business owners who want to be known by name in their field.",
+          "deliverables": [
+            "Positioning and message",
+            "A personal visual identity",
+            "A personal website in your name",
+            "A content plan for visibility"
+          ],
+          "note": "A package that brings our three departments together: consulting to define your message, marketing to build your identity and content, and digital solutions to build your website."
+        }
+      }
     }
   },
   "workPage": {
     "hero": {
-      "label": "Work",
-      "heading": "Business systems we've designed and built.",
-      "sub": "From our flagship business system to the business systems we've designed and built for ambitious organizations across Saudi Arabia."
+      "label": "Our Work",
+      "title": "Selected projects with our clients",
+      "lead": "Examples of work we have delivered in consulting, digital solutions and marketing."
     },
-    "pharmacyOS": {
-      "tierLabel": "Flagship Business System",
-      "name": "PharmacyOS",
-      "tagline": "The complete operating system for modern pharmacies.",
-      "screenshotsSoon": "Product screenshots — coming soon",
-      "problemLabel": "The Problem",
-      "problem1": "Modern pharmacy operations are more complex than they appear from the outside. A functioning pharmacy must simultaneously manage inventory — dozens of supplier relationships, expiry tracking, reorder thresholds — alongside staff, patients, prescriptions, and real-time business performance. Doing all of this accurately, with a small team and no integrated system, is not possible.",
-      "problem2": "The result in most pharmacies is a patchwork: a POS system that handles transactions but not inventory intelligence, a WhatsApp group for shift coordination, a spreadsheet nobody trusts for stock levels, and a pharmacy owner who holds the entire operation in their head. When that owner is not there, the operation degrades.",
-      "productLabel": "The Product",
-      "product1": "PharmacyOS is a custom-designed pharmacy management system built to replace the patchwork with one integrated operating layer. It was designed not by a software team looking for a vertical — but by a pharmacist and operations specialist who lived inside the problem.",
-      "product2": "Every feature in PharmacyOS was derived from a real operational gap — not from a feature list. The system was built to be operated by pharmacy staff with no technical background, managed by pharmacy owners without the need for constant presence, and scaled to multi-branch operations without architectural modification.",
-      "coversLabel": "What It Covers",
-      "covers": [
-        "Inventory Management & Expiry Tracking",
-        "Supplier Management & Purchase Orders",
-        "Staff Operations & Shift Control",
-        "Prescription Tracking & Patient Records",
-        "Sales, Revenue & Financial Reporting",
-        "Business Intelligence Dashboard"
-      ],
-      "pillarsLabel": "How ASCENDRA Built It",
-      "digitalScope": "The technology — custom-built from the ground up by ASCENDRA, not a configured SaaS platform.",
-      "consultingScope": "The operations — workflow design and pharmacy management methodology, derived from direct sector experience.",
-      "statusLabel": "Status",
-      "status": "Proprietary Product · Designed and Built by ASCENDRA",
-      "statusNote": "PharmacyOS is not a client project. It is a product created from operational conviction — ASCENDRA's most direct proof that deep sector understanding, translated into a functioning digital system, changes how a business operates."
+    "integratedBadge": "Integrated project",
+    "deliveredLabel": "What we delivered",
+    "filterAll": "All",
+    "filterLabel": "Filter projects by department",
+    "visit": "Visit website",
+    "emptyNote": "Projects for this department are coming soon. The integrated project above includes it.",
+    "endTitle": "Have a project? Tell us about it.",
+    "projects": {
+      "maha": {
+        "title": "Dr. Maha Alatawi",
+        "desc": "We built a complete presence under her name: a visual identity, a personal website, and a website for her company TAWD Culture, along with a feasibility study.",
+        "delivered": "Visual identity · Personal website · TAWD Culture website · Feasibility study",
+        "links": {
+          "personalSite": "Visit personal website",
+          "tawdSite": "Visit TAWD website"
+        }
+      },
+      "win": {
+        "title": "WIN Solutions",
+        "desc": "A company website that presents its services clearly and receives customer requests.",
+        "delivered": "Website design and development in Arabic and English",
+        "links": {}
+      },
+      "karam": {
+        "title": "Mohamed Karam",
+        "desc": "A personal website that introduces him and his professional experience.",
+        "delivered": "Personal website design and development",
+        "links": {
+          "site": "Visit website"
+        }
+      }
     },
-    "caseStudies": {
-      "tierLabel": "Case Studies",
-      "imageSoon": "Project image — coming soon",
-      "challengeLabel": "Challenge",
-      "approachLabel": "Approach",
-      "builtLabel": "Built",
-      "outcomeLabel": "Outcome",
-      "taghreedName": "Taghreed Academy",
-      "taghreedTag": "Case Study · Education",
-      "taghreedDesc": "Digital systems and operational infrastructure for a growing education platform in Saudi Arabia.",
-      "ascendraName": "ASCENDRA Website",
-      "ascendraTag": "Case Study · Foundation System",
-      "ascendraChallenge": "Build the first version of ASCENDRA's public-facing website — a bilingual (EN/AR) digital presence that accurately represents the company's positioning, brand, and service architecture from day one.",
-      "ascendraApproach": "Designed and built from the brand up — starting with strategic positioning documents, moving through information architecture and content blueprinting, to implementation. Every layout rule was defined before a line of code was written.",
-      "ascendraBuilt": "Next.js 15 (App Router) · React 19 · TypeScript · Tailwind CSS · next-intl. Bilingual EN/AR with RTL layout. Schema.org structured data. Core Web Vitals optimized.",
-      "ascendraOutcome": "A production-ready bilingual digital presence that holds ASCENDRA's strategic positioning accurately — built to be extended as the company grows.",
-      "pillarsApplied": "How ASCENDRA Built It",
-      "digital": "Technology",
-      "consulting": "Operations"
-    },
-    "digitalPresence": {
-      "tierLabel": "Digital Presence",
-      "winName": "WIN Solutions",
-      "winTag": "Digital Presence · B2B Services",
-      "winDesc": "Corporate website and digital presence for a Saudi B2B services company.",
-      "hossamName": "Dr Hossam Personal Website",
-      "hossamTag": "Digital Presence · Personal Brand",
-      "hossamDesc": "Personal brand website for the founder — establishing a credible professional presence.",
-      "mohamedName": "Dr Mohamed Karam",
-      "mohamedTag": "Digital Presence · Medical",
-      "mohamedDesc": "Personal and professional digital presence for a medical professional."
-    },
-    "cta": {
-      "heading": "Have a project in mind?",
-      "body": "Tell us what you are trying to build. We will identify the right approach and scope it correctly.",
-      "primary": "Let's Talk",
-      "secondary": "Explore the Systems"
-    }
+    "imagePlaceholder": "Project image"
   },
-  "productsPage": {
+  "aboutPage": {
     "hero": {
-      "label": "Products",
-      "headline": "Ready-to-start products with a clear scope.",
-      "body1": "Alongside our end-to-end systems, ASCENDRA offers a set of focused, productized services — each with a defined scope, a clear delivery time, and a fixed outcome. No open-ended engagement; you know exactly what you get.",
-      "body2": "Choose a product below, or tell us what you need and we'll recommend the right starting point.",
-      "subLine": "Every product ends with something delivered — a document, a website, a result you can use."
+      "label": "About",
+      "title": "ASCENDRA is an Integrated Business Solutions company in Riyadh.",
+      "lead": "We work with small and medium businesses across Saudi Arabia and the Gulf, delivering consulting, digital solutions and marketing under one roof."
     },
-    "groups": [
-      {
-        "id": "business",
-        "label": "Business Products",
-        "items": [
-          {
-            "name": "Feasibility Study",
-            "value": "A bankable feasibility study for new projects in Saudi Arabia — built for funding applications, government requirements, and investment decisions.",
-            "href": "products/feasibility-study"
-          }
-        ]
-      },
-      {
-        "id": "technology",
-        "label": "Technology Products",
-        "items": [
-          {
-            "name": "Personal Brand Website",
-            "value": "A professional digital presence for doctors, consultants, and experts who need to be found and trusted.",
-            "href": "products/personal-brand-website"
-          },
-          {
-            "name": "Business Website",
-            "value": "A corporate website that positions your company correctly and turns visitors into clients.",
-            "href": "products/business-website"
-          }
-        ]
-      }
-    ],
-    "cardCta": "View details",
-    "alsoBuild": {
-      "label": "Beyond Products",
-      "headline": "We also build mobile apps and custom systems.",
-      "body": "Need something bigger than a product? We design and build mobile applications (Android & iOS) and custom business systems, engineered around how your business actually operates.",
-      "cta": "Talk to Us"
+    "story": {
+      "label": "Our story",
+      "title": "Why we founded ASCENDRA",
+      "p1": "A small business owner usually deals with several parties to get one thing done: a consultant writes the study, a developer builds the website, an agency runs the ads. Each works alone, and nobody sees the full picture.",
+      "p2": "We founded ASCENDRA to bring those roles together. We understand the business first, then deliver what it needs with one plan and one team."
     },
-    "detail": {
-      "whatYouGet": "What You Get",
-      "delivery": "Delivery Time",
-      "howItWorks": "How It Works",
-      "faq": "Frequently Asked Questions",
-      "addOnLabel": "Optional Add-on",
-      "back": "All Products",
-      "ctaPrimary": "Request a Quote",
-      "ctaWhatsapp": "Message us on WhatsApp"
-    }
+    "values": {
+      "label": "Our approach",
+      "title": "What we commit to with every client",
+      "items": [
+        {
+          "title": "Understand before we build",
+          "body": "We don't start any work before we understand the business, its customers and where it wants to go."
+        },
+        {
+          "title": "We say what we see",
+          "body": "We tell you honestly what we see in your business, even when it isn't what you expect to hear."
+        },
+        {
+          "title": "A clear proposal from the start",
+          "body": "You know the scope and cost before we begin, with no items appearing later."
+        },
+        {
+          "title": "Still here after delivery",
+          "body": "We stay in touch after delivery for support and updates."
+        }
+      ]
+    },
+    "pillars": {
+      "label": "Our departments",
+      "title": "Three departments, one team"
+    },
+    "where": {
+      "label": "Where we work",
+      "text": "We are based in Riyadh and work with clients across Saudi Arabia and the Gulf."
+    },
+    "endTitle": "We'd be glad to learn about your business."
   },
-  "feasibilityStudy": {
-    "name": "Feasibility Study",
-    "heroValue": "A bankable feasibility study that tells you — with evidence — whether your project is worth building.",
-    "heroBody": "A professional feasibility study for new projects in Saudi Arabia, prepared to the standard expected by banks, investors, and government programs. Suitable for funding applications, licensing and government requirements, and internal go/no-go investment decisions.",
-    "scope": [
-      "Market and competitor analysis — demand, target segments, and where you fit",
-      "Operating model — how the project runs day to day",
-      "Capital costs (CapEx) and operating costs (OpEx), itemized",
-      "Revenue projections and core financial indicators",
-      "A clear go / no-go recommendation with the reasoning behind it",
-      "Delivered as a professional, presentation-ready document"
+  "contact": {
+    "label": "Contact",
+    "title": "Tell us about your business",
+    "subtitle": "Write a short note on what you need, and we'll reply within one working day.",
+    "points": [
+      "You don't need to know the service name; just describe the situation.",
+      "We send a written proposal with scope and cost before we start.",
+      "Your information is kept strictly confidential."
     ],
-    "deliveryValue": "7–10 business days",
-    "steps": [
-      {
-        "title": "Discovery",
-        "desc": "We start with a structured conversation about your project idea, target market, and goals — and agree on the scope of the study."
-      },
-      {
-        "title": "Research & Analysis",
-        "desc": "We analyze the market, competitors, cost structure, and revenue potential using reliable data and realistic assumptions."
-      },
-      {
-        "title": "Modeling",
-        "desc": "We build the financial model — capital and operating costs, revenue projections, and the indicators that drive the decision."
-      },
-      {
-        "title": "Delivery",
-        "desc": "You receive a professional document with a clear go/no-go recommendation, ready to present to banks, investors, or partners."
-      }
-    ],
-    "faq": [
-      {
-        "q": "Is the study suitable for bank funding and government requirements?",
-        "a": "Yes. It is prepared to the standard expected by banks, investment funds, and government programs, and is suitable for funding and licensing applications."
-      },
-      {
-        "q": "What do you need from me to start?",
-        "a": "A clear description of the project idea, the intended location, and any information you already have. We guide you through the rest during discovery."
-      },
-      {
-        "q": "How long does it take?",
-        "a": "Typically 7–10 business days from the discovery conversation, depending on the complexity of the project and the availability of market data."
-      },
-      {
-        "q": "What if the recommendation is 'no-go'?",
-        "a": "That is a valuable outcome. A clear, evidence-based no-go saves you from investing in the wrong project — and often points to a better version of the idea."
-      }
-    ],
-    "ctaHeading": "Thinking about a new project?",
-    "ctaBody": "Tell us about your idea. We'll scope the feasibility study and get you a clear answer you can act on.",
-    "whatsappText": "Hi, I'd like to request a quote for a Feasibility Study with ASCENDRA."
-  },
-  "personalBrandWebsite": {
-    "name": "Personal Brand Website",
-    "heroValue": "A professional website that turns your name and credentials into a trusted digital presence.",
-    "heroBody": "For credentialed professionals — doctors, consultants, and experts — who need to be found, understood, and trusted online. A focused personal website that presents your expertise with authority and makes it easy for the right people to reach you.",
-    "scope": [
-      "Single-page or multi-section personal website",
-      "Professional presentation of your profile, expertise, and credentials",
-      "Bilingual-ready structure (Arabic / English)",
-      "Mobile-first, fast-loading design",
-      "Contact and booking integration — so enquiries reach you directly",
-      "Ready to publish on your own domain"
-    ],
-    "deliveryValue": "1 week",
-    "steps": [
-      {
-        "title": "Brief",
-        "desc": "We collect your profile, credentials, photos, and the goal of the site — who you want to reach and what you want them to do."
-      },
-      {
-        "title": "Design",
-        "desc": "We design a clean, professional layout that reflects your standing and reads well on any device."
-      },
-      {
-        "title": "Build",
-        "desc": "We build the site, wire up contact and booking, and prepare it for your domain."
-      },
-      {
-        "title": "Launch",
-        "desc": "We publish, test on real devices, and hand it over ready to share."
-      }
-    ],
-    "faq": [
-      {
-        "q": "Is the site bilingual?",
-        "a": "The structure is bilingual-ready (Arabic / English). We can launch in one language and add the second, or deliver both from the start."
-      },
-      {
-        "q": "Can visitors book an appointment?",
-        "a": "Yes. We integrate contact and booking so enquiries and appointment requests reach you directly."
-      },
-      {
-        "q": "Do I need to provide the content?",
-        "a": "You provide your profile details, credentials, and photos. We structure and present them professionally — and can refine your wording."
-      },
-      {
-        "q": "Can I add branding later?",
-        "a": "Yes. A personal brand identity (logo, colors, typography) is available as an optional add-on — see below."
-      }
-    ],
-    "addOn": {
-      "name": "+ Personal Brand Identity",
-      "desc": "Add a complete personal brand identity — logo, color palette, and typography — designed to match your website and give your name a consistent, professional look across every channel."
+    "orWhatsapp": "Or message us directly on WhatsApp",
+    "name": "Name",
+    "namePlaceholder": "Your name or business name",
+    "phone": "Mobile number",
+    "phonePlaceholder": "05XXXXXXXX",
+    "email": "Email (optional)",
+    "emailPlaceholder": "name@company.com",
+    "serviceType": "Service type",
+    "serviceOptions": {
+      "consulting": "Consulting",
+      "digital": "Digital Solutions",
+      "marketing": "Marketing",
+      "unsure": "Not sure yet"
     },
-    "ctaHeading": "Ready to own your name online?",
-    "ctaBody": "Tell us about your profession and your goals. We'll scope your personal website and get you a quote.",
-    "whatsappText": "Hi, I'd like to request a quote for a Personal Brand Website with ASCENDRA."
+    "message": "About your project",
+    "messagePlaceholder": "What do you need?",
+    "send": "Send",
+    "sending": "Sending...",
+    "required": "Please enter your name, mobile number and a short note about your project.",
+    "successTitle": "Thank you",
+    "successBody": "Your email app has opened to send the message. If it didn't, message us on WhatsApp and we'll reply within one working day.",
+    "errorMsg": "Something went wrong. Please try again or message us on WhatsApp."
   },
-  "businessWebsite": {
-    "name": "Business Website",
-    "heroValue": "A corporate website that positions your company correctly — and converts visitors into clients.",
-    "heroBody": "A professional, multi-page website for established and growing businesses. Built to present your company with authority, communicate what you do clearly, and turn the right visitors into enquiries.",
-    "scope": [
-      "Multi-page corporate website (home, about, services, contact, and more)",
-      "Bilingual Arabic / English with correct RTL layout",
-      "Mobile-first, fast, professional design",
-      "SEO foundations so the right people can find you",
-      "Analytics setup to measure visitors and enquiries",
-      "Contact flows that route enquiries to the right place"
-    ],
-    "deliveryValue": "2–3 weeks",
-    "steps": [
+  "privacy": {
+    "label": "Privacy Policy",
+    "title": "Privacy Policy",
+    "sections": [
       {
-        "title": "Discovery",
-        "desc": "We align on your positioning, audience, structure, and the pages the site needs to do its job."
+        "h": "What we collect",
+        "p": "We only collect what you send us yourself through the contact form, WhatsApp or email: your name, mobile number, email if you add it, and a note about your project."
       },
       {
-        "title": "Design",
-        "desc": "We design a professional, on-brand layout that presents your company with authority across every screen."
+        "h": "How we use it",
+        "p": "We use this information only to reply to your request and contact you about it. We don't sell your data or share it with anyone for marketing."
       },
       {
-        "title": "Build",
-        "desc": "We build the site bilingual and mobile-first, with SEO foundations, analytics, and contact flows wired in."
+        "h": "Keeping your data",
+        "p": "We keep the information for as long as we are in contact or working with you, and you can ask us to delete it at any time."
       },
       {
-        "title": "Launch",
-        "desc": "We test, publish to your domain, and hand over a site your team can rely on."
+        "h": "Questions about your data",
+        "p": "For any question, or to ask us to delete your data, email us at the address shown at the bottom of the page."
       }
-    ],
-    "faq": [
-      {
-        "q": "Is the website bilingual?",
-        "a": "Yes. It's built in Arabic and English with correct right-to-left layout for the Arabic side."
-      },
-      {
-        "q": "Will it help us show up on Google?",
-        "a": "We build in SEO foundations — clean structure, metadata, and performance — that give you a solid base to be found and to grow visibility over time."
-      },
-      {
-        "q": "Can you migrate our existing content?",
-        "a": "Yes. We can restructure and migrate your existing content, and refine it so it reads professionally in both languages."
-      },
-      {
-        "q": "Do we get a brand identity too?",
-        "a": "A full brand identity is available as an optional add-on — see below. If you already have one, we build to it."
-      }
-    ],
-    "addOn": {
-      "name": "+ Brand Identity",
-      "desc": "Add a complete brand identity — logo, color system, and typography — designed alongside the website so your company looks coherent and professional everywhere it appears."
-    },
-    "ctaHeading": "Ready for a website that works?",
-    "ctaBody": "Tell us about your company and what the site needs to do. We'll scope it and get you a quote.",
-    "whatsappText": "Hi, I'd like to request a quote for a Business Website with ASCENDRA."
+    ]
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "connect": "Our accounts",
+    "links": "Site links",
+    "location": "Riyadh, Saudi Arabia",
+    "privacy": "Privacy Policy"
   }
 }

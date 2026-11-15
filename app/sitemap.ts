@@ -4,14 +4,13 @@ import { pageUrls } from "@/lib/seo";
 // Locale-less route segments ("" = home). Keep in sync with the app routes.
 const PATHS = [
   "",
-  "solutions",
-  "products",
-  "products/feasibility-study",
-  "products/personal-brand-website",
-  "products/business-website",
+  "consulting",
+  "digital",
+  "marketing",
   "work",
   "about",
   "contact",
+  "privacy",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

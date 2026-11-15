@@ -10,6 +10,10 @@ const config: Config = {
         gold: "#D4AF37",
         "light-gray": "#F0F2F4",
         "gray-text": "#5A6678",
+        "gold-deep": "#7A5F0E",
+        slate: "#3A4E6B",
+        line: "#E3E7ED",
+        mist: "#C9D2DE",
       },
       fontFamily: {
         // Space Grotesk = display/headings/wordmark ; Inter = body/UI ; IBM Plex Sans Arabic = all Arabic

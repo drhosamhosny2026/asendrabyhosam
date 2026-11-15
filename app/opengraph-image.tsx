@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "ASCENDRA — Business Systems & Growth Builder";
+export const alt = "ASCENDRA — Integrated Business Solutions";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -80,7 +80,7 @@ export default function Image() {
               lineHeight: 1.5,
             }}
           >
-            Build Systems.&nbsp;&nbsp;Enable Growth.&nbsp;&nbsp;Drive Transformation.
+            Integrated Business Solutions
           </div>
         </div>
 

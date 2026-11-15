@@ -16,7 +16,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const plexArabic = IBM_Plex_Sans_Arabic({
-  subsets: ["arabic"], weight: ["400", "500", "600"],
+  subsets: ["arabic"], weight: ["400", "500", "600", "700"],
   variable: "--font-plex-arabic", display: "swap",
 });
 
@@ -29,12 +29,12 @@ export async function generateMetadata(
   // Site-wide metadata defaults. Per-page generateMetadata (see lib/seo.ts)
   // overrides title/description and supplies the canonical + hreflang alternates.
   const title = isAr
-    ? "ASCENDRA — أنظمة رقمية واستشارات أعمال | الرياض"
-    : "ASCENDRA — Digital Systems & Business Consulting | Riyadh";
+    ? "ASCENDRA — حلول أعمال متكاملة | الرياض"
+    : "ASCENDRA — Integrated Business Solutions | Riyadh";
 
   const description = isAr
-    ? "تبني ASCENDRA أنظمة رقمية — مواقع، CRM، ERP، وأتمتة — على أساس من استشارات أعمال حقيقية. للشركات الصغيرة والمتوسطة في المملكة العربية السعودية."
-    : "ASCENDRA builds digital systems — websites, CRM, ERP, automation — on a foundation of real business consulting. For SMEs and growing companies in Saudi Arabia.";
+    ? "ASCENDRA شركة حلول أعمال متكاملة في الرياض. نقدّم للمنشآت الصغيرة والمتوسطة الاستشارات والحلول الرقمية والتسويق من جهة واحدة."
+    : "ASCENDRA is an Integrated Business Solutions company in Riyadh. Consulting, digital solutions and marketing for small and medium businesses, under one roof.";
 
   return {
     metadataBase: new URL(SITE_URL),
@@ -74,8 +74,10 @@ export default async function LocaleLayout({
     <html lang={locale} dir={dir} className={`${spaceGrotesk.variable} ${inter.variable} ${plexArabic.variable}`}>
       <body className="font-sans" suppressHydrationWarning>
         <OrganizationSchema />
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
-        <WhatsAppButton />
+        <NextIntlClientProvider messages={messages}>
+          {children}
+          <WhatsAppButton />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

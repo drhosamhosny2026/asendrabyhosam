@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import Image from "next/image";
-import { Link } from "@/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { LINKS } from "@/config/links";
+import ContactForm from "@/components/ContactForm";
+import { PrimaryButton, GhostButton, GoldRule, SectionHeader, Steps, WhatsAppIcon } from "@/components/Sections";
+import { Link } from "@/navigation";
+import { PILLARS } from "@/lib/services";
+import { whatsappLink } from "@/config/links";
 import { buildPageMetadata } from "@/lib/seo";
 
 export async function generateMetadata(
@@ -12,252 +14,143 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta.home" });
-  return buildPageMetadata({
-    locale,
-    path: "",
-    title: t("title"),
-    description: t("description"),
-    absoluteTitle: true,
-  });
+  return buildPageMetadata({ locale, path: "", title: t("title"), description: t("description"), absoluteTitle: true });
 }
 
-export default async function Home(
-  { params }: { params: Promise<{ locale: string }> }
-) {
+const CLIENTS = ["TAWD Culture", "WIN Solutions", "Maha Alatawi", "Mohamed Karam"];
+
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const h = await getTranslations("home");
+  const s = await getTranslations("services");
+  const c = await getTranslations("common");
+  const b = await getTranslations("brand");
+  const arrow = locale === "ar" ? "←" : "→";
 
-  const hero    = await getTranslations("hero");
-  const brand   = await getTranslations("brand");
-  const need    = await getTranslations("startFromNeed");
-  const ins     = await getTranslations("insight");
-  const outT    = await getTranslations("outcomes");
-  const sw      = await getTranslations("selectedWork");
-  const ctaCopy = await getTranslations("contactCta");
-
-  const needItems = need.raw("items")  as { question: string; answer: string; cta: string; href: string }[];
-  const outcomes  = outT.raw("items")  as { metric: string; label: string; desc: string }[];
-  const swItems   = sw.raw("items")    as { tier: string; name: string; desc: string; href: string }[];
-
-  const arrow   = locale === "ar" ? "←" : "→";
-  const waHref  = `${LINKS.whatsapp}?text=${encodeURIComponent(ctaCopy("whatsappText"))}`;
+  const points = h.raw("integrated.points") as { title: string; body: string }[];
+  const steps = h.raw("steps.items") as { title: string; body: string }[];
 
   return (
     <>
       <Header />
-
       <main id="main-content">
-
-        {/* ── 1. HERO ─────────────────────────────────────────────────── */}
-        <section aria-labelledby="hero-heading" className="bg-navy text-white relative overflow-hidden min-h-screen flex items-center">
-          <div aria-hidden="true" className="absolute inset-0 opacity-[0.04] pointer-events-none">
-            <Image
-              src="/brand/ASCENDRA-logo_gold-transparent.svg"
-              alt=""
-              fill
-              unoptimized
-              className="object-contain object-right scale-[2] translate-x-1/4"
-            />
-          </div>
-          <div aria-hidden="true" className="absolute inset-0 opacity-[0.05] pointer-events-none">
-            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" focusable="false">
-              <defs>
-                <pattern id="apex-lines" x="0" y="0" width="60" height="60"
-                  patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-                  <line x1="0" y1="0" x2="0" y2="60" stroke="white" strokeWidth="1" />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#apex-lines)" />
-            </svg>
-          </div>
-
-          <div className="max-w-content mx-auto px-6 py-28 md:py-36 relative w-full">
-            <p className="font-sans text-[11px] uppercase tracking-label text-gold mb-8 rise rise-d1">
-              {brand("tagline")}
-            </p>
-
-            <h1 id="hero-heading" className="font-serif font-semibold text-5xl md:text-[5rem] lg:text-[5.5rem] leading-[1.05] tracking-tight max-w-4xl rise rise-d2">
-              {hero("headline")}<br />
-              {hero("headlineMid")}<br />
-              <span className="text-gold">{hero("headlineAccent")}</span>
-            </h1>
-
-            <p className="text-white/70 text-lg md:text-xl leading-relaxed mt-8 max-w-2xl rise rise-d3">
-              {hero("keyMessage")}
-            </p>
-
-            <div className="flex flex-wrap gap-4 mt-10 rise rise-d4">
-              <Link
-                href="/solutions"
-                className="bg-gold text-navy px-8 py-3.5 font-semibold text-sm hover:bg-gold/90 transition"
-              >
-                {hero("ctaPrimary")}
-              </Link>
-              <Link
-                href="/products"
-                className="border border-white/20 text-white px-8 py-3.5 font-medium text-sm hover:border-gold/50 hover:text-gold transition"
-              >
-                {hero("ctaSecondary")}
-              </Link>
+        {/* Hero */}
+        <section className="bg-navy px-6 pt-24 pb-28 md:pt-28 md:pb-32">
+          <div className="max-w-content mx-auto flex flex-col gap-7">
+            <span className="text-[15px] font-medium text-gold rise rise-d1" dir="auto">{h("hero.eyebrow")}</span>
+            <h1 className="m-0 max-w-[900px] text-[clamp(36px,5vw,64px)] leading-[1.3] font-bold text-white rise rise-d2">{h("hero.title")}</h1>
+            <GoldRule />
+            <p className="m-0 max-w-[680px] text-lg md:text-xl leading-[1.9] text-mist rise rise-d3">{h("hero.lead")}</p>
+            <div className="flex flex-wrap gap-3.5 mt-2 rise rise-d4">
+              <PrimaryButton href="/contact">{h("hero.primary")}</PrimaryButton>
+              <GhostButton href={whatsappLink(c("whatsappGeneral"))} external>
+                <WhatsAppIcon />
+                {h("hero.secondary")}
+              </GhostButton>
             </div>
-
-            <p className="mt-12 text-white/30 text-xs uppercase tracking-label rise rise-d4">
-              {hero("trustLine")}
-            </p>
+            <span className="mt-6 font-serif italic text-2xl text-gold" dir="ltr">{b("tagline")}</span>
           </div>
         </section>
 
-        {/* ── 2. START FROM YOUR NEED ─────────────────────────────────── */}
-        <section aria-labelledby="need-heading" className="py-24 px-6 bg-white">
-          <div className="max-w-content mx-auto">
-            <p className="font-sans text-xs uppercase tracking-label text-gold mb-6" aria-hidden="true">
-              {need("label")}
-            </p>
-            <h2 id="need-heading" className="font-serif font-semibold text-4xl md:text-5xl text-navy leading-tight tracking-tight mb-14 max-w-2xl">
-              {need("heading")}
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              {needItems.map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-light-gray border-t-2 border-gold/25 p-8 flex flex-col gap-4 hover:border-gold/70 transition-colors"
-                >
-                  <h3 className="font-serif font-semibold text-xl text-navy leading-tight tracking-tight">
-                    {item.question}
-                  </h3>
-                  <p className="text-navy/60 text-base leading-relaxed flex-1">
-                    {item.answer}
-                  </p>
-                  <Link
-                    href={item.href}
-                    className="inline-flex items-center gap-2 text-gold font-medium text-sm hover:gap-3 transition-all self-start"
-                  >
-                    {item.cta}
-                    <span aria-hidden="true">{arrow}</span>
-                  </Link>
-                </div>
+        {/* Clients strip */}
+        <section aria-label={h("clients.label")} className="bg-white px-6 py-10 border-b border-line">
+          <div className="max-w-content mx-auto flex flex-wrap items-center justify-between gap-6">
+            <span className="text-[15px] text-gray-text">{h("clients.label")}</span>
+            <ul dir="ltr" className="flex flex-wrap items-center gap-x-12 gap-y-3 list-none m-0 p-0">
+              {CLIENTS.map((name) => (
+                <li key={name} className="font-serif text-xl font-semibold tracking-[0.04em] text-gray-text">{name}</li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
-        {/* ── 3. SELECTED WORK ─────────────────────────────────────────── */}
-        <section aria-labelledby="selected-work-heading" className="py-24 px-6 bg-light-gray">
-          <div className="max-w-content mx-auto">
-            <p className="font-sans text-xs uppercase tracking-label text-gold mb-4" aria-hidden="true">
-              {sw("label")}
-            </p>
-            <h2 id="selected-work-heading" className="font-serif font-semibold text-4xl md:text-5xl text-navy leading-tight tracking-tight mb-4 max-w-xl">
-              {sw("heading")}
-            </h2>
-            <p className="text-navy/60 text-lg leading-relaxed max-w-2xl mb-14">
-              {sw("intro")}
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              {swItems.map((item, i) => (
-                <article
-                  key={i}
-                  className={`bg-white p-8 flex flex-col gap-4 border-t-2 hover:border-gold/70 transition-colors ${
-                    i === 0 ? "border-gold" : "border-gold/25"
-                  }`}
-                >
-                  <p className={`font-sans text-[10px] uppercase tracking-label font-medium ${
-                    i === 0 ? "text-gold" : "text-gold/70"
-                  }`}>
-                    {item.tier}
-                  </p>
-                  <h3 className="font-serif font-semibold text-xl text-navy leading-tight tracking-tight">
-                    {item.name}
-                  </h3>
-                  <p className="text-gray-text text-sm leading-relaxed flex-1">{item.desc}</p>
-                  <Link
-                    href={`/${item.href}`}
-                    className="inline-flex items-center gap-2 text-gold font-medium text-sm hover:gap-3 transition-all"
-                  >
-                    {i === 0 ? sw("viewProject") : sw("viewCaseStudy")}
-                    <span aria-hidden="true">{arrow}</span>
-                  </Link>
-                </article>
-              ))}
+        {/* What "integrated" means */}
+        <section className="bg-white px-6 py-24">
+          <div className="max-w-content mx-auto flex flex-wrap gap-14 items-start">
+            <div className="flex-[1_1_440px] flex flex-col gap-5">
+              <span className="text-[15px] font-semibold text-gold-deep" dir="ltr">{h("integrated.label")}</span>
+              <h2 className="m-0 text-[clamp(28px,3.4vw,44px)] leading-[1.4] font-bold text-navy">{h("integrated.title")}</h2>
+              <p className="m-0 text-lg leading-[2] text-gray-text">{h("integrated.p1")}</p>
+              <p className="m-0 text-lg leading-[2] text-gray-text">{h("integrated.p2")}</p>
             </div>
-
-            <div className="mt-12 text-center">
-              <Link
-                href="/work"
-                className="inline-flex items-center gap-2 border border-navy/20 text-navy text-sm font-medium px-8 py-3 hover:border-gold hover:text-gold transition-colors"
-              >
-                {sw("viewAll")}
-                <span aria-hidden="true">{arrow}</span>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* ── 4. THE SYSTEMS PROBLEM + WHAT CHANGES ───────────────────── */}
-        <section id="why" aria-labelledby="why-heading" className="py-24 px-6 bg-white scroll-mt-20">
-          <div className="max-w-content mx-auto">
-            <p className="font-sans text-xs uppercase tracking-label text-gold mb-6" aria-hidden="true">
-              {ins("label")}
-            </p>
-            <h2 id="why-heading" className="font-serif font-semibold text-4xl md:text-5xl text-navy leading-tight tracking-tight mb-8 max-w-3xl">
-              {ins("headline")}
-            </h2>
-
-            <p className="max-w-3xl text-navy/65 text-lg leading-relaxed mb-14">
-              {ins("body")}
-            </p>
-
-            <div className="grid sm:grid-cols-3 gap-6">
-              {outcomes.map((o, i) => (
-                <div key={i} className="bg-light-gray p-8 flex flex-col gap-3">
-                  <div aria-hidden="true" className="text-gold font-serif font-semibold text-4xl leading-none">
-                    {o.metric}
+            <ol className="flex-[1_1_400px] list-none m-0 p-0 border-t border-line">
+              {points.map((p, i) => (
+                <li key={p.title} className="flex gap-5 py-6 border-b border-line">
+                  <span aria-hidden="true" className="font-serif text-3xl font-semibold leading-tight text-gold-deep">{String(i + 1).padStart(2, "0")}</span>
+                  <div className="flex flex-col gap-1.5">
+                    <h3 className="m-0 text-xl font-bold text-navy">{p.title}</h3>
+                    <p className="m-0 text-base leading-[1.85] text-gray-text">{p.body}</p>
                   </div>
-                  <h3 className="font-serif font-semibold text-lg text-navy leading-tight tracking-tight">
-                    {o.label}
-                  </h3>
-                  <p className="text-gray-text text-sm leading-relaxed">{o.desc}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        {/* Departments */}
+        <section id="services" className="bg-light-gray px-6 py-24">
+          <div className="max-w-content mx-auto flex flex-col gap-12">
+            <SectionHeader label={h("services.label")} title={h("services.title")} lead={h("services.lead")} />
+            <div className="grid gap-6 lg:grid-cols-3">
+              {PILLARS.map((p) => (
+                <div key={p.key} className="bg-white border border-line rounded-2xl p-8 flex flex-col gap-6">
+                  <div className="flex flex-col gap-2.5">
+                    <span className="text-sm font-semibold" style={{ color: p.accent }}>{s(`${p.key}.eyebrow`)}</span>
+                    <h3 className="m-0 text-3xl font-bold text-navy">{s(`${p.key}.name`)}</h3>
+                    <p className="m-0 text-[17px] leading-[1.85] text-gray-text">{s(`${p.key}.homeDesc`)}</p>
+                  </div>
+                  <ul className="flex flex-wrap gap-2.5 list-none m-0 p-0">
+                    {p.services.map((id) => (
+                      <li key={id}>
+                        <Link href={`${p.href}#${id}`} className="flex items-center min-h-[44px] px-4 rounded-full border border-[#D5DBE3] text-navy text-[15px] hover:border-navy transition">
+                          {s(`${p.key}.items.${id}.name`)}
+                        </Link>
+                      </li>
+                    ))}
+                    {p.packageId && (
+                      <li>
+                        <Link href={`${p.href}#${p.packageId}`} className="flex items-center gap-2 min-h-[44px] px-4 rounded-full border border-gold text-navy text-[15px] hover:bg-[#FBF5E1] transition">
+                          {s(`${p.key}.items.${p.packageId}.name`)}
+                          <span className="text-xs font-semibold text-gold-deep">{c("packageBadge")}</span>
+                        </Link>
+                      </li>
+                    )}
+                  </ul>
+                  <Link href={p.href} className="mt-auto flex items-center min-h-[44px] text-[17px] font-semibold text-gold-deep hover:text-navy transition">
+                    {s(`${p.key}.explore`)} {arrow}
+                  </Link>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ── 5. FINAL CTA ─────────────────────────────────────────────── */}
-        <section aria-labelledby="cta-heading" className="py-24 px-6 bg-navy">
-          <div className="max-w-content mx-auto text-center">
-            <p className="font-sans text-xs uppercase tracking-label text-gold mb-5" aria-hidden="true">
-              {ctaCopy("label")}
-            </p>
-            <h2 id="cta-heading" className="font-serif font-semibold text-4xl md:text-5xl text-white leading-tight tracking-tight mb-5 max-w-2xl mx-auto">
-              {ctaCopy("heading")}
-            </h2>
-            <p className="text-white/60 text-lg leading-relaxed max-w-xl mx-auto mb-10">
-              {ctaCopy("body")}
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/contact"
-                className="bg-gold text-navy px-10 py-3.5 font-semibold text-sm hover:bg-gold/90 transition"
-              >
-                {ctaCopy("primary")}
-              </Link>
+        <Steps label={h("steps.label")} title={h("steps.title")} items={steps} />
+
+        {/* Contact */}
+        <section id="contact" className="bg-navy px-6 py-24 scroll-mt-20">
+          <div className="max-w-content mx-auto flex flex-wrap gap-14 items-start">
+            <div className="flex-[1_1_360px] flex flex-col gap-5">
+              <span className="text-[15px] font-semibold text-gold">{h("contact.label")}</span>
+              <h2 className="m-0 text-[clamp(28px,3.4vw,44px)] leading-[1.35] font-bold text-white">{h("contact.title")}</h2>
+              <p className="m-0 text-lg leading-[1.9] text-mist">{h("contact.lead")}</p>
               <a
-                href={waHref}
+                href={whatsappLink(c("whatsappGeneral"))}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-white/20 text-white px-10 py-3.5 font-medium text-sm hover:border-gold/50 hover:text-gold transition"
+                className="inline-flex items-center gap-2.5 min-h-[44px] self-start text-gold text-[17px] font-semibold"
               >
-                {ctaCopy("whatsapp")}
+                <WhatsAppIcon />
+                {h("contact.orWhatsapp")}
               </a>
+            </div>
+            <div className="flex-[1_1_440px] bg-white rounded-2xl p-8 md:p-10">
+              <ContactForm />
             </div>
           </div>
         </section>
-
       </main>
-
       <Footer />
     </>
   );

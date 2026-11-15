@@ -1,7 +1,7 @@
 # ASCENDRA by Hossam — Website Project
 
 ## What this is
-The official website for ASCENDRA by Hossam — a Business Systems & Growth Builder.
+The official website for ASCENDRA — an Integrated Business Solutions company (حلول أعمال متكاملة) in Riyadh, with three departments: Consulting, Digital Solutions, Marketing.
 Built with Next.js 15 (App Router) + React 19 + TypeScript + Tailwind CSS + next-intl (bilingual EN/AR).
 
 ## Brand rules (NON-NEGOTIABLE — the logo is approved and locked)
@@ -9,12 +9,16 @@ Built with Next.js 15 (App Router) + React 19 + TypeScript + Tailwind CSS + next
 - **Colors**: Deep Navy `#0B1D33` · Emerald `#0F5B46` · Soft Gold `#D4AF37` · White `#FFFFFF` · Light Gray `#F0F2F4`. Gold is an ACCENT only — never large fills.
 - **Typography**: Space Grotesk (Medium/Semibold/Bold) for wordmark + headings; IBM Plex Sans Arabic for all Arabic text; Inter for body/UI.
   - Wordmark letter-spacing: 0.12em (class `.wordmark`).
-- **Tagline**: EN "The system behind your growth." / AR "النظام خلف نموّك"
-- **Voice**: Strategic, executive, precise, premium. No hype, no startup clichés.
+- **Category line**: EN "Integrated Business Solutions" / AR "حلول أعمال متكاملة" (shown under the wordmark)
+- **Tagline**: "Built to Ascend." (used in both languages, set in LTR)
+- **Voice**: Speaks as the company ("we"), never as a person; no founder or team names on the site. Plain, professional Modern Standard Arabic. No hype, no startup clichés, no durations or prices anywhere.
 
 ## Architecture
 - `app/[locale]/layout.tsx` — locale-aware root layout, loads fonts, sets `dir` (rtl for ar).
-- `app/[locale]/page.tsx` — homepage: Hero → Philosophy → Services → Approach → Contact.
+- `app/[locale]/page.tsx` — homepage: Hero → Clients → What integrated means → Three departments → How we work → Contact.
+- `app/[locale]/{consulting,digital,marketing}` — department pages, all rendered by `components/PillarPage.tsx`.
+- `lib/services.ts` — departments and service ids (single source of truth). Adding a service = one id here + its text under `services.<dept>.items.<id>` in both message files; it then appears in the mega menu, the homepage card and the department page.
+- `lib/work.ts` — portfolio entries for /work (text under `workPage.projects.<id>`).
 - `components/` — Header, Footer (reusable).
 - `messages/en.json` & `messages/ar.json` — ALL text lives here. Never hardcode copy in components.
 - `i18n.ts`, `middleware.ts` — next-intl routing. Locales: en (default), ar.

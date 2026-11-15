@@ -9,3 +9,8 @@ export const LINKS = {
   email:       "contact@ascendrabyhosam.com",
   founderSite: "https://dr-hossamhosny.vercel.app/",
 };
+
+/** WhatsApp link with a prefilled message. */
+export function whatsappLink(text: string): string {
+  return `${LINKS.whatsapp}?text=${encodeURIComponent(text)}`;
+}

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { LINKS } from "@/config/links";
+import { Link } from "@/navigation";
+import { PILLARS } from "@/lib/services";
 
 function IconWhatsApp() {
   return (
@@ -41,6 +43,8 @@ function IconLinkedIn() {
 export default function Footer() {
   const b = useTranslations("brand");
   const f = useTranslations("footer");
+  const n = useTranslations("nav");
+  const s = useTranslations("services");
 
   const socials = [
     { href: LINKS.whatsapp,  Icon: IconWhatsApp,  label: "WhatsApp"  },
@@ -49,70 +53,58 @@ export default function Footer() {
     { href: LINKS.linkedin,  Icon: IconLinkedIn,  label: "LinkedIn"  },
   ];
 
+  const siteLinks = [
+    ...PILLARS.map((p) => ({ href: p.href, label: s(`${p.key}.name`) })),
+    { href: "/work", label: n("work") },
+    { href: "/about", label: n("about") },
+    { href: "/contact", label: n("contact") },
+  ];
+
   return (
-    <footer role="contentinfo" className="bg-navy text-light-gray/70 py-16 px-6">
-      <div className="max-w-content mx-auto flex flex-col items-center gap-0 text-center">
+    <footer role="contentinfo" className="bg-[#071526] text-mist py-14 px-6">
+      <div className="max-w-content mx-auto flex flex-col gap-10">
+        <div className="flex flex-wrap items-start justify-between gap-10">
+          <div className="flex flex-col gap-3 max-w-sm">
+            <div className="flex items-center gap-3">
+              <Image src="/brand/ASCENDRA-logo_gold-transparent.svg" alt="" aria-hidden="true" width={36} height={36} unoptimized className="h-9 w-9" />
+              <span className="text-white text-xl font-serif font-semibold wordmark" dir="ltr">{b("name")}</span>
+            </div>
+            <p className="text-gold text-sm font-medium">{b("category")}</p>
+            <p className="text-sm text-[#AAB4C3]">{f("location")}</p>
+          </div>
 
-        {/* Logo + Brand */}
-        <Image
-          src="/brand/ASCENDRA-logo_gold-transparent.svg"
-          alt=""
-          aria-hidden="true"
-          width={40}
-          height={40}
-          unoptimized
-          className="h-10 w-10 mb-3"
-        />
-        <div className="text-white text-xl font-serif font-semibold wordmark mb-3">{b("name")}</div>
-        <p className="font-sans text-[11px] uppercase tracking-label text-gold/55 mb-8">{b("tagline")}</p>
+          <nav aria-label={f("links")} className="flex flex-wrap gap-x-2 gap-y-1 max-w-xl">
+            {siteLinks.map((l) => (
+              <Link key={l.href} href={l.href} className="flex items-center min-h-[44px] px-3 text-sm text-[#AAB4C3] hover:text-gold transition">
+                {l.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
 
-        {/* Social Icons */}
-        <nav aria-label={f("connect")} className="flex items-center gap-3 mb-4">
-          {socials.map(({ href, Icon, label }) =>
-            href !== "#" ? (
+        <div className="flex flex-wrap items-center justify-between gap-6 border-t border-white/10 pt-8">
+          <nav aria-label={f("connect")} className="flex items-center gap-3">
+            {socials.map(({ href, Icon, label }) => (
               <a
                 key={label}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center text-light-gray/50 transition-colors hover:border-gold/50 hover:text-gold"
+                className="w-11 h-11 rounded-full border border-white/15 flex items-center justify-center text-[#AAB4C3] transition-colors hover:border-gold/50 hover:text-gold"
               >
                 <Icon />
               </a>
-            ) : (
-              <span
-                key={label}
-                aria-label={`${label} — coming soon`}
-                className="w-10 h-10 rounded-full border border-white/8 flex items-center justify-center text-light-gray/20 pointer-events-none select-none"
-              >
-                <Icon />
-              </span>
-            )
-          )}
-        </nav>
-
-        {/* Email */}
-        {LINKS.email !== "#" ? (
-          <a
-            href={`mailto:${LINKS.email}`}
-            className="text-sm text-light-gray/40 hover:text-gold transition-colors mb-8"
-          >
+            ))}
+          </nav>
+          <a href={`mailto:${LINKS.email}`} dir="ltr" className="text-sm text-[#AAB4C3] hover:text-gold transition-colors">
             {LINKS.email}
           </a>
-        ) : (
-          <p className="text-sm text-light-gray/25 mb-8 select-none" aria-label={f("emailPlaceholder")}>
-            {f("emailPlaceholder")}
-          </p>
-        )}
-
-        {/* Divider */}
-        <div className="w-16 border-t border-white/10 mb-6" />
-
-        {/* Copyright */}
-        <p className="text-xs text-light-gray/40">
-          © {new Date().getFullYear()} {b("name")}. {f("rights")}
-        </p>
+          <div className="flex flex-wrap items-center gap-4 text-xs text-[#AAB4C3]">
+            <Link href="/privacy" className="hover:text-gold transition">{f("privacy")}</Link>
+            <span dir="ltr">© {new Date().getFullYear()} {b("name")}. {f("rights")}</span>
+          </div>
+        </div>
       </div>
     </footer>
   );

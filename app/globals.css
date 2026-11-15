@@ -84,3 +84,13 @@ textarea:focus-visible {
 [dir="rtl"] .font-serif {
   font-family: var(--font-plex-arabic), system-ui, sans-serif;
 }
+
+/* English headings use the display face; Arabic stays on IBM Plex Sans Arabic */
+[dir="ltr"] h1,
+[dir="ltr"] h2,
+[dir="ltr"] h3 {
+  font-family: var(--font-space-grotesk), system-ui, sans-serif;
+}
+
+/* Keep anchored sections clear of the sticky header */
+[id] { scroll-margin-top: 6rem; }
