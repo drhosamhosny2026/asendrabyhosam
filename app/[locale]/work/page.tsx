@@ -45,7 +45,17 @@ export default async function WorkPage({ params }: { params: Promise<{ locale: s
     };
   };
 
-  const featured = PROJECTS.filter((p) => p.featured).map((p) => toCard(p.id));
+  const featured = PROJECTS.filter((p) => p.featured).map((p) => ({
+    ...toCard(p.id),
+    badge: p.badge === "integrated" ? w("integratedBadge") : w("caseStudy"),
+    story: p.story
+      ? [
+          { label: w("situation"), text: w(`projects.${p.id}.situation`) },
+          { label: w("done"), text: w(`projects.${p.id}.done`) },
+          { label: w("result"), text: w(`projects.${p.id}.result`) },
+        ]
+      : null,
+  }));
   const others = PROJECTS.filter((p) => !p.featured).map((p) => toCard(p.id));
 
   return (
@@ -67,7 +77,7 @@ export default async function WorkPage({ params }: { params: Promise<{ locale: s
                   <span className="text-base text-[#8A97AA]">[{w("imagePlaceholder")}]</span>
                 </div>
                 <div className="flex-[1_1_400px] p-9 md:p-11 flex flex-col gap-4">
-                  <span className="self-start text-[13px] font-bold text-navy bg-gold rounded-full px-3.5 py-1">{w("integratedBadge")}</span>
+                  <span className="self-start text-[13px] font-bold text-navy bg-gold rounded-full px-3.5 py-1">{f.badge}</span>
                   <h2 className="m-0 text-3xl font-bold text-navy">{f.title}</h2>
                   <p className="m-0 text-[17px] leading-[1.9] text-gray-text">{f.desc}</p>
                   <div className="flex flex-wrap gap-2">
@@ -75,6 +85,16 @@ export default async function WorkPage({ params }: { params: Promise<{ locale: s
                       <span key={k} className={`text-sm font-semibold rounded-full px-3.5 py-1.5 ${TAG_STYLE[k]}`}>{pillarNames[k]}</span>
                     ))}
                   </div>
+                  {f.story && (
+                    <dl className="m-0 flex flex-col gap-4 pt-4 border-t border-line">
+                      {f.story.map((st) => (
+                        <div key={st.label} className="flex flex-col gap-1.5">
+                          <dt className="text-[15px] font-bold text-navy">{st.label}</dt>
+                          <dd className="m-0 text-base leading-[1.85] text-gray-text">{st.text}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                  )}
                   <div className="flex flex-col gap-2 pt-4 border-t border-line">
                     <span className="text-[15px] font-bold text-navy">{w("deliveredLabel")}</span>
                     <span className="text-base leading-[1.8] text-gray-text">{f.delivered}</span>

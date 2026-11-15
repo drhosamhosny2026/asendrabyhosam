@@ -473,9 +473,14 @@
       },
       "win": {
         "title": "WIN Solutions",
-        "desc": "A company website that presents its services clearly and receives customer requests.",
-        "delivered": "Website design and development in Arabic and English",
-        "links": {}
+        "desc": "A creative marketing and production company in Riyadh, working with government bodies and major brands.",
+        "situation": "The company introduced itself with a PDF company profile sent to clients. Videos could not play inside it, it had to be updated and resent with every new project, and the company had no way of knowing who opened it.",
+        "done": "We built a professional bilingual website (Arabic and English) that presents its identity and services, gathers its past work in a portfolio linked to its video channels, and shows its clients, awards and direct contact channels, with visitor analytics connected.",
+        "result": "The company now has one link instead of a file. It stays current with every new project, and shows how many people visit and which countries they come from.",
+        "delivered": "Bilingual website design and development · Portfolio · Search engine setup · Visitor analytics",
+        "links": {
+          "site": "Visit website"
+        }
       },
       "karam": {
         "title": "Mohamed Karam",
@@ -486,7 +491,11 @@
         }
       }
     },
-    "imagePlaceholder": "Project image"
+    "imagePlaceholder": "Project image",
+    "situation": "The situation",
+    "done": "What we did",
+    "result": "The result",
+    "caseStudy": "Case study"
   },
   "aboutPage": {
     "hero": {

@@ -9,12 +9,17 @@ export type Project = {
   pillars: readonly PillarKey[];
   links: readonly { key: string; url: string }[];
   featured?: boolean;
+  /** Has situation / done / result text and renders as a case study. */
+  story?: boolean;
+  /** Badge on featured cards: "integrated" (all departments) or "caseStudy". */
+  badge?: "integrated" | "caseStudy";
 };
 
 export const PROJECTS: readonly Project[] = [
   {
     id: "maha",
     featured: true,
+    badge: "integrated",
     pillars: ["consulting", "digital", "marketing"],
     links: [
       { key: "personalSite", url: "https://mahaalatawi.com" },
@@ -23,8 +28,11 @@ export const PROJECTS: readonly Project[] = [
   },
   {
     id: "win",
+    featured: true,
+    story: true,
+    badge: "caseStudy",
     pillars: ["digital"],
-    links: [],
+    links: [{ key: "site", url: "https://win-solutions.org" }],
   },
   {
     id: "karam",
