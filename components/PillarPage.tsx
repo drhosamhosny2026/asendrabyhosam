@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { PageHero, PrimaryButton, GhostButton, SectionHeader, Steps, Faq, CtaBand } from "@/components/Sections";
 import { getPillar, type PillarKey } from "@/lib/services";
 import { whatsappLink } from "@/config/links";
+import TargetHighlight from "@/components/TargetHighlight";
 
 type Step = { title: string; body: string };
 type FaqItem = { q: string; a: string };
@@ -23,6 +24,7 @@ export default async function PillarPage({ pillarKey, locale }: { pillarKey: Pil
   return (
     <>
       <Header />
+      <TargetHighlight />
       <main id="main-content">
         <PageHero
           eyebrow={t("hero.eyebrow")}
@@ -42,9 +44,9 @@ export default async function PillarPage({ pillarKey, locale }: { pillarKey: Pil
                 const name = t(`items.${id}.name`);
                 const deliverables = t.raw(`items.${id}.deliverables`) as string[];
                 return (
-                  <article key={id} id={id} className="scroll-mt-28 bg-white border border-line rounded-2xl p-8 md:p-9 flex flex-col gap-5">
+                  <article key={id} id={id} data-service-card className="svc-card scroll-mt-28 bg-white border border-line rounded-2xl p-8 md:p-9 flex flex-col gap-5">
                     <div className="flex items-baseline gap-3.5">
-                      <span aria-hidden="true" className="font-serif text-[32px] font-semibold leading-none text-gold-deep">
+                      <span aria-hidden="true" className="svc-num font-serif text-[32px] font-semibold leading-none text-gold-deep">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <h3 className="m-0 text-2xl font-bold text-navy">{name}</h3>
@@ -76,7 +78,7 @@ export default async function PillarPage({ pillarKey, locale }: { pillarKey: Pil
                 const name = t(`items.${pkg}.name`);
                 const deliverables = t.raw(`items.${pkg}.deliverables`) as string[];
                 return (
-                  <article id={pkg} className="scroll-mt-28 md:col-span-2 bg-navy rounded-2xl p-9 md:p-11 flex flex-wrap gap-10">
+                  <article id={pkg} data-service-card className="svc-card svc-card--dark scroll-mt-28 md:col-span-2 bg-navy rounded-2xl p-9 md:p-11 flex flex-wrap gap-10">
                     <div className="flex-[1_1_380px] flex flex-col gap-4">
                       <span className="self-start text-[13px] font-bold text-navy bg-gold rounded-full px-3.5 py-1">{c("packageFull")}</span>
                       <h3 className="m-0 text-3xl font-bold text-white">{name}</h3>

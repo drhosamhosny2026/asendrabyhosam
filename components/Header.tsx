@@ -172,6 +172,7 @@ export default function Header() {
           <div
             id="mega-menu"
             onMouseEnter={openNow}
+            onClick={(e) => { if ((e.target as HTMLElement).closest("a")) closeAll(); }}
             className={`hidden lg:block absolute inset-x-0 top-full px-6 pt-2 transition duration-150 ${menuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"}`}
           >
             <div className="max-w-content mx-auto bg-white rounded-2xl border border-line shadow-[0_24px_60px_rgba(11,29,51,0.28)] overflow-hidden">
@@ -218,6 +219,7 @@ export default function Header() {
         {/* Mobile drawer */}
         <div
           id="mobile-menu"
+          onClick={(e) => { if ((e.target as HTMLElement).closest("a")) closeAll(); }}
           className={`lg:hidden bg-navy border-t border-white/10 overflow-y-auto transition-all duration-300 ${mobileOpen ? "max-h-[calc(100vh-5rem)] opacity-100" : "max-h-0 opacity-0 pointer-events-none"}`}
         >
           <nav aria-label={t("mobileNav")} className="flex flex-col px-6 py-4">
