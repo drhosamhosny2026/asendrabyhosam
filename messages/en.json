@@ -578,7 +578,8 @@
     "sending": "Sending...",
     "required": "Please enter your name, mobile number and a short note about your project.",
     "successTitle": "Thank you",
-    "successBody": "Your email app has opened to send the message. If it didn't, message us on WhatsApp and we'll reply within one working day.",
+    "successBody": "We've received your message and will reply within one working day.",
+    "successBodyMailto": "Your email app has opened to send the message. If it didn't, message us on WhatsApp and we'll reply within one working day.",
     "errorMsg": "Something went wrong. Please try again or message us on WhatsApp."
   },
   "privacy": {
