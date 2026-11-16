@@ -17,8 +17,6 @@ export async function generateMetadata(
   return buildPageMetadata({ locale, path: "", title: t("title"), description: t("description"), absoluteTitle: true });
 }
 
-const CLIENTS = ["TAWD Culture", "WIN Solutions", "Maha Alatawi", "Mohamed Karam"];
-
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -50,18 +48,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               </GhostButton>
             </div>
             <span className="mt-6 font-serif italic text-2xl text-gold" dir="ltr">{b("tagline")}</span>
-          </div>
-        </section>
-
-        {/* Clients strip */}
-        <section aria-label={h("clients.label")} className="bg-white px-6 py-10 border-b border-line">
-          <div className="max-w-content mx-auto flex flex-wrap items-center justify-between gap-6">
-            <span className="text-[15px] text-gray-text">{h("clients.label")}</span>
-            <ul dir="ltr" className="flex flex-wrap items-center gap-x-12 gap-y-3 list-none m-0 p-0">
-              {CLIENTS.map((name) => (
-                <li key={name} className="font-serif text-xl font-semibold tracking-[0.04em] text-gray-text">{name}</li>
-              ))}
-            </ul>
           </div>
         </section>
 
