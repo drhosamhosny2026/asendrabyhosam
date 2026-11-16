@@ -45,4 +45,11 @@ export const PROJECTS: readonly Project[] = [
     images: ["/work/karam.webp"],
     video: "/work/karam",
   },
+  {
+    id: "almasa",
+    pillars: ["digital"],
+    links: [{ key: "site", url: "https://taghreed-academy.web.app" }],
+    images: ["/work/almasa.webp"],
+    video: "/work/almasa",
+  },
 ] as const;

@@ -496,6 +496,14 @@
         "links": {
           "site": "Visit website"
         }
+      },
+      "almasa": {
+        "title": "Almasa Academy",
+        "desc": "A complete learning platform for Saudi aptitude and achievement exams: courses and lessons, a question bank and quizzes, student accounts, and an admin panel for the teacher.",
+        "delivered": "Platform design and development · Accounts and permissions · Question bank and quizzes · Admin panel",
+        "links": {
+          "site": "Visit platform"
+        }
       }
     },
     "imagePlaceholder": "Project image"
