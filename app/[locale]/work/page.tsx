@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { PageHero, CtaBand } from "@/components/Sections";
+import Image from "next/image";
 import WorkGrid, { type WorkCard } from "@/components/WorkGrid";
 import { PROJECTS } from "@/lib/work";
 import { PILLARS, type PillarKey } from "@/lib/services";
@@ -42,6 +43,7 @@ export default async function WorkPage({ params }: { params: Promise<{ locale: s
       delivered: w(`projects.${id}.delivered`),
       pillars: [...proj.pillars],
       links: proj.links.map((l) => ({ label: w(`projects.${id}.links.${l.key}`), url: l.url })),
+      images: [...proj.images],
     };
   };
 
@@ -73,8 +75,12 @@ export default async function WorkPage({ params }: { params: Promise<{ locale: s
           <div className="max-w-content mx-auto flex flex-col gap-10">
             {featured.map((f) => (
               <article key={f.id} className="bg-white border border-line rounded-[20px] overflow-hidden flex flex-wrap">
-                <div role="img" aria-label={w("imagePlaceholder")} className="flex-[1_1_460px] min-h-[360px] bg-navy flex items-center justify-center">
-                  <span className="text-base text-[#8A97AA]">[{w("imagePlaceholder")}]</span>
+                <div className="flex-[1_1_460px] min-h-[320px] bg-navy p-6 md:p-8 flex flex-col justify-center gap-5">
+                  {f.images.map((src) => (
+                    <div key={src} className="relative w-full aspect-[16/10] rounded-xl overflow-hidden shadow-[0_18px_40px_rgba(0,0,0,0.35)] border border-white/10">
+                      <Image src={src} alt={`${w("imagePlaceholder")}: ${f.title}`} fill sizes="(min-width: 1024px) 560px, 100vw" className="object-cover object-top" />
+                    </div>
+                  ))}
                 </div>
                 <div className="flex-[1_1_400px] p-9 md:p-11 flex flex-col gap-4">
                   <span className="self-start text-[13px] font-bold text-navy bg-gold rounded-full px-3.5 py-1">{f.badge}</span>

@@ -8,6 +8,8 @@ export type Project = {
   id: string;
   pillars: readonly PillarKey[];
   links: readonly { key: string; url: string }[];
+  /** Screenshots in /public/work. Two images on a featured card are stacked. */
+  images: readonly string[];
   featured?: boolean;
   /** Has situation / done / result text and renders as a case study. */
   story?: boolean;
@@ -25,6 +27,7 @@ export const PROJECTS: readonly Project[] = [
       { key: "personalSite", url: "https://mahaalatawi.com" },
       { key: "tawdSite", url: "https://tawdculture.com" },
     ],
+    images: ["/work/maha.webp", "/work/tawd.webp"],
   },
   {
     id: "win",
@@ -33,10 +36,12 @@ export const PROJECTS: readonly Project[] = [
     badge: "caseStudy",
     pillars: ["digital"],
     links: [{ key: "site", url: "https://win-solutions.org" }],
+    images: ["/work/win.webp", "/work/win-work.webp"],
   },
   {
     id: "karam",
     pillars: ["digital"],
     links: [{ key: "site", url: "https://mohamed-karam.com" }],
+    images: ["/work/karam.webp"],
   },
 ] as const;

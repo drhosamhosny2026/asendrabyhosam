@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import type { PillarKey } from "@/lib/services";
 
 export type WorkCard = {
@@ -9,6 +10,7 @@ export type WorkCard = {
   delivered: string;
   pillars: PillarKey[];
   links: { label: string; url: string }[];
+  images: string[];
 };
 
 const TAG_STYLE: Record<PillarKey, string> = {
@@ -53,8 +55,10 @@ export default function WorkGrid({
         <div className="grid gap-6 md:grid-cols-2">
           {shown.map((p) => (
             <article key={p.id} className="bg-white border border-line rounded-2xl overflow-hidden flex flex-col">
-              <div role="img" aria-label={labels.placeholder} className="h-60 bg-[#16304F] flex items-center justify-center">
-                <span className="text-[15px] text-[#8A97AA]">[{labels.placeholder}]</span>
+              <div className="relative aspect-[16/10] bg-[#16304F] border-b border-line">
+                {p.images[0] && (
+                  <Image src={p.images[0]} alt={`${labels.placeholder}: ${p.title}`} fill sizes="(min-width: 768px) 600px, 100vw" className="object-cover object-top" />
+                )}
               </div>
               <div className="p-8 flex flex-col gap-3.5 grow">
                 <div className="flex flex-wrap gap-2">
