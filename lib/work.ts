@@ -11,10 +11,10 @@ export type Project = {
   /** Screenshots in /public/work. Two images on a featured card are stacked. */
   images: readonly string[];
   featured?: boolean;
-  /** Has situation / done / result text and renders as a case study. */
-  story?: boolean;
-  /** Badge on featured cards: "integrated" (all departments) or "caseStudy". */
-  badge?: "integrated" | "caseStudy";
+  /** Badge on featured cards. */
+  badge?: "integrated";
+  /** Walkthrough video in /public/work, without extension (.webm + .mp4). Poster = images[0]. */
+  video?: string;
 };
 
 export const PROJECTS: readonly Project[] = [
@@ -28,20 +28,21 @@ export const PROJECTS: readonly Project[] = [
       { key: "tawdSite", url: "https://tawdculture.com" },
     ],
     images: ["/work/maha.webp", "/work/tawd.webp"],
+    video: "/work/maha",
   },
   {
     id: "win",
     featured: true,
-    story: true,
-    badge: "caseStudy",
     pillars: ["digital"],
     links: [{ key: "site", url: "https://win-solutions.org" }],
-    images: ["/work/win.webp", "/work/win-work.webp"],
+    images: ["/work/win.webp"],
+    video: "/work/win",
   },
   {
     id: "karam",
     pillars: ["digital"],
     links: [{ key: "site", url: "https://mohamed-karam.com" }],
     images: ["/work/karam.webp"],
+    video: "/work/karam",
   },
 ] as const;
