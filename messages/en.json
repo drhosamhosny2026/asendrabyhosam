@@ -241,6 +241,15 @@
             "The most suitable customer segments",
             "Available opportunities and entry recommendations"
           ]
+        },
+        "documents": {
+          "name": "Business Documents",
+          "who": "For businesses that need professional documents to present themselves to clients and partners, or to organise their internal work.",
+          "deliverables": [
+            "Company profile",
+            "Technical and financial proposals",
+            "Internal policies and regulations"
+          ]
         }
       }
     },
@@ -441,6 +450,7 @@
             "Positioning and message",
             "A personal visual identity",
             "A personal website in your name",
+            "A professional CV and LinkedIn profile",
             "A content plan for visibility"
           ],
           "note": "A package that brings our three departments together: consulting to define your message, marketing to build your identity and content, and digital solutions to build your website."

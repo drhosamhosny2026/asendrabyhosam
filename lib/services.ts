@@ -25,7 +25,7 @@ export const PILLARS: readonly Pillar[] = [
     href: "/consulting",
     accent: "#3A4E6B",
     dot: "#0B1D33",
-    services: ["feasibility", "businessPlan", "diagnosis", "operations", "sales", "market"],
+    services: ["feasibility", "businessPlan", "diagnosis", "operations", "sales", "market", "documents"],
   },
   {
     key: "digital",
